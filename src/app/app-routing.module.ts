@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SearchFlightsComponent } from './user/search-flights/search-flights.component';
 import { RegistrationComponent } from './user/registration/registration.component';

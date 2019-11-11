@@ -10,9 +10,11 @@ import { LoginComponent } from './user/login/login.component';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
+import { ProfileComponent } from './user/profile/profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AirlinelistcomponentComponent } from './admin/airlinelistcomponent/airlinelistcomponent.component';
 import { SearchFlightsComponent } from './user/search-flights/search-flights.component';
+import { MatButtonModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { SearchFlightsComponent } from './user/search-flights/search-flights.com
     LoginComponent,
     FooterComponent,
     SearchFlightsComponent,
-    AirlinelistcomponentComponent
+    AirlinelistcomponentComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,9 @@ import { SearchFlightsComponent } from './user/search-flights/search-flights.com
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
