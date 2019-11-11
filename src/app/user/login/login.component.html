@@ -1,7 +1,6 @@
-
-<form (ngSubmit)='getres()' style="border:1px solid #ccc">
-    <div class="container">
-      
+<div class="container-fluid">
+  <div class="offset-md-3 col-md-6"> 
+  <form (ngSubmit)='getres()' style="border:1px solid #ccc">  
       <hr>
   
       <label for="email"><b  style= "font-size: 22px;">Email</b></label>
@@ -11,23 +10,26 @@
       <input type="password" placeholder="Enter Password" name="psw"  id= "passeword" required>
   
       <a href="#" class="forgot"> forgot Password?</a>
-      <div class="clearfix">
-        
-        <button type="submit" class="signupbtn "> login</button>
-      </div>
+        <div class="clearfix">
+          
+          <button type="submit" class="signupbtn "> login</button>
+        </div>
       <h5 style="text-align: center ;font-size : 25px;" >
         OR login WITH 
       </h5>
-
-      <div class="col">
-          <a href="#" class="fb btn" style = "font-size : 20px; margin-right: 20px; border-radius: 4px;">
-            <i class="fa fa-facebook fa-fw"></i> login with Facebook
-          </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <a href="#" class="google btn "  style = "font-size : 20px; border-radius: 4px;">
-            <i class="fa fa-google fa-fw"></i> login with Google+
-          </a>
-        </div>
-  
-
+        
+      
+    </form>
+      </div> 
+     
+     <div class="offset-md-3 col-md-2">
+        <a href="#" class="fb btn" style = "font-size : 20px; margin-right: 20px; border-radius: 4px;">
+          <i class="fa fa-facebook fa-fw"></i> login with Facebook
+        </a>
+     </div>
+     <div class="offset-md-2 col-md-2"> 
+        <a href="#" class="google btn "  style = "font-size : 20px; border-radius: 4px;">
+          <i class="fa fa-google fa-fw"></i> login with Google+
+        </a>
     </div>
-  </form>
+    </div>
