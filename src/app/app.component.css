@@ -1,0 +1,5 @@
+.body {
+    background: black;
+    background-image: linear-gradient(black, #0099cc);
+    height: 800px;
+}
