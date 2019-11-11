@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { SearchFlightsComponent } from './user/search-flights/search-flights.component';
 
 
+
 const routes: Routes = [
   {path: '', component: SearchFlightsComponent}
 ];
