@@ -1,12 +1,22 @@
 #div1{
     height: 100%;
-    background-color: rgb(245, 245, 237);
+    background-image: linear-gradient(black, #0099cc );
+    background-attachment: fixed;
 }
-#div2{
+/* #div2{
     /* background-color: rgb(163, 163, 156);
     height: 800px; */
-    background-image: linear-gradient(#0099cc 0%, #000066 96%);
+    /* background-image: linear-gradient(black, #0099cc );
     height: 50%;
+    background-attachment: fixed; */
+
     /* height: 100%;     */
     /* height: 800px; */
-}
+/* } */
+/* body{
+    height: 100%;
+    background-color: rgb(245, 245, 237);
+    background-image: linear-gradient(#0099cc 0%, #000066 96%);
+    height: 50%;
+    background-attachment: fixed;
+} */ 
