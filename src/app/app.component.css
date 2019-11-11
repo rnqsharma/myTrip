@@ -1,4 +1,4 @@
-body {
-    background-image: linear-gradient(#0099cc 0%, #000066 96%);
-    height: 800px;
+body{
+    background-image: linear-gradient(black,#0099cc); 
+    height:800px 
 }
