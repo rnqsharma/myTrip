@@ -1,0 +1,17 @@
+footer .main-footer,.footer-copyright{
+        padding: 20px 0;
+        background:#808080;
+        
+    }
+.widget li a{	color: #ff8d1e;}
+.widget li a:hover,.social-footer2 li a:hover{	color: #4b92dc;}
+.widget {
+    color : white;
+}
+.image{
+    height: 150px;
+    width: 200px;
+}
+.mail{
+    color: black;
+}
