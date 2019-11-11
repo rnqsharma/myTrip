@@ -1,0 +1,54 @@
+<h1>Create New Account</h1>
+<form action="" >
+    <div class="container" >
+      <p>Please fill in this form to create an account.</p>
+      
+      <hr>
+      
+      <label for="name"><b>Full Name</b></label>
+      <input type="text" placeholder="Enter Full Name" name="name" required>
+
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+      
+      <strong style="font-size: 18px;">Gender</strong><br><br>
+      <input type="radio" name="gender" value="male"> Male
+      <input type="radio" name="gender" value="female"> Female
+
+      <br><br><br>
+
+      <label for="birthdate"><strong>Date Of Birth:</strong></label>&nbsp;&nbsp;
+      <input class="birthdate" type="date" placeholder="YYYY-MM-DD" data-date-split-input="true" required/>
+      <br><br><br>
+      <label for="psw"><b style="font-size: 20px;">Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+  
+      <label for="psw-repeat"><b style="font-size: 18px;">Confirm Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+  
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+      <br><br>
+      <input type="checkbox" required>I understand and agreee with the <a href="./policy.component.html" style="color:dodgerblue">Terms & Privacy</a> of MyTrip
+  
+      <div class="clearfix">
+    
+        <button type="submit" class="signupbtn">Create Account</button>
+      </div>
+      <h4 style="text-align: center;">
+        OR CREATE ACCOUNT WITH 
+      </h4>
+
+      <div class="col">
+          <a href="#" class="fb btn" style = "font-size : 20px; border-radius: 10px;">
+          <i class="fa fa-facebook"></i> SignUp with Facebook
+          </a>
+          <a href="#" class="google btn" style = "font-size : 20px; border-radius: 10px;">
+          <i class="fa fa-google fa-fw"></i> SignUp with Google+
+          </a>
+      </div>
+  
+
+    </div>
+  </form>
