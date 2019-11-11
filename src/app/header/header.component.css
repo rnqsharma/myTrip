@@ -1,0 +1,11 @@
+img{
+    height: 60px;
+    width: 60px;
+}
+.navbar-brand{
+    float: right;
+}
+.btn1{
+    border-radius: 12px;
+    color: #0066cc;
+}

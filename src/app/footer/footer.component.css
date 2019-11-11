@@ -1,17 +1,15 @@
 footer .main-footer,.footer-copyright{
         padding: 20px 0;
-        background:#808080;
+        background:black;
         
     }
 .widget li a{	color: #ff8d1e;}
-.widget li a:hover,.social-footer2 li a:hover{	color: #4b92dc;}
-.widget {
+.widget li a:hover{	color: #4b92dc;}
+.widget,h6 {
     color : white;
 }
 .image{
-    height: 150px;
+    height:150px;
     width: 200px;
 }
-.mail{
-    color: black;
-}
+ul.social-footer2 li a:hover {background-color:#ff8d1e;}
