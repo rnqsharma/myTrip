@@ -66,29 +66,38 @@ button:hover {
 
 
 .col {
+  
   width: 100%;
   margin: auto;
   padding: 0 50px;
   margin-top: 6px;
-  }
-  
-  .fb {
+}
+
+.fb {
   background-color: #3B5998;
   color: white;
-  margin-left : 300px;
+  margin-left : 500px;
   text-align: center;
   font-size: 16 px;
   padding: 15px 32px;
-  text-decoration: none;
-  }
+    text-decoration:none;
   
-  
-  .google {
+}
+
+
+.google {
   background-color: rgb(247, 244, 244);
   color: black;
   text-align: center;
-  margin-left: 350px;
+  
   font-size: 16 px;
   padding: 15px 32px;
-  text-decoration: none;
+  text-decoration:none;
+}
+
+  .card{
+    align-self: center;
+    background-color: white;
+    height: 70%;
+    width: 70%;
   }

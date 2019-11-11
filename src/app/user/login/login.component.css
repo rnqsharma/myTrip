@@ -10,6 +10,12 @@
   background: #f1f1f1;
 }
 
+
+.card{
+  background-color: white;
+  height: 70%;
+  width: 70%;
+}
 input[type=text]:focus, input[type=password]:focus {
   background-color: #ddd;
   outline: none;
@@ -79,7 +85,7 @@ button:hover {
 .fb {
   background-color: #3B5998;
   color: white;
-  margin-left : 300px;
+  margin-left : 500px;
   text-align: center;
   font-size: 16 px;
   padding: 15px 32px;
@@ -92,7 +98,7 @@ button:hover {
   background-color: rgb(247, 244, 244);
   color: black;
   text-align: center;
-  margin-left: 400px;
+  
   font-size: 16 px;
   padding: 15px 32px;
   text-decoration:none;
