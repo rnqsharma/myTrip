@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchFlightsComponent } from './user/search-flights/search-flights.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchFlightsComponent
+    SearchFlightsComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
