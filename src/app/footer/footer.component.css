@@ -1,15 +1,43 @@
-footer .main-footer,.footer-copyright{
-        padding: 20px 0;
-        background:black;
-        
-    }
-.widget li a{	color: #ff8d1e;}
-.widget li a:hover{	color: #4b92dc;}
-.widget,h6 {
-    color : white;
-}
-.image{
-    height:150px;
-    width: 200px;
-}
-ul.social-footer2 li a:hover {background-color:#ff8d1e;}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .fa-google {
+    background: #dd4b39;
+    color: white;
+  }
+  
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  
