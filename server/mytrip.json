@@ -1,0 +1,44 @@
+{
+    "data": [
+        {
+            "flightsdata": [
+                {
+                    "flightID": "SG-197",
+                    "flightCompany": "Spicejet",
+                    "departureName": "Delhi",
+                    "departureTime": "16:35",
+                    "arrivalName": "Bengaluru",
+                    "arrivalTime": "19:25",
+                    "price": 9051,
+                    "duration": "02:55"
+                }
+            ]
+        },
+        {
+            "profiledata": [
+                {
+                    "fullName": "Raunaq Sharma",
+                    "email": "rnqsharma3@gmail.com",
+                    "password": "raunaq123",
+                    "gender": "male",
+                    "dob": "11-05-1997",
+                    "address": "646/20 Prem Nagar, Rohtak, Haryana",
+                    "city": "Rohtak",
+                    "state": "Haryana",
+                    "country": "India",
+                    "pin code": 124001,
+                    "mobile": 7206187562
+                }
+            ]
+        },
+        {
+            "citydetails": [
+                {
+                    "delhi": "DL",
+                    "bengaluru": "BL",
+                    "mumbai": "MA"
+                }
+            ]
+        }
+    ]
+}

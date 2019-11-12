@@ -1,0 +1,21 @@
+.sec,.aside{
+    background: white;
+    border-color:black;
+    border-width: 10px;
+    border-radius: 15px
+    
+}
+/* h6{
+    padding-left: 10%;
+    
+} */
+.rght{
+    float: right;
+   
+}
+.btn{
+    background-color: #4CAF50;
+    border-radius: 8px;
+    margin-top: 5%;
+    width: 20%;
+}
