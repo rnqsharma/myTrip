@@ -11,7 +11,6 @@ import { SearchFlightsComponent } from './user/search-flights/search-flights.com
 import { HeaderComponent } from './header/header.component';
 import { ProfileComponent } from './user/profile/profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatListModule, MatSlider, MatList, MatSliderModule, MatRadioButton, MatRadioModule, MatSelectModule, MatFormField, MatFormFieldModule, MatFormFieldControl, MatCheckboxModule } from '@angular/material';
 import { ViewProfileComponent } from './user/view-profile/view-profile.component';
 import { SearchListComponent } from './user/search-list/search-list.component';
 
@@ -33,14 +32,7 @@ import { SearchListComponent } from './user/search-list/search-list.component';
     ReactiveFormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatListModule,
-    MatSliderModule,
-    MatRadioModule,
-    MatSelectModule,
-    MatFormFieldModule,
-    MatCheckboxModule
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
