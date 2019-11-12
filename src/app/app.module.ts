@@ -11,8 +11,10 @@ import { SearchFlightsComponent } from './user/search-flights/search-flights.com
 import { HeaderComponent } from './header/header.component';
 import { ProfileComponent } from './user/profile/profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatRadioModule, MatButtonModule } from '@angular/material';
 import { ViewProfileComponent } from './user/view-profile/view-profile.component';
 import { SearchListComponent } from './user/search-list/search-list.component';
+import { RegistrationComponent } from './user/registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { SearchListComponent } from './user/search-list/search-list.component';
     HeaderComponent,
     ProfileComponent,
     ViewProfileComponent,
-    SearchListComponent
+    SearchListComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,9 @@ import { SearchListComponent } from './user/search-list/search-list.component';
     ReactiveFormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatRadioModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

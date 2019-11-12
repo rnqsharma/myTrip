@@ -8,11 +8,8 @@ import { SearchListComponent } from './search-list/search-list.component';
 
 
 @NgModule({
-<<<<<<< HEAD
-  declarations: [LoginComponent, SearchListComponent],
-=======
-  declarations: [RegistrationComponent,LoginComponent],
->>>>>>> df223b6874ceff82878556b2a1ae5ca50eca591a
+  declarations: [LoginComponent, SearchListComponent, RegistrationComponent],
+
   imports: [
     CommonModule
   ]
