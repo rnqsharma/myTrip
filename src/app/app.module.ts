@@ -10,6 +10,7 @@ import { ProfileComponent } from './user/profile/profile.component';
 import { ViewProfileComponent } from './user/view-profile/view-profile.component';
 import { MatButtonModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FilterComponent } from './user/filter/filter.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ProfileComponent,
     SearchFlightsComponent,
     HeaderComponent,
-    ViewProfileComponent
+    ViewProfileComponent,
+    FilterComponent
 
   ],
   imports: [
