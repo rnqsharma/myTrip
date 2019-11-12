@@ -9,19 +9,18 @@ import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchFlightsComponent } from './user/search-flights/search-flights.component';
 import { HeaderComponent } from './header/header.component';
+import { ProfileComponent } from './user/profile/profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AirlinelistcomponentComponent } from './admin/airlinelistcomponent/airlinelistcomponent.component';
-import { ReviewBookingComponent } from './user/review-booking/review-booking.component';
+import { MatButtonModule } from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent,
-  LoginComponent,
+    LoginComponent,
     FooterComponent,
     SearchFlightsComponent,
     HeaderComponent,
-    AirlinelistcomponentComponent,
-    ReviewBookingComponent
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +28,9 @@ import { ReviewBookingComponent } from './user/review-booking/review-booking.com
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
