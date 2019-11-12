@@ -6,12 +6,14 @@
   padding: 15px;
   margin: 5px 0 22px 0;
   display: inline-block;
-  border: none;
-  background: #f1f1f1;
+  border: 1px solid lightslategray;
+  background:transparent;
+  border-radius: 1%;
+  text-decoration-color: black;
 }
 
 input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
+  background-color: transparent;
   outline: none;
 }
 
@@ -73,27 +75,24 @@ button:hover {
   margin-top: 2%;
 }
 
-.fb {
-  background-color: #3B5998;
+.btn-facebook {
   color: white;
-  margin-left: 30%;  
- text-decoration:none;
-  
-}
+  background-color: #3b5998;
+  }
 
 
 
-.google {
-  background-color: rgb(247, 244, 244);
-  color: black;
-  text-decoration:none;
-  
-
-}
+.btn-google {
+  color: white;
+  background-color: #ea4335;
+  }
 
   .card{
     
     background-color: white;
-  
+    
+    width:60%;
+    margin-left: 18%;
+    border-radius: 2%;
     
   }
