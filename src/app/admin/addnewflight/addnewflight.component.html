@@ -1,0 +1,191 @@
+<div class="container">
+        <div class="card">
+            <div class="card-body">
+    
+        <div style="font-weight: bold; text-align: left; color: grey">
+        
+        </div>
+        
+        <form (ngSubmit)="addflight()" [formGroup]="newflightform">
+        <!-- <div class="offset-md-6"> -->
+        <div class="form-group row mb-3">
+        <label class="col-md-2 col-form-label"
+        for="descriptionId">Flight Name</label>
+        
+        <div class="col-md-6">
+        <input class="form-control"
+        id="FullName"
+        placeholder="Flight Name"
+        rows=3
+        formControlName="FullName"
+        />
+        
+        </div>
+        </div>
+        
+        
+        <div class="form-group row mb-3">
+                <label class="col-md-2 col-form-label"
+                for="descriptionId">Flight No.</label>
+                
+                <div class="col-md-6">
+                <input class="form-control"
+                id="flightno"
+                placeholder="Flight No"
+                rows=3
+                formControlName="Flight No"
+                />
+                
+                </div>    </div>
+    
+            <div class="form-group row mb-3">
+                <label class="col-md-2 col-form-label"
+                for="descriptionId">Airline name</label>
+                
+                <div class="col-md-6">
+                
+                        <select class="form-control" name="Airline_Name">
+                                <option value="indigo">Indigo</option>
+                                <option value="goair">GoAir</option>
+                                <option value="airindia">AirIndia</option>
+                                <option value="airasia">AirAsia</option>
+                              </select>
+                
+                </div>
+                </div>
+                
+                <div class="form-group row mb-3">
+                        <label class="col-md-2 col-form-label"
+                        for="descriptionId">Departure City</label>
+                        
+                        <div class="col-md-6">
+                        
+                                <select class="form-control" name="Departure_city">
+                                        <option value="delhi">Delhi</option>
+                                        <option value="jaipur">Jaipur</option>
+                                        <option value="bengaluru">Bengaluru</option>
+                                        <option value="mumbai">Mumbai</option>
+                                      </select>
+                        
+                        </div>
+                        </div>
+                        <div class="form-group row mb-3">
+                                <label class="col-md-2 col-form-label"
+                                for="descriptionId">Arrival City</label>
+                                
+                                <div class="col-md-6">
+                                
+                                        <select  class="form-control" name="Arrival_city">
+                                                <option value="delhi">Delhi</option>
+                                                <option value="jaipur">Jaipur</option>
+                                                <option value="bengaluru">Bengaluru</option>
+                                                <option value="mumbai">Mumbai</option>
+                                              </select>
+                                
+                                </div>
+                                </div>
+    
+                
+    
+                    <div class="form-group row mb-3">
+                            <label class="col-md-2 col-form-label"
+                            for="descriptionId">Arrival Time</label>
+                            
+                            <div class="col-md-6">
+                                    <input type="time" name="time" value="" id="time" > 
+                            
+                            </div>
+                            </div>
+    
+                        <div class="form-group row mb-3">
+                            <label class="col-md-2 col-form-label"
+                            for="descriptionId">Arrival Time</label>
+                            
+                            <div class="col-md-6">
+                                    <input type="time" name="time" value="" > 
+                            
+                            </div>
+                            </div>
+                
+                            <div class="form-group row mb-3">
+                                <label class="col-md-2 col-form-label"
+                                for="descriptionId">Duration(hrs)</label>
+                                
+                                <div class="col-md-6">
+                                <input class="form-control"
+                                id="Duration"
+                                placeholder=""
+                                rows=3
+                                formControlName="Duration"
+                                />
+                                
+                                </div>
+                                </div>
+    
+                                <div class="form-group row mb-3">
+                                        <label class="col-md-2 col-form-label"
+                                        for="descriptionId">No Of Economy Class Seats</label>
+                                                
+                                        <div class="col-md-6">
+                                        <input class="form-control"
+                                        id="Economy_Seats"
+                                        placeholder=""
+                                        type="number"
+                                        rows=3
+                                        formControlName="Economy_Seats"
+                                        />
+                            
+                            </div>
+                            </div>
+    
+                            <div class="form-group row mb-3">
+                                <label class="col-md-2 col-form-label"
+                                for="descriptionId">No Of Business Class Seats</label>
+                                        
+                                <div class="col-md-6">
+                                <input class="form-control"
+                                id="Business_Seats"
+                                placeholder=""
+                                type="number"
+                                rows=3
+                                formControlName="Business_Seats"
+                                />
+                                
+                                </div>
+                                </div>
+            
+                    
+                       
+                                    
+                        <div class="form-group row mb-3">
+                        <label class="col-md-2 col-form-label">Distance(in km)</label>
+                        <div class="col-md-6">
+                        <input class="form-control" id="Distance" type="number"
+                        placeholder=""
+                        formControlName="Distance"
+                             />
+                                
+                        </div>
+                       </div>
+                    
+    
+        <div class="form-group row mb-4">
+        <div class="offset-md-3 col-md-4">
+        <button class="btn btn-primary mr-6"
+        style="width:200px;"
+        type="submit"
+        >
+        Submit
+        </button>
+        </div>
+        </div>
+    
+        </form>
+        </div>
+    </div>
+    
+        
+        <div class="alert alert-danger"
+        *ngIf="errorMessage">{{errorMessage}}
+        
+        </div>

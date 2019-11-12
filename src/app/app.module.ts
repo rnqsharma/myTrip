@@ -12,6 +12,7 @@ import { HeaderComponent } from './header/header.component';
 import { ProfileComponent } from './user/profile/profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material';
+import { AddnewflightComponent } from './admin/addnewflight/addnewflight.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MatButtonModule } from '@angular/material';
     FooterComponent,
     SearchFlightsComponent,
     HeaderComponent,
-    ProfileComponent
+    ProfileComponent,
+    AddnewflightComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +35,6 @@ import { MatButtonModule } from '@angular/material';
     MatButtonModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AddnewflightComponent]
 })
 export class AppModule { }
