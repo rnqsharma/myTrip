@@ -1,8 +1,8 @@
-#div1{
+/* #div1{
     height: 100%;
     background-image: linear-gradient(black, #0099cc );
     background-attachment: fixed;
-}
+} */
 /* #div2{
     /* background-color: rgb(163, 163, 156);
     height: 800px; */
@@ -20,3 +20,7 @@
     height: 50%;
     background-attachment: fixed;
 } */ 
+#div1 {
+    background-image: linear-gradient(black, #0099cc);
+    height: 1000px;
+}

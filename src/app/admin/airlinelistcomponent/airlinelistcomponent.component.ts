@@ -10,7 +10,6 @@ export class AirlinelistcomponentComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    
   }
 
 }
