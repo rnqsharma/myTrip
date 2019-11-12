@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="card">
+    <div class="card" style="border-radius: 30px;">
         <div class="card-body" id="cardbody">
             <div style="font-weight: bold; text-align: center">
                 <h2>Search flights</h2>
@@ -23,7 +23,7 @@
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-5">
                                     <label> From :</label>
-                                    <select class="form-control" id="selectfromcity">
+                                    <select class="form-control" [(ngModel)]='from' name="from" id="selectfromcity">
                                         <option >Bangalore</option>
                                         <option >Delhi</option>
                                     </select>
@@ -31,7 +31,7 @@
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-5">
                                     <label> To :</label>
-                                    <select class="form-control" id="selectfromcity">
+                                    <select class="form-control" [(ngModel)]='to' name="to" id="selectfromcity">
                                         <option >Bangalore</option>
                                         <option >Delhi</option>
                                     </select>
@@ -86,6 +86,7 @@
                     <button class="btn btn-primary button" (click)='findFlights()' style="width: 50%; height: 50px;" type="submit">
                         Find Flights
                     </button>
+                    
                 </div>
             </div>
             <div class="alert alert-danger"
