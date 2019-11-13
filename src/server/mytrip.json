@@ -8,7 +8,7 @@
                     "arrivalName": "Bengaluru",
                     "arrivalTime": "19:25",
                     "price": 9051,
-                    "duration": "02:55"
+                    "duration": "02 hrs 55 min"
                 },
                 {
                     "flightID": "SG-196",
@@ -18,8 +18,29 @@
                     "arrivalName": "Delhi",
                     "arrivalTime": "19:25",
                     "price": 9051,
-                    "duration": "02:55"
+                    "duration": "02 hrs 55 mins"
+                },
+                {
+                    "flightID": "SG-197",
+                    "flightCompany": "Spicejet",
+                    "departureName": "Delhi",
+                    "departureTime": "16:35",
+                    "arrivalName": "Bengaluru",
+                    "arrivalTime": "19:25",
+                    "price": 9051,
+                    "duration": "02 hrs 55 min"
+                },
+                {
+                    "flightID": "SG-197",
+                    "flightCompany": "Spicejet",
+                    "departureName": "Delhi",
+                    "departureTime": "16:35",
+                    "arrivalName": "Bengaluru",
+                    "arrivalTime": "19:25",
+                    "price": 9051,
+                    "duration": "02 hrs 55 min"
                 }
+                
             ],
     
             "profiledata": [

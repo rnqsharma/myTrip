@@ -2,10 +2,39 @@
     max-width: 700px;
 } */
 img{
-    height: 75px;
-    width: 75px;
+    height: 50px;
+    width: 50px;
     /* margin-top: 25px; */
 }
-.flight-card{
-    max-width: 700px;
+.container{
+    width: 65%;
 }
+/* .flight-card{
+    max-width: 65%;
+    margin: auto;
+} */
+
+.example-card {
+    max-width: 400px;
+  }
+  
+  .header-image {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS1N1PrEqSsb-FCWH3J32PUCndFdSQSxqzypFRdyxo-7zM4DK2c');
+    background-size: cover;
+  }
+
+  table {
+    width: 100%;
+  }
+  #ele{
+      margin-left: 8%;
+      /* font-size: medium;
+      font-weight: 500; */
+  }
+  hr{
+      border: 2px solid;
+  }
+  mat-card-header{
+      margin-left: 35px;
+      /* margin-top: 20px; */
+  }

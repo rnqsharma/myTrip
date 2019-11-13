@@ -5,7 +5,7 @@ export interface IFlights {
         departureName: string;
         departureTime: string;
         arrivalName: string;
-        arrivalTim: string;
+        arrivalTime: string;
         price: number;
         duration: string;
 

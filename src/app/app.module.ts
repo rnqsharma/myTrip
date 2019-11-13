@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 
 import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCard, MatCardModule} from '@angular/material';
+import {MatButtonModule, MatCard, MatCardModule, MatRadioButton, MatRadioModule, MatTableModule} from '@angular/material';
 import { LoginComponent } from './user/login/login.component';
 
 import { FooterComponent } from './footer/footer.component';
@@ -15,7 +15,9 @@ import { SearchFlightsComponent } from './user/search-flights/search-flights.com
 import { HeaderComponent } from './header/header.component';
 import { ProfileComponent } from './user/profile/profile.component';
 import { FlightListComponent } from './user/flight-list/flight-list.component';
-
+import { ViewProfileComponent } from './user/view-profile/view-profile.component';
+import { SearchListComponent } from './user/search-list/search-list.component';
+import { RegistrationComponent } from './user/registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,11 @@ import { FlightListComponent } from './user/flight-list/flight-list.component';
     FooterComponent,
     SearchFlightsComponent,
     ProfileComponent,
-    FlightListComponent
+    FlightListComponent,
+    ViewProfileComponent,
+    SearchListComponent,
+    RegistrationComponent,
+    // MatRadioModule,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +43,11 @@ import { FlightListComponent } from './user/flight-list/flight-list.component';
     MatCardModule,
     FormsModule,
     ReactiveFormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatRadioModule,
+    MatTableModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

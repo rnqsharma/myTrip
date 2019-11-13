@@ -14,8 +14,11 @@
                             <div class="row">
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-5">
-                                    <input type="radio" name="triptype" checked> One Way 
-                                    <input type="radio" name="triptype"> Round Trip
+                                    <mat-radio-group aria-label="Select an option">
+                                        <mat-radio-button value="1">One Way</mat-radio-button>&nbsp;
+                                        <mat-radio-button value="2">Round Trip</mat-radio-button>
+                                    </mat-radio-group>
+
                                 </div>
                                 <div class="col-sm-6"></div>
                             </div>
@@ -27,6 +30,12 @@
                                         <option >Bangalore</option>
                                         <option >Delhi</option>
                                     </select>
+                                    <!-- <mat-form-field appearance="outline">
+                                        <mat-select placeholder="Select">
+                                            <mat-option value="option">Bangalore</mat-option>
+                                            <mat-option value="option">Delhi</mat-option>
+                                        </mat-select>
+                                    </mat-form-field> -->
                                 </div>
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-5">

@@ -37,6 +37,6 @@ export class SearchFlightsComponent implements OnInit {
     // for (const f  this.flightsArray) {
     //   console.log(f);
     // }
-    this.router.navigate(['/search']);
+    this.router.navigate(['/search', this.to, this.from]);
   }
 }

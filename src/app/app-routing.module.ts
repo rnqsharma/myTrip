@@ -3,14 +3,23 @@ import { Routes, RouterModule } from '@angular/router';
 import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
 import { SearchFlightsComponent } from './user/search-flights/search-flights.component';
 import { FlightListComponent } from './user/flight-list/flight-list.component';
+import { ProfileComponent } from './user/profile/profile.component';
+import { ViewProfileComponent } from './user/view-profile/view-profile.component';
+import { RegistrationComponent } from './user/registration/registration.component';
+import { LoginComponent } from './user/login/login.component';
+
 
 const routes: Routes = [
+  {path: 'editprofile', component: ProfileComponent},
+  // {path: '', component: ViewProfileComponent},
+
   {path: 'adminhome', component: AdminhomeComponent},
   {path: '', component: SearchFlightsComponent},
-  {path: 'search', component: FlightListComponent},
+  {path: 'search/:to/:from', component: FlightListComponent},
 
-  // {path: 'login', component: SearchFlightsComponent}
-
+  // {path: '', component: SearchFlightsComponent},
+  {path:'signup',component: RegistrationComponent},
+  {path:'login',component:LoginComponent}
 ];
 
 @NgModule({
@@ -18,3 +27,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+export const routingComponents=[ RegistrationComponent,SearchFlightsComponent,LoginComponent]
