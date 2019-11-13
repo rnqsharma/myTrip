@@ -8,6 +8,7 @@ import { RegistrationComponent } from './user/registration/registration.componen
 import { LoginComponent } from './user/login/login.component';
 import { ViewProfileComponent } from './user/view-profile/view-profile.component';
 import { ReviewBookingComponent } from './user/review-booking/review-booking.component';
+import { AirlinelistcomponentComponent } from './admin/airlinelistcomponent/airlinelistcomponent.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path: 'signup', component: RegistrationComponent},
   {path: 'viewprofile', component: ViewProfileComponent},
   {path: 'editprofile', component: ProfileComponent},
+  {path: 'airlinelistcomponent/:flightCompany', component: AirlinelistcomponentComponent}
 ];
 
 @NgModule({
