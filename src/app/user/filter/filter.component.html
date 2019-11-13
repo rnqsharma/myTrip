@@ -1,67 +1,60 @@
-<div class="row" >
-    <div class="offset-md-2 col-md-8">
-            <div class="container">
-                    <div class="card"  >
-                        <div class="card-body">
 
-                
-                    <div class="col-md-2"style=" text-align: left; color: grey">
-                    <h6>Apply filter</h6>
-                    </div>
-                    
-                    <form (ngSubmit)="saveProfile()" [formGroup]="profileForm">
-                    <!-- <div class="offset-md-6"> -->
-                    
-                    
-                    
-                        <div class="form-group row mb-3">
-                            <label class="col-md-2 col-form-label"
-                            for="descriptionId">Gender</label>
-                            <div class="col-md-6">
-                                <input type="radio" name="gender" value="male" checked> Male<br>
-                                <input type="radio" name="gender" value="female"> Female<br>
-                            </div>
-                            </div>
-                        
-                            <mat-checkbox>Check me!</mat-checkbox>
-                
-                
-                    <div class="form-group row mb-4">
-                    <div class="offset-md-3 col-md-4">
-                    <button class="btn btn-primary mr-6"
-                    style="width:200px;"
-                    type="submit"
-                    >
-                    apply filter
-                    </button>
-                    </div>
-                    </div>
-                
-                    </form>
-                    </div>
-                </div>
-    </div>
-</div>
 <div class="container">
-        <h2>Bordered Table</h2>
-        <p>The .table-bordered class adds borders on all sides of the table and the cells:</p>            
-        <table class="table table-bordered">
-          
+  <div class="card"  >
+    <div class="card-body">
+      <table>
+        
           <tbody>
-            <tr>
-              <td>stops</td>
-              <td>Doe</td>
-              <td>john@example.com</td>
-            </tr>
-            <tr>
-              <td>Departure Time</td>
+            <div class="row">
+              <div class="col-sm-2">stops
+                <br>
+                <mat-checkbox color="primary">Non stop</mat-checkbox>
+                &nbsp;
+                <mat-checkbox color="primary">1 stop</mat-checkbox>
+                
+              </div>
+              <div class="col-sm-3">Departure Time
+                  <br>
+                  <mat-checkbox color="primary">Before 9am</mat-checkbox>
+                  &nbsp;
+                  <mat-checkbox color="primary">9am - 6pm</mat-checkbox>
+                  &nbsp;
+                  <mat-checkbox color="primary">After 6pm</mat-checkbox>
+              </div>
+              <div class="col-sm-3">Arrival Time
+                  <br>
+                <mat-checkbox color="primary">Before 9am</mat-checkbox>
+                &nbsp;
+                <mat-checkbox color="primary">9am - 6pm</mat-checkbox>
+                &nbsp;
+                <mat-checkbox color="primary">After 6pm</mat-checkbox>
+              </div>
+              <div class="col-sm-3">Airlines
+                  <br>
+                <mat-checkbox color="primary">Indigo</mat-checkbox>
+                &nbsp;
+                <mat-checkbox color="primary">Air Asia</mat-checkbox>
+                &nbsp;
+                <mat-checkbox color="primary">Vistara</mat-checkbox>
+                &nbsp;
+                <mat-checkbox color="primary">Spicejet</mat-checkbox>
+              </div>
+              <div class="col-sm-1" style="margin-top: 20px;">
+                <form>
+                  <div class="form-group row mb-4">
+
+                  <button class="btn btn-primary mr-6"
+                  style="width:100px;"
+                  type="submit"
+                  >
+                  apply 
+                  </button>
+                  
+                  </div>
               
-            </tr>
-            <tr>
-              <td>Arrival Time</td>
-            </tr>
-            <tr>
-              <td>Airlines</td>
+                </form>
+              </div>
+            </div>
           </tbody>
         </table>
-      </div>
+    </div>
