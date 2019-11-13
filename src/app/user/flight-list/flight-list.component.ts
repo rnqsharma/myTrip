@@ -44,18 +44,16 @@ export class FlightListComponent implements OnInit {
             this.to = params.get('to');
             this.from = params.get('from');
           }
-
         );
         console.log(this.to);
         console.log(this.from);
         this.filterData();
       }
-      
     );
   }
 
   filterData() {
-    console.log("In filter");
+    console.log('In filter');
     this.fl.forEach( f => {
       // console.log(f);
       if (f.departureName === this.from) {
@@ -66,6 +64,4 @@ export class FlightListComponent implements OnInit {
       }
     });
   }
-
-
 }

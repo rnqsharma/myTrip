@@ -9,7 +9,6 @@ import { LoginComponent } from './user/login/login.component';
 import { ViewProfileComponent } from './user/view-profile/view-profile.component';
 import { SearchListComponent } from './user/search-list/search-list.component';
 
-
 const routes: Routes = [
   {path: 'editprofile', component: ProfileComponent},
   // {path: '', component: ViewProfileComponent},
