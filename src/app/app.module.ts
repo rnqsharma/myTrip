@@ -54,6 +54,7 @@ import { AddnewflightComponent } from './admin/addnewflight/addnewflight.compone
     MatRadioModule,
     MatTableModule,
     MatButtonModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -15,7 +15,7 @@ const routes: Routes = [
 
   {path: 'adminhome', component: AdminhomeComponent},
   {path: '', component: SearchFlightsComponent},
-  {path: 'search/:to/:from', component: FlightListComponent},
+  {path: 'search/:to/:from/:roundtrip', component: FlightListComponent},
 
   // {path: '', component: SearchFlightsComponent},
   {path:'login',component:LoginComponent},
