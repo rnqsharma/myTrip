@@ -11,7 +11,10 @@ import { SearchFlightsComponent } from './user/search-flights/search-flights.com
 import { HeaderComponent } from './header/header.component';
 import { ProfileComponent } from './user/profile/profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material';
+import { MatRadioModule, MatButtonModule } from '@angular/material';
+import { ViewProfileComponent } from './user/view-profile/view-profile.component';
+import { SearchListComponent } from './user/search-list/search-list.component';
+import { RegistrationComponent } from './user/registration/registration.component';
 import { ReviewBookingComponent } from './user/review-booking/review-booking.component';
 
 @NgModule({
@@ -22,6 +25,9 @@ import { ReviewBookingComponent } from './user/review-booking/review-booking.com
     SearchFlightsComponent,
     HeaderComponent,
     ProfileComponent,
+    ViewProfileComponent,
+    SearchListComponent,
+    RegistrationComponent,
     ReviewBookingComponent
   ],
   imports: [
@@ -32,6 +38,7 @@ import { ReviewBookingComponent } from './user/review-booking/review-booking.com
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    MatRadioModule,
     MatButtonModule
   ],
   providers: [],

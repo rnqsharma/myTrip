@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RegistrationComponent } from './registration/registration.component';
+
 import { LoginComponent } from './login/login.component';
-import { ReviewBookingComponent } from './review-booking/review-booking.component';
+import { SearchListComponent } from './search-list/search-list.component';
 
 
 
 @NgModule({
-  declarations: [LoginComponent, ReviewBookingComponent],
+  declarations: [LoginComponent, SearchListComponent, RegistrationComponent],
+
   imports: [
     CommonModule
   ]
