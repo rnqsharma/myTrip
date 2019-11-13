@@ -1,0 +1,23 @@
+.example-card {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 200px;
+    width: 600px;
+    height: 200px;
+  }
+
+  button{
+      background-color: rgb(47, 46, 70);
+      font-size: large;
+      color: white;
+      margin-top: 25px;
+  }
+  #flight{
+      margin-left: 20px;
+  }
+  #sch{
+      margin-top: 20px;
+      margin-left: 20px;
+  }
+  

@@ -1,3 +1,7 @@
+.container{
+    background-attachment: fixed;
+    overflow-y: visible;
+}
 
 #selectfromcity {
     width: 80%;
