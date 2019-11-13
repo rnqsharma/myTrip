@@ -1,0 +1,18 @@
+section{
+    border-radius: 12px;
+    border-color: black;
+    background-color: white;
+    float: left;
+    margin-left: 7.5%;
+    margin-right: 5%;
+}
+aside{
+    border-radius: 12px;
+    border-color: black;
+    background-color: white;
+    float: right;
+}
+.icon{
+    height: 120px;
+    width: 150px;
+}

@@ -11,6 +11,8 @@ import { SearchFlightsComponent } from './user/search-flights/search-flights.com
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AirlinelistcomponentComponent } from './admin/airlinelistcomponent/airlinelistcomponent.component';
+import { ReviewBookingComponent } from './user/review-booking/review-booking.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { AirlinelistcomponentComponent } from './admin/airlinelistcomponent/airl
     FooterComponent,
     SearchFlightsComponent,
     HeaderComponent,
-    AirlinelistcomponentComponent
+    AirlinelistcomponentComponent,
+    ReviewBookingComponent
   ],
   imports: [
     BrowserModule,
