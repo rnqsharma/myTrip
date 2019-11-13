@@ -5,6 +5,7 @@ import { SearchFlightsComponent } from './user/search-flights/search-flights.com
 import { RegistrationComponent } from './user/registration/registration.component';
 import { LoginComponent } from './user/login/login.component';
 import { ViewProfileComponent } from './user/view-profile/view-profile.component';
+import { SearchListComponent } from './user/search-list/search-list.component';
 
 
 
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: 'signup', component: RegistrationComponent},
   {path: 'login', component: LoginComponent},
   {path: 'viewprofile', component: ViewProfileComponent},
-  {path: 'editprofile', component: ProfileComponent}
+  {path: 'editprofile', component: ProfileComponent},
+  {path: 'search', component: SearchListComponent}
 ];
 
 @NgModule({
