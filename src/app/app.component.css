@@ -1,7 +1,6 @@
 #div1 {
     background-image: linear-gradient(black, #0099cc);
     background-size: auto;
-    /* height: 100%;*/
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
