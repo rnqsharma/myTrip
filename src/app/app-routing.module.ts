@@ -4,9 +4,9 @@ import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
 import { SearchFlightsComponent } from './user/search-flights/search-flights.component';
 import { FlightListComponent } from './user/flight-list/flight-list.component';
 import { ProfileComponent } from './user/profile/profile.component';
-import { ViewProfileComponent } from './user/view-profile/view-profile.component';
 import { RegistrationComponent } from './user/registration/registration.component';
 import { LoginComponent } from './user/login/login.component';
+import { ViewProfileComponent } from './user/view-profile/view-profile.component';
 
 
 const routes: Routes = [
@@ -18,8 +18,10 @@ const routes: Routes = [
   {path: 'search/:to/:from', component: FlightListComponent},
 
   // {path: '', component: SearchFlightsComponent},
-  {path:'signup',component: RegistrationComponent},
-  {path:'login',component:LoginComponent}
+  {path:'login',component:LoginComponent},
+  {path: 'signup', component: RegistrationComponent},
+  {path: 'viewprofile', component: ViewProfileComponent},
+  {path: 'editprofile', component: ProfileComponent}
 ];
 
 @NgModule({
@@ -28,4 +30,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const routingComponents=[ RegistrationComponent,SearchFlightsComponent,LoginComponent]
+export const routingComponents = [ RegistrationComponent, SearchFlightsComponent, LoginComponent];

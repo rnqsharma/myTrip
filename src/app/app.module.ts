@@ -18,6 +18,8 @@ import { FlightListComponent } from './user/flight-list/flight-list.component';
 import { ViewProfileComponent } from './user/view-profile/view-profile.component';
 import { SearchListComponent } from './user/search-list/search-list.component';
 import { RegistrationComponent } from './user/registration/registration.component';
+import { AddnewflightComponent } from './admin/addnewflight/addnewflight.component';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +34,11 @@ import { RegistrationComponent } from './user/registration/registration.componen
     ViewProfileComponent,
     SearchListComponent,
     RegistrationComponent,
-    // MatRadioModule,
+    AddnewflightComponent,
+    ViewProfileComponent,
+    SearchListComponent,
+    RegistrationComponent,
+    AddnewflightComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +53,7 @@ import { RegistrationComponent } from './user/registration/registration.componen
     BrowserAnimationsModule,
     MatRadioModule,
     MatTableModule,
-    
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

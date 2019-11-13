@@ -1,11 +1,13 @@
 :root {
   --input-padding-x: 1.5rem;
   --input-padding-y: .75rem;
-  }
+}
+
+body {
+  background-image: linear-gradient(black,#0099cc);
+}
+
   
-  body {
-background-image: linear-gradient(black,#0099cc);
-  }
   
   .card-signin {
   border: 0;
