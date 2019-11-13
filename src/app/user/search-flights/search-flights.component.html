@@ -1,84 +1,103 @@
 <div class="container">
-    <div class="card">
-        <div class="card-body">
+    <div class="card" style="border-radius: 30px;">
+        <div class="card-body" id="cardbody">
             <div style="font-weight: bold; text-align: center">
                 <h2>Search flights</h2>
                 <h4 style="color: grey;">Fly anywhere. Fly everywhere.</h4>
             </div>
-            <form>
-                <div class="form-group">
-                    <input type="radio" name="oneWay" value="" checked> One Way <br>
-                    <input type="radio" name="roundTrip" value=""> Round Trip <br>
+
+            <div class="table-responsive overflow-hidden">
+                <form>
+                    <table class="table table-borderless" style="width: 100%;">
+                        <tbody>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-5">
+                                    <mat-radio-group aria-label="Select an option">
+                                        <mat-radio-button value="1">One Way</mat-radio-button>&nbsp;
+                                        <mat-radio-button value="2">Round Trip</mat-radio-button>
+                                    </mat-radio-group>
+
+                                </div>
+                                <div class="col-sm-6"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-5">
+                                    <label> From :</label>
+                                    <select class="form-control" [(ngModel)]='from' name="from" id="selectfromcity">
+                                        <option>Bangalore</option>
+                                        <option>Delhi</option>
+                                    </select>
+
+                                </div>
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-5">
+                                    <label> To :</label>
+                                    <select class="form-control" [(ngModel)]='to' name="to" id="selectfromcity">
+                                        <option>Bangalore</option>
+                                        <option>Delhi</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-5">
+                                    <label>Departure</label>
+                                    <input class="form-control" id="selectfromcity" type="date"
+                                        placeholder="Email (required)" />
+                                </div>
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-5">
+                                    <label>Return</label>
+                                    <input class="form-control" id="selectfromcity" type="date"
+                                        placeholder="Email (required)" />
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-5">
+                                    <label>Travellers :</label>
+                                    <select class="form-control" id="selectfromcity">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-5">
+                                    <label>Class :</label>
+                                    <select class="form-control" id="selectfromcity">
+                                        <option>Economy</option>
+                                        <option>Business</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </tbody>
+
+                    </table>
+                </form>
+                <br>
+                <div class="form-group" style="text-align:center">
+                    <button class="btn btn-primary button" (click)='findFlights()' style="width: 50%; height: 50px;"
+                        type="submit">
+                        Find Flights
+                    </button>
+
                 </div>
-
-                <div class="form-group">
-                    <label> To :</label>
-                    <div class="">
-                        <select class="form-control">
-                            <option >Bangalore</option>
-                            <option >Delhi</option>    
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label> From :</label>
-                    <div class="">
-                        <select class="form-control">
-                            <option >Bangalore</option>
-                            <option >Delhi</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="">
-                    <div class="form-group">
-                        <label>Departure</label>
-                        <div class="">
-                            <input class="form-control" id="email" type="date" placeholder="Email (required)" formControlName="email"/>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Return</label>
-                        <input class="form-control" id="email" type="date" placeholder="Email (required)" formControlName="email"/>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Travellers :</label>
-                        <select class="form-control">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>6</option>
-                            <option>7</option>
-                            <option>8</option>
-                            <option>9</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Class :</label>
-                        <select class="form-control">
-                            <option>Economy</option>
-                            <option>Business</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="">
-                            <button class="btn btn-primary form-group" style="width:120px;" type="submit">
-                                Find Flights
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="alert alert-danger"
-                    *ngIf="errorMessage">{{errorMessage}}
-                </div>
-            </form>
+            </div>
+            <div class="alert alert-danger" *ngIf="errorMessage">{{errorMessage}}
+            </div>
         </div>
     </div>
 </div>

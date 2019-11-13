@@ -1,0 +1,182 @@
+<!-- <div>
+    <p></p>
+</div> -->
+
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+
+    <div style="font-weight: bold; text-align: left; color: grey">
+    <h2>Edit profile</h2>
+    </div>
+    
+    <form (ngSubmit)="saveProfile()" [formGroup]="profileForm">
+    <!-- <div class="offset-md-6"> -->
+    <div class="form-group row mb-3">
+    <label class="col-md-2 col-form-label"
+    for="descriptionId">Full Name</label>
+    
+    <div class="col-md-6">
+    <input class="form-control"
+    id="FullName"
+    placeholder="Full Name"
+    rows=3
+    formControlName="FullName"
+    />
+    
+    </div>
+    </div>
+    
+    
+        <div class="form-group row mb-3">
+            <label class="col-md-2 col-form-label"
+            for="descriptionId">Gender</label>
+            <div class="col-md-6">
+                <input type="radio" name="gender" value="male" checked> Male<br>
+                <input type="radio" name="gender" value="female"> Female<br>
+            </div>
+            </div>
+
+        <div class="form-group row mb-3">
+            <label class="col-md-2 col-form-label"
+            for="descriptionId">Date of Birth</label>
+            
+            <div class="col-md-6">
+            <input class="form-control"
+            id="birthday"
+            placeholder=""
+            rows=3
+            formControlName="Birthday"
+            />
+            
+            </div>
+            </div>
+
+            <div class="form-group row mb-3">
+                <label class="col-md-2 col-form-label"
+                for="descriptionId">Address</label>
+                
+                <div class="col-md-6">
+                <input class="form-control"
+                id="Address"
+                rows=3
+                input type="text-area"
+                formControlName="Address"
+                />
+                
+                </div>
+                </div>
+
+
+                <div class="form-group row mb-3">
+                    <label class="col-md-2 col-form-label"
+                    for="descriptionId">City</label>
+                    
+                    <div class="col-md-6">
+                    <input class="form-control"
+                    id="City"
+                    placeholder="City"
+                    rows=3
+                    formControlName="City"
+                    />
+                    
+                    </div>
+                    </div>
+
+                    <div class="form-group row mb-3">
+                        <label class="col-md-2 col-form-label"
+                        for="descriptionId">State</label>
+                        
+                        <div class="col-md-6">
+                        <input class="form-control"
+                        id="State"
+                        placeholder="State"
+                        rows=3
+                        formControlName="State"
+                        />
+                        
+                        </div>
+                        </div>
+            
+                        <div class="form-group row mb-3">
+                            <label class="col-md-2 col-form-label"
+                            for="descriptionId">Country</label>
+                            
+                            <div class="col-md-6">
+                            <input class="form-control"
+                            id="Country"
+                            placeholder="Country"
+                            rows=3
+                            formControlName="FullName"
+                            />
+                            
+                            </div>
+                            </div>
+
+            <div class="form-group row mb-3">
+                        <label class="col-md-2 col-form-label"
+                        for="descriptionId">PinCode</label>
+                                
+                        <div class="col-md-6">
+                        <input class="form-control"
+                        id="PinCode"
+                        placeholder="PinCode"
+                        type="number"
+                        rows=3
+                        formControlName="PinCode"
+                        />
+                        
+                        </div>
+                        </div>
+
+                        <div class="form-group row mb-3">
+                            <label class="col-md-2 col-form-label"
+                            for="descriptionId">PhoneNo</label>
+                                    
+                            <div class="col-md-6">
+                            <input class="form-control"
+                            id="PhoneNo"
+                            placeholder="PhoneNo"
+                            type="number"
+                            rows=3
+                            formControlName="PhoneNo"
+                            />
+                            
+                            </div>
+                            </div>
+        
+                
+                   
+                                
+                    <div class="form-group row mb-3">
+                    <label class="col-md-2 col-form-label">Email</label>
+                    <div class="col-md-6">
+                    <input class="form-control" id="email" type="text"
+                    placeholder="Email (required)"
+                    formControlName="email"
+                         />
+                            
+                    </div>
+                   </div>
+                
+
+    <div class="form-group row mb-4">
+    <div class="offset-md-3 col-md-4">
+    <button class="btn btn-primary mr-6"
+    style="width:200px;"
+    type="submit"
+    >
+    Update Profile
+    </button>
+    </div>
+    </div>
+
+    </form>
+    </div>
+</div>
+
+    
+    <div class="alert alert-danger"
+    *ngIf="errorMessage">{{errorMessage}}
+    
+    </div>

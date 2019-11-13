@@ -1,4 +1,6 @@
-body{
-    background-image: linear-gradient(black,#0099cc); 
-    height:800px 
+#div1 {
+    background-image: linear-gradient(black, #0099cc);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
