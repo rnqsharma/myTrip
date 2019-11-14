@@ -8,12 +8,14 @@ import { RegistrationComponent } from './user/registration/registration.componen
 import { LoginComponent } from './user/login/login.component';
 import { ViewProfileComponent } from './user/view-profile/view-profile.component';
 import { SearchListComponent } from './user/search-list/search-list.component';
+import { ReviewBookingComponent } from './user/review-booking/review-booking.component';
 
 const routes: Routes = [
   {path: 'editprofile', component: ProfileComponent},
   // {path: '', component: ViewProfileComponent},
 
   {path: 'adminhome', component: AdminhomeComponent},
+  {path: 'reviewBooking/:flightID', component: ReviewBookingComponent},
   {path: '', component: SearchFlightsComponent},
   {path: 'search/:to/:from/:roundtrip', component: FlightListComponent},
 

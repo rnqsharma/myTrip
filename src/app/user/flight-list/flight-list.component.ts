@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FlightdataService } from 'src/app/service/flightdata.service';
 import { IFlights } from 'src/app/model/IFlights';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-
 @Component({
   selector: 'app-flight-list',
   templateUrl: './flight-list.component.html',
@@ -24,7 +23,8 @@ export class FlightListComponent implements OnInit {
   roundTrip = '';
   roundTripBool: boolean;
   // tslint:disable-next-line: variable-name
-  constructor(private _flightsData: FlightdataService, private route: ActivatedRoute) { }
+  constructor(private _flightsData: FlightdataService, private route: ActivatedRoute, 
+    private router: Router) { }
 
   ngOnInit() {
     this._flightsData.getFlightsData().subscribe(
@@ -46,7 +46,6 @@ export class FlightListComponent implements OnInit {
         }
         this.filterData();
       }
-
     );
   }
 
@@ -56,14 +55,17 @@ export class FlightListComponent implements OnInit {
     this.fl.forEach(f => {
       console.log(f);
       // console.log(f.arrivalName + ' ' + this.to);
-      console.log(f.departureName + " " + this.from + " " + f.arrivalName + " " + this.to);
+      console.log(f.departureName + ' ' + this.from + ' ' + f.arrivalName + ' ' + this.to);
       if (f.departureName === this.from && f.arrivalName === this.to) {
         console.log(f);
-        
         this.flightList.push(f);
-        
         console.log(this.flightList);
       }
     });
+  }
+
+  routeReview(){
+    // console.log("fgfdsg");
+    // this.router.navigate(['reviewBooking', 'SG-197']);
   }
 }

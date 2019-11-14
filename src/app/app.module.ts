@@ -20,6 +20,7 @@ import { RegistrationComponent } from './user/registration/registration.componen
 import { AddnewflightComponent } from './admin/addnewflight/addnewflight.component';
 import { FilterComponent } from './user/filter/filter.component';
 import { AdminFlightlistComponent } from './admin/admin-flightlist/admin-flightlist.component';
+import { ReviewBookingComponent } from './user/review-booking/review-booking.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { AdminFlightlistComponent } from './admin/admin-flightlist/admin-flightl
     RegistrationComponent,
     AddnewflightComponent,
     FilterComponent,
-    AdminFlightlistComponent
+    AdminFlightlistComponent,
+    ReviewBookingComponent
   ],
   imports: [
     BrowserModule,
