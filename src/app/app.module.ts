@@ -19,6 +19,7 @@ import { SearchListComponent } from './user/search-list/search-list.component';
 import { RegistrationComponent } from './user/registration/registration.component';
 import { AddnewflightComponent } from './admin/addnewflight/addnewflight.component';
 import { FilterComponent } from './user/filter/filter.component';
+import { AdminFlightlistComponent } from './admin/admin-flightlist/admin-flightlist.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { FilterComponent } from './user/filter/filter.component';
     SearchListComponent,
     RegistrationComponent,
     AddnewflightComponent,
-    FilterComponent
+    FilterComponent,
+    AdminFlightlistComponent
   ],
   imports: [
     BrowserModule,
