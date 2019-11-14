@@ -1,0 +1,20 @@
+.center {
+    text-align: center;
+}
+
+.hsw {
+    padding: 11px 0;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    font-family: Lato-Regular,Arial,Helvetica,sans-serif;
+}
+
+/* .hsw .hsw_inner {
+    width: 1200px;
+    margin: 0 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+} */

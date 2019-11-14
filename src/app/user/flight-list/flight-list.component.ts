@@ -36,7 +36,6 @@ export class FlightListComponent implements OnInit {
             this.from = params.get('from');
             this.roundTrip = params.get('roundtrip');
           }
-
         );
         console.log(this.to);
         console.log(this.from);
@@ -52,16 +51,19 @@ export class FlightListComponent implements OnInit {
   }
 
   filterData() {
-    console.log("In filter");
+    console.log('In filter');
     console.log(this.roundTrip);
     this.fl.forEach(f => {
+      console.log(f);
       // console.log(f.arrivalName + ' ' + this.to);
+      console.log(f.departureName + " " + this.from + " " + f.arrivalName + " " + this.to);
       if (f.departureName === this.from && f.arrivalName === this.to) {
+        console.log(f);
+        
         this.flightList.push(f);
+        
         console.log(this.flightList);
       }
     });
   }
-
-
 }

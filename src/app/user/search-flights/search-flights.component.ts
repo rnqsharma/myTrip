@@ -20,6 +20,7 @@ export class SearchFlightsComponent implements OnInit {
 
   ngOnInit() {
     this.roundcounter = false;
+    console.log('In O');
     this._flightService.getFlightsData()
       .subscribe((fulldata: IFlights[]) => {
         console.log(fulldata);
@@ -30,6 +31,17 @@ export class SearchFlightsComponent implements OnInit {
   findFlights() {
     console.log(this.roundcounter);
     this.router.navigate(['/search', this.to, this.from, this.roundcounter]);
+    console.log(this.flightsArray);
+    console.log(this.from);
+    console.log(this.to);
+    // this.flightsArray.forEach(c => {
+    //   console.log(c);
+
+    // });
+    // for (const f  this.flightsArray) {
+    //   console.log(f);
+    // }
+    // this.router.navigate(['/search', this.to, this.from]);
   }
 
   radioSetter() {
