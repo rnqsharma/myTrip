@@ -7,8 +7,7 @@ import { ProfileComponent } from './user/profile/profile.component';
 import { RegistrationComponent } from './user/registration/registration.component';
 import { LoginComponent } from './user/login/login.component';
 import { ViewProfileComponent } from './user/view-profile/view-profile.component';
-import { ReviewBookingComponent } from './user/review-booking/review-booking.component';
-
+import { SearchListComponent } from './user/search-list/search-list.component';
 
 const routes: Routes = [
   {path: 'editprofile', component: ProfileComponent},
@@ -16,14 +15,14 @@ const routes: Routes = [
 
   {path: 'adminhome', component: AdminhomeComponent},
   {path: '', component: SearchFlightsComponent},
-  {path: 'search/:to/:from', component: FlightListComponent},
-  {path: 'reviewbooking', component: ReviewBookingComponent},
+  {path: 'search/:to/:from/:roundtrip', component: FlightListComponent},
 
   // {path: '', component: SearchFlightsComponent},
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: RegistrationComponent},
   {path: 'viewprofile', component: ViewProfileComponent},
-  {path: 'editprofile', component: ProfileComponent}
+  {path: 'editprofile', component: ProfileComponent},
+  {path: 'search', component: SearchListComponent}
 ];
 
 @NgModule({
