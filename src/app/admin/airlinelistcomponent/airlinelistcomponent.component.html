@@ -4,12 +4,13 @@
     <div class ="card-body">
         <div class= "table table-responsive">
             <table class= "table">
-                <tr>
+                <tr  *ngFor = 'let f of fl  | unique'>
+                    
                     <td> 
                         <img src= \assets\images\airasia.png   height="60" width="60">
                     </td>
                     <td>
-                        airasia
+                    {{f.flightCompany}}
                     </td>
                 </tr>
 

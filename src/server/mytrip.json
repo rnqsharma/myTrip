@@ -2,7 +2,7 @@
             "flightsdata": [
                 {
                     "flightID": "SG-197",
-                    "flightCompany": "Spicejet",
+                    "flightCompany": "AirAsia",
                     "departureName": "Delhi",
                     "departureTime": "16:35",
                     "arrivalName": "Bengaluru",
@@ -32,7 +32,7 @@
                 },
                 {
                     "flightID": "SG-197",
-                    "flightCompany": "Spicejet",
+                    "flightCompany": "Indigo",
                     "departureName": "Delhi",
                     "departureTime": "16:35",
                     "arrivalName": "Bengaluru",

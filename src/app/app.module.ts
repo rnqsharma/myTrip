@@ -20,6 +20,8 @@ import { SearchListComponent } from './user/search-list/search-list.component';
 import { RegistrationComponent } from './user/registration/registration.component';
 import { AddnewflightComponent } from './admin/addnewflight/addnewflight.component';
 import { ReviewBookingComponent } from './user/review-booking/review-booking.component';
+import { AirlinelistcomponentComponent } from './admin/airlinelistcomponent/airlinelistcomponent.component';
+import { UniquePipe } from './unique.pipe';
 
 
 @NgModule({
@@ -40,7 +42,9 @@ import { ReviewBookingComponent } from './user/review-booking/review-booking.com
     SearchListComponent,
     RegistrationComponent,
     AddnewflightComponent,
-    ReviewBookingComponent
+    ReviewBookingComponent,
+    AirlinelistcomponentComponent,
+    UniquePipe
   ],
   imports: [
     BrowserModule,
