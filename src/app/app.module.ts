@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 
 import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCardModule, MatRadioModule, MatTableModule, MatCheckboxModule} from '@angular/material';
+import { MatButtonModule, MatCardModule, MatRadioModule, MatTableModule, MatCheckboxModule, MatRadioChange} from '@angular/material';
 import { LoginComponent } from './user/login/login.component';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -19,6 +19,7 @@ import { SearchListComponent } from './user/search-list/search-list.component';
 import { RegistrationComponent } from './user/registration/registration.component';
 import { AddnewflightComponent } from './admin/addnewflight/addnewflight.component';
 import { FilterComponent } from './user/filter/filter.component';
+import { RoundtripFooterComponent } from './user/roundtrip-footer/roundtrip-footer.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { FilterComponent } from './user/filter/filter.component';
     SearchListComponent,
     RegistrationComponent,
     AddnewflightComponent,
-    FilterComponent
+    FilterComponent,
+    RoundtripFooterComponent
   ],
   imports: [
     BrowserModule,
