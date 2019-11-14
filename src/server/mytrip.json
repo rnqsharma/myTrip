@@ -1,71 +1,81 @@
 {
-            "flightsdata": [
-                {
-                    "flightID": "SG-197",
-                    "flightCompany": "Spicejet",
-                    "departureName": "Delhi",
-                    "departureTime": "16:35",
-                    "arrivalName": "Bengaluru",
-                    "arrivalTime": "19:25",
-                    "price": 9051,
-                    "duration": "02 hrs 55 min"
-                },
-                {
-                    "flightID": "SG-196",
-                    "flightCompany": "Spicejet",
-                    "departureName": "Bengaluru",
-                    "departureTime": "16:35",
-                    "arrivalName": "Delhi",
-                    "arrivalTime": "19:25",
-                    "price": 9051,
-                    "duration": "02 hrs 55 mins"
-                },
-                {
-                    "flightID": "SG-197",
-                    "flightCompany": "Spicejet",
-                    "departureName": "Delhi",
-                    "departureTime": "16:35",
-                    "arrivalName": "Bengaluru",
-                    "arrivalTime": "19:25",
-                    "price": 9051,
-                    "duration": "02 hrs 55 min"
-                },
-                {
-                    "flightID": "SG-197",
-                    "flightCompany": "Spicejet",
-                    "departureName": "Delhi",
-                    "departureTime": "16:35",
-                    "arrivalName": "Bengaluru",
-                    "arrivalTime": "19:25",
-                    "price": 9051,
-                    "duration": "02 hrs 55 min"
-                }
-                
-            ],
-    
-            "profiledata": [
-                {
-                    "fullName": "Raunaq Sharma",
-                    "email": "rnqsharma3@gmail.com",
-                    "password": "raunaq123",
-                    "gender": "male",
-                    "dob": "11-05-1997",
-                    "address": "646/20 Prem Nagar, Rohtak, Haryana",
-                    "city": "Rohtak",
-                    "state": "Haryana",
-                    "country": "India",
-                    "pin code": 124001,
-                    "mobile": 7206187562
-                }
-            ],
-        
-            "citydetails": [
-                {
-                    "delhi": "DL",
-                    "bengaluru": "BL",
-                    "mumbai": "MA"
-                }
-            ]
-        
-    
+  "flightsdata": [
+    {
+      "flightID": "SG-197",
+      "flightCompany": "Spicejet",
+      "departureName": "Delhi",
+      "departureTime": "16:35",
+      "arrivalName": "Bengaluru",
+      "arrivalTime": "19:25",
+      "price": 9051,
+      "duration": "02 hrs 55 min"
+    },
+    {
+      "flightID": "SG-196",
+      "flightCompany": "Spicejet",
+      "departureName": "Bengaluru",
+      "departureTime": "16:35",
+      "arrivalName": "Delhi",
+      "arrivalTime": "19:25",
+      "price": 9051,
+      "duration": "02 hrs 55 mins"
+    },
+    {
+      "flightID": "SG-197",
+      "flightCompany": "Spicejet",
+      "departureName": "Delhi",
+      "departureTime": "16:35",
+      "arrivalName": "Bengaluru",
+      "arrivalTime": "19:25",
+      "price": 9051,
+      "duration": "02 hrs 55 min"
+    },
+    {
+      "flightID": "SG-197",
+      "flightCompany": "Spicejet",
+      "departureName": "Delhi",
+      "departureTime": "16:35",
+      "arrivalName": "Bengaluru",
+      "arrivalTime": "19:25",
+      "price": 9051,
+      "duration": "02 hrs 55 min"
+    }
+  ],
+  "profiledata": [
+    {
+      "fullName": "raunaq sharma",
+      "id": "rnqsharma3@gmail.com",
+      "password": 1234,
+      "gender": "male",
+      "dob": "01-01-1997",
+      "address": "646/20 Prem Nagar",
+      "city": "rohtak",
+      "state": "Haryana",
+      "country": "India",
+      "pin code": 124001,
+      "mobile": 8183876776,
+      "email": "rnqsharma3@gmail.com"
+    },
+    {
+      "fullName": "Rajni Malhotra",
+      "id": "rajnimalhotra1997@gmail.com",
+      "password": 1234,
+      "gender": "female",
+      "dob": "07-03-1997",
+      "address": "ludhiana",
+      "city": "ludhiana",
+      "state": "punjab",
+      "country": "india",
+      "pin code": 124001,
+      "mobile": "879655556",
+      "email": "rajnimalhotra1997@gmail.com"
+    }
+  ],
+  "citydetails": [
+    {
+      "delhi": "DL",
+      "bengaluru": "BL",
+      "mumbai": "MA"
+    }
+  ]
 }
