@@ -11,4 +11,5 @@ export interface IProfile {
     country: string;
     pincode: number;
     mobile: number;
+    rights: string;
 }

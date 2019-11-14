@@ -21,12 +21,12 @@ import { RegistrationComponent } from './user/registration/registration.componen
 import { AddnewflightComponent } from './admin/addnewflight/addnewflight.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     AdminhomeComponent,
-    LoginComponent,
     FooterComponent,
     SearchFlightsComponent,
     ProfileComponent,
@@ -38,17 +38,15 @@ import { AddnewflightComponent } from './admin/addnewflight/addnewflight.compone
     ViewProfileComponent,
     SearchListComponent,
     RegistrationComponent,
-    AddnewflightComponent
+    AddnewflightComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
     MatCardModule,
     FormsModule,
-    ReactiveFormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatRadioModule,
@@ -57,5 +55,6 @@ import { AddnewflightComponent } from './admin/addnewflight/addnewflight.compone
   ],
   providers: [],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }

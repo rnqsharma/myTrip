@@ -9,6 +9,7 @@ import { LoginComponent } from './user/login/login.component';
 import { ViewProfileComponent } from './user/view-profile/view-profile.component';
 
 
+
 const routes: Routes = [
   {path: 'editprofile', component: ProfileComponent},
   // {path: '', component: ViewProfileComponent},
@@ -18,7 +19,7 @@ const routes: Routes = [
   {path: 'search/:to/:from', component: FlightListComponent},
 
   // {path: '', component: SearchFlightsComponent},
-  {path:'login',component:LoginComponent},
+  {path: 'login', component: LoginComponent},
   {path: 'signup', component: RegistrationComponent},
   {path: 'viewprofile', component: ViewProfileComponent},
   {path: 'editprofile', component: ProfileComponent}
