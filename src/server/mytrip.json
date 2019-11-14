@@ -8,37 +8,105 @@
       "arrivalName": "Bangalore",
       "arrivalTime": "19:25",
       "price": 9051,
-      "duration": "02 hrs 55 min"
+      "duration": "02 hrs 55 min",
+      "economy": 150,
+      "business": 50
     },
     {
       "flightID": "SG-196",
       "flightCompany": "Spicejet",
-      "departureName": "Bangalore",
-      "departureTime": "16:35",
+      "departureName": "Pune",
+      "departureTime": "06:35",
       "arrivalName": "Delhi",
-      "arrivalTime": "19:25",
-      "price": 9051,
-      "duration": "02 hrs 55 mins"
+      "arrivalTime": "09:00",
+      "price": 7520,
+      "duration": "02 hrs 25 min",
+      "economy": 150,
+      "business": 50
     },
     {
-      "flightID": "SG-195",
-      "flightCompany": "Spicejet",
-      "departureName": "Delhi",
+      "flightID": "6E-545",
+      "flightCompany": "Indigo",
+      "departureName": "Chennai",
+      "departureTime": "18:00",
+      "arrivalName": "Hyderabad",
+      "arrivalTime": "19:10",
+      "price": 3200,
+      "duration": "01 hrs 10 min",
+      "economy": 150,
+      "business": 50
+    },
+    {
+      "flightID": "AA-678",
+      "flightCompany": "AirAsia",
+      "departureName": "Kolkata",
       "departureTime": "16:35",
       "arrivalName": "Bangalore",
       "arrivalTime": "19:25",
-      "price": 9051,
-      "duration": "02 hrs 55 min"
+      "price": 10000,
+      "duration": "02 hrs 55 min",
+      "economy": 150,
+      "business": 50
     },
     {
-      "flightID": "SG-198",
-      "flightCompany": "Spicejet",
-      "departureName": "Delhi",
-      "departureTime": "16:35",
+      "flightID": "AA-891",
+      "flightCompany": "AirAsia",
+      "departureName": "Goa",
+      "departureTime": "01:00",
+      "arrivalName": "Mumbai",
+      "arrivalTime": "01:45",
+      "price": 2500,
+      "duration": "00 hrs 45 min",
+      "economy": 150,
+      "business": 50
+    },
+    {
+      "flightID": "6E-618",
+      "flightCompany": "Indigo",
+      "departureName": "Hyderabad",
+      "departureTime": "04:00",
       "arrivalName": "Bangalore",
-      "arrivalTime": "19:25",
-      "price": 9051,
-      "duration": "02 hrs 55 min"
+      "arrivalTime": "05:25",
+      "price": 3051,
+      "duration": "01 hrs 25 min",
+      "economy": 150,
+      "business": 50
+    },
+    {
+      "flightID": "VS-455",
+      "flightCompany": "Vistara",
+      "departureName": "Chandigarh",
+      "departureTime": "02:00",
+      "arrivalName": "Noida",
+      "arrivalTime": "03:30",
+      "price": 3551,
+      "duration": "01 hrs 30 min",
+      "economy": 150,
+      "business": 50
+    },
+    {
+      "flightID": "SG-246",
+      "flightCompany": "Spicejet",
+      "departureName": "Coimbatore",
+      "departureTime": "14:35",
+      "arrivalName": "Visakhapatnam",
+      "arrivalTime": "16:35",
+      "price": 6651,
+      "duration": "02 hrs 00 min",
+      "economy": 150,
+      "business": 50
+    },
+    {
+      "flightID": "VS-456",
+      "flightCompany": "Vistara",
+      "departureName": "Mumbai",
+      "departureTime": "05:00",
+      "arrivalName": "Pune",
+      "arrivalTime": "06:00",
+      "price": 2125,
+      "duration": "01 hrs 00 min",
+      "economy": 150,
+      "business": 50
     }
   ],
   "profiledata": [
@@ -53,7 +121,8 @@
       "state": "Haryana",
       "country": "India",
       "pin code": 124001,
-      "mobile": 7206187562
+      "mobile": 7206187562,
+      "rights": "admin"
     },
     {
       "fullName": "Raunaq11 Sharma",
@@ -66,21 +135,22 @@
       "state": "Haryana",
       "country": "India",
       "pin code": 124001,
-      "mobile": 7206187562
+      "mobile": 7206187562,
+      "rights": "user"
     },
     {
       "fullName": "Simarjot Singh",
-      "email": "",
+      "id": "simar@gmail.com",
       "password": "lol123",
       "gender": "Male",
       "dob": "2019-11-13",
-      "address": "",
-      "city": "",
-      "state": "",
-      "country": "",
-      "pincode": 0,
-      "mobile": 0,
-      "id": "simu7060@gmail.com"
+      "address": "Manyata Tech Park",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "country": "India",
+      "pincode": 560045,
+      "mobile": 6987985890,
+      "rights": "user"
     },
     {
       "fullName": "Rajni",
@@ -88,19 +158,57 @@
       "password": "123",
       "gender": "Female",
       "dob": "2019-11-20",
-      "address": "",
-      "city": "",
-      "state": "",
-      "country": "",
-      "pincode": 0,
-      "mobile": 0
+      "address": "Manyata Tech Park",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "country": "India",
+      "pincode": 560045,
+      "mobile": 9899879870,
+      "rights": "user"
+    },
+    {
+      "fullName": "Pooja",
+      "id": "kkpooja97@gmail.com",
+      "password": "hellothere",
+      "gender": "Female",
+      "dob": "1997-11-24",
+      "address": "Magnolia Apartments",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "country": "India",
+      "pincode": 411021,
+      "mobile": 8412000997,
+      "rights": "user"
+    },
+    {
+      "fullName": "Sandhya",
+      "id": "sandhyasandy@gmail.com",
+      "password": "wowmomo",
+      "gender": "Female",
+      "dob": "1997-08-30",
+      "address": "Hi-Tech City",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "country": "India",
+      "pincode": 245009,
+      "mobile": 7843785098,
+      "rights": "user"
     }
   ],
   "citydetails": [
     {
       "delhi": "DL",
-      "bengaluru": "BL",
-      "mumbai": "MA"
+      "bangalore": "BLR",
+      "mumbai": "MUM",
+      "kolkata": "KOL",
+      "chennai": "MAA",
+      "visakhapatnam": "VSK",
+      "coimbatore": "CMB",
+      "hyderabad": "HYD",
+      "pune": "PUN",
+      "chandigarh": "CHA",
+      "noida": "NOI",
+      "goa": "GOA"
     }
   ]
 }
