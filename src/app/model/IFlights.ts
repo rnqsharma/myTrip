@@ -8,4 +8,6 @@ export interface IFlights {
         arrivalTime: string;
         price: number;
         duration: string;
+        economy: number;
+        business: number;
 }
