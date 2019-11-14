@@ -1,0 +1,119 @@
+{
+  "flightsdata": [
+    {
+      "flightID": "SG-197",
+      "flightCompany": "Spicejet",
+      "departureName": "Delhi",
+      "departureTime": "16:35",
+      "arrivalName": "Bangalore",
+      "arrivalTime": "19:25",
+      "price": 9051,
+      "duration": "02 hrs 55 min"
+    },
+    {
+      "flightID": "SG-196",
+      "flightCompany": "Spicejet",
+      "departureName": "Bangalore",
+      "departureTime": "16:35",
+      "arrivalName": "Delhi",
+      "arrivalTime": "19:25",
+      "price": 9051,
+      "duration": "02 hrs 55 mins"
+    },
+    {
+      "flightID": "SG-195",
+      "flightCompany": "Spicejet",
+      "departureName": "Delhi",
+      "departureTime": "16:35",
+      "arrivalName": "Bangalore",
+      "arrivalTime": "19:25",
+      "price": 9051,
+      "duration": "02 hrs 55 min"
+    },
+    {
+      "flightID": "SG-198",
+      "flightCompany": "Spicejet",
+      "departureName": "Delhi",
+      "departureTime": "16:35",
+      "arrivalName": "Bangalore",
+      "arrivalTime": "19:25",
+      "price": 9051,
+      "duration": "02 hrs 55 min"
+    }
+  ],
+  "profiledata": [
+    {
+      "fullName": "Raunaq Sharma",
+      "id": "rnqsharma3@gmail.com",
+      "password": "raunaq123",
+      "gender": "male",
+      "dob": "11-05-1997",
+      "address": "646/20 Prem Nagar, Rohtak, Haryana",
+      "city": "Rohtak",
+      "state": "Haryana",
+      "country": "India",
+      "pin code": 124001,
+      "mobile": 7206187562
+    },
+    {
+      "fullName": "Raunaq11 Sharma",
+      "id": "rnqsharma3@gmail.com11",
+      "password": "raunaq123",
+      "gender": "male",
+      "dob": "11-05-1997",
+      "address": "646/20 Prem Nagar, Rohtak, Haryana",
+      "city": "Rohtak",
+      "state": "Haryana",
+      "country": "India",
+      "pin code": 124001,
+      "mobile": 7206187562
+    },
+    {
+      "fullName": "Simarjot Singh",
+      "email": "",
+      "password": "lol123",
+      "gender": "Male",
+      "dob": "2019-11-13",
+      "address": "",
+      "city": "",
+      "state": "",
+      "country": "",
+      "pincode": 0,
+      "mobile": 0,
+      "id": "simu7060@gmail.com"
+    },
+    {
+      "fullName": "Rajni",
+      "id": "rajnimalhotra@gmail.com",
+      "password": "123",
+      "gender": "Female",
+      "dob": "2019-11-20",
+      "address": "",
+      "city": "",
+      "state": "",
+      "country": "",
+      "pincode": 0,
+      "mobile": 0
+    },
+    {
+      "fullName": "Archit Goyal",
+      "id": "architcool09@gmail.com",
+      "password": "Archit2101@",
+      "gender": "Male",
+      "dob": "1997-01-21",
+      "address": "",
+      "city": "",
+      "state": "",
+      "country": "",
+      "pincode": 0,
+      "mobile": 0
+    }
+  ],
+  "citydetails": [
+    {
+      "delhi": "DL",
+      "bengaluru": "BL",
+      "mumbai": "MA"
+    }
+  ]
+}
