@@ -1,4 +1,4 @@
-<body>
+
   <div class="container">
     <div class="row">
       <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
@@ -30,7 +30,7 @@
              <a routerLink="/signup" class="nav-link"> New User?Create New Account</a>
               
               
-              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" [routerLink] = "'/viewprofile'" >Sign in</button>
               <hr class="my-4">
               <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"> Sign in with Google</button>
               <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"> Sign in with
@@ -41,4 +41,3 @@
       </div>
     </div>
   </div>
-</body>

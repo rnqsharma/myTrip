@@ -12,12 +12,13 @@ import { LoginComponent } from './user/login/login.component';
 
 
 
+
 const routes: Routes = [
   {path: '', component: SearchFlightsComponent},
-  {path:'signup',component: RegistrationComponent},
-  {path:'login',component:LoginComponent},
-  {path: 'editprofile', component: ProfileComponent},
-  {path: '', component: ViewProfileComponent}
+  {path: 'signup', component: RegistrationComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'viewprofile', component: ViewProfileComponent},
+  {path: 'editprofile', component: ProfileComponent}
 ];
 
 @NgModule({
@@ -26,4 +27,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const routingComponents=[ RegistrationComponent,SearchFlightsComponent,LoginComponent]
+export const routingComponents = [ RegistrationComponent, SearchFlightsComponent, LoginComponent];
