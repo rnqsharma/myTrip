@@ -46,7 +46,6 @@ export class FlightListComponent implements OnInit {
         }
         this.filterData();
       }
-
     );
   }
 
@@ -59,9 +58,7 @@ export class FlightListComponent implements OnInit {
       console.log(f.departureName + " " + this.from + " " + f.arrivalName + " " + this.to);
       if (f.departureName === this.from && f.arrivalName === this.to) {
         console.log(f);
-        
         this.flightList.push(f);
-        
         console.log(this.flightList);
       }
     });

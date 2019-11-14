@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCardModule, MatRadioModule, MatTableModule, MatCheckboxModule} from '@angular/material';
@@ -23,13 +22,15 @@ import { AirlineComponent } from './admin/airline/airline.component';
 
 import { AddnewflightComponent } from './admin/addnewflight/addnewflight.component';
 import { FilterComponent } from './user/filter/filter.component';
+import { AirlinelistcomponentComponent } from './admin/airlinelistcomponent/airlinelistcomponent.component';
+import { UniquePipe } from './unique.pipe';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     AdminhomeComponent,
-    LoginComponent,
     FooterComponent,
     SearchFlightsComponent,
     ProfileComponent,
@@ -44,17 +45,17 @@ import { FilterComponent } from './user/filter/filter.component';
     SearchListComponent,
     RegistrationComponent,
     AddnewflightComponent,
-    FilterComponent
+    LoginComponent,
+    FilterComponent,
+    AirlinelistcomponentComponent,
+    UniquePipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
     MatCardModule,
     FormsModule,
-    ReactiveFormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     
@@ -65,5 +66,6 @@ import { FilterComponent } from './user/filter/filter.component';
   ],
   providers: [],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }

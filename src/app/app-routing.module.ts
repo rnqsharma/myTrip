@@ -8,6 +8,9 @@ import { LoginComponent } from './user/login/login.component';
 import { FlightListComponent } from './user/flight-list/flight-list.component';
 import { ProfileComponent } from './user/profile/profile.component';
 import { SearchListComponent } from './user/search-list/search-list.component';
+import { AirlinelistcomponentComponent } from './admin/airlinelistcomponent/airlinelistcomponent.component';
+import { AddnewflightComponent } from './admin/addnewflight/addnewflight.component';
+
 
 const routes: Routes = [
   // {path: '', component: ViewProfileComponent},
@@ -21,7 +24,9 @@ const routes: Routes = [
   {path: 'signup', component: RegistrationComponent},
   {path: 'viewprofile', component: ViewProfileComponent},
   {path: 'editprofile', component: ProfileComponent},
-  {path: 'search', component: SearchListComponent}
+  {path: 'search', component: SearchListComponent},
+  {path: 'airlinelist' , component: AirlinelistcomponentComponent},
+  {path : 'addnewflight' , component : AddnewflightComponent }
 ];
 
 @NgModule({

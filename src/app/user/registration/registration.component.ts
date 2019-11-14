@@ -21,7 +21,8 @@ export class RegistrationComponent implements OnInit {
     state: '',
     country: '',
     pincode: 0,
-    mobile: 0
+    mobile: 0,
+    rights: ''
   };
 
   profileDataa: IProfile;
