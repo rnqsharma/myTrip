@@ -3,12 +3,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCard, MatCardModule, MatRadioButton, MatRadioModule, MatTableModule} from '@angular/material';
+import { MatButtonModule, MatCardModule, MatRadioModule, MatTableModule, MatCheckboxModule} from '@angular/material';
 import { LoginComponent } from './user/login/login.component';
-
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchFlightsComponent } from './user/search-flights/search-flights.component';
@@ -19,7 +17,9 @@ import { ViewProfileComponent } from './user/view-profile/view-profile.component
 import { SearchListComponent } from './user/search-list/search-list.component';
 import { RegistrationComponent } from './user/registration/registration.component';
 import { AddnewflightComponent } from './admin/addnewflight/addnewflight.component';
-
+import { FilterComponent } from './user/filter/filter.component';
+import { AirlinelistcomponentComponent } from './admin/airlinelistcomponent/airlinelistcomponent.component';
+import { UniquePipe } from './unique.pipe';
 
 
 @NgModule({
@@ -39,7 +39,10 @@ import { AddnewflightComponent } from './admin/addnewflight/addnewflight.compone
     SearchListComponent,
     RegistrationComponent,
     AddnewflightComponent,
-    LoginComponent
+    LoginComponent,
+    FilterComponent,
+    AirlinelistcomponentComponent,
+    UniquePipe
   ],
   imports: [
     BrowserModule,
@@ -51,7 +54,8 @@ import { AddnewflightComponent } from './admin/addnewflight/addnewflight.compone
     BrowserAnimationsModule,
     MatRadioModule,
     MatTableModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

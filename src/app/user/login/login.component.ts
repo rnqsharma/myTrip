@@ -30,21 +30,23 @@ export class LoginComponent implements OnInit {
   }
   // tslint:disable-next-line: variable-name
      getRes(email1: string , pass: string) {
-      
        this.loginservice.getloginData().subscribe((d) => {
       this.loginItem = d;
       console.log(this.loginItem);
       this.loginItem.forEach(c => {
-        if ( email1 === c.email && c.rights === 'admin' ) {
-
+        if ( email1 === c.id && c.rights === 'admin' ) {
+          console.log(c.id);
+          console.log(email1);
+          console.log(c.rights);
           if ( pass === c.password  ) {
+            console.log(pass);
             this.router.navigate(['/adminhome']);
           } else {
             this.router.navigate(['/login']);
             alert('please enter correct password/ email');
           }
            } else {
-        if ( email1 === c.email && c.rights === 'user' ) {
+        if ( email1 === c.id && c.rights === 'user' ) {
 
            if (pass === c.password ) {
              this.router.navigate(['/']);
