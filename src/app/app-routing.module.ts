@@ -8,6 +8,9 @@ import { RegistrationComponent } from './user/registration/registration.componen
 import { LoginComponent } from './user/login/login.component';
 import { ViewProfileComponent } from './user/view-profile/view-profile.component';
 import { SearchListComponent } from './user/search-list/search-list.component';
+import { AirlinelistcomponentComponent } from './admin/airlinelistcomponent/airlinelistcomponent.component';
+import { AddnewflightComponent } from './admin/addnewflight/addnewflight.component';
+
 
 const routes: Routes = [
   {path: 'editprofile', component: ProfileComponent},
@@ -15,14 +18,16 @@ const routes: Routes = [
 
   {path: 'adminhome', component: AdminhomeComponent},
   {path: '', component: SearchFlightsComponent},
-  {path: 'search/:to/:from', component: FlightListComponent},
+  {path: 'search/:to/:from/:roundtrip', component: FlightListComponent},
 
   // {path: '', component: SearchFlightsComponent},
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: RegistrationComponent},
   {path: 'viewprofile', component: ViewProfileComponent},
   {path: 'editprofile', component: ProfileComponent},
-  {path: 'search', component: SearchListComponent}
+  {path: 'search', component: SearchListComponent},
+  {path: 'airlinelist' , component: AirlinelistcomponentComponent},
+  {path : 'addnewflight' , component : AddnewflightComponent }
 ];
 
 @NgModule({
