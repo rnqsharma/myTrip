@@ -10,6 +10,7 @@ import { ProfileComponent } from './user/profile/profile.component';
 import { SearchListComponent } from './user/search-list/search-list.component';
 import { AirlinelistcomponentComponent } from './admin/airlinelistcomponent/airlinelistcomponent.component';
 import { AddnewflightComponent } from './admin/addnewflight/addnewflight.component';
+import { ScheduleComponent } from './admin/schedule/schedule.component';
 
 
 const routes: Routes = [
@@ -26,7 +27,8 @@ const routes: Routes = [
   {path: 'editprofile', component: ProfileComponent},
   {path: 'search', component: SearchListComponent},
   {path: 'airlinelist' , component: AirlinelistcomponentComponent},
-  {path : 'addnewflight' , component : AddnewflightComponent }
+  {path : 'addnewflight' , component : AddnewflightComponent },
+  {path:'flightSchedule',component:ScheduleComponent}
 ];
 
 @NgModule({

@@ -24,6 +24,8 @@ import { AddnewflightComponent } from './admin/addnewflight/addnewflight.compone
 import { FilterComponent } from './user/filter/filter.component';
 import { AirlinelistcomponentComponent } from './admin/airlinelistcomponent/airlinelistcomponent.component';
 import { UniquePipe } from './unique.pipe';
+import { ScheduleComponent } from './admin/schedule/schedule.component';
+
 
 
 @NgModule({
@@ -48,7 +50,9 @@ import { UniquePipe } from './unique.pipe';
     LoginComponent,
     FilterComponent,
     AirlinelistcomponentComponent,
-    UniquePipe
+    UniquePipe,
+    ScheduleComponent,
+    
   ],
   imports: [
     BrowserModule,
