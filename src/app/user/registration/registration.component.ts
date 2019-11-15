@@ -21,7 +21,18 @@ export class RegistrationComponent implements OnInit {
     state: '',
     country: '',
     pincode: 0,
-    mobile: 0
+    mobile: 0,
+    rights: '',
+    bookedFlights: [{
+      flightId: '',
+      flightCompany: '',
+      departureName: '',
+      departureTime: '',
+      arrivalName: '',
+      arrivalTime: '',
+      price: 0,
+      duration: ''
+    }]
   };
 
   profileDataa: IProfile;
