@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FlightdataService } from 'src/app/service/flightdata.service';
 import { IFlights } from 'src/app/model/IFlights';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { element } from 'protractor';
 import { IProfile } from 'src/app/model/IProfile';
@@ -29,10 +29,11 @@ export class FlightListComponent implements OnInit {
   selectedDeparture: IFlights;
   selectedArrival: IFlights;
   totalFare: number;
+  departureAndArrivalid = '';
+
 
   // tslint:disable-next-line: variable-name
-  constructor(private _flightsData: FlightdataService, private route: ActivatedRoute, 
-    private router: Router) { }
+  constructor(private _flightsData: FlightdataService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this._flightsData.getFlightsData().subscribe(
@@ -54,6 +55,7 @@ export class FlightListComponent implements OnInit {
         }
         this.filterData();
       }
+
     );
   }
 
@@ -62,8 +64,6 @@ export class FlightListComponent implements OnInit {
     console.log(this.roundTrip);
     this.fl.forEach(f => {
       console.log(f);
-      // console.log(f.arrivalName + ' ' + this.to);
-      console.log(f.departureName + ' ' + this.from + ' ' + f.arrivalName + ' ' + this.to);
       if (f.departureName === this.from && f.arrivalName === this.to) {
         console.log(f);
         this.flightList.push(f);
@@ -72,27 +72,25 @@ export class FlightListComponent implements OnInit {
     });
   }
 
-  routeReview(){
-    // console.log("fgfdsg");
-    // this.router.navigate(['reviewBooking', 'SG-197']);
+
+  departureRadioChange(selectedDepartureid: string) {
+    console.log('departureid = ' + selectedDepartureid);
+    this.findSelectedDeparture(selectedDepartureid);
   }
 
-  departureRadioChange(selectedDepartureFlightID: string) {
-    console.log('departureFlightID = ' + selectedDepartureFlightID);
-    this.findSelectedDeparture(selectedDepartureFlightID);
-  }
-
-  arrivalRadioChange(selectedArrivalFlightID: string) {
-    console.log('arrivalFlightID = ' + selectedArrivalFlightID);
-    this.findSelectedArrival(selectedArrivalFlightID);
+  arrivalRadioChange(selectedArrivalid: string) {
+    console.log('arrivalid = ' + selectedArrivalid);
+    this.findSelectedArrival(selectedArrivalid);
     this.findTotalFare();
   }
 
   findSelectedDeparture(id: string) {
     console.log(id);
+    this.departureAndArrivalid += id;
+    console.log(this.departureAndArrivalid);
     this.fl.forEach(f => {
 
-      if ( f.flightID === id) {
+      if ( f.id === id) {
         console.log(f);
         this.selectedDeparture = f;
         console.log(this.selectedDeparture);
@@ -102,8 +100,10 @@ export class FlightListComponent implements OnInit {
   }
 
   findSelectedArrival(id: string) {
+    this.departureAndArrivalid += ':' + id;
+    console.log(this.departureAndArrivalid);
     this.fl.forEach(f => {
-      if ( f.flightID === id) {
+      if ( f.id === id) {
         this.selectedArrival = f;
       }
     });
@@ -111,6 +111,8 @@ export class FlightListComponent implements OnInit {
   }
 
   findTotalFare() {
+    console.log(this.selectedDeparture.id);
+    console.log(this.selectedArrival.id);
     this.totalFare = this.selectedDeparture.price + this.selectedDeparture.price;
   }
 }

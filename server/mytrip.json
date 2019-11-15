@@ -1,0 +1,220 @@
+{
+    "flightsdata": [
+        {
+            "flightID": "SG-197",
+            "flightCompany": "Spicejet",
+            "departureName": "Delhi",
+            "departureTime": "16:35",
+            "arrivalName": "Bangalore",
+            "arrivalTime": "19:25",
+            "price": 9051,
+            "duration": "02 hrs 55 min",
+            "economy": 200,
+            "business": 50
+        },
+        {
+            "flightID": "SG-196",   
+            "flightCompany": "Spicejet",
+            "departureName": "Bangalore",
+            "departureTime": "16:35",
+            "arrivalName": "Delhi",
+            "arrivalTime": "19:25",
+            "price": 9051,
+            "duration": "02 hrs 55 mins",
+            "economy": 200,
+            "business": 50
+        },
+        {
+            "flightID": "SG-195",
+            "flightCompany": "Spicejet",
+            "departureName": "Delhi",
+            "departureTime": "16:35",
+            "arrivalName": "Bangalore",
+            "arrivalTime": "19:25",
+            "price": 9051,
+            "duration": "02 hrs 55 min",
+            "economy": 200,
+            "business": 50
+        },
+        {
+            "flightID": "SG-198",
+            "flightCompany": "Spicejet",
+            "departureName": "Delhi",
+            "departureTime": "16:35",
+            "arrivalName": "Bangalore",
+            "arrivalTime": "19:25",
+            "price": 9051,
+            "duration": "02 hrs 55 min",
+            "economy": 200,
+            "business": 50
+        }
+    ],
+    "profiledata": [
+        {
+            "fullName": "Raunaq Sharma",
+            "id": "rnqsharma3@gmail.com",
+            "password": "raunaq123",
+            "gender": "male",
+            "dob": "11-05-1997",
+            "address": "646/20 Prem Nagar, Rohtak, Haryana",
+            "city": "Rohtak",
+            "state": "Haryana",
+            "country": "India",
+            "pin code": 124001,
+            "mobile": 7206187562,
+            "rights": "user"
+        },
+        {
+            "fullName": "Raunaq11 Sharma",
+            "id": "admin@gmail.com",
+            "password": "admin123",
+            "gender": "male",
+            "dob": "11-05-1997",
+            "address": "646/20 Prem Nagar, Rohtak, Haryana",
+            "city": "Rohtak",
+            "state": "Haryana",
+            "country": "India",
+            "pin code": 124001,
+            "mobile": 7206187562,
+            "rights": "admin"
+        },
+        {
+            "fullName": "Simarjot Singh",
+            "email": "",
+            "password": "lol123",
+            "gender": "Male",
+            "dob": "2019-11-13",
+            "address": "",
+            "city": "",
+            "state": "",
+            "country": "",
+            "pincode": 0,
+            "mobile": 0,
+            "id": "simu7060@gmail.com"
+        },
+        {
+            "fullName": "Rajni",
+            "id": "rajnimalhotra@gmail.com",
+            "password": "123",
+            "gender": "Female",
+            "dob": "2019-11-20",
+            "address": "",
+            "city": "",
+            "state": "",
+            "country": "",
+            "pincode": 0,
+            "mobile": 0
+        },
+        {
+            "fullName": "",
+            "id": "5_WXuOR",
+            "password": "",
+            "gender": "Male",
+            "dob": "",
+            "address": "",
+            "city": "",
+            "state": "",
+            "country": "",
+            "pincode": 0,
+            "mobile": 0
+        },
+        {
+            "fullName": "",
+            "id": "e5cWAzK",
+            "password": "",
+            "gender": "Male",
+            "dob": "",
+            "address": "",
+            "city": "",
+            "state": "",
+            "country": "",
+            "pincode": 0,
+            "mobile": 0
+        },
+        {
+            "fullName": "",
+            "id": "ccQdbi3",
+            "password": "",
+            "gender": "Male",
+            "dob": "",
+            "address": "",
+            "city": "",
+            "state": "",
+            "country": "",
+            "pincode": 0,
+            "mobile": 0
+        },
+        {
+            "fullName": "",
+            "id": "utmlHMs",
+            "password": "",
+            "gender": "Male",
+            "dob": "",
+            "address": "",
+            "city": "",
+            "state": "",
+            "country": "",
+            "pincode": 0,
+            "mobile": 0
+        },
+        {
+            "fullName": "",
+            "id": "rtlaaGe",
+            "password": "",
+            "gender": "Male",
+            "dob": "",
+            "address": "",
+            "city": "",
+            "state": "",
+            "country": "",
+            "pincode": 0,
+            "mobile": 0
+        },
+        {
+            "fullName": "",
+            "id": "3p_iuyS",
+            "password": "",
+            "gender": "Male",
+            "dob": "",
+            "address": "",
+            "city": "",
+            "state": "",
+            "country": "",
+            "pincode": 0,
+            "mobile": 0
+        },
+        {
+            "fullName": "",
+            "id": "WnHJ8kB",
+            "password": "",
+            "gender": "Male",
+            "dob": "",
+            "address": "",
+            "city": "",
+            "state": "",
+            "country": "",
+            "pincode": 0,
+            "mobile": 0
+        },
+        {
+            "fullName": "",
+            "id": "0CU8nze",
+            "password": "",
+            "gender": "Male",
+            "dob": "",
+            "address": "",
+            "city": "",
+            "state": "",
+            "country": "",
+            "pincode": 0,
+            "mobile": 0
+        }
+    ],
+    "citydetails": [
+        {
+            "delhi": "DL",
+            "bengaluru": "BL",
+            "mumbai": "MA"
+        }
+    ]
+}

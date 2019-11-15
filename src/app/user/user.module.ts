@@ -12,11 +12,7 @@ import { RoundtripFooterComponent } from './roundtrip-footer/roundtrip-footer.co
 
 @NgModule({
 
-<<<<<<< HEAD
   declarations: [LoginComponent, FlightListComponent, SearchListComponent, RegistrationComponent, ReviewBookingComponent],
-=======
-  declarations: [LoginComponent, FlightListComponent, SearchListComponent, RegistrationComponent, RoundtripFooterComponent],
->>>>>>> 66fe69cb3171351753d1f5e3aee172eade315c34
 
   imports: [
     CommonModule

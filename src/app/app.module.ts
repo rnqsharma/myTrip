@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCardModule, MatRadioModule, MatTableModule, MatCheckboxModule, MatRadioChange} from '@angular/material';
@@ -22,13 +21,14 @@ import { FilterComponent } from './user/filter/filter.component';
 import { AdminFlightlistComponent } from './admin/admin-flightlist/admin-flightlist.component';
 import { ReviewBookingComponent } from './user/review-booking/review-booking.component';
 import { RoundtripFooterComponent } from './user/roundtrip-footer/roundtrip-footer.component';
+import { AirlinelistcomponentComponent } from './admin/airlinelistcomponent/airlinelistcomponent.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     AdminhomeComponent,
-    LoginComponent,
     FooterComponent,
     SearchFlightsComponent,
     ProfileComponent,
@@ -44,17 +44,18 @@ import { RoundtripFooterComponent } from './user/roundtrip-footer/roundtrip-foot
     FilterComponent,
     AdminFlightlistComponent,
     ReviewBookingComponent,
-    RoundtripFooterComponent
+    RoundtripFooterComponent,
+    LoginComponent,
+    FilterComponent,
+    AirlinelistcomponentComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
     MatCardModule,
     FormsModule,
-    ReactiveFormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatRadioModule,
@@ -64,5 +65,6 @@ import { RoundtripFooterComponent } from './user/roundtrip-footer/roundtrip-foot
   ],
   providers: [],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }

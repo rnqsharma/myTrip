@@ -1,6 +1,5 @@
 <app-search-list></app-search-list>
     <app-filter></app-filter>
-
 <br><br>
 <div *ngIf="!roundTripBool">
     <div class="container" *ngFor='let f of flightList'>
@@ -8,7 +7,7 @@
             <mat-card-header class="row">
                 <div mat-card-avatar class="header-image"></div>
                 <mat-card-title>{{f.flightCompany}}</mat-card-title>
-                <mat-card-subtitle>{{f.flightID}}</mat-card-subtitle>
+                <mat-card-subtitle>{{f.id}}</mat-card-subtitle>
                 <div class="col-sm-1" id="ele">
                     <mat-card-title>{{f.departureTime}}</mat-card-title>
                     <mat-card-subtitle>{{f.departureName}}</mat-card-subtitle>
@@ -28,7 +27,7 @@
                 </div>
                 <div class="col-sm-1" id="ele">
                     <mat-card-actions>
-                        <button class="btn btn-primary button" [routerLink]="['/reviewBooking', f.flightID]" type="submit">
+                        <button class="btn btn-primary button" [routerLink]="['/reviewBooking', f.id]"  type="submit">
                             BOOK
                         </button>
                     </mat-card-actions>
@@ -53,13 +52,13 @@
                     <div class="col-sm-6 float-left">
                         <mat-radio-group color='primary' aria-label="Select an option" >
                             <div class="row" >
-                                <mat-radio-button *ngFor='let f of flightList' [value]="f" (change)="departureRadioChange(f.flightID)" value='{{f.flightID}}'>
+                                <mat-radio-button *ngFor='let f of flightList' [value]="f" (change)="departureRadioChange(f.id)" value='{{f.id}}'>
                                     <div class="col-sm">
                                         <mat-card class="row" id="rowCard">
                                             <mat-card-header class="row">
                                                 <div mat-card-avatar class="header-image-table"></div>
                                                 <mat-card-title id="tablecardtitle">{{f.flightCompany}}</mat-card-title>
-                                                <mat-card-subtitle>{{f.flightID}}</mat-card-subtitle>
+                                                <mat-card-subtitle>{{f.id}}</mat-card-subtitle>
                                                 <div class="col-sm-1" id="ele">
                                                     <mat-card-title id="tablecardtitle">{{f.departureTime}}</mat-card-title>
                                                     <mat-card-subtitle>{{f.departureName}}</mat-card-subtitle>
@@ -90,14 +89,14 @@
                     <div class="col-sm-6 float-right">
                         <mat-radio-group color='primary' aria-label="Select an option">
                                 <div class="row" >
-                                    <mat-radio-button *ngFor='let f of flightList' [value]="f" (change)="arrivalRadioChange(f.flightID)" value='{{f.flightID}}'>
+                                    <mat-radio-button *ngFor='let f of flightList' [value]="f" (change)="arrivalRadioChange(f.id)" value='{{f.id}}'>
                                         <!-- <div class="col-sm-2"></div> -->
                                         <div class="col-sm">
                                             <mat-card class="row" id="rowCard">
                                                 <mat-card-header class="row">
                                                     <div mat-card-avatar class="header-image-table"></div>
                                                     <mat-card-title id="tablecardtitle">{{f.flightCompany}}</mat-card-title>
-                                                    <mat-card-subtitle>{{f.flightID}}</mat-card-subtitle>
+                                                    <mat-card-subtitle>{{f.id}}</mat-card-subtitle>
                                                     <div class="col-sm-1" id="ele">
                                                         <mat-card-title id="tablecardtitle">{{f.departureTime}}</mat-card-title>
                                                         <mat-card-subtitle>{{f.departureName}}</mat-card-subtitle>
@@ -128,11 +127,9 @@
             </table>
         </div>
     </div>
-</div>  
-<br><br><br><br>
 
 
-<div class="footer" >
+    <div class="footer" >
         <footer>
             <div class="container-fluid">
                 <div class="table-responsive col-sm">
@@ -145,7 +142,7 @@
                                             <div mat-card-avatar class="header-image-table"></div>
                                             <div>
                                                 <mat-card-title id="tablecardtitle">{{selectedDeparture.flightCompany}}</mat-card-title>
-                                                <mat-card-subtitle>{{selectedDeparture.flightID}}</mat-card-subtitle>
+                                                <mat-card-subtitle>{{selectedDeparture.id}}</mat-card-subtitle>
                                             </div>
                                             <div class="col-sm-1" id="ele">
                                                 <mat-card-title id="tablecardtitle">{{selectedDeparture.departureTime}}</mat-card-title>
@@ -174,7 +171,7 @@
                                             <mat-card-header class="row">
                                                 <div mat-card-avatar class="header-image-table"></div>
                                                 <mat-card-title id="tablecardtitle">{{selectedArrival.flightCompany}}</mat-card-title>
-                                                <mat-card-subtitle>{{selectedArrival.flightID}}</mat-card-subtitle>
+                                                <mat-card-subtitle>{{selectedArrival.id}}</mat-card-subtitle>
                                                 <div class="col-sm-1" id="ele">
                                                     <mat-card-title id="tablecardtitle">{{selectedArrival.departureTime}}</mat-card-title>
                                                     <mat-card-subtitle>{{selectedArrival.departureName}}</mat-card-subtitle>
@@ -200,7 +197,7 @@
                                     
                                     <div class="col-sm-2">
                                             Total Fare : ₹ {{totalFare}}    <br>
-                                        <button class="btn-primary" style="border-radius: 20px; margin-top: 0px; width: 150px;">BOOK NOW</button>
+                                        <button class="btn-primary" [routerLink]="['/reviewBooking', departureAndArrivalid]" style="border-radius: 20px; margin-top: 0px; width: 150px;">BOOK NOW</button>
                                     </div>
                                 </div>
                                 
@@ -210,6 +207,13 @@
             </div>
         </footer>
     </div>
+
+
+</div>  
+<br><br><br><br>
+
+
+
 
 <!-- <div class="footer" >
     <footer>
@@ -224,7 +228,7 @@
                                         <div mat-card-avatar class="header-image-table"></div>
                                         <div>
                                             <mat-card-title id="tablecardtitle">{{selectedDeparture.flightCompany}}</mat-card-title>
-                                            <mat-card-subtitle>{{selectedDeparture.flightID}}</mat-card-subtitle>
+                                            <mat-card-subtitle>{{selectedDeparture.id}}</mat-card-subtitle>
                                         </div>
                                         <div class="col-sm-1" id="ele">
                                             <mat-card-title id="tablecardtitle">{{selectedDeparture.departureTime}}</mat-card-title>
@@ -253,7 +257,7 @@
                                         <mat-card-header class="row">
                                             <div mat-card-avatar class="header-image-table"></div>
                                             <mat-card-title id="tablecardtitle">{{selectedArrival.flightCompany}}</mat-card-title>
-                                            <mat-card-subtitle>{{selectedArrival.flightID}}</mat-card-subtitle>
+                                            <mat-card-subtitle>{{selectedArrival.id}}</mat-card-subtitle>
                                             <div class="col-sm-1" id="ele">
                                                 <mat-card-title id="tablecardtitle">{{selectedArrival.departureTime}}</mat-card-title>
                                                 <mat-card-subtitle>{{selectedArrival.departureName}}</mat-card-subtitle>
