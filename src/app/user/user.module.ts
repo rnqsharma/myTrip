@@ -9,8 +9,9 @@ import { SearchListComponent } from './search-list/search-list.component';
 
 
 @NgModule({
+  declarations: [RegistrationComponent,LoginComponent, SearchListComponent, FlightListComponent],
+  
 
-  declarations: [LoginComponent, FlightListComponent, SearchListComponent, RegistrationComponent],
 
   imports: [
     CommonModule

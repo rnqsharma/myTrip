@@ -1,0 +1,38 @@
+<div class='table-responsive'>
+    <table class='table table-dark table-hover'>
+    <thead>
+    <tr>
+      
+    <th>Airline</th>
+    <th>Flight ID</th>
+    <th>Departure</th>
+    <th>Arrival</th>
+    <th>Departure Time</th>
+    <th>Arrival Time</th>
+    <th>Duration</th>
+    <th></th>
+    </tr>
+    </thead>
+
+    <tbody>
+        
+    <tr *ngFor='let flight of flights'>
+
+
+        
+        <td>{{ flight.flightCompany }}</td>
+        <td>{{ flight.flightID }}</td>
+        <td>{{flight.departureName}}</td>
+        <td>{{flight.arrivalName}}</td>
+        <td>{{ flight.departureTime }}</td>
+        <td>{{ flight.arrivalTime }}</td>
+        <td>{{flight.duration}}</td>
+        <td><button class='btn btn-primary'>
+            Edit
+            </button>
+        </td>
+        
+    </tr>
+    </tbody>
+    </table>
+    </div>

@@ -17,7 +17,7 @@
         id="FullName"
         placeholder="Flight Name"
         rows=3
-        formControlName="FullName"
+        formControlName="flightName"
         />
         
         </div>
@@ -33,10 +33,11 @@
                 id="flightno"
                 placeholder="Flight No"
                 rows=3
-                formControlName="Flight No"
+                formControlName="flightNo"
                 />
                 
-                </div>    </div>
+                </div>   
+         </div>
     
             <div class="form-group row mb-3">
                 <label class="col-md-2 col-form-label"
@@ -45,13 +46,11 @@
                 <div class="col-md-6">
                 
                         <select class="form-control" name="Airline_Name">
-                                <option value="indigo">Indigo</option>
-                                <option value="goair">GoAir</option>
-                                <option value="airindia">AirIndia</option>
-                                <option value="airasia">AirAsia</option>
+                                <option *ngFor='let airlines of airline'>Indigo</option>
                               </select>
                 
                 </div>
+                <app-airline></app-airline>
                 </div>
                 
                 <div class="form-group row mb-3">
@@ -61,14 +60,16 @@
                         <div class="col-md-6">
                         
                                 <select class="form-control" name="Departure_city">
-                                        <option value="delhi">Delhi</option>
+                                        <option *ngFor='let city of cities'>Delhi</option>
                                         <option value="jaipur">Jaipur</option>
                                         <option value="bengaluru">Bengaluru</option>
                                         <option value="mumbai">Mumbai</option>
                                       </select>
                         
                         </div>
+                        <app-city></app-city>
                         </div>
+                       
                         <div class="form-group row mb-3">
                                 <label class="col-md-2 col-form-label"
                                 for="descriptionId">Arrival City</label>
@@ -92,7 +93,8 @@
                             for="descriptionId">Departure Time</label>
                             
                             <div class="col-md-6">
-                                    <input type="time" name="time" value="" id="departure_time" > 
+                                    <input type="time" name="time" value="" id="departure_time" 
+                                    formControlName="departureTime" class="form-control"> 
                             
                             </div>
                             </div>
@@ -102,7 +104,8 @@
                             for="descriptionId">Arrival Time</label>
                             
                             <div class="col-md-6">
-                                    <input type="time" name="time" value="" id= "departure_time" > 
+                                    <input type="time" name="time" value="" id= "arrivalTime"
+                                    formControlName="arrivalTime" class="form-control" > 
                             
                             </div>
                             </div>
@@ -186,6 +189,6 @@
     
         
         <div class="alert alert-danger"
-        *ngIf="errorMessage">{{errorMessage}}
-        
+        *ngIf="errorMessage">
+        {{errorMessage}}
         </div>

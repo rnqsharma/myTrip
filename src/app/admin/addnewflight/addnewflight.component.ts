@@ -11,5 +11,5 @@ export class AddnewflightComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
 }

@@ -41,7 +41,7 @@ export class ProfileComponent implements OnInit {
       mobile: [''],
     });
 
-    
+
 
     this.profileService.getProfileById('rnqsharma3@gmail.com').
       subscribe((profile: IProfile) => {
