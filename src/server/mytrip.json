@@ -216,5 +216,27 @@
       "bengaluru": "BL",
       "mumbai": "MA"
     }
+  ],
+  "airlines" : [
+      {
+          "airLineName":"Spicejet",
+          "airlineId":"SG",
+          "logo": "..\src\assets\images\spicejet.png"
+      },
+      {
+        "airLineName":"Airindia",
+        "airlineId":"AI",
+        "logo": "..\src\assets\images\airindia.png"
+    },
+    {
+        "airLineName":"Vistara",
+        "airlineId":"VT",
+        "logo": "..\src\assets\images\vistara.png"
+    },
+    {
+        "airLineName":"Indigo",
+        "airlineId":"Ig",
+        "logo": "..\src\assets\images\indigo.png"
+    }
   ]
 }
