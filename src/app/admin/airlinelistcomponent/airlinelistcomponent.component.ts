@@ -11,6 +11,10 @@ import {UniquePipe } from 'src/app/unique.pipe';
 })
 export class AirlinelistcomponentComponent implements OnInit {
   private sub: Subscription;
+  flightCompany: '';
+  logo: '';
+  airLineId: '';
+
   fl: IFlights[];
   // tslint:disable-next-line: ban-types
   flightList: Array<String> = [];

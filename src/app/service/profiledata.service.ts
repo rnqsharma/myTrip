@@ -26,6 +26,10 @@ export class ProfiledataService {
     .pipe(tap (data => console.log('registration Successful' + JSON.stringify(data))),
     catchError(this.handleError));
   }
+  
+  public getProfileById(id: string): Observable<IProfile> {
+    return this._httpclient.get<IProfile>(`http://localhost:3000/profiledata/${id}`);
+      }
 
 
 

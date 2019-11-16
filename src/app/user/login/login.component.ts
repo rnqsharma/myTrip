@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit {
   access = false;
   username: string;
   password: string;
+  check: string;
 
   constructor(private router: Router,
               private loginservice: LogindataService) { }
@@ -40,6 +41,8 @@ export class LoginComponent implements OnInit {
           console.log(c.rights);
           if ( pass === c.password  ) {
             console.log(pass);
+            
+            console.log(this.check);
             this.router.navigate(['/adminhome']);
           } else {
             this.router.navigate(['/login']);
@@ -49,7 +52,8 @@ export class LoginComponent implements OnInit {
         if ( email1 === c.id && c.rights === 'user' ) {
 
            if (pass === c.password ) {
-             this.router.navigate(['/']);
+            localStorage.setItem('username', c.fullName);
+            this.router.navigate(['/']);
            } else {
             this.router.navigate(['/login']);
             alert('please enter correct password');
