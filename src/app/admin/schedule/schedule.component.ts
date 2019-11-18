@@ -20,13 +20,14 @@ export class ScheduleComponent implements OnInit {
   duration='';
   flights : IFlights[];
 
-  constructor(private _flightsData: FlightdataService,private route: ActivatedRoute) { }
+  // tslint:disable-next-line: variable-name
+  constructor(private _flightsData: FlightdataService, private route: ActivatedRoute) { }
 
   ngOnInit() {
 
     this._flightsData.getFlightsData().subscribe((flights: IFlights[]) => {
       this.flights = flights;
-      console.log(this.flights)
+      console.log(this.flights);
 
     });
     

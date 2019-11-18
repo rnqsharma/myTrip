@@ -2,142 +2,145 @@
 
 <div class="container-fluid">
     <div class="row">
-    <div class="col-md-4">
+      <div class="col-md-5">
         
         <div class="card offset-md-3 col-md-7" >
-            <div class="card-body">      
+          <div class="card-body">      
             <table class="table table-hover">
                 <tbody>
-                  <tr style="text-align: center">
-                    <img src="assets/images/addPicture.jpg" class="img-fluid" alt="Cinque Terre">
-                  </tr>
-                  <tr>
-                    <th style="text-align: center">Rajni Malhotra</th>
-                  </tr>
+                        <tr style="text-align: center">
+                          <img src="assets/images/addPicture.jpg" class="img-fluid" alt="Cinque Terre">
+                        </tr>
+                        <tr>
+                          <th style="text-align: center">{{fullName}}</th>
+                        </tr>
         
-                    <tr>    
-                        <td >
-                        <!-- <a href="#">
-                            <span class="glyphicon glyphicon-user"></span>
-                        </a> -->
-                        <i class="fas fa-cloud"></i>
-                        <img id='profile' src='assets/images/man-user.png' class="img-fluid" alt="Cinque Terre">
-                        Profile</td>
-                    </tr>
+                        <tr>    
+                          <td >
+                          <img id='profile' src='assets/images/man-user.png' class="img-fluid" alt="Cinque Terre">
+                          Profile</td>
+                        </tr>
 
-                    <tr>    
-                            
-                        <td ><img id='info' src='assets/images/information.png' class="img-fluid" alt="Cinque Terre"> Other info</td>
-                    </tr>
+                        <tr>        
+                        <td><img id='info' src='assets/images/information.png' class="img-fluid" alt="Cinque Terre"> Other info</td>
+                        </tr>
 
-                    <tr>    
+                        <tr>    
                             <td ><img id='info' src='assets/images/logout.png' class="img-fluid" alt="Cinque Terre"> Logout</td>
                         </tr>
-                      
-                      </tbody>
-                  </table>
-                </div>
-                </div>
+                </tbody>
+            </table>
+          </div>
+        </div>
+
     </div>
     <br>
     
-    <div class="col-md-7">
-        <div class="col-md-11 jobs_index_middle_panels">
-                <div class="card" >
-                <div class="card-body">
+<div class="col-md-7">
+         <div class="col-md-11 jobs_index_middle_panels">
+            <div class="card" >
+            <div class="card-body">
               <div>
                 <div class="col-sm-7 float-left">
                   <h2>View Profile</h2>
                 </div>
-              <div class="col-sm-4 float-right" >
+                <div class="col-sm-4 float-right" >
                     
                     <button mat-stroked-button color="accent" [routerLink] = "['/editprofile']">Edit</button>
-              </div>
+                </div>
             </div>
-              </div>
-              </div>
+            </div>
+          </div>
         
 
         
         <br>
         
 
-<div class="col-md-12 jobs_index_middle_panels">
-    <div class="card" >
-    <div class="card-body">
-  
-    <table class="table table-hover">
-    <thead>
-      <tr>
-        <th>Login info.</th>
-        
-      </tr>
-    </thead>
-    
-    <tbody>
-      <tr>
-        <th>Name</th>
-        <td style="color: red">+Add</td>
-        
-      </tr>
-      <tr>
-        <th>Birthday</th>
-        <td style="color: red">+Add</td>
-        
-      </tr>
-      <tr>
-        <th>Email</th>
-        <td style="color: red">+Add</td>
-        
-      </tr>
-      <tr>
-        <th>Gender</th>
-        <td style="color: red">+Add</td>
-        
-      </tr>
-    </tbody>
-  </table>
-</div>
+  <div class="col-md-12 jobs_index_middle_panels">
+      <div class="card">
+          <div class="card-body">
+            <table class="table table-hover">
+              <thead class="table table-borderless">
+                <tr>
+                  <th>Login info.</th>
+                  <td></td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <td style="color: red">{{fullName}}</td>
+                    
+                </tr>
+                <tr>
+                  <th>Email</th>
+                  <td style="color: red">{{id}}</td>
+                  
+                </tr>
+                <tr>
+                  <th>Date of Birth</th>
+                  <td style="color: red">{{dob}}</td>
+                  
+                </tr>
+              
+                <tr>
+                  <th>Gender</th>
+                  <td style="color: red">{{gender}}</td>
+                  
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+  <br>
+
+      <div class="card">
+        <div class="card-body">
+          <table class="table table-hover">
+            <thead class="table table-borderless">
+              <tr>
+                <th>Other info.</th>
+                <td></td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Phone No</th>
+                <td style="color: red" > {{mobile_value ? mobile : add}}</td>
+                  
+              </tr>
+              <tr>
+                <th>Address</th>
+                <td style="color: red" > {{address_value ? address : add}} </td>
+              </tr>
+              <tr>
+                <th>City</th>
+                <td style="color: red" >{{city_value ? city : add}}</td>
+                
+              </tr>
+            
+              <tr>
+                <th>state</th>
+                <td style="color: red" >{{state_value ? state : add}}</td>
+                
+              </tr>
+              <tr>
+                <th>Country</th>
+                <td style="color: red" >{{country_value ? country : add}}</td>
+                
+              </tr>
+            
+            
+            </tbody>
+          </table>
+        </div>
+      </div>
+  </div>
 </div>
 
-<br>
+</div>
 
-    <div class="card">
-    <div class="card-body">
-        <table class="table table-hover">
-        <thead>
-          <tr>
-            <th>Other info.</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th>Address</th>
-            <td style="color: red">+Add</td>
-            
-          </tr>
-          <tr>
-            <th>City</th>
-            <td style="color: red">+Add</td>
-            
-          </tr>
-        
-          <tr>
-            <th>state</th>
-            <td style="color: red">+Add</td>
-            
-          </tr>
-          <tr>
-            <th>Country</th>
-            <td style="color: red" >+Add</td>
-            
-          </tr>
-    
-    
-        </tbody>
-      </table>
-    </div>
-    </div>
-</div>
-</div>
-</div>
+
+

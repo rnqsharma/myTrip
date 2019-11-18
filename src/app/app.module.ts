@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCardModule, MatRadioModule, MatTableModule, MatCheckboxModule} from '@angular/material';
+import { MatButtonModule, MatCardModule, MatRadioModule, MatTableModule, MatCheckboxModule, MatRadioChange, MatSnackBar, MatSnackBarModule, MatMenuModule} from '@angular/material';
 import { LoginComponent } from './user/login/login.component';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -22,8 +22,10 @@ import { AirlineComponent } from './admin/airline/airline.component';
 
 import { AddnewflightComponent } from './admin/addnewflight/addnewflight.component';
 import { FilterComponent } from './user/filter/filter.component';
+import { AdminFlightlistComponent } from './admin/admin-flightlist/admin-flightlist.component';
+import { ReviewBookingComponent } from './user/review-booking/review-booking.component';
+import { RoundtripFooterComponent } from './user/roundtrip-footer/roundtrip-footer.component';
 import { AirlinelistcomponentComponent } from './admin/airlinelistcomponent/airlinelistcomponent.component';
-import { UniquePipe } from './unique.pipe';
 import { ScheduleComponent } from './admin/schedule/schedule.component';
 import { EditComponent } from './admin/edit/edit.component';
 
@@ -49,10 +51,14 @@ import { EditComponent } from './admin/edit/edit.component';
     SearchListComponent,
     RegistrationComponent,
     AddnewflightComponent,
+    FilterComponent,
+    AdminFlightlistComponent,
+    ReviewBookingComponent,
+    RoundtripFooterComponent,
     LoginComponent,
     FilterComponent,
     AirlinelistcomponentComponent,
-    UniquePipe,
+
     ScheduleComponent,
     EditComponent
     
@@ -65,11 +71,12 @@ import { EditComponent } from './admin/edit/edit.component';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule,
     MatRadioModule,
     MatTableModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSnackBarModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
