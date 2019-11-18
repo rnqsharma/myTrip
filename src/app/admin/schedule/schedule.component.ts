@@ -13,7 +13,7 @@ export class ScheduleComponent implements OnInit {
   
   departureTime='';
   arrivalTime='';
-  flightID ='';
+  id ='';
   flightCompany='';
   departureName='';
   arrivalName='';
@@ -29,6 +29,7 @@ export class ScheduleComponent implements OnInit {
       console.log(this.flights)
 
     });
+    
 
   }
 }

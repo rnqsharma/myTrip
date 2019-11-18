@@ -7,7 +7,7 @@
 
                 <div mat-card-avatar class="header-image"></div>
                 <mat-card-title>{{f.flightCompany}}</mat-card-title>
-                <mat-card-subtitle>{{f.flightID}}</mat-card-subtitle>
+                <mat-card-subtitle>{{f.id}}</mat-card-subtitle>
                 <div class="col-sm-1" id="ele">
                     <mat-card-title>{{f.departureTime}}</mat-card-title>
                     <mat-card-subtitle>{{f.departureName}}</mat-card-subtitle>
@@ -64,13 +64,13 @@
                 <div class="col-sm-6 float-left">
                     <mat-radio-group color='primary' aria-label="Select an option">
                         <div class="row" *ngFor='let f of flightList'>
-                            <mat-radio-button  value='{{f.flightID}}'>
+                            <mat-radio-button  value='{{f.id}}'>
                                 <div class="col-sm">
                                     <mat-card class="row" id="rowCard">
                                         <mat-card-header class="row">
                                             <div mat-card-avatar class="header-image-table"></div>
                                             <mat-card-title id="tablecardtitle">{{f.flightCompany}}</mat-card-title>
-                                            <mat-card-subtitle>{{f.flightID}}</mat-card-subtitle>
+                                            <mat-card-subtitle>{{f.id}}</mat-card-subtitle>
                                             <div class="col-sm-1" id="ele">
                                                 <mat-card-title id="tablecardtitle">{{f.departureTime}}</mat-card-title>
                                                 <mat-card-subtitle>{{f.departureName}}</mat-card-subtitle>
@@ -101,14 +101,14 @@
                 <div class="col-sm-6 float-right">
                     <mat-radio-group color='primary' aria-label="Select an option">
                             <div class="row" *ngFor='let f of flightList'>
-                                <mat-radio-button  value='{{f.flightID}}'>
+                                <mat-radio-button  value='{{f.id}}'>
                                     <!-- <div class="col-sm-2"></div> -->
                                     <div class="col-sm">
                                         <mat-card class="row" id="rowCard">
                                             <mat-card-header class="row">
                                                 <div mat-card-avatar class="header-image-table"></div>
                                                 <mat-card-title id="tablecardtitle">{{f.flightCompany}}</mat-card-title>
-                                                <mat-card-subtitle>{{f.flightID}}</mat-card-subtitle>
+                                                <mat-card-subtitle>{{f.id}}</mat-card-subtitle>
                                                 <div class="col-sm-1" id="ele">
                                                     <mat-card-title id="tablecardtitle">{{f.departureTime}}</mat-card-title>
                                                     <mat-card-subtitle>{{f.departureName}}</mat-card-subtitle>

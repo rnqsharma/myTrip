@@ -31,6 +31,8 @@ export class RegistrationComponent implements OnInit {
   ngOnInit() {
   }
 
+
+
   postProfileData( fullName: string, email: string, gender: string, dob: string, password: string ) {
 
     this.profileData.fullName = fullName;
@@ -42,5 +44,9 @@ export class RegistrationComponent implements OnInit {
     console.log('profileData = ' + this.profileData);
     this.service.postProfileData(this.profileData).subscribe(d => console.log(d));
   }
+
+   
+
+  
 
 }

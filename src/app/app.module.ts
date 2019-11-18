@@ -25,6 +25,8 @@ import { FilterComponent } from './user/filter/filter.component';
 import { AirlinelistcomponentComponent } from './admin/airlinelistcomponent/airlinelistcomponent.component';
 import { UniquePipe } from './unique.pipe';
 import { ScheduleComponent } from './admin/schedule/schedule.component';
+import { EditComponent } from './admin/edit/edit.component';
+
 
 
 
@@ -52,6 +54,7 @@ import { ScheduleComponent } from './admin/schedule/schedule.component';
     AirlinelistcomponentComponent,
     UniquePipe,
     ScheduleComponent,
+    EditComponent
     
   ],
   imports: [
@@ -62,7 +65,7 @@ import { ScheduleComponent } from './admin/schedule/schedule.component';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    
+    ReactiveFormsModule,
     MatRadioModule,
     MatTableModule,
     MatButtonModule,

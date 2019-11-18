@@ -11,6 +11,7 @@ import { SearchListComponent } from './user/search-list/search-list.component';
 import { AirlinelistcomponentComponent } from './admin/airlinelistcomponent/airlinelistcomponent.component';
 import { AddnewflightComponent } from './admin/addnewflight/addnewflight.component';
 import { ScheduleComponent } from './admin/schedule/schedule.component';
+import { EditComponent } from './admin/edit/edit.component';
 
 
 const routes: Routes = [
@@ -28,7 +29,8 @@ const routes: Routes = [
   {path: 'search', component: SearchListComponent},
   {path: 'airlinelist' , component: AirlinelistcomponentComponent},
   {path : 'addnewflight' , component : AddnewflightComponent },
-  {path:'flightSchedule',component:ScheduleComponent}
+  {path:'flightSchedule',component:ScheduleComponent},
+  {path:'edit',component: EditComponent}
 ];
 
 @NgModule({

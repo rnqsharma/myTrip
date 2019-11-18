@@ -1,0 +1,51 @@
+<div class="container-fluid">
+<div class="card ">
+        <div class="card-body">
+
+<form [formGroup]="scheduleForm" (ngSubmit)="onSubmit()">
+
+    <h2 style="text-align: center;">Update Flight</h2>
+    <p>
+     <label>Airline: </label>
+     <input type="text" class="form-control" formControlName="flightCompany" required>
+    </p>
+   
+ 
+   <p>
+       <label>Flight ID: </label>
+       <input type="text" class="form-control" formControlName="id" required>
+   </p>
+
+   <p>
+    <label>Departure: </label>
+    <input type="text" class="form-control" formControlName="departureName" required>
+   </p>
+
+   <p>
+    <label>Arrival: </label>
+    <input type="text" class="form-control" formControlName="arrivalName" required>
+   </p>
+
+    <p>
+    <label>Departure Time: </label>
+    <input type="time" class="form-control" formControlName="departureTime" required>
+    </p>
+
+    <p>
+    <label>Arrival Time: </label>
+    <input type="time" class="form-control" formControlName="arrivalTime" required>
+    </p>
+
+    <p>
+    <label>Duration(in Hrs): </label>
+    <input type="time" class="form-control" formControlName="duration" required>
+    </p>
+
+ 
+     
+     <button type="submit" class="btn btn-primary"  [disabled]= "!scheduleForm.valid">Save</button>
+
+ </form>
+</div>
+</div>
+</div>

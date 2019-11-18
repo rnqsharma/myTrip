@@ -1,6 +1,6 @@
 export interface IFlights {
 
-        flightID: string;
+        id: string;
         flightCompany: string;
         departureName: string;
         departureTime: string;
