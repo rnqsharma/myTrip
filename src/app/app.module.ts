@@ -20,6 +20,8 @@ import { AddnewflightComponent } from './admin/addnewflight/addnewflight.compone
 import { FilterComponent } from './user/filter/filter.component';
 import { AirlinelistcomponentComponent } from './admin/airlinelistcomponent/airlinelistcomponent.component';
 import { UniquePipe } from './unique.pipe';
+import { AuthserviceService } from './service/authservice.service';
+import { CustomerguardGuard } from './customerguard.guard';
 
 
 @NgModule({
@@ -57,7 +59,7 @@ import { UniquePipe } from './unique.pipe';
     MatButtonModule,
     MatCheckboxModule
   ],
-  providers: [],
+  providers: [CustomerguardGuard , AuthserviceService],
   bootstrap: [AppComponent]
 
 })

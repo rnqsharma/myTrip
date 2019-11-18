@@ -36,6 +36,7 @@ export class LoginComponent implements OnInit {
       console.log(this.loginItem);
       this.loginItem.forEach(c => {
         if ( email1 === c.id && c.rights === 'admin' ) {
+          localStorage.setItem('right', 'c.rights');
           console.log(c.id);
           console.log(email1);
           console.log(c.rights);

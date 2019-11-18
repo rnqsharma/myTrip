@@ -10,19 +10,21 @@ import { ViewProfileComponent } from './user/view-profile/view-profile.component
 import { SearchListComponent } from './user/search-list/search-list.component';
 import { AirlinelistcomponentComponent } from './admin/airlinelistcomponent/airlinelistcomponent.component';
 import { AddnewflightComponent } from './admin/addnewflight/addnewflight.component';
+import { CustomerguardGuard } from './customerguard.guard';
+import { ProductEditGuard } from './user/registration/producteditguard';
 
 
 const routes: Routes = [
   {path: 'editprofile', component: ProfileComponent},
   // {path: '', component: ViewProfileComponent},
 
-  {path: 'adminhome', component: AdminhomeComponent},
+  {path: 'adminhome', component: AdminhomeComponent , canActivate: [CustomerguardGuard]},
   {path: '', component: SearchFlightsComponent},
   {path: 'search/:to/:from/:roundtrip', component: FlightListComponent},
 
   // {path: '', component: SearchFlightsComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'signup', component: RegistrationComponent},
+  {path: 'signup', component: RegistrationComponent , canDeactivate: [ProductEditGuard]},
   {path: 'viewprofile', component: ViewProfileComponent},
   {path: 'editprofile', component: ProfileComponent},
   {path: 'search', component: SearchListComponent},

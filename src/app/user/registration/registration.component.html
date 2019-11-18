@@ -9,16 +9,16 @@
             <div class="card-body">
         
         <h1>Create New Account</h1>
-        <form action="" class="">
+        <form action="" class="" [formGroup]="RegistrationForm">
             <div class="container" >
               <p>Please fill in this form to create an account.</p>
               
               <hr>
               <label for="name"><b>Full Name</b></label>
-              <input type="text" placeholder="Enter Full Name" name="name" value="{{profileData.fullName}}" required #name>
+              <input type="text" input class="form-control" placeholder="Enter Full Name" formControlName="RegistrationName"name="name" value="{{profileData.fullName}}" required #name>
         
               <label for="email"><b>Email</b></label>
-              <input type="text" placeholder="Enter Email" name="email" required #email>
+              <input type="text" input class="form-control" placeholder="Enter Email" formControlName="RegistrationEmail" name="email" required #email>
               
               <strong style="font-size: 18px;">Gender</strong><br><br>
 
@@ -34,16 +34,16 @@
               <br><br><br>
         
               <label for="birthdate"><strong>Date Of Birth:</strong></label>&nbsp;&nbsp;
-              <input class="birthdate" type="date" placeholder="YYYY-MM-DD" data-date-split-input="true" required #dob>
+              <input class="birthdate" input class="form-control" type="date" placeholder="YYYY-MM-DD" formControlName="RegistrationDob" data-date-split-input="true" required #dob>
               <br><br><br>
               <label for="psw"><b style="font-size: 20px;">Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required #password>
+              <input type="password" input class="form-control" placeholder="Enter Password"  formControlName="RegistrationPass" name="psw" required #password>
               
               <label for="psw-repeat"><b style="font-size: 18px;">Confirm Password</b></label>
-              <input type="password" placeholder="Repeat Password" name="psw-repeat" required >
+              <input type="password"input class="form-control" placeholder="Repeat Password"  formControlName="RegistrationPassR" name="psw-repeat" required >
           
               <label>
-                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                <input type="checkbox" input class="form-control" checked="checked" name="remember"  formControlName="RegistrationRemenber" style="margin-bottom:15px"> Remember me
               </label>
               <br><br>
              

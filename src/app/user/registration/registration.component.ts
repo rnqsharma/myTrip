@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ProfiledataService } from 'src/app/service/profiledata.service';
 import { ThrowStmt } from '@angular/compiler';
 import { IProfile } from 'src/app/model/IProfile';
+import { NgForm, FormControlName, FormGroup, FormBuilder } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-registration',
@@ -9,7 +11,8 @@ import { IProfile } from 'src/app/model/IProfile';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
-
+  // @ViewChild(FormControlName, { read: ElementRef }) formInputElements: ElementRef[];
+  RegistrationForm: FormGroup;
   profileData: IProfile = {
     fullName: '',
     id: '',
@@ -26,7 +29,9 @@ export class RegistrationComponent implements OnInit {
   };
 
   profileDataa: IProfile;
-  constructor(private service: ProfiledataService) { }
+  constructor(private fb: FormBuilder,
+              private route: ActivatedRoute,
+              private router: Router, private service: ProfiledataService) { }
 
   ngOnInit() {
   }
