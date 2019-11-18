@@ -8,11 +8,12 @@ import { AddnewflightComponent } from './addnewflight/addnewflight.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { AdminFlightlistComponent } from './admin-flightlist/admin-flightlist.component';
 import { EditairlineComponent } from './editairline/editairline.component';
+import { CityViewComponent } from './city-view/city-view.component';
 
 
 
 @NgModule({
-  declarations: [AirlinelistcomponentComponent, CityComponent, AirlineComponent, AdminhomeComponent, AddnewflightComponent, ScheduleComponent,AdminFlightlistComponent],
+  declarations: [AirlinelistcomponentComponent, CityComponent, AirlineComponent, AdminhomeComponent, AddnewflightComponent, ScheduleComponent,AdminFlightlistComponent, CityViewComponent],
   imports: [
     CommonModule
   ]

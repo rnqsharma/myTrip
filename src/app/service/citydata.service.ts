@@ -13,7 +13,7 @@ export class CitydataService {
 
   getCityData(): Observable<ICity[]> {
     return this._httpclient.get<ICity[]>(
-      `http://localhost:3000/profiledata`
+      `http://localhost:3000/citydetails`
     );
   }
 }
