@@ -32,7 +32,7 @@ const routes: Routes = [
   {path: 'editprofile', component: ProfileComponent},
   {path: 'search', component: SearchListComponent},
   {path: 'airlinelist' , component: AirlinelistcomponentComponent},
-  {path : 'addnewflight' , component : AddnewflightComponent },
+  {path : 'addnewflight/:flightID' , component : AddnewflightComponent },
   {path: 'flightSchedule', component: ScheduleComponent},
   {path: 'editAirline', component: AirlineComponent}
   // {path : 'addnewflight/:flightID' , component : AddnewflightComponent }

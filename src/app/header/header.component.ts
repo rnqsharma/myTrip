@@ -11,8 +11,8 @@ import { Subscription } from 'rxjs';
 })
 export class HeaderComponent implements OnInit {
 
-  @Input()
-  userName: string = 'Login or Signup';
+  // @Input()
+  userName = localStorage.getItem('username');
 
   email = '';
   private sub: Subscription;
@@ -26,8 +26,13 @@ export class HeaderComponent implements OnInit {
    }
 
   ngOnInit() {
+    console.log(localStorage.getItem('username'));
+    if (localStorage.getItem('username') === '') {
+      this.userName = 'Login or Signup';
+    }
     console.log(this.userName);
-    this.headerService.getLoggedInName.subscribe(name => this.setUsernameMethod(name));
+    this.setUsernameMethod();
+    // this.headerService.getLoggedInName.subscribe(name => this.setUsernameMethod(name));
     this.headerService.getEmail.subscribe(email => this.setEmail(email));
   }
 
@@ -35,13 +40,14 @@ export class HeaderComponent implements OnInit {
     console.log("dhfs")
   }
 
-  setUsernameMethod(name: string) {
-    this.userName = name;
+  setUsernameMethod() {
+    this.userName = localStorage.getItem('username');
+    console.log(this.userName);
     if (this.userName !== 'Login or Signup') {
       this.counter = true;
-      localStorage.setItem('username', name);
+      // localStorage.setItem('username', name);
     }
-    console.log(this.userName);
+    // console.log(this.userName);
   }
 
   setEmail(email: string) {
@@ -55,7 +61,9 @@ export class HeaderComponent implements OnInit {
 
   logoutFunc() {
     console.log('In Logout');
-    // this.router.navigate(['']);
+    localStorage.clear();
+    // localStorage.getItem('username');
+    this.router.navigate(['']);
   }
 
   profileView() {
