@@ -29,6 +29,7 @@ import { AirlinelistcomponentComponent } from './admin/airlinelistcomponent/airl
 import { ScheduleComponent } from './admin/schedule/schedule.component';
 import { EditComponent } from './admin/edit/edit.component';
 
+import { CityViewComponent } from './admin/city-view/city-view.component';
 
 
 
@@ -60,8 +61,9 @@ import { EditComponent } from './admin/edit/edit.component';
     AirlinelistcomponentComponent,
 
     ScheduleComponent,
-    EditComponent
+    EditComponent,
     
+    CityViewComponent
   ],
   imports: [
     BrowserModule,

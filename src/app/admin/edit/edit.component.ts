@@ -1,8 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FlightdataService } from 'src/app/service/flightdata.service';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { IFlights } from 'src/app/model/IFlights';
+import { AirlinedataService } from 'src/app/service/airlinedata.service';
+import { IAirline } from 'src/app/model/IAirline';
+import { CitydataService } from 'src/app/service/citydata.service';
+import { ICity } from 'src/app/model/ICity';
 
 @Component({
   selector: 'app-edit',
@@ -11,31 +16,112 @@ import { IFlights } from 'src/app/model/IFlights';
 })
 export class EditComponent implements OnInit {
 
-  sub:any;
-  i:any;
-  flight:IFlights;
+  
+  scheduleForm: FormGroup;
+  private sub: Subscription;
+  id: string;
+  flightData: IFlights;
+  airlines: IAirline[];
+  airLineName: string;
+  // airlinesName: Array<string> = [];
+  cities: ICity[];
+  cityName: string;
+  flight: IFlights;
+  errorMessage: string;
 
-  scheduleForm = new FormGroup({
 
-    flightCompany: new FormControl(''),
-    id : new FormControl(''),
-    departureName : new FormControl(''),
-    arrivalName : new FormControl(''),
-    departureTime : new FormControl(''),
-    arrivalTime : new FormControl(''),
-    duration : new FormControl('')
-}); 
+  constructor(
+    private fb: FormBuilder,
+    private route: ActivatedRoute,
+    private router: Router,
+    private flightService: FlightdataService,
+    private airlineservice: AirlinedataService,
+    private cityservice: CitydataService
+  ) { }
 
-  constructor(private fl:FlightdataService,private router:Router,private route:ActivatedRoute) { 
-  }
 
   ngOnInit() {
+    
+    
+    this.sub = this.route.paramMap.subscribe(
+      params => {
+        this.id = params.get('flightID');
+      }
+    );
 
+
+    this.scheduleForm = this.fb.group({
+      id: [''],
+      flightCompany: [''],
+      departureName: [''],
+      departureTime: [''],
+      arrivalName: [''],
+      arrivalTime: [''],
+      price: [''],
+      duration: ['']
+    });
    
-  }
+    this.airlineservice.getAirlinesData().subscribe((airlines: IAirline[]) => {
+      this.airlines = airlines;
+      // console.log(this.airlines);
 
-  del(){
-    this.fl.deleteFlight(this.scheduleForm.value.id).subscribe(e=>console.log(e));
+      this.cityservice.getCityData().subscribe((cities: ICity[]) => {
+        this.cities = cities;
+        console.log('lool');
+        console.log(this.cities);
+
+        this.flightService.getFlightsDataByID(this.id).
+        subscribe((flight: IFlights) => {
+          console.log(flight);
+          this.flight = flight;
+          this.scheduleForm.patchValue({
+  
+            id: this.flight.id,
+            flightCompany: this.flight.flightCompany,
+            departureName: this.flight.departureName,
+            departureTime: this.flight.departureTime,
+            arrivalName: this.flight.arrivalName,
+            arrivalTime: this.flight.arrivalTime,
+            price: this.flight.price,
+            duration: this.flight.duration,
+            economy: this.flight.economy,
+            business: this.flight.business,
+          });
+  
+      });
+    });
+  });
+  
+    }
+      addflight = (): void => {
+    const p = { ...this.flight, ...this.scheduleForm.value };
+    console.log(p);
+    // console.log(this.email);
+    this.updateProfile(p, this.id);
+    // console.log("sgf")
+  }
+      updateProfile(flight: IFlights, id: string): void {
+    this.flightService.updateProfile(flight, id)
+      .subscribe({
+        next: () => this.onSaveComplete(),
+        error: err => this.errorMessage = err
+      });
+  }
+      onSaveComplete(): void {
+    // Reset the form to clear the flags
+    // this.profileForm.reset();
+    //  this.router.navigate(['/profile']);
+  }
+    
+  
+  
+  }
+  
+  
+
+
+ /* del(){
+    this.flightService.deleteFlight(this.scheduleForm.value.id).subscribe(e=>console.log(e));
     console.log(this.scheduleForm.value.id)
   }
 
@@ -45,9 +131,12 @@ export class EditComponent implements OnInit {
       //console.warn(this.scheduleForm.value.id);
     this.flight=this.scheduleForm.value;
     console.log(this.flight);
-    this.fl.updateFlight(this.flight).subscribe();
+    this.flightService.updateFlight(this.flight).subscribe();
       
     }
-  }
+
+
+*/
+
 
 

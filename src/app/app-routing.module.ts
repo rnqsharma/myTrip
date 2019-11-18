@@ -15,6 +15,7 @@ import { ScheduleComponent } from './admin/schedule/schedule.component';
 import { AdminFlightlistComponent } from './admin/admin-flightlist/admin-flightlist.component';
 import { AirlineComponent } from './admin/airline/airline.component';
 import { EditComponent } from './admin/edit/edit.component';
+import { CityViewComponent } from './admin/city-view/city-view.component';
 
 
 const routes: Routes = [
@@ -31,12 +32,14 @@ const routes: Routes = [
   {path: 'signup', component: RegistrationComponent},
   {path: 'viewprofile/:email', component: ViewProfileComponent},
   {path: 'editprofile', component: ProfileComponent},
-  {path:'edit',component: EditComponent},
+  {path:'edit/:flightID',component: EditComponent},
   {path: 'search', component: SearchListComponent},
   {path: 'airlinelist' , component: AirlinelistcomponentComponent},
-  {path : 'addnewflight' , component : AddnewflightComponent },
+  {path : 'addnewflight/:flightID' , component : AddnewflightComponent },
   {path: 'flightSchedule', component: ScheduleComponent},
-  {path: 'editAirline', component: AirlineComponent}
+  {path: 'editAirline', component: AirlineComponent},
+  {path: 'cityList', component: CityViewComponent}
+
   // {path : 'addnewflight/:flightID' , component : AddnewflightComponent }
 ];
 

@@ -3,7 +3,8 @@
           <p>
                 <button id="air" mat-raised-button ><a routerLink= "/airlinelist">Airline Management</a></button>
                 <button id="flight" mat-raised-button><a routerLink= "/adminFlight">Flight Management</a></button>
-                <button id="sch" mat-raised-button><a routerLink="/flightSchedule">Schedule Management</a></button>
+                <button id="sch" mat-raised-button><a routerLink="/flightSchedule">Flight Schedule</a></button>
+                <button id="sch" mat-raised-button><a [routerLink]="['/cityList']">City Managment</a></button>
           </p>
         </mat-card-content>
         

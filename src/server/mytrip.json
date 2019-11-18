@@ -3,7 +3,7 @@
     {
       "id": "SG-197",
       "flightCompany": "Spicejet",
-      "departureName": "Delhi",
+      "departureName": "Pune",
       "departureTime": "16:35",
       "arrivalName": "Bangalore",
       "arrivalTime": "19:25",
@@ -13,25 +13,24 @@
       "business": 50
     },
     {
+      "flightCompany": "AirCar",
       "id": "SG-201",
-      "flightCompany": "Airbus",
-      "departureName": "Bangalore",
-      "departureTime": "16:35",
-      "arrivalName": "Delhi",
-      "arrivalTime": "19:25",
-      "price": 9051,
-      "duration": "02 hrs 55 min",
-      "economy": 150,
-      "business": 250
+      "departureName": "Delhi",
+      "arrivalName": "Mumbai",
+      "departureTime": "03:15",
+      "arrivalTime": "07:15",
+      "duration": "04 Hrs 15 mins"
     },
     {
-      "flightCompany": "GoAir",
+      "flightCompany": "SpiceJet",
       "id": "SG-198",
-      "departureName": "Sre",
-      "arrivalName": "Sarsawa",
+      "departureName": "Bangalore",
+      "arrivalName": "Delhi",
       "departureTime": "06:12",
       "arrivalTime": "10:32",
-      "duration": "04:10"
+      "duration": "04:10",
+      "economy": 5,
+      "business": 10
     },
     {
       "flightCompany": "AirIndia",
@@ -316,6 +315,84 @@
           "duration": ""
         }
       ]
+    },
+    {
+      "fullName": "Rahul",
+      "id": "Khanna",
+      "password": "Rahul",
+      "gender": "Male",
+      "dob": "1998-01-21",
+      "address": "",
+      "city": "",
+      "state": "",
+      "country": "",
+      "pincode": 0,
+      "mobile": 0,
+      "rights": "",
+      "bookedFlights": [
+        {
+          "flightId": "",
+          "flightCompany": "",
+          "departureName": "",
+          "departureTime": "",
+          "arrivalName": "",
+          "arrivalTime": "",
+          "price": 0,
+          "duration": ""
+        }
+      ]
+    },
+    {
+      "fullName": "Rahul Khanna",
+      "id": "rahulkhanna",
+      "password": "Rahul",
+      "gender": "Male",
+      "dob": "1998-01-21",
+      "address": "",
+      "city": "",
+      "state": "",
+      "country": "",
+      "pincode": 0,
+      "mobile": 0,
+      "rights": "",
+      "bookedFlights": [
+        {
+          "flightId": "",
+          "flightCompany": "",
+          "departureName": "",
+          "departureTime": "",
+          "arrivalName": "",
+          "arrivalTime": "",
+          "price": 0,
+          "duration": ""
+        }
+      ]
+    },
+    {
+      "fullName": "Rahul Khanna",
+      "id": "rahulkhanna@gmail.com",
+      "password": "Rahul",
+      "gender": "Male",
+      "dob": "1998-01-21",
+      "address": "",
+      "city": "",
+      "state": "",
+      "country": "",
+      "pincode": 0,
+      "mobile": 0,
+      "rights": "",
+      "bookedFlights": [
+        {
+          "flightId": "",
+          "flightCompany": "",
+          "departureName": "",
+          "departureTime": "",
+          "arrivalName": "",
+          "arrivalTime": "",
+          "price": 0,
+          "duration": ""
+        }
+      ]
     }
   ],
   "citydetails": [
@@ -368,6 +445,26 @@
       "airLineName": "Indigo",
       "id": "Ig",
       "logo": "../src/assets/images/indigo.png"
+    },
+    {
+      "airLineName": "goAir",
+      "id": "gA",
+      "logo": ""
+    },
+    {
+      "airLineName": "Indigo",
+      "id": "gXSwNdD",
+      "logo": ""
+    },
+    {
+      "airLineName": "Indigo",
+      "id": "zxpKOqb",
+      "logo": ""
+    },
+    {
+      "airLineName": "XYZ",
+      "id": "qcPgdv0",
+      "logo": ""
     }
   ]
 }

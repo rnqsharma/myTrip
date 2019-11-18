@@ -27,10 +27,9 @@
         <td>{{ flight.departureTime }}</td>
         <td>{{ flight.arrivalTime }}</td>
         <td>{{flight.duration}}</td>
-        <td><button class='btn btn-primary'>
-            <a routerLink="/edit" style="color: white;">
-            Edit
-            </a></button>
+        <td><button class='btn btn-primary' [routerLink]="['/edit', flight.id]" type="submit">
+                        Edit
+            </button>
         </td>
         
     </tr>
