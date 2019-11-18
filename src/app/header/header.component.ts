@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { ProfiledataService } from '../service/profiledata.service';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { HeadernameService } from '../service/headername.service';
 import { Router, ActivatedRoute } from '@angular/router';
-import { IProfile } from '../model/IProfile';
+import { Subscription } from 'rxjs';
+
 
 @Component({
   selector: 'app-header',
@@ -9,37 +10,57 @@ import { IProfile } from '../model/IProfile';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
- myinput : string;
-counter: boolean = false;
+
+  @Input()
+  userName: string = 'Login or Signup';
+
+  email = '';
+  private sub: Subscription;
+  // @Output()
+  // setUsername: EventEmitter<string> = new EventEmitter<string>();
+
+  counter = false;
   logoimg = 'assets/images/paper-plane.png';
-  profileItem: IProfile;
-  constructor(private router: Router, private route: ActivatedRoute ,
-              private profiledataservice: ProfiledataService) { }
+  constructor(private headerService: HeadernameService, private router: Router,
+              private route: ActivatedRoute) {
+   }
 
   ngOnInit() {
-  // {
-  // //  this.id =  this.route.snapshot.paramMap.get('id');
-  // //  console.log(this.id);
-  // //  this. profiledataservice.getProfileById(this.id).subscribe((profileItem)  => {
-  // //    this.profileItem = profileItem;
-  // //    console.log(this.profileItem);
-  // //    this.check = this.profileItem.fullName;
-  // //     if(this.check !== '') {
-  // //       this.counter = true;
-  // //     }
-  //  }
-  //  ) ;
+    console.log(this.userName);
+    this.headerService.getLoggedInName.subscribe(name => this.setUsernameMethod(name));
+    this.headerService.getEmail.subscribe(email => this.setEmail(email));
+  }
 
-  // }
-  this.myinput = localStorage.getItem('username');
-  console.log(this.myinput);
-  if ( this.myinput !== '' || this.myinput === undefined) {
-    console.log(this.myinput);
-    console.log(this.counter);
-    this.counter = true;
-    console.log(this.counter);
-       }
+  ngOnChanges() {
+    console.log("dhfs")
+  }
 
-}
+  setUsernameMethod(name: string) {
+    this.userName = name;
+    if (this.userName !== 'Login or Signup') {
+      this.counter = true;
+      localStorage.setItem('username', name);
+    }
+    console.log(this.userName);
+  }
+
+  setEmail(email: string) {
+    this.email = email;
+  }
+
+  onUserClicked(name: string): void {
+    console.log("dsfdsf");
+    console.log(name);
+  }
+
+  logoutFunc() {
+    console.log('In Logout');
+    // this.router.navigate(['']);
+  }
+
+  profileView() {
+    console.log(this.email);
+    this.router.navigate(['/viewprofile', this.email]);
+  }
 
 }

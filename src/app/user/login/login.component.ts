@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 import { LogindataService } from 'src/app/service/logindata.service';
 import { Router } from '@angular/router';
 import { IProfile } from 'src/app/model/IProfile';
+import { HeadernameService } from 'src/app/service/headername.service';
 
 
 
@@ -12,6 +13,10 @@ import { IProfile } from 'src/app/model/IProfile';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  
+  @Output() setUserName: EventEmitter<string> = new EventEmitter<string>();
+
+
   email: '';
   email1: string;
   pass: string;
@@ -24,10 +29,10 @@ export class LoginComponent implements OnInit {
   check: string;
 
   constructor(private router: Router,
-              private loginservice: LogindataService) { }
+              private loginservice: LogindataService, private headerName: HeadernameService) { }
 
   ngOnInit() {
-    localStorage.clear();
+    // localStorage.clear();
   }
   // tslint:disable-next-line: variable-name
      getRes(email1: string , pass: string) {
@@ -42,10 +47,12 @@ export class LoginComponent implements OnInit {
           console.log(c.rights);
           if ( pass === c.password  ) {
             console.log(pass);
-            
-            console.log(this.check);
+            this.funcUserName(c.fullName);
+            localStorage.setItem('username', c.fullName);
+            this.headerName.setUserName(c.fullName, c.id, 1).subscribe(c => console.log(c));
             this.router.navigate(['/adminhome']);
           } else {
+            this.headerName.setUserName('Login or Signup', '', 1).subscribe(c => console.log(c));
             this.router.navigate(['/login']);
             alert('please enter correct password/ email');
           }
@@ -55,8 +62,14 @@ export class LoginComponent implements OnInit {
            if (pass === c.password ) {
             localStorage.setItem('username', c.fullName);
             this.router.navigate(['/']);
+            this.funcUserName(c.fullName);
+            localStorage.setItem('username', c.fullName);
+             this.headerName.setUserName(c.fullName, c.id, 1).subscribe(c => console.log(c));
+             this.router.navigate(['/']);
            } else {
+            this.headerName.setUserName('Login or Signup', '', 1).subscribe(c => console.log(c));
             this.router.navigate(['/login']);
+
             alert('please enter correct password');
            }   }
           }}
@@ -70,5 +83,9 @@ export class LoginComponent implements OnInit {
         return true;
       }
 
+      funcUserName(name: string) {
+        console.log(name);
+        this.setUserName.emit(name);
+      }
 
     }

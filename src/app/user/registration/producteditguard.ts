@@ -8,11 +8,6 @@ import { RegistrationComponent } from './registration.component';
 providedIn: 'root'
 })
 export class ProductEditGuard implements CanDeactivate<RegistrationComponent> {
-canDeactivate(component: RegistrationComponent): Observable<boolean> | Promise<boolean> | boolean {
-if (component.RegistrationForm.dirty) {
- // const productName = component.RegistrationForm.get('productName').value || 'New Product';
-return false;
-}
-return true;
-}
-}
+canDeactivate(component: RegistrationComponent): Observable<boolean> | Promise<boolean> | boolean { return true;
+
+}}

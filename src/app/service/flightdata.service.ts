@@ -17,5 +17,10 @@ export class FlightdataService {
     );
   }
 
-  
+  getFlightsDataByID(id: string): Observable<IFlights> {
+    return this._httpclient.get<IFlights>(
+      `http://localhost:3000/flightsData/${id}`
+    );
+  }
+
 }
