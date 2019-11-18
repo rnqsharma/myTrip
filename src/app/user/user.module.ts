@@ -7,6 +7,7 @@ import { ReviewBookingComponent } from './review-booking/review-booking.componen
 import { FlightListComponent } from './flight-list/flight-list.component';
 import { SearchListComponent } from './search-list/search-list.component';
 import { RoundtripFooterComponent } from './roundtrip-footer/roundtrip-footer.component';
+import { PassengerDetailsComponent } from './passenger-details/passenger-details.component';
 
 
 
@@ -14,7 +15,7 @@ import { RoundtripFooterComponent } from './roundtrip-footer/roundtrip-footer.co
   // declarations: [RegistrationComponent,LoginComponent, SearchListComponent, FlightListComponent],
   
 
-  declarations: [LoginComponent, FlightListComponent, SearchListComponent, RegistrationComponent, ReviewBookingComponent],
+  declarations: [LoginComponent, FlightListComponent, SearchListComponent, RegistrationComponent, ReviewBookingComponent, PassengerDetailsComponent],
 
   imports: [
     CommonModule

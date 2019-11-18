@@ -28,6 +28,7 @@ import { ReviewBookingComponent } from './user/review-booking/review-booking.com
 import { RoundtripFooterComponent } from './user/roundtrip-footer/roundtrip-footer.component';
 import { AirlinelistcomponentComponent } from './admin/airlinelistcomponent/airlinelistcomponent.component';
 import { ScheduleComponent } from './admin/schedule/schedule.component';
+import { PassengerDetailsComponent } from './user/passenger-details/passenger-details.component';
 
 
 
@@ -57,7 +58,8 @@ import { ScheduleComponent } from './admin/schedule/schedule.component';
     LoginComponent,
     FilterComponent,
     AirlinelistcomponentComponent,
-    ScheduleComponent
+    ScheduleComponent,
+    PassengerDetailsComponent
   ],
   imports: [
     BrowserModule,
