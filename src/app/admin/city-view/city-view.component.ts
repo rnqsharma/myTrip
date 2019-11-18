@@ -9,6 +9,10 @@ import { CitydataService } from 'src/app/service/citydata.service';
 })
 export class CityViewComponent implements OnInit {
   cities: ICity[];
+  cityData: ICity = {
+    cityName: '',
+    id: ''
+  };
 
   constructor(
     private cityservice: CitydataService
@@ -21,6 +25,13 @@ export class CityViewComponent implements OnInit {
       console.log(this.cities);
   });
 }
+postCityData(cityName: string, id: string) {
+  this.cityData.cityName = cityName;
+  this.cityData.id = id;
+  console.log(this.cityData.cityName);
+  console.log(this.cityData.id);
+  
+  this.cityservice.postCityData(this.cityData).subscribe((city: ICity) => console.log(city));
 
-
+}
 }

@@ -20,7 +20,7 @@ export class AirlinelistcomponentComponent implements OnInit {
     id: '',
     logo: ''
   };
-  airlineDataa: IAirline;
+  //airlineDataa: IAirline;
 
   constructor(private airlineservice: AirlinedataService,
                 // tslint:disable-next-line: align
@@ -39,8 +39,8 @@ postAirlineData(airlineName: string, id: string, logo: string) {
   this.airlineData.airLineName = airlineName;
   this.airlineData.id = id;
   this.airlineData.logo = logo;
-  this.airlineDataa = this.airlineData;
-  console.log(this.airlineDataa);
+  //this.airlineDataa = this.airlineData;
+  //console.log(this.airlineDataa);
   this.airlineservice.postAirlineData(this.airlineData).subscribe((airline: IAirline) => console.log(airline));
 }
 

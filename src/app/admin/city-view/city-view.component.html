@@ -11,7 +11,7 @@
                      
                      <th>City Name</th>
                      <th>City Id </th>
-                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModa">Add Airline</button>
+                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModa">ADD City</button>
                      <!-- <app-airline></app-airline> -->
     
                 </tr>
@@ -64,7 +64,7 @@
                         
                                 <form class="modal-body" class="form-group" style="margin: 20px;" >
                                         <label for="name"><b>City Name: </b></label>
-                                        <input type="text" class="form-control" placeholder="Enter City Name"  name="name" #Name required ><br>
+                                        <input type="text" class="form-control" placeholder="Enter City Name"  name="name" #cityName required ><br>
                                     
                                         <label for="code"><b>City Id:</b></label>
                                         <input type="text" class="form-control"placeholder="Enter City Code" name="code" #id required>
@@ -75,7 +75,7 @@
                         
                         <!-- Modal footer -->
                         <div class="modal-footer">
-                          <button type="button" class="btn btn-primary" (click) ="postAirlineData(airLineName.value, id.value, logo.value)" >Save</button>
+                          <button type="button" class="btn btn-primary" (click) ="postCityData(cityName.value, id.value)" >Save</button>
                         </div>
                         
                       </div>
