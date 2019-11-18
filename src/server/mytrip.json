@@ -277,9 +277,86 @@
           "duration": "01 hrs 30 min"
         }
       ]
+    },
+    {
+      "fullName": "lmao",
+      "id": "lol",
+      "password": "",
+      "gender": "Male",
+      "dob": "",
+      "address": "",
+      "city": "",
+      "state": "",
+      "country": "",
+      "pincode": 0,
+      "mobile": 0,
+      "rights": "",
+      "bookedFlights": [
+        {
+          "flightId": "",
+          "flightCompany": "",
+          "departureName": "",
+          "departureTime": "",
+          "arrivalName": "",
+          "arrivalTime": "",
+          "price": 0,
+          "duration": ""
+        }
+      ]
+    },
+    {
+      "fullName": "lmalam",
+      "id": "asdslda",
+      "password": "",
+      "gender": "Male",
+      "dob": "",
+      "address": "",
+      "city": "",
+      "state": "",
+      "country": "",
+      "pincode": 0,
+      "mobile": 0,
+      "rights": "",
+      "bookedFlights": [
+        {
+          "flightId": "",
+          "flightCompany": "",
+          "departureName": "",
+          "departureTime": "",
+          "arrivalName": "",
+          "arrivalTime": "",
+          "price": 0,
+          "duration": ""
+        }
+      ]
+    },
+    {
+      "fullName": "aaa",
+      "id": "oooo",
+      "password": "",
+      "gender": "Male",
+      "dob": "",
+      "address": "",
+      "city": "",
+      "state": "",
+      "country": "",
+      "pincode": 0,
+      "mobile": 0,
+      "rights": "",
+      "bookedFlights": [
+        {
+          "flightId": "",
+          "flightCompany": "",
+          "departureName": "",
+          "departureTime": "",
+          "arrivalName": "",
+          "arrivalTime": "",
+          "price": 0,
+          "duration": ""
+        }
+      ]
     }
   ],
-
   "citydetails": [
     {
       "cityName": "Delhi",
@@ -310,30 +387,26 @@
       "id": "GOA"
     }
   ],
-
-  "airlines" : [
+  "airlines": [
     {
-      "airLineName":"Spicejet",
-      "id":"SG",
+      "airLineName": "Spicejet",
+      "id": "SG",
       "logo": "../src/assets/images/spicejet.png"
     },
     {
-      "airLineName":"Airindia",
-      "id":"AI",
+      "airLineName": "Airindia",
+      "id": "AI",
       "logo": "../src/assets/images/airindia.png"
     },
     {
-      "airLineName":"Vistara",
-      "id":"VT",
+      "airLineName": "Vistara",
+      "id": "VT",
       "logo": "../src/assets/images/vistara.png"
     },
     {
-      "airLineName":"Indigo",
-      "id":"Ig",
+      "airLineName": "Indigo",
+      "id": "Ig",
       "logo": "../src/assets/images/indigo.png"
     }
   ]
-
 }
-
-

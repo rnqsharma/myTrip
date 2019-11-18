@@ -1,0 +1,45 @@
+
+
+<div class="container">
+  
+  <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModa">
+    Add Airline
+  </button>
+
+  <!-- The Modal -->
+  <div class="modal fade" id="myModa">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Airline Information</h4>
+        </div>
+        
+        <!-- Modal body -->
+        
+                <div class="modal-body" class="form-group" style="margin: 20px;">
+                        <label for="name"><b>Airline Name: </b></label>
+                        <input type="text" class="form-control" placeholder="Enter Airline Name"  name="name" required><br>
+                    
+                        <label for="code"><b>Airline Id:</b></label>
+                        <input type="text" class="form-control"placeholder="Enter Airline Code" name="code" required>
+                        <br>
+                        <label for="code"><b>Airline Logo:</b></label>
+                        <input type='file' name="code" id="imageUpload"  accept=".png, .jpg, .jpeg" />
+                </div>
+        
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" >Save</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+

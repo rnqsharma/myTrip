@@ -67,5 +67,5 @@ export class AddnewflightComponent implements OnInit {
 
 
   }
-
+  
 }

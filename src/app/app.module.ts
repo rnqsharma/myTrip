@@ -14,14 +14,20 @@ import { HeaderComponent } from './header/header.component';
 import { ProfileComponent } from './user/profile/profile.component';
 import { FlightListComponent } from './user/flight-list/flight-list.component';
 import { ViewProfileComponent } from './user/view-profile/view-profile.component';
+
 import { SearchListComponent } from './user/search-list/search-list.component';
 import { RegistrationComponent } from './user/registration/registration.component';
+import { CityComponent } from './admin/city/city.component';
+import { AirlineComponent } from './admin/airline/airline.component';
+
 import { AddnewflightComponent } from './admin/addnewflight/addnewflight.component';
 import { FilterComponent } from './user/filter/filter.component';
 import { AdminFlightlistComponent } from './admin/admin-flightlist/admin-flightlist.component';
 import { ReviewBookingComponent } from './user/review-booking/review-booking.component';
 import { RoundtripFooterComponent } from './user/roundtrip-footer/roundtrip-footer.component';
 import { AirlinelistcomponentComponent } from './admin/airlinelistcomponent/airlinelistcomponent.component';
+import { ScheduleComponent } from './admin/schedule/schedule.component';
+
 
 
 @NgModule({
@@ -36,6 +42,8 @@ import { AirlinelistcomponentComponent } from './admin/airlinelistcomponent/airl
     ViewProfileComponent,
     SearchListComponent,
     RegistrationComponent,
+    CityComponent,
+    AirlineComponent,
     AddnewflightComponent,
     ViewProfileComponent,
     SearchListComponent,
@@ -49,6 +57,7 @@ import { AirlinelistcomponentComponent } from './admin/airlinelistcomponent/airl
     FilterComponent,
     AirlinelistcomponentComponent,
 
+    ScheduleComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,6 +67,7 @@ import { AirlinelistcomponentComponent } from './admin/airlinelistcomponent/airl
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+
     MatRadioModule,
     MatTableModule,
     MatButtonModule,
