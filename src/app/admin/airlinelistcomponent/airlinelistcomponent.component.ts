@@ -27,23 +27,10 @@ export class AirlinelistcomponentComponent implements OnInit {
                 private router: Router)  { }
 
   ngOnInit() {
+    
     this.airlineservice.getAirlinesData().subscribe((airlines: IAirline[]) => {
       this.airlines = airlines;
-      console.log(airlines);
-      // this.profile = profile;
-      // console.log(this.profile);
-      // this.fullName = this.profile.fullName;
-      // this.dob = this.profile.dob;
-      // this.id = this.profile.id;
-      // this.gender = this.profile.gender;
-
-      // this.mobile = this.profile.mobile;
-      // this.address = this.profile.address;
-      // this.state = this.profile.state;
-      // this.city = this.profile.city;
-      // this.country = this.profile.country;
-
-    
+      console.log(this.airlines);
 
   });
 }
@@ -54,7 +41,7 @@ postAirlineData(airlineName: string, id: string, logo: string) {
   this.airlineData.logo = logo;
   this.airlineDataa = this.airlineData;
   console.log(this.airlineDataa);
-  this.airlineservice.postAirlineData(this.airlineData);
+  this.airlineservice.postAirlineData(this.airlineData).subscribe((airline: IAirline) => console.log(airline));
 }
 
 deleteFlight(id: string): void {
