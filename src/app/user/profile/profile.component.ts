@@ -79,7 +79,7 @@ export class ProfileComponent implements OnInit {
   onSaveComplete(): void {
     // Reset the form to clear the flags
     // this.profileForm.reset();
-     this.router.navigate(['/viewprofile']);
+    //  this.router.navigate(['/viewprofile']);
   }
 }
 

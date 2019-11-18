@@ -18,6 +18,7 @@ export class FlightListComponent implements OnInit {
   private sub: Subscription;
   fl: IFlights[];
   flightList: Array<IFlights> = [];
+  flightListRound: Array<IFlights> = [];
   time: {
     hours: string;
     min: string;
@@ -71,6 +72,9 @@ export class FlightListComponent implements OnInit {
         console.log(f);
         this.flightList.push(f);
         console.log(this.flightList);
+      } else if (f.arrivalName === this.from && f.departureName === this.to) {
+        this.flightListRound.push(f);
+        console.log(this.flightListRound);
       }
     });
   }

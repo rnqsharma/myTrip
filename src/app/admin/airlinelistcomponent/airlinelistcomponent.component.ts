@@ -39,7 +39,7 @@ postAirlineData(airlineName: string, id: string, logo: string) {
   this.airlineData.id = id;
   this.airlineData.logo = logo;
   this.airlineDataa = this.airlineData;
-  this.airlineservice.postAirlineData(this.airlineDataa).subscribe((airline:IAirline) => console.log(airline));
+  this.airlineservice.postAirlineData(this.airlineDataa).subscribe((airline: IAirline) => console.log(airline));
 }
 
 deleteFlight(id: string): void {
@@ -58,7 +58,6 @@ deleteFlight(id: string): void {
 
   deleteFeedback() {
     // this.idFeed = feedID;
-    console.log("lll");
     this.airlines.forEach(c => {
       if (c.id === this.airlineData.id) {
             this.deleteByAttr(this.airlines, 'id', this.airlineData.id);
