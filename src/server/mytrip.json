@@ -1,15 +1,27 @@
 {
   "flightsdata": [
     {
-      "id": "SG-197",
+      "id": "SG-1807",
       "flightCompany": "Spicejet",
-      "departureName": "Pune",
+      "departureName": "Delhi",
       "departureTime": "16:35",
       "arrivalName": "Bangalore",
       "arrivalTime": "19:25",
+      "price": 1051,
+      "duration": "02 hrs 55 min",
+      "economy": 150,
+      "business": 50
+    },
+    {
+      "id": "SG-190",
+      "flightCompany": "Spicejet",
+      "departureName": "Bangalore",
+      "departureTime": "16:35",
+      "arrivalName": "Delhi",
+      "arrivalTime": "19:25",
       "price": 9051,
       "duration": "02 hrs 55 min",
-      "economy": 11,
+      "economy": 150,
       "business": 50
     },
     {
@@ -369,10 +381,6 @@
     {
       "cityName": "Pune",
       "id": "PUN"
-    },
-    {
-      "cityName": "Goa",
-      "id": "GOA"
     }
   ],
   "airlines": [
@@ -395,11 +403,6 @@
       "airLineName": "Indigo",
       "id": "Ig",
       "logo": "../src/assets/images/indigo.png"
-    },
-    {
-      "airLineName": "goAir",
-      "id": "gA",
-      "logo": ""
     }
   ]
 }
