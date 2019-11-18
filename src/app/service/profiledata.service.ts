@@ -28,16 +28,11 @@ postProfileData(login: IProfile): Observable<IProfile> {
   console.log('post wala');
   const headers = new HttpHeaders({'Content-Type': 'application/json'}); // MIME TYPE
   console.log('post wala');
+  console.log(login);
   return this._httpclient.post<IProfile>(`http://localhost:3000/profiledata`, login, {headers})
   .pipe(tap (data => console.log('registration Successful' + JSON.stringify(data))),
   catchError(this.handleError));
 }
-
-
-
-
-
-
 
 
 
