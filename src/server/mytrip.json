@@ -3,13 +3,13 @@
     {
       "id": "SG-197",
       "flightCompany": "Spicejet",
-      "departureName": "Delhi",
+      "departureName": "Pune",
       "departureTime": "16:35",
       "arrivalName": "Bangalore",
       "arrivalTime": "19:25",
       "price": 9051,
       "duration": "02 hrs 55 min",
-      "economy": 150,
+      "economy": 11,
       "business": 50
     },
     {

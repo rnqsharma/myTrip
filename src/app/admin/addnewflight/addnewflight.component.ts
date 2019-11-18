@@ -21,10 +21,12 @@ export class AddnewflightComponent implements OnInit {
   id: string;
   flightData: IFlights;
   airlines: IAirline[];
-  airLineName : string;
+  airLineName: string;
   // airlinesName: Array<string> = [];
-  cities : ICity[];
+  cities: ICity[];
   cityName: string;
+  flight: IFlights;
+  errorMessage: string;
 
   constructor(
     private fb: FormBuilder,
@@ -36,24 +38,21 @@ export class AddnewflightComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.airlineservice.getAirlinesData().subscribe((airlines: IAirline[]) => {
-      this.airlines = airlines;
-      //console.log(this.airlines);
 
-      this.cityservice.getCityData().subscribe((cities: ICity[]) => {
-        this.cities = cities;
-        console.log('lool');
-        console.log(this.cities);
+    this.sub = this.route.paramMap.subscribe(
+      params => {
+        this.id = params.get('flightID');
+      }
+    );
 
-    
-      // airlines.forEach(airLineNames => {
-      //   console.log(airLineNames.airLineName);
-      //   this.airlinesName.push(airLineNames.airLineName);
-      // });
-      // console.log(this.airlinesName);
-
-      
-        this.flightForm = this.fb.group({
+    // this.productForm = this.fb.group({
+    //   productName: [''],
+    //   productCode: ['', Validators.required],
+    //   starRating: ['', NumberValidators.range(1, 5)],
+    //   tags: this.fb.array([]),
+    //   description: ''
+    //   });
+    this.flightForm = this.fb.group({
       id: [''],
       flightCompany: [''],
       departureName: [''],
@@ -65,36 +64,59 @@ export class AddnewflightComponent implements OnInit {
       economy: [''],
       business: [''],
     });
+    this.airlineservice.getAirlinesData().subscribe((airlines: IAirline[]) => {
+      this.airlines = airlines;
+      // console.log(this.airlines);
 
-        this.sub = this.route.paramMap.subscribe(
-      params => {
-        this.id = params.get('flightID');
-      }
-    );
+      this.cityservice.getCityData().subscribe((cities: ICity[]) => {
+        this.cities = cities;
+        console.log('lool');
+        console.log(this.cities);
 
-        this.flightService.getFlightsDataByID(this.id).subscribe(
-      (flights: IFlights) => {
-        this.flightData = flights;
-        console.log(this.flightData);
+
+        this.flightService.getFlightsDataByID(this.id).
+      subscribe((flight: IFlights) => {
+        console.log(flight);
+        this.flight = flight;
         this.flightForm.patchValue({
 
-          fullName: this.flightData
-          // email: this.profile.id,
-          // password: this.profile.password,
-          // gender: this.profile.gender,
-          // dob: this.profile.dob,
-          // address: this.profile.address,
-          // city: this.profile.city,
-          // state: this.profile.state,
-          // country: this.profile.country,
-          // pincode: this.profile.pincode,
-          // mobile: this.profile.mobile
+          id: this.flight.id,
+          flightCompany: this.flight.flightCompany,
+          departureName: this.flight.departureName,
+          departureTime: this.flight.departureTime,
+          arrivalName: this.flight.arrivalName,
+          arrivalTime: this.flight.arrivalTime,
+          price: this.flight.price,
+          duration: this.flight.duration,
+          economy: this.flight.economy,
+          business: this.flight.business,
         });
-      });
-      // })
+
     });
   });
-}
+});
 
+  }
+    addflight = (): void => {
+  const p = { ...this.flight, ...this.flightForm.value };
+  console.log(p);
+  // console.log(this.email);
+  this.updateProfile(p, this.id);
+  // console.log("sgf")
+}
+    updateProfile(flight: IFlights, id: string): void {
+  this.flightService.updateProfile(flight, id)
+    .subscribe({
+      next: () => this.onSaveComplete(),
+      error: err => this.errorMessage = err
+    });
+}
+    onSaveComplete(): void {
+  // Reset the form to clear the flags
+  // this.profileForm.reset();
+  //  this.router.navigate(['/profile']);
+}
   
+
+
 }
