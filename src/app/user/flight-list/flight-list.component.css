@@ -4,10 +4,6 @@ img{
     width: 50px;
     /* margin-top: 25px; */
 }
-.container{
-    /* width: 75%; */
-}
-
 
 .example-card {
     max-width: 400px;
@@ -46,7 +42,7 @@ img{
       border: 2px solid;
   }
   mat-card-header{
-      margin-left: 35px;
+      /* margin-left: 35px; */
       /* margin-top: 20px; */
   }
   mat-card{
@@ -67,3 +63,13 @@ td {
 th{
     border: none;
 }
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 150px;
+    line-height: 60px; /* Vertically center the text there */
+    background-color: #f5f5f5;
+  }

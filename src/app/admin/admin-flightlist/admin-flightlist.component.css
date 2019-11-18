@@ -1,0 +1,69 @@
+
+img{
+    height: 50px;
+    width: 50px;
+    /* margin-top: 25px; */
+}
+.container{
+    /* width: 75%; */
+}
+
+
+.example-card {
+    max-width: 400px;
+  }
+  
+  .header-image {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS1N1PrEqSsb-FCWH3J32PUCndFdSQSxqzypFRdyxo-7zM4DK2c');
+    background-size: cover;
+  }
+  .header-image-table {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS1N1PrEqSsb-FCWH3J32PUCndFdSQSxqzypFRdyxo-7zM4DK2c');
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+  }
+
+  #tablecardtitle{
+      font-size: 17px;
+      font-weight: normal;
+  }
+
+  table {
+      margin: 0px auto;
+    width: 100%;
+  }
+  #div1{
+      margin: 0px auto;
+      /* margin-left: 30px; */
+  }
+  #ele{
+      margin-left: 8%;
+      /* font-size: medium;
+      font-weight: 500; */
+  }
+  hr{
+      border: 2px solid;
+  }
+  mat-card-header{
+      margin-left: 35px;
+      /* margin-top: 20px; */
+  }
+  mat-card{
+      width: 70%;
+  }
+  #rowCard{
+      width: 100%;
+  }
+  table {
+    /* border: 0px solid #CCC; */
+    border: none;
+    border-collapse: collapse;
+}
+
+td {
+    border: none;
+}
+th{
+    border: none;
+}

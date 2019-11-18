@@ -11,4 +11,15 @@ export interface IProfile {
     country: string;
     pincode: number;
     mobile: number;
+    rights: string;
+    bookedFlights: [{
+        flightId: string;
+        flightCompany: string;
+        departureName: string;
+        departureTime: string;
+        arrivalName: string;
+        arrivalTime: string;
+        price: number;
+        duration: string;
+    }];
 }
