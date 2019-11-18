@@ -44,7 +44,7 @@ export class FlightListComponent implements OnInit {
             this.to = params.get('to');
             this.from = params.get('from');
             this.roundTrip = params.get('roundtrip');
-            console.log(this.to + ' ' + this.from + ' ' + this.roundTrip );
+            console.log(this.from + ' ' + this.to + ' ' + this.roundTrip );
           }
         );
         console.log(this.to);

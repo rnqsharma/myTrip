@@ -17,10 +17,12 @@
                                         <mat-radio-button value="1">One Way</mat-radio-button>&nbsp;
                                         <mat-radio-button value="2">Round Trip</mat-radio-button>
                                     </mat-radio-group> -->
-                                    <mat-radio-group aria-label="Select an option">
+                                    <!-- <mat-radio-group aria-label="Select an option">
                                         <mat-radio-button color='primary' value="1">One Way</mat-radio-button>&nbsp;
                                         <mat-radio-button (change)='radioSetter()' color='primary' value="2">Round Trip</mat-radio-button>
-                                    </mat-radio-group>
+                                    </mat-radio-group> -->
+                                    <input type="radio"  (change)='radioSetterOne()' name="type" value="1" checked> One Way
+                                    <input type="radio" (change)='radioSetterRound()' name="type" value="2"> Round Trip
 
                                 </div>
                                 <div class="col-sm-6"></div>
@@ -28,13 +30,17 @@
                             <div class="row">
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-5">
-                                    <mat-form-field>
+                                    <!-- <mat-form-field>
                                         <mat-label> From :</mat-label>
                                         <mat-select class="form-control" name="from" id="selectfromcity" (change)="getFromCity($event)">                                        
                                             <mat-option *ngFor='let c of from' [value]="c"> {{c}} </mat-option>
-                                        </mat-select>   
-                                    </mat-form-field>
-
+                                        </mat-select>
+                                    </mat-form-field> -->
+                                    
+                                    <label> From :</label>
+                                    <select class="form-control" name="from" id="selectfromcity" (change)="getFromCity($event)">                                        
+                                        <option *ngFor='let c of from' [value]="c"> {{c}} </option>
+                                    </select>
                                 </div>
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-5">

@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // tslint:disable-next-line: max-line-length
-import { MatButtonModule, MatCardModule, MatRadioModule, MatTableModule, MatCheckboxModule, MatSnackBarModule, MatMenuModule, MatSelectModule, MatOptionModule} from '@angular/material';
+import { MatButtonModule, MatCardModule, MatRadioModule, MatTableModule, MatCheckboxModule, MatSnackBarModule, MatMenuModule, MatSelectModule, MatOptionModule, MatDatepicker, MatDatepickerModule, MatNativeDateModule} from '@angular/material';
 import { LoginComponent } from './user/login/login.component';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -67,7 +67,6 @@ import { ScheduleComponent } from './admin/schedule/schedule.component';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-
     MatRadioModule,
     MatTableModule,
     MatButtonModule,
@@ -75,7 +74,9 @@ import { ScheduleComponent } from './admin/schedule/schedule.component';
     MatSelectModule,
     MatOptionModule,
     MatSnackBarModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, Input } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 import { IFlights } from 'src/app/model/IFlights';
 import { FlightdataService } from 'src/app/service/flightdata.service';
 import { CitydataService } from 'src/app/service/citydata.service';
 import { ICity } from 'src/app/model/ICity';
+import { Subscribable, Subscriber, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-search-flights',
@@ -24,100 +25,97 @@ export class SearchFlightsComponent implements OnInit {
     departureDate: '',
     returnDate: '',
     travellers: 0,
-    class: ''
+    class: 'Economy',
+    tripType: ''
   };
 
   startDate: string;
   endDate: string;
   dateRange: string[];
   date: Date;
+  sub: Subscription;
 
   // tslint:disable-next-line: variable-name
-  constructor(private router: Router, private _flightService: FlightdataService, private _cityService: CitydataService) { }
+  // tslint:disable-next-line: max-line-length
+  constructor(private router: Router, private _flightService: FlightdataService, private _cityService: CitydataService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.roundcounter = false;
-    console.log('In O');
     this._flightService.getFlightsData()
       .subscribe((fulldata: IFlights[]) => {
-        console.log(fulldata);
         this.flightsArray = fulldata;
       });
 
     this._cityService.getCityData()
     .subscribe((fulldata: ICity[]) => {
-      console.log(fulldata);
       this.cities = fulldata;
-      console.log(this.cities);
       this.to = this.cities.map( c => c.cityName);
       this.from = this.cities.map( c => c.cityName);
     });
   }
 
   findFlights() {
-    console.log(this.roundcounter);
-    console.log(this.selectedDetails);
-    this.router.navigate(['/search', this.selectedDetails.toCity, this.selectedDetails.fromCity, this.roundcounter]);
+    // tslint:disable-next-line: max-line-length
+    this.router.navigate(['/search', this.selectedDetails.toCity, this.selectedDetails.fromCity, this.roundcounter, this.selectedDetails.departureDate, this.selectedDetails.returnDate, this.selectedDetails.tripType, this.selectedDetails.travellers, this.selectedDetails.class]);
   }
 
-  getTripType(e: any) {
-    console.log('tripType = ' + e.target.value);
+  getTripType() {
+    if (this.roundcounter) {
+      this.selectedDetails.tripType = 'Round Trip';
+    } else {
+      this.selectedDetails.tripType = 'One Way';
+    }
   }
 
   getFromCity(e: any) {
-    console.log('from = ' + e.target.value);
     this.selectedDetails.fromCity = e.target.value.toString();
   }
 
   getToCity = (e: any) => {
-    console.log('to = ' + e.target.value);
     this.selectedDetails.toCity = e.target.value;
-    console.log(this.selectedDetails);
   }
 
   getDepartureDate(e: any) {
-    console.log('departuredate = ' + e.target.value);
     this.selectedDetails.departureDate = e.target.value;
     this.date = e.target.value;
+    console.log('selected departure date = ' + this.selectedDetails.departureDate);
     this.validateDepartureDate(this.date);
   }
 
   getReturnDate(e: any) {
-    console.log('returndate = ' + e.target.value);
     this.selectedDetails.returnDate = e.target.value;
+    console.log('selected return date = ' + this.selectedDetails.returnDate);
   }
 
   getTraveller(e: any) {
-    console.log('traveller = ' + e.target.value);
     this.selectedDetails.travellers = e.target.value;
   }
 
   getClass(e: any) {
-    console.log('class = ' + e.target.value);
     this.selectedDetails.class = e.target.value;
   }
 
-  radioSetter() {
-    this.roundcounter = !this.roundcounter;
+  radioSetterOne() {
+    this.roundcounter = false;
+    this.getTripType();
+  }
+
+  radioSetterRound() {
+    this.roundcounter = true  ;
+    this.getTripType();
   }
 
   validateDepartureDate(date: Date) {
-    date = this.date;
-    const dd = date.getDate;
-    const mm = date.getMonth;
-    const yy = date.getFullYear;
-    const today = new Date();
-    const currentDate = today.getDate().toString;
-    // console.log('current date = ' + currentDate);
-    this.startDate = '' + currentDate;
-    this.addMonthsToDate(this.startDate, 3);
-    console.log('currentDate = ' + this.startDate);
-    console.log('end date = ' + this.endDate);
-
-
-    // for (const d = new Date(this.startDate); d <= new Date(this.endDate); d.setDate(d.getDate() + 1)) {
-    //   dateRange.push($.datepicker.formatDate('yy-mm-dd', d));
-    // }
+    // date = this.date;
+    // const dd = date.getDate;
+    // const mm = date.getMonth;
+    // const yy = date.getFullYear;
+    // const today = new Date();
+    // const currentDate = today.getDate().toString;
+    // this.startDate = '' + currentDate;
+    // this.addMonthsToDate(this.startDate, 3);
+    // console.log('currentDate = ' + this.startDate);
+    // console.log('end date = ' + this.endDate);
   }
 
   addMonthsToDate(dt, n) {

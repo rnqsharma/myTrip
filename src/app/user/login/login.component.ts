@@ -13,7 +13,7 @@ import { HeadernameService } from 'src/app/service/headername.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  
+
   @Output() setUserName: EventEmitter<string> = new EventEmitter<string>();
 
 

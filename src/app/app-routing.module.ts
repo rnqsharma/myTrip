@@ -23,8 +23,7 @@ const routes: Routes = [
   {path: 'reviewBooking/:flightID', component: ReviewBookingComponent},
   {path: '', component: SearchFlightsComponent},
   {path: 'adminFlight', component: AdminFlightlistComponent},
-  {path: 'search/:to/:from/:roundtrip', component: FlightListComponent},
-
+  {path: 'search/:to/:from/:roundtrip/:departuredate/:returndate/:triptype/:travellers/:class', component: FlightListComponent},
   // {path: '', component: SearchFlightsComponent},
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: RegistrationComponent},
