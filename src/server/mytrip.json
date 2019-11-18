@@ -13,8 +13,8 @@
       "business": 50
     },
     {
-      "id": "SG-197",
-      "flightCompany": "Spicejet",
+      "id": "SG-201",
+      "flightCompany": "Airbus",
       "departureName": "Bangalore",
       "departureTime": "16:35",
       "arrivalName": "Delhi",
@@ -22,79 +22,25 @@
       "price": 9051,
       "duration": "02 hrs 55 min",
       "economy": 150,
-      "business": 50
+      "business": 250
     },
     {
-      "id": "SG-190",
-      "flightCompany": "Spicejet",
-      "departureName": "Pune",
-      "departureTime": "06:35",
-      "arrivalName": "Delhi",
-      "arrivalTime": "19:25",
-      "price": 9051,
-      "duration": "02 hrs 55 min",
-      "economy": 150,
-      "business": 50
-    },
-    {
+      "flightCompany": "GoAir",
       "id": "SG-198",
-      "flightCompany": "Spicejet",
-      "departureName": "Pune",
-      "departureTime": "06:35",
-      "arrivalName": "Delhi",
-      "arrivalTime": "09:00",
-      "price": 7520,
-      "duration": "02 hrs 25 min",
-      "economy": 150,
-      "business": 50
+      "departureName": "Sre",
+      "arrivalName": "Sarsawa",
+      "departureTime": "06:12",
+      "arrivalTime": "10:32",
+      "duration": "04:10"
     },
     {
-      "id": "6E-545",
-      "flightCompany": "Indigo",
-      "departureName": "Chennai",
-      "departureTime": "18:00",
-      "arrivalName": "Hyderabad",
-      "arrivalTime": "19:10",
-      "price": 3200,
-      "duration": "01 hrs 10 min",
-      "economy": 150,
-      "business": 50
-    },
-    {
-      "id": "AA-678",
-      "flightCompany": "AirAsia",
-      "departureName": "Kolkata",
-      "departureTime": "16:35",
-      "arrivalName": "Bangalore",
-      "arrivalTime": "19:25",
-      "price": 10000,
-      "duration": "02 hrs 55 min",
-      "economy": 150,
-      "business": 50
-    },
-    {
-      "id": "AA-891",
-      "flightCompany": "AirAsia",
-      "departureName": "Goa",
-      "departureTime": "01:00",
-      "arrivalName": "Mumbai",
-      "arrivalTime": "01:45",
-      "price": 2500,
-      "duration": "00 hrs 45 min",
-      "economy": 150,
-      "business": 50
-    },
-    {
+      "flightCompany": "AirIndia",
       "id": "6E-618",
-      "flightCompany": "Indigo",
-      "departureName": "Hyderabad",
-      "departureTime": "04:00",
-      "arrivalName": "Bangalore",
-      "arrivalTime": "05:25",
-      "price": 3051,
-      "duration": "01 hrs 25 min",
-      "economy": 150,
-      "business": 50
+      "departureName": "sre",
+      "arrivalName": "pune",
+      "departureTime": "03:56",
+      "arrivalTime": "07:12",
+      "duration": "03:15"
     },
     {
       "id": "VS-455",
@@ -107,35 +53,11 @@
       "duration": "01 hrs 30 min",
       "economy": 150,
       "business": 50
-    },
-    {
-      "id": "SG-246",
-      "flightCompany": "Spicejet",
-      "departureName": "Coimbatore",
-      "departureTime": "14:35",
-      "arrivalName": "Visakhapatnam",
-      "arrivalTime": "16:35",
-      "price": 6651,
-      "duration": "02 hrs 00 min",
-      "economy": 150,
-      "business": 50
-    },
-    {
-      "id": "VS-456",
-      "flightCompany": "Vistara",
-      "departureName": "Mumbai",
-      "departureTime": "05:00",
-      "arrivalName": "Pune",
-      "arrivalTime": "06:00",
-      "price": 2125,
-      "duration": "01 hrs 00 min",
-      "economy": 150,
-      "business": 50
     }
   ],
   "profiledata": [
     {
-      "fullName": "Raunaq Sharma",
+      "fullName": "Don Sharma",
       "id": "rnqsharma3@gmail.com",
       "password": "raunaq123",
       "gender": "male",
@@ -158,7 +80,8 @@
           "price": 3551,
           "duration": "01 hrs 30 min"
         }
-      ]
+      ],
+      "email": "rnqsharma3@gmail.com"
     },
     {
       "fullName": "Raunaq11 Sharma",
@@ -367,6 +290,32 @@
           "duration": ""
         }
       ]
+    },
+    {
+      "fullName": "Arch",
+      "id": "abcd@gmail.com",
+      "password": "abcd",
+      "gender": "Male",
+      "dob": "0011-01-21",
+      "address": "",
+      "city": "",
+      "state": "",
+      "country": "",
+      "pincode": 0,
+      "mobile": 0,
+      "rights": "",
+      "bookedFlights": [
+        {
+          "flightId": "",
+          "flightCompany": "",
+          "departureName": "",
+          "departureTime": "",
+          "arrivalName": "",
+          "arrivalTime": "",
+          "price": 0,
+          "duration": ""
+        }
+      ]
     }
   ],
   "citydetails": [
@@ -421,5 +370,4 @@
       "logo": "../src/assets/images/indigo.png"
     }
   ]
-
 }
