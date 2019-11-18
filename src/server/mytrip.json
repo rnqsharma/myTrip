@@ -1,7 +1,7 @@
 {
   "flightsdata": [
     {
-      "flightID": "SG-197",
+      "id": "SG-197",
       "flightCompany": "Spicejet",
       "departureName": "Delhi",
       "departureTime": "16:35",
@@ -13,7 +13,19 @@
       "business": 50
     },
     {
-      "flightID": "SG-196",
+      "id": "SG-190",
+      "flightCompany": "Spicejet",
+      "departureName": "Pune",
+      "departureTime": "06:35",
+      "arrivalName": "Delhi",
+      "arrivalTime": "19:25",
+      "price": 9051,
+      "duration": "02 hrs 55 min",
+      "economy": 150,
+      "business": 50
+    },
+    {
+      "id": "SG-198",
       "flightCompany": "Spicejet",
       "departureName": "Pune",
       "departureTime": "06:35",
@@ -25,7 +37,7 @@
       "business": 50
     },
     {
-      "flightID": "6E-545",
+      "id": "6E-545",
       "flightCompany": "Indigo",
       "departureName": "Chennai",
       "departureTime": "18:00",
@@ -37,7 +49,7 @@
       "business": 50
     },
     {
-      "flightID": "AA-678",
+      "id": "AA-678",
       "flightCompany": "AirAsia",
       "departureName": "Kolkata",
       "departureTime": "16:35",
@@ -49,7 +61,7 @@
       "business": 50
     },
     {
-      "flightID": "AA-891",
+      "id": "AA-891",
       "flightCompany": "AirAsia",
       "departureName": "Goa",
       "departureTime": "01:00",
@@ -61,7 +73,7 @@
       "business": 50
     },
     {
-      "flightID": "6E-618",
+      "id": "6E-618",
       "flightCompany": "Indigo",
       "departureName": "Hyderabad",
       "departureTime": "04:00",
@@ -73,7 +85,7 @@
       "business": 50
     },
     {
-      "flightID": "VS-455",
+      "id": "VS-455",
       "flightCompany": "Vistara",
       "departureName": "Chandigarh",
       "departureTime": "02:00",
@@ -85,7 +97,7 @@
       "business": 50
     },
     {
-      "flightID": "SG-246",
+      "id": "SG-246",
       "flightCompany": "Spicejet",
       "departureName": "Coimbatore",
       "departureTime": "14:35",
@@ -97,7 +109,7 @@
       "business": 50
     },
     {
-      "flightID": "VS-456",
+      "id": "VS-456",
       "flightCompany": "Vistara",
       "departureName": "Mumbai",
       "departureTime": "05:00",
@@ -116,17 +128,31 @@
       "password": "raunaq123",
       "gender": "male",
       "dob": "11-05-1997",
-      "address": "646/20 Prem Nagar, Rohtak, Haryana",
+      "address": "646/20 Prem Nagar",
       "city": "Rohtak",
       "state": "Haryana",
       "country": "India",
       "pin code": 124001,
-      "mobile": 7206187562
+      "mobile": 7206187562,
+      "rights": "admin",
+      "bookedFlights": [
+        {
+          "flightId": "VS-455",
+          "flightCompany": "Vistara",
+          "departureName": "Chandigarh",
+          "departureTime": "02:00",
+          "arrivalName": "Noida",
+          "arrivalTime": "03:30",
+          "price": 3551,
+          "duration": "01 hrs 30 min"
+        }
+      ],
+      "email": "rnqsharma3@gmail.com"
     },
     {
       "fullName": "Raunaq11 Sharma",
-      "id": "rnqsharma3@gmail.com11",
-      "password": "raunaq123",
+      "id": "admin@gmail.com",
+      "password": "admin123",
       "gender": "male",
       "dob": "11-05-1997",
       "address": "646/20 Prem Nagar, Rohtak, Haryana",
@@ -134,7 +160,20 @@
       "state": "Haryana",
       "country": "India",
       "pin code": 124001,
-      "mobile": 7206187562
+      "mobile": 7206187562,
+      "rights": "user",
+      "bookedFlights": [
+        {
+          "flightId": "VS-455",
+          "flightCompany": "Vistara",
+          "departureName": "Chandigarh",
+          "departureTime": "02:00",
+          "arrivalName": "Noida",
+          "arrivalTime": "03:30",
+          "price": 3551,
+          "duration": "01 hrs 30 min"
+        }
+      ]
     },
     {
       "fullName": "Simarjot Singh",
@@ -147,7 +186,20 @@
       "state": "Karnataka",
       "country": "India",
       "pincode": 560045,
-      "mobile": 6987985890
+      "mobile": 6987985890,
+      "rights": "user",
+      "bookedFlights": [
+        {
+          "flightId": "VS-455",
+          "flightCompany": "Vistara",
+          "departureName": "Chandigarh",
+          "departureTime": "02:00",
+          "arrivalName": "Noida",
+          "arrivalTime": "03:30",
+          "price": 3551,
+          "duration": "01 hrs 30 min"
+        }
+      ]
     },
     {
       "fullName": "Rajni",
@@ -160,7 +212,20 @@
       "state": "Karnataka",
       "country": "India",
       "pincode": 560045,
-      "mobile": 9899879870
+      "mobile": 9899879870,
+      "rights": "user",
+      "bookedFlights": [
+        {
+          "flightId": "VS-455",
+          "flightCompany": "Vistara",
+          "departureName": "Chandigarh",
+          "departureTime": "02:00",
+          "arrivalName": "Noida",
+          "arrivalTime": "03:30",
+          "price": 3551,
+          "duration": "01 hrs 30 min"
+        }
+      ]
     },
     {
       "fullName": "Pooja",
@@ -173,7 +238,20 @@
       "state": "Maharashtra",
       "country": "India",
       "pincode": 411021,
-      "mobile": 8412000997
+      "mobile": 8412000997,
+      "rights": "user",
+      "bookedFlights": [
+        {
+          "flightId": "VS-455",
+          "flightCompany": "Vistara",
+          "departureName": "Chandigarh",
+          "departureTime": "02:00",
+          "arrivalName": "Noida",
+          "arrivalTime": "03:30",
+          "price": 3551,
+          "duration": "01 hrs 30 min"
+        }
+      ]
     },
     {
       "fullName": "Sandhya",
@@ -186,23 +264,150 @@
       "state": "Telangana",
       "country": "India",
       "pincode": 245009,
-      "mobile": 7843785098
+      "mobile": 7843785098,
+      "rights": "user",
+      "bookedFlights": [
+        {
+          "flightId": "VS-455",
+          "flightCompany": "Vistara",
+          "departureName": "Chandigarh",
+          "departureTime": "02:00",
+          "arrivalName": "Noida",
+          "arrivalTime": "03:30",
+          "price": 3551,
+          "duration": "01 hrs 30 min"
+        }
+      ]
+    },
+    {
+      "fullName": "lmao",
+      "id": "lol",
+      "password": "",
+      "gender": "Male",
+      "dob": "",
+      "address": "",
+      "city": "",
+      "state": "",
+      "country": "",
+      "pincode": 0,
+      "mobile": 0,
+      "rights": "",
+      "bookedFlights": [
+        {
+          "flightId": "",
+          "flightCompany": "",
+          "departureName": "",
+          "departureTime": "",
+          "arrivalName": "",
+          "arrivalTime": "",
+          "price": 0,
+          "duration": ""
+        }
+      ]
+    },
+    {
+      "fullName": "lmalam",
+      "id": "asdslda",
+      "password": "",
+      "gender": "Male",
+      "dob": "",
+      "address": "",
+      "city": "",
+      "state": "",
+      "country": "",
+      "pincode": 0,
+      "mobile": 0,
+      "rights": "",
+      "bookedFlights": [
+        {
+          "flightId": "",
+          "flightCompany": "",
+          "departureName": "",
+          "departureTime": "",
+          "arrivalName": "",
+          "arrivalTime": "",
+          "price": 0,
+          "duration": ""
+        }
+      ]
+    },
+    {
+      "fullName": "aaa",
+      "id": "oooo",
+      "password": "",
+      "gender": "Male",
+      "dob": "",
+      "address": "",
+      "city": "",
+      "state": "",
+      "country": "",
+      "pincode": 0,
+      "mobile": 0,
+      "rights": "",
+      "bookedFlights": [
+        {
+          "flightId": "",
+          "flightCompany": "",
+          "departureName": "",
+          "departureTime": "",
+          "arrivalName": "",
+          "arrivalTime": "",
+          "price": 0,
+          "duration": ""
+        }
+      ]
     }
   ],
   "citydetails": [
     {
-      "delhi": "DL",
-      "bangalore": "BLR",
-      "mumbai": "MUM",
-      "kolkata": "KOL",
-      "chennai": "MAA",
-      "visakhapatnam": "VSK",
-      "coimbatore": "CMB",
-      "hyderabad": "HYD",
-      "pune": "PUN",
-      "chandigarh": "CHA",
-      "noida": "NOI",
-      "goa": "GOA"
+      "cityName": "Delhi",
+      "id": "DL"
+    },
+    {
+      "cityName": "Bangalore",
+      "id": "BLR"
+    },
+    {
+      "cityName": "Mumbai",
+      "id": "MUM"
+    },
+    {
+      "cityName": "Kolkata",
+      "id": "KOL"
+    },
+    {
+      "cityName": "Chennai",
+      "id": "MAA"
+    },
+    {
+      "cityName": "Pune",
+      "id": "PUN"
+    },
+    {
+      "cityName": "Goa",
+      "id": "GOA"
+    }
+  ],
+  "airlines": [
+    {
+      "airLineName": "Spicejet",
+      "id": "SG",
+      "logo": "../src/assets/images/spicejet.png"
+    },
+    {
+      "airLineName": "Airindia",
+      "id": "AI",
+      "logo": "../src/assets/images/airindia.png"
+    },
+    {
+      "airLineName": "Vistara",
+      "id": "VT",
+      "logo": "../src/assets/images/vistara.png"
+    },
+    {
+      "airLineName": "Indigo",
+      "id": "Ig",
+      "logo": "../src/assets/images/indigo.png"
     }
   ]
 }

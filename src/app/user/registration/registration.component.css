@@ -17,10 +17,13 @@ input[type=text]:focus, input[type=password]:focus {
   outline: none;
 }
 
+.snackbar {
+  background-color: white;
+}
+
 hr {
   border: 1px solid #f1f1f1;
   margin-bottom: 25px;
-  
 }
 
 /* Set a style for all buttons */
