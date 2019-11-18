@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCardModule, MatRadioModule, MatTableModule, MatCheckboxModule, MatRadioChange} from '@angular/material';
+import { MatButtonModule, MatCardModule, MatRadioModule, MatTableModule, MatCheckboxModule, MatRadioChange, MatSnackBar, MatSnackBarModule, MatMenuModule} from '@angular/material';
 import { LoginComponent } from './user/login/login.component';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -48,7 +48,7 @@ import { AirlinelistcomponentComponent } from './admin/airlinelistcomponent/airl
     LoginComponent,
     FilterComponent,
     AirlinelistcomponentComponent,
-    
+
   ],
   imports: [
     BrowserModule,
@@ -61,7 +61,9 @@ import { AirlinelistcomponentComponent } from './admin/airlinelistcomponent/airl
     MatRadioModule,
     MatTableModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSnackBarModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

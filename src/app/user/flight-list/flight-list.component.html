@@ -27,7 +27,7 @@
                 </div>
                 <div class="col-sm-1" id="ele">
                     <mat-card-actions>
-                        <button class="btn btn-primary button" [routerLink]="['/reviewBooking', f.id]"  type="submit">
+                        <button class="btn btn-primary button" [routerLink]="['/reviewBooking', f.id]" type="submit">
                             BOOK
                         </button>
                     </mat-card-actions>
@@ -89,7 +89,7 @@
                     <div class="col-sm-6 float-right">
                         <mat-radio-group color='primary' aria-label="Select an option">
                                 <div class="row" >
-                                    <mat-radio-button *ngFor='let f of flightList' [value]="f" (change)="arrivalRadioChange(f.id)" value='{{f.id}}'>
+                                    <mat-radio-button *ngFor='let f of flightListRound' [value]="f" (change)="arrivalRadioChange(f.id)" value='{{f.id}}'>
                                         <!-- <div class="col-sm-2"></div> -->
                                         <div class="col-sm">
                                             <mat-card class="row" id="rowCard">

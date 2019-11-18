@@ -13,6 +13,7 @@ export class ReviewBookingComponent implements OnInit {
 
     to = '';
     from = '';
+    totalPrice = 0;
     private sub: Subscription;
     fl: IFlights[];
     flightList: Array<IFlights> = [];
@@ -43,13 +44,15 @@ export class ReviewBookingComponent implements OnInit {
           this.fl = flights;
           this.sub = this.route.paramMap.subscribe(
             params => {
-              this.id = params.get('id');
+              this.id = params.get('flightID');
               console.log(this.id);
               this.idArray = this.id.split(':');
               console.log(this.idArray);
               if (this.idArray.length > 1) {
                 this.fromCity = this.idArray[0];
                 this.toCity = this.idArray[1];
+              } else {
+                this.fromCity = this.idArray[0];
               }
             }
           );
@@ -60,10 +63,14 @@ export class ReviewBookingComponent implements OnInit {
     filterData() {
       console.log('In filter');
       this.fl.forEach( f => {
+        console.log(f);
         if (f.id === this.fromCity || f.id === this.toCity) {
+          console.log('sfd');
           this.flightList.push(f);
+          this.totalPrice += f.price;
           console.log(this.flightList);
         }
       });
+
   }
 }
