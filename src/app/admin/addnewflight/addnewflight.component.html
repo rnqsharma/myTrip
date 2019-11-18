@@ -6,22 +6,9 @@
         
         </div>
         
-        <form (ngSubmit)="addflight()" [formGroup]="newflightform">
+        <form (ngSubmit)="addflight()" [formGroup]="flightform">
         <!-- <div class="offset-md-6"> -->
-        <div class="form-group row mb-3">
-        <label class="col-md-2 col-form-label"
-        for="descriptionId">Flight Name</label>
-        
-        <div class="col-md-6">
-        <input class="form-control"
-        id="FullName"
-        placeholder="Flight Name"
-        rows=3
-        formControlName="flightName"
-        />
-        
-        </div>
-        </div>
+ 
         
         
         <div class="form-group row mb-3">
@@ -33,7 +20,7 @@
                 id="flightno"
                 placeholder="Flight No"
                 rows=3
-                formControlName="flightNo"
+                formControlName="id"
                 />
                 
                 </div>   
@@ -45,7 +32,7 @@
                 
                 <div class="col-md-6">
                 
-                        <select class="form-control" name="Airline_Name">
+                        <select class="form-control" name="Airline_Name" formControlName="flightCompany">
                                 <option *ngFor='let airlines of airline'>Indigo</option>
                               </select>
                 
@@ -59,7 +46,7 @@
                         
                         <div class="col-md-6">
                         
-                                <select class="form-control" name="Departure_city">
+                                <select class="form-control" name="Departure_city" formControlName="departureName">
                                         <option *ngFor='let city of cities'>Delhi</option>
                                         <option value="jaipur">Jaipur</option>
                                         <option value="bengaluru">Bengaluru</option>
@@ -76,7 +63,7 @@
                                 
                                 <div class="col-md-6">
                                 
-                                        <select  class="form-control" name="Arrival_city">
+                                        <select  class="form-control" name="Arrival_city" formControlName="arrivalName">
                                                 <option value="delhi">Delhi</option>
                                                 <option value="jaipur">Jaipur</option>
                                                 <option value="bengaluru">Bengaluru</option>
@@ -93,7 +80,7 @@
                             for="descriptionId">Departure Time</label>
                             
                             <div class="col-md-6">
-                                    <input type="time" name="time" value="" id="departure_time" 
+                                    <input type="time" name="time" value="" id="departureTime" 
                                     formControlName="departureTime" class="form-control"> 
                             
                             </div>
@@ -119,7 +106,7 @@
                                 id="Duration"
                                 placeholder=""
                                 rows=3
-                                formControlName="Duration"
+                                formControlName="duration"
                                 />
                                 
                                 </div>
@@ -135,7 +122,7 @@
                                         placeholder=""
                                         type="number"
                                         rows=3
-                                        formControlName="Economy_Seats"
+                                        formControlName="economy"
                                         />
                             
                             </div>
@@ -151,7 +138,7 @@
                                 placeholder=""
                                 type="number"
                                 rows=3
-                                formControlName="Business_Seats"
+                                formControlName="business"
                                 />
                                 
                                 </div>
@@ -165,7 +152,7 @@
                         <div class="col-md-6">
                         <input class="form-control" id="Distance" type="number"
                         placeholder=""
-                        formControlName="Distance"
+                        formControlName="distance"
                              />
                                 
                         </div>

@@ -1,67 +1,64 @@
-<html>
-<head>
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-</head>
-<div class = "container ">
+<div class="container" *ngFor='let f of flightList'>
+    <div class="row">
+    <section class="col-md-6 col-sm-4">
+                <mat-card class="row">
+                        <mat-card-header class="row">
+                            <div mat-card-avatar class="header-image"></div>
+                            <mat-card-title>{{f.flightCompany}}</mat-card-title>
+                            <mat-card-subtitle>{{f.id}}</mat-card-subtitle>
+                            <div class="col-sm-1" id="ele">
+                                <mat-card-title>{{f.departureTime}}</mat-card-title>
+                                <mat-card-subtitle>{{f.departureName}}</mat-card-subtitle>
+                            </div>
+                            <div class="col-sm-1" id="ele">
+                                <mat-card-subtitle>{{f.duration}}</mat-card-subtitle>
+                                <mat-card-subtitle>
+                                    <hr>
+                                </mat-card-subtitle>
+                            </div>
+                            <div class="col-sm-1" id="ele">
+                                <mat-card-title>{{f.arrivalTime}}</mat-card-title>
+                                <mat-card-subtitle>{{f.arrivalName}}</mat-card-subtitle>
+                            </div>
+                        </mat-card-header>
+                    </mat-card>
     <div class = "row">
-        <div class ="col-lg-8 col-sd-2 ">
-            
-         <section class="sec">
-                 <div class = "row">
-                 <div class="col-md-3 col-sd-2 col-md-offset-4" style="padding-right:30px; border-right: 1px solid #ccc;">
-                        <h6>Depart</h6>
-                    </div>
-            
-                    <div class="col-md-3 col-sm-2 col-md-offset-4">
-                        <h6>BLR-HYD</h6>
-                    </div>
-
-                    <div class="col-md-6 col-sm-4 rght " >
-                            <h6>BLR-HYD</h6>
-                        </div>
-                </div>
-                
-         <hr>
-         
-        
-
-         <hr>
-            <!-- <div class ="col-md-4 col-sm-2 btm">
-
-                cabin
-            </div> -->
-            <div class = "row">
             <div class="col-md-3 col-sd-2 pdng" style="padding-right:20px; border-right: 1px solid #ccc;">
                     <h6>Baggage:</h6>
-                    <p>adult</p>
-
                 </div>
-        
-                <div class="col-md-3 col-sm-2">
+                <div class="col-md-3 col-sm-2" style="padding-right:20px; border-right: 1px solid #ccc;">
                     <h6>Check in</h6>
-                    <p>7kg</p>
+                    <p>15kg</p>
                 </div>
+                <div class="col-md-3 col-sm-2">
+                        <h6>Cabin</h6>
+                        <p>7kg</p>
+                    </div>
             </div>
-            
-        
         </section>
-        <button class="btn">Continue</button>
-     
-        
-        <div class="col-md-3 col-sm-2 col-md-offset-4">
-        <aside class="aside">
-            hjkhjk
-
-        </aside>
+            
+    <aside class="col-md-3 col-sm-4">
+            <h5>Fare Summary</h5>
+            <hr>
+        <div class="container">
+            <div class="row">
+               <h6><strong>Base Fare</strong>: Rs. {{f.price}}</h6>
+            </div>
+            <hr>
+            <div class="row">
+                    <h6><strong>Subcharges</strong>: Rs. 500</h6>
+                </div>
+                <hr>
+            <div class="row">
+                <h6><strong>Other Charges</strong>: Rs. 5</h6>
+            </div>
+            <hr>
+            <div class="row">
+                <h6><strong>Total Amount</strong>:</h6>
+                <h6> Rs. {{f.price + 505}}</h6>
+            </div>
         </div>
+    </aside>
+    <button class="btn btn-primary button" (click)='payment()' type="submit" >Pay</button>
 </div>
 </div>
-</div>
-
-
-

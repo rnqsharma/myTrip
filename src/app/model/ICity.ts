@@ -1,6 +1,4 @@
 export interface ICity {
-
-    delhi: string;
-    bengaluru: string;
-    mumbai: string;
+    cityName: string;
+    id: string;
 }

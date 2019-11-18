@@ -36,7 +36,6 @@ export class SearchFlightsComponent implements OnInit {
     console.log(this.to);
     // this.flightsArray.forEach(c => {
     //   console.log(c);
-
     // });
     // for (const f  this.flightsArray) {
     //   console.log(f);
