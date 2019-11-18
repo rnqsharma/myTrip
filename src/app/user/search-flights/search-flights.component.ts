@@ -19,13 +19,18 @@ export class SearchFlightsComponent implements OnInit {
   roundcounter: boolean;
 
   selectedDetails = {
-    fromCity: '',
-    toCity: '',
+    fromCity: 'Delhi',
+    toCity: 'Delhi',
     departureDate: '',
     returnDate: '',
     travellers: 0,
     class: ''
   };
+
+  startDate: string;
+  endDate: string;
+  dateRange: string[];
+  date: Date;
 
   // tslint:disable-next-line: variable-name
   constructor(private router: Router, private _flightService: FlightdataService, private _cityService: CitydataService) { }
@@ -49,11 +54,14 @@ export class SearchFlightsComponent implements OnInit {
     });
   }
 
-
   findFlights() {
     console.log(this.roundcounter);
     console.log(this.selectedDetails);
-    this.router.navigate(['/search', this.to, this.from, this.roundcounter]);
+    this.router.navigate(['/search', this.selectedDetails.toCity, this.selectedDetails.fromCity, this.roundcounter]);
+  }
+
+  getTripType(e: any) {
+    console.log('tripType = ' + e.target.value);
   }
 
   getFromCity(e: any) {
@@ -63,12 +71,15 @@ export class SearchFlightsComponent implements OnInit {
 
   getToCity = (e: any) => {
     console.log('to = ' + e.target.value);
+    this.selectedDetails.toCity = e.target.value;
     console.log(this.selectedDetails);
   }
 
   getDepartureDate(e: any) {
     console.log('departuredate = ' + e.target.value);
     this.selectedDetails.departureDate = e.target.value;
+    this.date = e.target.value;
+    this.validateDepartureDate(this.date);
   }
 
   getReturnDate(e: any) {
@@ -88,5 +99,30 @@ export class SearchFlightsComponent implements OnInit {
 
   radioSetter() {
     this.roundcounter = !this.roundcounter;
+  }
+
+  validateDepartureDate(date: Date) {
+    date = this.date;
+    const dd = date.getDate;
+    const mm = date.getMonth;
+    const yy = date.getFullYear;
+    const today = new Date();
+    const currentDate = today.getDate().toString;
+    // console.log('current date = ' + currentDate);
+    this.startDate = '' + currentDate;
+    this.addMonthsToDate(this.startDate, 3);
+    console.log('currentDate = ' + this.startDate);
+    console.log('end date = ' + this.endDate);
+
+
+    // for (const d = new Date(this.startDate); d <= new Date(this.endDate); d.setDate(d.getDate() + 1)) {
+    //   dateRange.push($.datepicker.formatDate('yy-mm-dd', d));
+    // }
+  }
+
+  addMonthsToDate(dt, n) {
+    const dtt = dt.getMonth() + n;
+    const endDate = new Date(dt.setMonth(dtt));
+    this.endDate = '' + endDate.toString;
   }
 }

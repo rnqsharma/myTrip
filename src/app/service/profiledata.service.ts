@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { IProfile } from '../model/IProfile';
-import { tap, catchError, map } from 'rxjs/operators';
-import { Observable, throwError } from 'rxjs';
+import { Observable, pipe, throwError} from 'rxjs';
+import { tap, map, catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -12,20 +12,26 @@ export class ProfiledataService {
    // tslint:disable-next-line: variable-name
    constructor(private _httpclient: HttpClient) { }
 
-   getProfileData(): Observable<IProfile[]> {
+  public getProfileData(): Observable<IProfile[]> {
      return this._httpclient.get<IProfile[]>(
        `http://localhost:3000/profiledata`
      );
    }
 
-   postProfileData(login: IProfile): Observable<IProfile> {
-    console.log('post wala');
-    const headers = new HttpHeaders({'Content-Type': 'application/json'}); // MIME TYPE
-    console.log('post wala');
-    return this._httpclient.post<IProfile>(`http://localhost:3000/profiledata`, login, {headers})
-    .pipe(tap (data => console.log('registration Successful' + JSON.stringify(data))),
-    catchError(this.handleError));
-  }
+
+public getProfileById(id: string): Observable<IProfile> {
+  return this._httpclient.get<IProfile>
+  (`http://localhost:3000/profiledata/${id}`);
+}
+
+postProfileData(login: IProfile): Observable<IProfile> {
+  console.log('post wala');
+  const headers = new HttpHeaders({'Content-Type': 'application/json'}); // MIME TYPE
+  console.log('post wala');
+  return this._httpclient.post<IProfile>(`http://localhost:3000/profiledata`, login, {headers})
+  .pipe(tap (data => console.log('registration Successful' + JSON.stringify(data))),
+  catchError(this.handleError));
+}
 
 
 
@@ -47,5 +53,19 @@ export class ProfiledataService {
     }
     console.error(err);
     return throwError(errorMessage);
+  }
+
+
+// tslint:disable-next-line: align
+public updateProfile(profile: IProfile, id: string): Observable<IProfile> {
+  const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+  console.log('id' + id);
+  const url = `http://localhost:3000/profiledata/${id}`;
+  return this._httpclient.put<IProfile>(url, profile, { headers })
+  .pipe(
+  tap(() => console.log('updateProfile: ' + profile.id)),
+  // Return the product on an update
+  map(() => profile)
+  );
   }
 }

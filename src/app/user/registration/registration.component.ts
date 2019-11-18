@@ -52,5 +52,4 @@ export class RegistrationComponent implements OnInit {
     console.log('profileData = ' + this.profileData);
     this.service.postProfileData(this.profileData).subscribe(d => console.log(d));
   }
-
 }

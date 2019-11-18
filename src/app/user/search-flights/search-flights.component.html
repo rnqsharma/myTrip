@@ -13,7 +13,7 @@
                             <div class="row">
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-5">
-                                    <mat-radio-group aria-label="Select an option">
+                                    <mat-radio-group aria-label="Select an option" (change)="getTripType($event)">
                                         <mat-radio-button color='primary' value="One Way">One Way</mat-radio-button>&nbsp;
                                         <mat-radio-button (change)='radioSetter()' color='primary' value="Round Trip">Round Trip</mat-radio-button>
                                     </mat-radio-group>
@@ -24,10 +24,13 @@
                             <div class="row">
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-5">
-                                    <label> From :</label>
-                                    <select class="form-control" name="from" id="selectfromcity" (change)="getFromCity($event)">                                        
-                                        <option *ngFor='let c of from' [value]="c"> {{c}} </option>
-                                    </select>
+                                    <mat-form-field>
+                                        <mat-label> From :</mat-label>
+                                        <mat-select class="form-control" name="from" id="selectfromcity" (change)="getFromCity($event)">                                        
+                                            <mat-option *ngFor='let c of from' [value]="c"> {{c}} </mat-option>
+                                        </mat-select>   
+                                    </mat-form-field>
+
                                 </div>
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-5">

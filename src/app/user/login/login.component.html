@@ -4,13 +4,13 @@
         <div class="card card-signin my-5">
           <div class="card-body">
             <h5 class="card-title text-center">Sign In</h5>
-            <form class="form-signin">
+            <form (ngSubmit)='getRes()' class="form-signin" >
               <!-- <div class="form-label-group"> -->
               <label for="inputEmail">Email address</label>
-              <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
+              <input type="email"  [(ngModel)]="email" id="email" class="form-control" placeholder="Email address" name= "email"  required #email1>
               <!-- <div class="form-label-group"> -->
               <label for="inputPassword">Password</label>
-              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+              <input type="password"   [(ngModel)]="pass1"id="pwd" class="form-control" placeholder="Password" name= "pswd" required #pass>
               <div class="row">
                 <div class="col-lg-6 col-md-6 col -12">
                   <div class="custom-control custom-checkbox mb-3">
@@ -28,7 +28,7 @@
              <a routerLink="/signup" class="nav-link"> New User?Create New Account</a>
               
               
-              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" [routerLink] = "'/viewprofile'" >Sign in</button>
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" [disabled]='getDisableStatus(email1.value , pass.value)' (click)="getRes(email1.value, pass.value)" type="submit" [routerLink] = "''" >Sign in</button>
               <hr class="my-4">
               <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"> Sign in with Google</button>
               <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"> Sign in with

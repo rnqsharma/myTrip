@@ -12,16 +12,18 @@
     
     <form (ngSubmit)="saveProfile()" [formGroup]="profileForm">
     <!-- <div class="offset-md-6"> -->
+    
     <div class="form-group row mb-3">
     <label class="col-md-2 col-form-label"
     for="descriptionId">Full Name</label>
     
     <div class="col-md-6">
     <input class="form-control"
-    id="FullName"
-    placeholder="Full Name"
+    id="fullName"
+    placeholder="full Name"
     rows=3
-    formControlName="FullName"
+    formControlName="fullName"
+    
     />
     
     </div>
@@ -32,8 +34,8 @@
             <label class="col-md-2 col-form-label"
             for="descriptionId">Gender</label>
             <div class="col-md-6">
-                <input type="radio" name="gender" value="male" checked> Male<br>
-                <input type="radio" name="gender" value="female"> Female<br>
+                <input type="radio" name="gender" value="male" checked formControlName="gender"> Male<br>
+                <input type="radio" name="gender" value="female" formControlName="gender"> Female<br>
             </div>
             </div>
 
@@ -43,10 +45,10 @@
             
             <div class="col-md-6">
             <input class="form-control"
-            id="birthday"
+            id="dob"
             placeholder=""
             rows=3
-            formControlName="Birthday"
+            formControlName="dob"
             />
             
             </div>
@@ -58,10 +60,10 @@
                 
                 <div class="col-md-6">
                 <input class="form-control"
-                id="Address"
+                id="address"
                 rows=3
                 input type="text-area"
-                formControlName="Address"
+                formControlName="address"
                 />
                 
                 </div>
@@ -74,10 +76,10 @@
                     
                     <div class="col-md-6">
                     <input class="form-control"
-                    id="City"
-                    placeholder="City"
+                    id="city"
+                    placeholder="city"
                     rows=3
-                    formControlName="City"
+                    formControlName="city"
                     />
                     
                     </div>
@@ -89,10 +91,10 @@
                         
                         <div class="col-md-6">
                         <input class="form-control"
-                        id="State"
-                        placeholder="State"
+                        id="state"
+                        placeholder="state"
                         rows=3
-                        formControlName="State"
+                        formControlName="state"
                         />
                         
                         </div>
@@ -104,10 +106,10 @@
                             
                             <div class="col-md-6">
                             <input class="form-control"
-                            id="Country"
-                            placeholder="Country"
+                            id="country"
+                            placeholder="country"
                             rows=3
-                            formControlName="FullName"
+                            formControlName="country"
                             />
                             
                             </div>
@@ -119,11 +121,11 @@
                                 
                         <div class="col-md-6">
                         <input class="form-control"
-                        id="PinCode"
-                        placeholder="PinCode"
+                        id="pincode"
+                        placeholder="pincode"
                         type="number"
                         rows=3
-                        formControlName="PinCode"
+                        formControlName="pincode"
                         />
                         
                         </div>
@@ -135,11 +137,11 @@
                                     
                             <div class="col-md-6">
                             <input class="form-control"
-                            id="PhoneNo"
+                            id="mobile"
                             placeholder="PhoneNo"
                             type="number"
                             rows=3
-                            formControlName="PhoneNo"
+                            formControlName="mobile"
                             />
                             
                             </div>

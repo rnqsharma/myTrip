@@ -1,6 +1,6 @@
 export interface IFlights {
 
-        flightID: string;
+        id: string;
         flightCompany: string;
         departureName: string;
         departureTime: string;
@@ -8,7 +8,6 @@ export interface IFlights {
         arrivalTime: string;
         price: number;
         duration: string;
-        economy: string;
-        business: string;
-
+        economy: number;
+        business: number;
 }
