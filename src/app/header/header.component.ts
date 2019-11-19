@@ -62,6 +62,7 @@ export class HeaderComponent implements OnInit {
   }
 
   profileView() {
+    this.email = localStorage.getItem('email');
     console.log(this.email);
     this.router.navigate(['/viewprofile', this.email]);
   }

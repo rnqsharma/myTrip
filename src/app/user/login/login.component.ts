@@ -43,6 +43,7 @@ export class LoginComponent implements OnInit {
           if (pass === c.password) {
             console.log(pass);
             localStorage.setItem('username', c.fullName);
+            localStorage.setItem('email', c.id);
             console.log(localStorage.getItem('username'));
             this.router.navigate(['/adminhome']);
           } else {
@@ -56,6 +57,7 @@ export class LoginComponent implements OnInit {
 
             if (pass === c.password) {
               localStorage.setItem('username', c.fullName);
+              localStorage.setItem('email', c.id);
               this.router.navigate(['/']);
               location.reload();
             } else {

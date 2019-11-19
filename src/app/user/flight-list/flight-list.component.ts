@@ -26,7 +26,6 @@ export class FlightListComponent implements OnInit {
   timeArray = [];
   roundTrip = '';
   roundTripBool: boolean;
-
   selectedDeparture: IFlights;
   selectedArrival: IFlights;
   totalFare: number;
@@ -45,6 +44,7 @@ export class FlightListComponent implements OnInit {
             this.to = params.get('to');
             this.from = params.get('from');
             this.roundTrip = params.get('roundtrip');
+            console.log(this.from + ' ' + this.to + ' ' + this.roundTrip );
           }
         );
         console.log(this.to);
@@ -78,6 +78,9 @@ export class FlightListComponent implements OnInit {
     console.log(this.roundTrip);
     this.fl.forEach(f => {
       console.log(f);
+      console.log(f.departureName);
+      console.log(f.arrivalName);
+
       if (f.departureName === this.from && f.arrivalName === this.to) {
         console.log(f);
         this.flightList.push(f);
@@ -117,7 +120,7 @@ export class FlightListComponent implements OnInit {
     console.log(this.departureAndArrivalid);
     this.fl.forEach(f => {
 
-      if ( f.id === id) {
+      if (f.id === id) {
         console.log(f);
         this.selectedDeparture = f;
         console.log(this.selectedDeparture);
@@ -130,7 +133,7 @@ export class FlightListComponent implements OnInit {
     this.departureAndArrivalid += ':' + id;
     console.log(this.departureAndArrivalid);
     this.fl.forEach(f => {
-      if ( f.id === id) {
+      if (f.id === id) {
         this.selectedArrival = f;
       }
     });
@@ -140,6 +143,8 @@ export class FlightListComponent implements OnInit {
   findTotalFare() {
     console.log(this.selectedDeparture.id);
     console.log(this.selectedArrival.id);
-    this.totalFare = this.selectedDeparture.price + this.selectedDeparture.price;
+    console.log('selectedDeparturePrice =  ' + this.selectedDeparture.price);
+    console.log('selectedArrivalPrice =  ' + this.selectedArrival.price);
+    this.totalFare = this.selectedDeparture.price + this.selectedArrival.price;
   }
 }
