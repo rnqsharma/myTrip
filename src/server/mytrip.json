@@ -25,18 +25,6 @@
       "business": 50
     },
     {
-      "id": "SG-198",
-      "flightCompany": "India-Uk",
-      "departureName": "Pune",
-      "departureTime": "06:35",
-      "arrivalName": "Delhi",
-      "arrivalTime": "09:00",
-      "price": 7520,
-      "duration": "02 hrs 45 min",
-      "economy": 150,
-      "business": 50
-    },
-    {
       "flightCompany": "AirCar",
       "id": "SG-201",
       "departureName": "Delhi",
@@ -64,18 +52,6 @@
       "departureTime": "03:56",
       "arrivalTime": "07:12",
       "duration": "03:15"
-    },
-    {
-      "id": "VS-455",
-      "flightCompany": "Vistara",
-      "departureName": "Chandigarh",
-      "departureTime": "02:00",
-      "arrivalName": "Noida",
-      "arrivalTime": "03:30",
-      "price": 3551,
-      "duration": "01 hrs 30 min",
-      "economy": 150,
-      "business": 50
     }
   ],
   "profiledata": [
