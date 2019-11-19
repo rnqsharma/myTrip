@@ -11,8 +11,8 @@ import { Subscription } from 'rxjs';
 })
 export class HeaderComponent implements OnInit {
 
-  @Input()
-  userName: string = 'Login or Signup';
+  // @Input()
+  userName = 'Login or Signup';
 
   email = '';
   private sub: Subscription;
@@ -27,19 +27,32 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     console.log(this.userName);
-    this.headerService.getLoggedInName.subscribe(name => this.setUsernameMethod(name));
-    this.headerService.getEmail.subscribe(email => this.setEmail(email));
+    console.log(localStorage.getItem('username'));
+    if (localStorage.getItem('username') !== null ) {
+      console.log('hjgfhjgdsgf');
+      this.userName = localStorage.getItem('username');
+    } else {
+      this.userName = 'Login or Signup';
+    }
+    // this.userName = localStorage.getItem('username');
+    // if (this.userName === null) {
+    //   this.userName = 'Login or Signup';
+    // }
+    console.log(this.userName);
+    this.setUsernameMethod();
+    // this.headerService.getLoggedInName.subscribe(name => this.setUsernameMethod(name));
+    // this.headerService.getEmail.subscribe(email => this.setEmail(email));
   }
 
-  ngOnChanges() {
-    console.log("dhfs")
-  }
+  // ngOnChanges() {
+  //   console.log("dhfs")
+  // }
 
-  setUsernameMethod(name: string) {
-    this.userName = name;
+  setUsernameMethod() {
+    // this.userName = name;
     if (this.userName !== 'Login or Signup') {
       this.counter = true;
-      localStorage.setItem('username', name);
+      // localStorage.setItem('username', name);
     }
     console.log(this.userName);
   }
@@ -55,7 +68,9 @@ export class HeaderComponent implements OnInit {
 
   logoutFunc() {
     console.log('In Logout');
-    // this.router.navigate(['']);
+    localStorage.clear();
+    this.router.navigate(['']);
+    location.reload();
   }
 
   profileView() {
