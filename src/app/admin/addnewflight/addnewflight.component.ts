@@ -70,10 +70,10 @@ export class AddnewflightComponent implements OnInit {
 
       this.cityservice.getCityData().subscribe((cities: ICity[]) => {
         this.cities = cities;
-        console.log('lool');
-        console.log(this.cities);
+        //console.log(this.cities);
 
 
+        if(this.id !== '0'){
         this.flightService.getFlightsDataByID(this.id).
       subscribe((flight: IFlights) => {
         console.log(flight);
@@ -91,8 +91,9 @@ export class AddnewflightComponent implements OnInit {
           economy: this.flight.economy,
           business: this.flight.business,
         });
-
+        console.log("flightForm is working" +this.flightForm.value.id);
     });
+  }
   });
 });
 
@@ -101,7 +102,19 @@ export class AddnewflightComponent implements OnInit {
   const p = { ...this.flight, ...this.flightForm.value };
   console.log(p);
   // console.log(this.email);
-  this.updateProfile(p, this.id);
+  console.log("p.id is working" +this.id);
+  if (this.id === '0') {
+    console.log("createNew is working");
+    this.flightService.createFlight(p)
+    .subscribe({
+    next: () => this.onSaveComplete(),
+    error: err => this.errorMessage = err
+    });
+    }
+    else{
+      console.log("update is working");
+      this.updateProfile(p, this.id);
+    }
   // console.log("sgf")
 }
     updateProfile(flight: IFlights, id: string): void {
@@ -115,16 +128,10 @@ export class AddnewflightComponent implements OnInit {
 
 
 
-
-    onSaveComplete(): void {
+onSaveComplete(): void {
   // Reset the form to clear the flags
   // this.profileForm.reset();
-  //  this.router.navigate(['/profile']);
+    this.router.navigate(['/adminFlight']);
 }
-
-
-
-  
-
 
 }
