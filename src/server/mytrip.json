@@ -3,25 +3,13 @@
     {
       "id": "SG-197",
       "flightCompany": "Spicejet",
-      "departureName": "Pune",
+      "departureName": "Delhi",
       "departureTime": "16:35",
       "arrivalName": "Bangalore",
       "arrivalTime": "19:25",
       "price": 9051,
       "duration": "02 hrs 55 min",
-      "economy": 11,
-      "business": 50
-    },
-    {
-      "id": "SG-198",
-      "flightCompany": "Spicejet",
-      "departureName": "Pune",
-      "departureTime": "06:35",
-      "arrivalName": "Delhi",
-      "arrivalTime": "09:00",
-      "price": 7520,
-      "duration": "02 hrs 25 min",
-      "economy": 150,
+      "economy": 11111,
       "business": 50
     },
     {
@@ -373,10 +361,6 @@
     {
       "cityName": "Goa",
       "id": "GOA"
-    },
-    {
-      "cityName": "rajni malhotra",
-      "id": "gA"
     },
     {
       "cityName": "ludhiana",

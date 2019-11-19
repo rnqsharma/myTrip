@@ -61,6 +61,19 @@ export class FlightListComponent implements OnInit {
   }
 
   filterData() {
+
+    this.fl.sort((a: IFlights, b: IFlights) => {
+      if (a.price < b.price) {
+         return -1;
+      } else if (a.price > b.price) {
+         return 1;
+      } else {
+        return 0;
+      }
+   });
+
+    console.log(this.fl);
+
     console.log('In filter');
     console.log(this.roundTrip);
     this.fl.forEach(f => {
@@ -68,6 +81,16 @@ export class FlightListComponent implements OnInit {
       if (f.departureName === this.from && f.arrivalName === this.to) {
         console.log(f);
         this.flightList.push(f);
+        this.flightList.sort((a: IFlights, b: IFlights) => {
+           console.log(a);
+           if (a.price < b.price) {
+              return -1;
+           } else if (a.price > b.price) {
+              return 1;
+           } else {
+             return 0;
+           }
+        });
         console.log(this.flightList);
       } else if (f.arrivalName === this.from && f.departureName === this.to) {
         this.flightListRound.push(f);

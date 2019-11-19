@@ -39,13 +39,19 @@ export class ViewProfileComponent implements OnInit {
 
   ngOnInit() {
 
+    this.sub = this.route.paramMap.subscribe(
+      params => {
+        this.email = params.get('email');
+        console.log(this.email);
+      }
+    );
+
+      // this.profileService.getProfileById(this.email).subscribe((profile: IProfile) => {
+
+      // })
+
     this.profileService.getProfileById(this.email).subscribe((profile: IProfile) => {
-      this.sub = this.route.paramMap.subscribe(
-        params => {
-          this.email = params.get('email');
-          console.log(this.email);
-        }
-      );
+      console.log(profile);
       console.log(profile);
       this.profile = profile;
       console.log(this.profile);
