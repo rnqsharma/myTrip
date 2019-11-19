@@ -1,6 +1,3 @@
-/* .card{
-    width: 40%;
-} */
 #profile{
     width: 30px;
     height: 30px;
@@ -12,4 +9,7 @@
 #logout{
     width: 30px;
     height: 30px;
+}
+td{
+    margin-left: 100%;
 }

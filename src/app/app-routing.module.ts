@@ -20,7 +20,7 @@ const routes: Routes = [
   // {path: '', component: SearchFlightsComponent},
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: RegistrationComponent},
-  {path: 'viewprofile', component: ViewProfileComponent},
+  {path: 'viewprofile/:id', component: ViewProfileComponent},
   {path: 'editprofile', component: ProfileComponent},
   {path: 'search', component: SearchListComponent}
 ];

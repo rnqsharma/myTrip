@@ -12,9 +12,9 @@ export class ProfiledataService {
    // tslint:disable-next-line: variable-name
    constructor(private _httpclient: HttpClient) { }
 
-   getProfileData(): Observable<IProfile[]> {
-     return this._httpclient.get<IProfile[]>(
-       `http://localhost:3000/profiledata`
+   getProfileById(id: string): Observable<IProfile> {
+     return this._httpclient.get<IProfile>(
+       `http://localhost:8001/viewprofile/${id}`
      );
    }
 
@@ -22,19 +22,23 @@ export class ProfiledataService {
     console.log('post wala');
     const headers = new HttpHeaders({'Content-Type': 'application/json'}); // MIME TYPE
     console.log('post wala');
-    return this._httpclient.post<IProfile>(`http://localhost:3000/profiledata`, login, {headers})
+    return this._httpclient.post<IProfile>(`http://localhost:8001/signup`, login, {headers})
     .pipe(tap (data => console.log('registration Successful' + JSON.stringify(data))),
     catchError(this.handleError));
   }
 
-
-
-
-
-
-
-
-
+  // tslint:disable-next-line: align
+public updateProfile(profile: IProfile, id: string): Observable<IProfile> {
+  const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+  console.log('id' + id);
+  const url = `http://localhost:3000/profiledata/${id}`;
+  return this._httpclient.put<IProfile>(url, profile, { headers })
+  .pipe(
+  tap(() => console.log('updateProfile: ' + profile.id)),
+  // Return the product on an update
+  map(() => profile)
+  );
+  }
    private handleError(err: ErrorEvent) {
     let errorMessage: string;
     if (err.error instanceof ErrorEvent) {
