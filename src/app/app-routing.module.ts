@@ -28,11 +28,7 @@ const routes: Routes = [
   // {path: '', component: SearchFlightsComponent},
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: RegistrationComponent},
-<<<<<<< HEAD
-  {path: 'viewprofile/:id', component: ViewProfileComponent},
-=======
   {path: 'viewprofile/:email', component: ViewProfileComponent},
->>>>>>> d30d0939c6968998fb87f935af1f9888ebd5f0c6
   {path: 'editprofile', component: ProfileComponent},
   {path: 'search', component: SearchListComponent},
   {path: 'airlinelist' , component: AirlinelistcomponentComponent},

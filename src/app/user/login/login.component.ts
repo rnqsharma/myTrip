@@ -5,14 +5,6 @@ import { Router } from '@angular/router';
 import { IProfile } from 'src/app/model/IProfile';
 import { HeadernameService } from 'src/app/service/headername.service';
 
-
-
-import { LogindataService } from 'src/app/service/logindata.service';
-import { Router } from '@angular/router';
-import { IProfile } from 'src/app/model/IProfile';
-
-
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -29,25 +21,7 @@ export class LoginComponent implements OnInit {
   username: string;
   password: string;
 
-<<<<<<< HEAD
-  constructor(private router: Router,
-              private loginservice: LogindataService) { }
-
-  ngOnInit() {
-    localStorage.clear();
-=======
   @Output() setUserName: EventEmitter<string> = new EventEmitter<string>();
-
-
-  email: '';
-  email1: string;
-  pass: string;
-  pass1 = '';
-  loginItem: IProfile[];
-  flag = 0;
-  access = false;
-  username: string;
-  password: string;
 
   constructor(private router: Router,
     private loginservice: LogindataService, private headerName: HeadernameService) { }
@@ -110,44 +84,5 @@ export class LoginComponent implements OnInit {
   funcUserName(name: string) {
     console.log(name);
     this.setUserName.emit(name);
->>>>>>> d30d0939c6968998fb87f935af1f9888ebd5f0c6
   }
-  // tslint:disable-next-line: variable-name
-     getRes(email1: string , pass: string) {
-       this.loginservice.getloginData().subscribe((d) => {
-      //this.loginItem = d;
-      console.log(this.loginItem);
-      this.loginItem.forEach(c => {
-        if ( email1 === c.id && c.rights === 'admin' ) {
-          console.log(c.id);
-          console.log(email1);
-          console.log(c.rights);
-          if ( pass === c.password  ) {
-            console.log(pass);
-            this.router.navigate(['/adminhome']);
-          } else {
-            this.router.navigate(['/login']);
-            alert('please enter correct password/ email');
-          }
-           } else {
-        if ( email1 === c.id && c.rights === 'user' ) {
-
-           if (pass === c.password ) {
-             this.router.navigate(['/']);
-           } else {
-            this.router.navigate(['/login']);
-            alert('please enter correct password');
-           }   }
-          }}
-      );
-     }) ;
-      }
-      getDisableStatus(email1: string , pass: string) {
-        if (email1.includes('@') && this.pass !== '') {
-          return false;
-        }
-        return true;
-      }
-
-
     }

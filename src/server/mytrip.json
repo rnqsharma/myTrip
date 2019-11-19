@@ -28,31 +28,6 @@
       "departureName": "Bangalore",
       "departureTime": "16:35",
       "arrivalName": "Delhi",
-<<<<<<< HEAD
-      "arrivalTime": "19:25",
-      "price": 9051,
-      "duration": "02 hrs 55 mins"
-    },
-    {
-      "flightID": "SG-195",
-      "flightCompany": "Spicejet",
-      "departureName": "Delhi",
-      "departureTime": "16:35",
-      "arrivalName": "Bangalore",
-      "arrivalTime": "19:25",
-      "price": 9051,
-      "duration": "02 hrs 55 min"
-    },
-    {
-      "flightID": "SG-198",
-      "flightCompany": "Spicejet",
-      "departureName": "Delhi",
-      "departureTime": "16:35",
-      "arrivalName": "Bangalore",
-      "arrivalTime": "19:25",
-      "price": 9051,
-      "duration": "02 hrs 55 min"
-=======
       "arrivalTime": "09:00",
       "price": 7520,
       "duration": "02 hrs 25 min",
@@ -142,7 +117,6 @@
       "duration": "01 hrs 00 min",
       "economy": 150,
       "business": 50
->>>>>>> d30d0939c6968998fb87f935af1f9888ebd5f0c6
     }
   ],
   "profiledata": [
@@ -157,9 +131,6 @@
       "state": "Haryana",
       "country": "India",
       "pin code": 124001,
-<<<<<<< HEAD
-      "mobile": 7206187562
-=======
       "mobile": 7206187562,
       "rights": "admin",
       "bookedFlights": [
@@ -174,7 +145,6 @@
           "duration": "01 hrs 30 min"
         }
       ]
->>>>>>> d30d0939c6968998fb87f935af1f9888ebd5f0c6
     },
     {
       "fullName": "Raunaq11 Sharma",
@@ -187,9 +157,6 @@
       "state": "Haryana",
       "country": "India",
       "pin code": 124001,
-<<<<<<< HEAD
-      "mobile": 7206187562
-=======
       "mobile": 7206187562,
       "rights": "user",
       "bookedFlights": [
@@ -204,7 +171,6 @@
           "duration": "01 hrs 30 min"
         }
       ]
->>>>>>> d30d0939c6968998fb87f935af1f9888ebd5f0c6
     },
     {
       "fullName": "Simarjot Singh",
@@ -212,15 +178,6 @@
       "password": "lol123",
       "gender": "Male",
       "dob": "2019-11-13",
-<<<<<<< HEAD
-      "address": "",
-      "city": "",
-      "state": "",
-      "country": "",
-      "pincode": 0,
-      "mobile": 0,
-      "id": "simu7060@gmail.com"
-=======
       "address": "Manyata Tech Park",
       "city": "Bangalore",
       "state": "Karnataka",
@@ -240,7 +197,6 @@
           "duration": "01 hrs 30 min"
         }
       ]
->>>>>>> d30d0939c6968998fb87f935af1f9888ebd5f0c6
     },
     {
       "fullName": "Rajni",
@@ -248,14 +204,6 @@
       "password": "123",
       "gender": "Female",
       "dob": "2019-11-20",
-<<<<<<< HEAD
-      "address": "",
-      "city": "",
-      "state": "",
-      "country": "",
-      "pincode": 0,
-      "mobile": 0
-=======
       "address": "Manyata Tech Park",
       "city": "Bangalore",
       "state": "Karnataka",
@@ -275,16 +223,12 @@
           "duration": "01 hrs 30 min"
         }
       ]
->>>>>>> d30d0939c6968998fb87f935af1f9888ebd5f0c6
     },
     {
       "fullName": "pooja",
       "id": "kkpooja97@gmail.com",
       "password": "abcd_1234",
       "gender": "Female",
-<<<<<<< HEAD
-      "dob": "2222-02-22",
-=======
       "dob": "1997-11-24",
       "address": "Magnolia Apartments",
       "city": "Pune",
@@ -338,15 +282,11 @@
       "password": "",
       "gender": "Male",
       "dob": "",
->>>>>>> d30d0939c6968998fb87f935af1f9888ebd5f0c6
       "address": "",
       "city": "",
       "state": "",
       "country": "",
       "pincode": 0,
-<<<<<<< HEAD
-      "mobile": 0
-=======
       "mobile": 0,
       "rights": "",
       "bookedFlights": [
@@ -413,16 +353,10 @@
           "duration": ""
         }
       ]
->>>>>>> d30d0939c6968998fb87f935af1f9888ebd5f0c6
     }
   ],
   "citydetails": [
     {
-<<<<<<< HEAD
-      "delhi": "DL",
-      "bengaluru": "BL",
-      "mumbai": "MA"
-=======
       "cityName": "Delhi",
       "id": "DL"
     },
@@ -467,7 +401,6 @@
       "airLineName": "Indigo",
       "id": "Ig",
       "logo": "../src/assets/images/indigo.png"
->>>>>>> d30d0939c6968998fb87f935af1f9888ebd5f0c6
     }
   ]
 }
