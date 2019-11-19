@@ -43,8 +43,14 @@ export class SearchFlightsComponent implements OnInit {
     // this.router.navigate(['/search', this.to, this.from]);
   }
 
-  radioSetter() {
-    this.roundcounter = !this.roundcounter;
+  radioSetterOne() {
+    this.roundcounter = false;
+    console.log(this.roundcounter);
+  }
+
+  radioSetterRound() {
+    this.roundcounter = true;
+    console.log(this.roundcounter);
   }
 
 }

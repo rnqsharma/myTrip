@@ -23,7 +23,6 @@ export class EditComponent implements OnInit {
   flightData: IFlights;
   airlines: IAirline[];
   airLineName: string;
-  // airlinesName: Array<string> = [];
   cities: ICity[];
   cityName: string;
   flight: IFlights;
@@ -63,12 +62,11 @@ export class EditComponent implements OnInit {
    
     this.airlineservice.getAirlinesData().subscribe((airlines: IAirline[]) => {
       this.airlines = airlines;
-      // console.log(this.airlines);
+      
 
       this.cityservice.getCityData().subscribe((cities: ICity[]) => {
         this.cities = cities;
-        console.log('lool');
-        console.log(this.cities);
+        //console.log(this.cities);
 
         this.flightService.getFlightsDataByID(this.id).
         subscribe((flight: IFlights) => {
@@ -96,9 +94,8 @@ export class EditComponent implements OnInit {
       addflight = (): void => {
     const p = { ...this.flight, ...this.scheduleForm.value };
     console.log(p);
-    // console.log(this.email);
     this.updateProfile(p, this.id);
-    // console.log("sgf")
+    
   }
       updateProfile(flight: IFlights, id: string): void {
     this.flightService.updateProfile(flight, id)
@@ -108,9 +105,7 @@ export class EditComponent implements OnInit {
       });
   }
       onSaveComplete(): void {
-    // Reset the form to clear the flags
-    // this.profileForm.reset();
-    //  this.router.navigate(['/profile']);
+  
   }
     
   

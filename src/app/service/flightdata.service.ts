@@ -29,6 +29,17 @@ export class FlightdataService {
     );
   }
 
+  deleteFlightByID(id: string): Observable<{}> {
+    console.log(id);
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    const url = `http://localhost:3000/flightsData/${id}`;
+    console.log('url = ' + url);
+    return this._httpclient.delete<IFlights>(url, { headers })
+    .pipe(
+      tap(data => console.log('deleteTopic: ' + id))
+    );
+  }
+
   getFlightsDataByID(id: string): Observable<IFlights> {
     return this._httpclient.get<IFlights>(
       `http://localhost:3000/flightsData/${id}`
