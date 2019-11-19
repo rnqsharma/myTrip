@@ -50,7 +50,7 @@ export class ProfileComponent implements OnInit {
     // );
 
 
-    this.profileService.getProfileById(this.email).subscribe((profile: IProfile) => {
+    this.profileService.getProfileById(localStorage.getItem('email')).subscribe((profile: IProfile) => {
         console.log(profile);
         this.profile = profile;
         this.profileForm.patchValue({
