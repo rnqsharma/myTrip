@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IProfile } from 'src/app/model/IProfile';
 import { ProfiledataService } from 'src/app/service/profiledata.service';
 import { Subscription } from 'rxjs';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-view-profile',
@@ -39,7 +39,8 @@ export class ViewProfileComponent implements OnInit {
     add = '+Add';
     email: string;
 
-  constructor(private profileService: ProfiledataService, private route: ActivatedRoute) { }
+  constructor(private profileService: ProfiledataService, private route: ActivatedRoute,
+              private router: Router) { }
 
   ngOnInit() {
 
@@ -81,5 +82,9 @@ export class ViewProfileComponent implements OnInit {
       }
       console.log(this.mobile_value);
   });
+  }
+
+  editProfileFunc() {
+    this.router.navigate(['editprofile']);
   }
 }

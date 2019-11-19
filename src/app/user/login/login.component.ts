@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
     private loginservice: LogindataService, private headerName: HeadernameService) { }
 
   ngOnInit() {
-    // localStorage.clear();
+
   }
   // tslint:disable-next-line: variable-name
   getRes(email1: string, pass: string) {
@@ -41,14 +41,13 @@ export class LoginComponent implements OnInit {
           console.log(c.rights);
           if (pass === c.password) {
             console.log(pass);
-            this.funcUserName(c.fullName);
             localStorage.setItem('username', c.fullName);
-            this.headerName.setUserName(localStorage.getItem('username'), c.id, 1).subscribe(c => console.log(c));
+            localStorage.setItem('email', c.id);
+            console.log(localStorage.getItem('username'));
             this.router.navigate(['/adminhome']);
           } else {
             console.log("In else");
             localStorage.setItem('username', 'Login or Signup');
-            this.headerName.setUserName(localStorage.getItem('username'), '', 1).subscribe(c => console.log(c));
             this.router.navigate(['/login']);
             alert('please enter correct password/ email');
           }
@@ -56,14 +55,13 @@ export class LoginComponent implements OnInit {
           if (email1 === c.id && c.rights === 'user') {
 
             if (pass === c.password) {
-              this.funcUserName(c.fullName);
               localStorage.setItem('username', c.fullName);
-              this.headerName.setUserName(localStorage.getItem('username'), c.id, 1).subscribe(c => console.log(c));
+              localStorage.setItem('email', c.id);
               this.router.navigate(['/']);
+              location.reload();
             } else {
               console.log("In else");
               localStorage.setItem('username', 'Login or Signup');
-              this.headerName.setUserName(localStorage.getItem('username'), '', 1).subscribe(c => console.log(c));
               this.router.navigate(['/login']);
 
               alert('please enter correct password');
@@ -83,6 +81,5 @@ export class LoginComponent implements OnInit {
 
   funcUserName(name: string) {
     console.log(name);
-    this.setUserName.emit(name);
   }
     }
