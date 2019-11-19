@@ -13,13 +13,32 @@ import { AirlinedataService } from 'src/app/service/airlinedata.service';
 })
 export class AirlinelistcomponentComponent implements OnInit {
 
+  airlinename : string;
+  _newName: string;
+  _newCode: string;
+  airlineid: string;
+  airlinelogo: any;
   private sub: Subscription;
   airlines: IAirline[];
+  errormessage = "please correct the validation error"
   airlineData: IAirline = {
-    airLineName: '',
+    airLineName:'',
     id: '',
     logo: ''
   };
+
+
+// tslint:disable-next-line: whitespace
+set newName(newValue: string){
+  this.airlineData.airLineName= newValue;
+  
+}
+// tslint:disable-next-line: variable-name
+set newCode(newValue: string){
+  
+  this.airlineData.id =newValue;
+
+}
   airlineDataa: IAirline;
 
   constructor(private airlineservice: AirlinedataService,
@@ -30,32 +49,18 @@ export class AirlinelistcomponentComponent implements OnInit {
     this.airlineservice.getAirlinesData().subscribe((airlines: IAirline[]) => {
       this.airlines = airlines;
       console.log(airlines);
-      // this.profile = profile;
-      // console.log(this.profile);
-      // this.fullName = this.profile.fullName;
-      // this.dob = this.profile.dob;
-      // this.id = this.profile.id;
-      // this.gender = this.profile.gender;
-
-      // this.mobile = this.profile.mobile;
-      // this.address = this.profile.address;
-      // this.state = this.profile.state;
-      // this.city = this.profile.city;
-      // this.country = this.profile.country;
-
-    
-
   });
 }
 
-postAirlineData(airlineName: string, id: string, logo: string) {
-  this.airlineData.airLineName = airlineName;
-  this.airlineData.id = id;
-  this.airlineData.logo = logo;
-  this.airlineDataa = this.airlineData;
-  console.log(this.airlineDataa);
-  this.airlineservice.postAirlineData(this.airlineData);
-}
+// postAirlineData(airlineName: string, id: string, logo: string) {
+//   this.airlineData.airLineName = airlineName;
+//   this.airlineData.id = id;
+//   this.airlineData.logo = logo;
+ 
+//   this.airlineDataa = this.airlineData;
+//   console.log(this.airlineDataa);
+//   this.airlineservice.postAirlineData(this.airlineData);
+// }
 
 deleteFlight(id: string): void {
   console.log(id);
@@ -95,5 +100,28 @@ deleteFlight(id: string): void {
     }
     return arr;
   }
+  EditAirline(airLineName: string , id: string ,logo:any)
+  {
+  
+    this.airlinename = airLineName;
+    this.airlineData.airLineName= airLineName;
+    this.airlinelogo = logo;
+    this.airlineid = id;
+    console.log( this.airlinename);
+    console.log(this.airlineid);
+
+    }
+    saveAirline(): void  {
+      this.airlineservice.updateAirline(this.airlineData,this.airlineid)
+.subscribe((data)=>{
+  console.log(data);
+  this.airlinename=data.airLineName;
+  //this.airlineid= data.id;
+  setTimeout(()=>location.reload(),2000);
+  //  this.router.navigate(['/airlinelist']);
+  confirm("do you really want change");
+});
+
+    }
 
 }

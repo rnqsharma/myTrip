@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, pipe, throwError } from 'rxjs';
 import { IAirline } from '../model/IAirline';
-import { tap, catchError } from 'rxjs/operators';
+import { tap, catchError, map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -44,6 +44,17 @@ export class AirlinedataService {
     .pipe(tap (data => console.log('registration Successful' + JSON.stringify(data))),
     catchError(this.handleError));
   }
+  updateAirline(product: IAirline,id: string ): Observable<IAirline> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    const url = `http://localhost:3000/airlines/${id}`;
+    return this._httpclient.put<IAirline>(url, product, { headers })
+    .pipe(
+    tap(() => console.log('updateProduct: ' + product.id + product.airLineName)),
+    // Return the product on an update
+    map(() => product),
+    catchError(this.handleError)
+    );
+    }
 
   private handleError(err: ErrorEvent) {
     let errorMessage: string;
