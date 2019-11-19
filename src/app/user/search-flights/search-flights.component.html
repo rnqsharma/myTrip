@@ -30,13 +30,6 @@
                             <div class="row">
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-5">
-                                    <!-- <mat-form-field>
-                                        <mat-label> From :</mat-label>
-                                        <mat-select class="form-control" name="from" id="selectfromcity" (change)="getFromCity($event)">                                        
-                                            <mat-option *ngFor='let c of from' [value]="c"> {{c}} </mat-option>
-                                        </mat-select>
-                                    </mat-form-field> -->
-                                    
                                     <label> From :</label>
                                     <select class="form-control" name="from" id="selectfromcity" (change)="getFromCity($event)">                                        
                                         <option *ngFor='let c of from' [value]="c"> {{c}} </option>
@@ -55,7 +48,7 @@
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-5">
                                     <label>Departure</label>
-                                    <input class="form-control" id="selectfromcity" type="date" placeholder="Email (required)" (change)="getDepartureDate($event)" >
+                                    <input class="form-control" id="selectfromcity" type="date" value="{{fullDate}}" placeholder="Email (required)" (change)="getDepartureDate($event)">
                                 </div>
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-5">

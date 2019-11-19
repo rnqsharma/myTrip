@@ -47,8 +47,6 @@ export class FlightListComponent implements OnInit {
             console.log(this.from + ' ' + this.to + ' ' + this.roundTrip );
           }
         );
-        console.log(this.to);
-        console.log(this.from);
         if (this.roundTrip === 'false') {
           this.roundTripBool = false;
         } else {
@@ -77,9 +75,6 @@ export class FlightListComponent implements OnInit {
     console.log('In filter');
     console.log(this.roundTrip);
     this.fl.forEach(f => {
-      console.log(f);
-      console.log(f.departureName);
-      console.log(f.arrivalName);
 
       if (f.departureName === this.from && f.arrivalName === this.to) {
         console.log(f);
