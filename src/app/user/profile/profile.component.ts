@@ -26,6 +26,8 @@ export class ProfileComponent implements OnInit {
     private profileService: ProfiledataService) { }
 
   ngOnInit() {
+
+    console.log(this.email + ' ');
     this.profileForm = this.fb.group({
       fullName: [''],
       email: [''],
@@ -40,10 +42,15 @@ export class ProfileComponent implements OnInit {
       mobile: [''],
     });
 
+    // this.sub = this.route.paramMap.subscribe(
+    //   params => {
+    //     this.email = params.get('email');
+    //     console.log(this.email);
+    //   }
+    // );
 
 
-    this.profileService.getProfileById('rnqsharma3@gmail.com').
-      subscribe((profile: IProfile) => {
+    this.profileService.getProfileById(this.email).subscribe((profile: IProfile) => {
         console.log(profile);
         this.profile = profile;
         this.profileForm.patchValue({

@@ -118,7 +118,7 @@ export class AddnewflightComponent implements OnInit {
   // Reset the form to clear the flags
   // this.profileForm.reset();
   //  this.router.navigate(['/profile']);
-addflight(){
+addflight() {
   console.log('id = ' + this.id);
 }
 
