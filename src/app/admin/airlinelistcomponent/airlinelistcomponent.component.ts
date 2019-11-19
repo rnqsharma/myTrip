@@ -27,11 +27,11 @@ export class AirlinelistcomponentComponent implements OnInit {
                 private router: Router)  { }
 
   ngOnInit() {
-    
     this.airlineservice.getAirlinesData().subscribe((airlines: IAirline[]) => {
       this.airlines = airlines;
+      console.log('asds');
+      console.log(airlines);
       console.log(this.airlines);
-
   });
 }
 
@@ -40,27 +40,26 @@ postAirlineData(airlineName: string, id: string, logo: string) {
   this.airlineData.id = id;
   this.airlineData.logo = logo;
   this.airlineDataa = this.airlineData;
+  this.airlineservice.postAirlineData(this.airlineDataa).subscribe((airline: IAirline) => console.log(airline));
   console.log(this.airlineDataa);
-  this.airlineservice.postAirlineData(this.airlineData).subscribe((airline: IAirline) => console.log(airline));
 }
 
 deleteFlight(id: string): void {
-  console.log(id);
-  this.airlineData.id = id;
-  // this.deleteFeedback();
-  if (confirm(`Really delete this topic?`)) {
-  this.airlineservice.deleteAirlineByID(id)
-  .subscribe(() => {
-  this.router.navigate(['/airlineList']);
-  // error: err => this.errorMessage = err;
-  this.deleteFeedback();
-  });
-  }
+    console.log(id);
+    this.airlineData.id = id;
+    // this.deleteFeedback();
+    if (confirm(`Really delete this topic?`)) {
+      this.airlineservice.deleteAirlineByID(id)
+      .subscribe(() => {
+      this.router.navigate(['/airlineList']);
+      // error: err => this.errorMessage = err;
+      this.deleteFeedback();
+      });
+    }
   }
 
   deleteFeedback() {
     // this.idFeed = feedID;
-    console.log("lll");
     this.airlines.forEach(c => {
       if (c.id === this.airlineData.id) {
             this.deleteByAttr(this.airlines, 'id', this.airlineData.id);

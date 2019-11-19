@@ -40,7 +40,7 @@ export class AirlinedataService {
     const headers = new HttpHeaders({'Content-Type': 'application/json'}); // MIME TYPE
     console.log('post wala');
     console.log(airline);
-    return this._httpclient.post<IAirline>(`http://localhost:3000/airlines`, airline, {headers})
+  return this._httpclient.post<IAirline>(`http://localhost:3000/airlines`,JSON.stringify(airline), {headers})
     .pipe(tap (data => console.log('registration Successful' + JSON.stringify(data))),
     catchError(this.handleError));
   }

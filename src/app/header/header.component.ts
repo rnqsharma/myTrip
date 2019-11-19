@@ -37,8 +37,10 @@ export class HeaderComponent implements OnInit {
 
   setUsernameMethod(name: string) {
     this.userName = name;
+    console.log(this.userName);
     if (this.userName !== 'Login or Signup') {
       this.counter = true;
+      console.log("sdjgfkjsg")
       localStorage.setItem('username', name);
     }
     console.log(this.userName);

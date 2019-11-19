@@ -28,6 +28,18 @@ export class AddnewflightComponent implements OnInit {
   flight: IFlights;
   errorMessage: string;
 
+  flightDetails: {
+    id: '',
+    flightCompany: '',
+    departureName: '',
+    departureTime: '',
+    arrivalName: '',
+    arrivalTime: '',
+    duration: '',
+    economy: '',
+    business: ''
+  };
+
   constructor(
     private fb: FormBuilder,
     private route: ActivatedRoute,
@@ -44,14 +56,6 @@ export class AddnewflightComponent implements OnInit {
         this.id = params.get('flightID');
       }
     );
-
-    // this.productForm = this.fb.group({
-    //   productName: [''],
-    //   productCode: ['', Validators.required],
-    //   starRating: ['', NumberValidators.range(1, 5)],
-    //   tags: this.fb.array([]),
-    //   description: ''
-    //   });
     this.flightForm = this.fb.group({
       id: [''],
       flightCompany: [''],
@@ -73,7 +77,6 @@ export class AddnewflightComponent implements OnInit {
         console.log('lool');
         console.log(this.cities);
 
-
         this.flightService.getFlightsDataByID(this.id).
       subscribe((flight: IFlights) => {
         console.log(flight);
@@ -90,41 +93,34 @@ export class AddnewflightComponent implements OnInit {
           duration: this.flight.duration,
           economy: this.flight.economy,
           business: this.flight.business,
-        });
+          });
 
+      });
     });
   });
-});
 
-  }
-    addflight = (): void => {
-  const p = { ...this.flight, ...this.flightForm.value };
-  console.log(p);
-  // console.log(this.email);
-  this.updateProfile(p, this.id);
-  // console.log("sgf")
 }
-    updateProfile(flight: IFlights, id: string): void {
-  this.flightService.updateProfile(flight, id)
-    .subscribe({
-      next: () => this.onSaveComplete(),
-      error: err => this.errorMessage = err
-    });
-}
-
-
-
-
-
-    onSaveComplete(): void {
+//     addflight = (): void => {
+//   const p = { ...this.flight, ...this.flightForm.value };
+//   console.log(p);
+//   // console.log(this.email);
+//   this.updateProfile(p, this.id);
+//   // console.log("sgf")
+// }
+//     updateProfile(flight: IFlights, id: string): void {
+//   this.flightService.updateProfile(flight, id)
+//     .subscribe({
+//       next: () => this.onSaveComplete(),
+//       error: err => this.errorMessage = err
+//     });
+// }
+    // onSaveComplete(): void {
   // Reset the form to clear the flags
   // this.profileForm.reset();
   //  this.router.navigate(['/profile']);
+addflight() {
+  console.log('id = ' + this.id);
 }
-
-
-
-  
 
 
 }

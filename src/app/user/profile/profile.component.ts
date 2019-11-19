@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormArray, FormControlName } from '@angular/forms';
-
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { IProfile } from 'src/app/model/IProfile';
@@ -75,7 +74,6 @@ export class ProfileComponent implements OnInit {
     console.log(p);
     console.log(this.email);
     this.updateProfile(p, this.email);
-    console.log("sgf")
   }
   updateProfile(profile: IProfile, id: string): void {
     this.profileService.updateProfile(profile, id)
@@ -86,7 +84,7 @@ export class ProfileComponent implements OnInit {
   }
   onSaveComplete(): void {
     // Reset the form to clear the flags
-    //this.profileForm.reset();
+    // this.profileForm.reset();
     //  this.router.navigate(['/viewprofile']);
   }
 }

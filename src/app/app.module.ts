@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCardModule, MatRadioModule, MatTableModule, MatCheckboxModule, MatRadioChange, MatSnackBar, MatSnackBarModule, MatMenuModule} from '@angular/material';
+// tslint:disable-next-line: max-line-length
+import { MatButtonModule, MatCardModule, MatRadioModule, MatTableModule, MatCheckboxModule, MatSnackBarModule, MatMenuModule, MatSelectModule, MatOptionModule, MatDatepicker, MatDatepickerModule, MatNativeDateModule} from '@angular/material';
 import { LoginComponent } from './user/login/login.component';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -27,6 +28,7 @@ import { ReviewBookingComponent } from './user/review-booking/review-booking.com
 import { RoundtripFooterComponent } from './user/roundtrip-footer/roundtrip-footer.component';
 import { AirlinelistcomponentComponent } from './admin/airlinelistcomponent/airlinelistcomponent.component';
 import { ScheduleComponent } from './admin/schedule/schedule.component';
+import { PassengerDetailsComponent } from './user/passenger-details/passenger-details.component';
 import { CityViewComponent } from './admin/city-view/city-view.component';
 
 
@@ -57,8 +59,8 @@ import { CityViewComponent } from './admin/city-view/city-view.component';
     LoginComponent,
     FilterComponent,
     AirlinelistcomponentComponent,
-
     ScheduleComponent,
+    PassengerDetailsComponent,
     CityViewComponent
   ],
   imports: [
@@ -69,13 +71,16 @@ import { CityViewComponent } from './admin/city-view/city-view.component';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-
     MatRadioModule,
     MatTableModule,
     MatButtonModule,
     MatCheckboxModule,
+    MatSelectModule,
+    MatOptionModule,
     MatSnackBarModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
