@@ -11,7 +11,7 @@
                  <th>Airline logo</th>
                  <th>Airline Name</th>
                  <th>Airline Id </th>
-                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModa">Add Airline</button>
+                 <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#myModa1">Add Airline</button>
                  <!-- <app-airline></app-airline> -->
 
             </tr>
@@ -31,7 +31,7 @@
                     <td>
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModa" (click)= "EditAirline(airline.airLineName,airline.id,airline.logo)">Edit</button>
                     </td>
-                    <td>
+                    <td>      
                         <button type="button" class="btn btn-primary"  (click)="deleteFlight(airline.id)">delete</button>
                     </td>
                 </tr>
@@ -43,7 +43,7 @@
     <            
         </div>
 
-                                                <!-- MODAL CODE -->
+                                                <!-- MODAL CODE edit-->
 
         <div class="modal fade" id="myModa">
                 <div class="modal-dialog modal-dialog-centered">
@@ -60,7 +60,7 @@
                                    
                               
                               <label for="code"><b>Airline Id:</b></label>
-                              <input type="text" class="form-control" value={{airlineid}} [(ngModel)]='newCode' placeholder="Enter Airline Code" [disabled] ="true" name="code" #id required>
+                              <input type="text" class="form-control" value={{airlineid}} [(ngModel)]='newCode' placeholder="Enter Airline Code" [disabled] = true name="code" #id required>
                               
                               <br>
                               <label for="name"><b>Airline Name: </b></label>
@@ -81,3 +81,43 @@
                   </div>
                 </div>
               </div>
+
+
+              <!-- MODAL CODE add -->
+
+        <div class="modal fade" id="myModa1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Airline Information</h4>
+              </div>
+              
+              <!-- Modal body -->
+              
+                      <form class="modal-body" class="form-group" style="margin: 20px;" >
+                             
+                        
+                        <label for="code"><b>Airline Id:</b></label>
+                        <input type="text" class="form-control"   placeholder="Enter Airline Code" name="code"  required #id>
+                        
+                        <br>
+                        <label for="name"><b>Airline Name: </b></label>
+                        <input type="text" class="form-control"  placeholder="Enter Airline Name"  name="name"  required #airLineName><br>
+                          
+                             
+                              
+                              <label for="code"><b>Airline Logo:</b></label>
+                              <input type='file' name="code" id="imageUpload" #logo>
+                      </form>
+              
+              
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary"  (click)="postAirlineData( id.value, airLineName.value, logo.value)" >Save</button>
+              </div>
+              
+            </div>
+          </div>
+        </div>

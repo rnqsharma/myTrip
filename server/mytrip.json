@@ -130,7 +130,7 @@
       "dob": "11-05-1997",
       "address": "646/20 Prem Nagar",
       "city": "Rohtak",
-      "state": "Ha",
+      "state": "Haryana",
       "country": "India",
       "pin code": 124001,
       "mobile": 7206187562,
@@ -360,7 +360,7 @@
   ],
   "citydetails": [
     {
-      "cityName": "Delhi",
+      "cityName": "delhi",
       "id": "DL"
     },
     {
@@ -384,7 +384,7 @@
       "id": "PUN"
     },
     {
-      "cityName": "Goa",
+      "cityName": "Goaa",
       "id": "GOA"
     }
   ],
@@ -407,6 +407,21 @@
     {
       "airLineName": "spice",
       "id": "IIII",
+      "logo": ""
+    },
+    {
+      "airLineName": "nsb",
+      "id": "snkjns",
+      "logo": ""
+    },
+    {
+      "airLineName": "iq",
+      "id": "qawsed",
+      "logo": ""
+    },
+    {
+      "airLineName": "qoi",
+      "id": "rafsg",
       "logo": ""
     }
   ]

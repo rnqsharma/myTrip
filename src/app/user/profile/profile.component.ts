@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormArray, FormControlName } from '@angular/forms';
-
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { IProfile } from 'src/app/model/IProfile';
@@ -15,7 +14,7 @@ export class ProfileComponent implements OnInit {
 
   errorMessage: string;
   profileForm: FormGroup;
-  email: string = 'rnqsharma3@gmail.com';
+  email = 'rnqsharma3@gmail.com';
   profile: IProfile;
   private sub: Subscription;
 
@@ -27,6 +26,8 @@ export class ProfileComponent implements OnInit {
     private profileService: ProfiledataService) { }
 
   ngOnInit() {
+
+    console.log(this.email + ' ');
     this.profileForm = this.fb.group({
       fullName: [''],
       email: [''],
@@ -41,10 +42,15 @@ export class ProfileComponent implements OnInit {
       mobile: [''],
     });
 
+    // this.sub = this.route.paramMap.subscribe(
+    //   params => {
+    //     this.email = params.get('email');
+    //     console.log(this.email);
+    //   }
+    // );
 
 
-    this.profileService.getProfileById('rnqsharma3@gmail.com').
-      subscribe((profile: IProfile) => {
+    this.profileService.getProfileById(localStorage.getItem('email')).subscribe((profile: IProfile) => {
         console.log(profile);
         this.profile = profile;
         this.profileForm.patchValue({
@@ -68,7 +74,6 @@ export class ProfileComponent implements OnInit {
     console.log(p);
     console.log(this.email);
     this.updateProfile(p, this.email);
-    console.log("sgf")
   }
   updateProfile(profile: IProfile, id: string): void {
     this.profileService.updateProfile(profile, id)
@@ -79,7 +84,7 @@ export class ProfileComponent implements OnInit {
   }
   onSaveComplete(): void {
     // Reset the form to clear the flags
-    //this.profileForm.reset();
+    // this.profileForm.reset();
     //  this.router.navigate(['/viewprofile']);
   }
 }

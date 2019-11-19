@@ -1,3 +1,14 @@
+<!-- <div class="card">
+        <button class="btn btn-primary button" [routerLink]="['/addnewflight', f.id]" type="submit">
+            ADD New Flight
+        </button>
+</div>     -->
+
+
+<div class="container">
+        <button class="btn btn-primary button" [routerLink]="['/addnewflight', 0]" type="submit">
+            ADD New Flight
+        </button>
 <div class="container" *ngFor='let f of fl'>
 
     <mat-card class="row">
@@ -35,7 +46,7 @@
 
             <div class="col-sm-1" id="ele">
                 <mat-card-actions>
-                    <button class="btn btn-primary button" type="submit">
+                    <button class="btn btn-primary button" (click)='deleteFlight(f.id)' type="submit">
                         DELETE
                     </button>
                 </mat-card-actions>
@@ -44,4 +55,5 @@
 
     </mat-card>
     <br>
+</div>
 </div>

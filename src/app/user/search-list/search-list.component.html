@@ -7,25 +7,23 @@
                         
                         <div class="offset-sm-2 col-sm-1.5">
                             <label>Trip type </label>
-                            <select class="form-control">
-                                <option>Round Trip</option>
+                            <select class="form-control" (change)="getTripType($event)">
                                 <option>One way</option>
+                                <option>Round Trip</option>
                             </select>
                         </div>
                         &nbsp;
                         <div class="col-sm-1.7">
                             <label>From </label>
-                            <select class="form-control">
-                                <option>Bangalore</option>
-                                <option>Delhi</option>
+                            <select class="form-control" name="from" (change)="getFromCity($event)">
+                                <option *ngFor='let c of from' [value]="c" >{{c}}</option>
                             </select>
                         </div>
                         &nbsp;  
                         <div class="col-sm-1.5">
                             <label>To </label>
-                            <select class="form-control">
-                                <option>Chandigarh</option>
-                                <option>Pune</option>
+                            <select class="form-control" name="to" (change)="getToCity($event)">
+                                <option *ngFor='let c of to' [value] = "c">{{c}}</option>
                             </select>
                         </div>
                         &nbsp;
@@ -64,7 +62,7 @@
                         &nbsp;
                         <div class="form-group">
                             <label></label>
-                            <button class="btn btn-primary button" style="width: 100%; height: 60%; border-radius: 10px; margin-top: 30px;"   >
+                            <button class="btn btn-primary button" (click)="findFlights()" style="width: 100%; height: 60%; border-radius: 10px; margin-top: 30px;"   >
                                 Find Flights
                             </button>
                         </div>

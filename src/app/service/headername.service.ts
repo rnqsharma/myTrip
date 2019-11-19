@@ -22,7 +22,8 @@ export class HeadernameService {
       this.getEmail.emit(this.email);
       return of(1);
     } else {
-      this.getLoggedInName.emit('Login or Signup');
+      console.log(localStorage.getItem('username'));
+      this.getLoggedInName.emit(localStorage.getItem('username'));
       return of(0);
     }
 

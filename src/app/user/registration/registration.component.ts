@@ -27,13 +27,13 @@ export class RegistrationComponent implements OnInit {
     rights: '',
     bookedFlights: [{
       flightId: '',
-        flightCompany: '',
-        departureName: '',
-        departureTime: '',
-        arrivalName: '',
-        arrivalTime: '',
-        price: 0,
-        duration: '',
+      flightCompany: '',
+      departureName: '',
+      departureTime: '',
+      arrivalName: '',
+      arrivalTime: '',
+      price: 0,
+      duration: ''
     }]
   };
 
@@ -76,5 +76,4 @@ export class RegistrationComponent implements OnInit {
     }
 
   }
-
 }
