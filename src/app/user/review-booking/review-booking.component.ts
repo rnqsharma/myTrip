@@ -3,6 +3,7 @@ import { Subscription } from 'rxjs';
 import { IFlights } from 'src/app/model/IFlights';
 import { FlightdataService } from 'src/app/service/flightdata.service';
 import { ActivatedRoute } from '@angular/router';
+import { PaypalService } from 'src/app/service/paypal.service';
 
 @Component({
   selector: 'app-review-booking',
@@ -37,7 +38,7 @@ export class ReviewBookingComponent implements OnInit {
           mins: string;
     // tslint:disable-next-line: variable-name
     constructor(private _flightsData: FlightdataService,
-                private route: ActivatedRoute) { }
+                private route: ActivatedRoute, private paypalService: PaypalService) { }
     ngOnInit() {
       this._flightsData.getFlightsData().subscribe(
         (flights: IFlights[]) => {
@@ -72,5 +73,9 @@ export class ReviewBookingComponent implements OnInit {
         }
       });
 
+  }
+
+  payment() {
+    this.paypalService.payPal();
   }
 }
