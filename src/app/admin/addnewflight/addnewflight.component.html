@@ -6,7 +6,7 @@
         
         </div>
         
-        <form (ngSubmit)="addflight()" [formGroup]="flightform">
+        <form (ngSubmit)="addflight()" [formGroup]="flightForm">
         <!-- <div class="offset-md-6"> -->
  
         
@@ -33,7 +33,7 @@
                 <div class="col-md-6">
                 
                         <select class="form-control" name="Airline_Name" formControlName="flightCompany">
-                                <option *ngFor='let airlines of airline'>Indigo</option>
+                                <option *ngFor='let airline of airlines' >{{airline.airLineName}}</option>
                               </select>
                 
                 </div>
@@ -47,10 +47,7 @@
                         <div class="col-md-6">
                         
                                 <select class="form-control" name="Departure_city" formControlName="departureName">
-                                        <option *ngFor='let city of cities'>Delhi</option>
-                                        <option value="jaipur">Jaipur</option>
-                                        <option value="bengaluru">Bengaluru</option>
-                                        <option value="mumbai">Mumbai</option>
+                                        <option *ngFor='let city of cities'  >{{city.cityName}}</option>
                                       </select>
                         
                         </div>
@@ -64,10 +61,7 @@
                                 <div class="col-md-6">
                                 
                                         <select  class="form-control" name="Arrival_city" formControlName="arrivalName">
-                                                <option value="delhi">Delhi</option>
-                                                <option value="jaipur">Jaipur</option>
-                                                <option value="bengaluru">Bengaluru</option>
-                                                <option value="mumbai">Mumbai</option>
+                                                        <option *ngFor='let city of cities'  >{{city.cityName}}</option>
                                               </select>
                                 
                                 </div>
@@ -152,7 +146,6 @@
                         <div class="col-md-6">
                         <input class="form-control" id="Distance" type="number"
                         placeholder=""
-                        formControlName="distance"
                              />
                                 
                         </div>

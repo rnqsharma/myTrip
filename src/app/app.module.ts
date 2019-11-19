@@ -29,6 +29,7 @@ import { RoundtripFooterComponent } from './user/roundtrip-footer/roundtrip-foot
 import { AirlinelistcomponentComponent } from './admin/airlinelistcomponent/airlinelistcomponent.component';
 import { ScheduleComponent } from './admin/schedule/schedule.component';
 import { PassengerDetailsComponent } from './user/passenger-details/passenger-details.component';
+import { CityViewComponent } from './admin/city-view/city-view.component';
 
 
 
@@ -59,7 +60,8 @@ import { PassengerDetailsComponent } from './user/passenger-details/passenger-de
     FilterComponent,
     AirlinelistcomponentComponent,
     ScheduleComponent,
-    PassengerDetailsComponent
+    PassengerDetailsComponent,
+    CityViewComponent
   ],
   imports: [
     BrowserModule,

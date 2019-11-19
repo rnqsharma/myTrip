@@ -14,6 +14,7 @@ import { AddnewflightComponent } from './admin/addnewflight/addnewflight.compone
 import { ScheduleComponent } from './admin/schedule/schedule.component';
 import { AdminFlightlistComponent } from './admin/admin-flightlist/admin-flightlist.component';
 import { AirlineComponent } from './admin/airline/airline.component';
+import { CityViewComponent } from './admin/city-view/city-view.component';
 
 
 const routes: Routes = [
@@ -31,9 +32,11 @@ const routes: Routes = [
   {path: 'editprofile', component: ProfileComponent},
   {path: 'search', component: SearchListComponent},
   {path: 'airlinelist' , component: AirlinelistcomponentComponent},
-  {path : 'addnewflight' , component : AddnewflightComponent },
+  {path : 'addnewflight/:flightID' , component : AddnewflightComponent },
   {path: 'flightSchedule', component: ScheduleComponent},
-  {path: 'editAirline', component: AirlineComponent}
+  {path: 'editAirline', component: AirlineComponent},
+  {path: 'cityList', component: CityViewComponent}
+
   // {path : 'addnewflight/:flightID' , component : AddnewflightComponent }
 ];
 

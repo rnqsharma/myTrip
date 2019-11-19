@@ -36,7 +36,6 @@ export class PassengerDetailsComponent implements OnInit {
     this.passengerDetails.address = address;
     this.passengerDetails.mobile = mobile;
   }
-
   onRadioMale() {
     this.passengerDetails.gender = 'Male';
   }

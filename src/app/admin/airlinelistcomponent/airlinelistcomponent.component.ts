@@ -31,6 +31,7 @@ export class AirlinelistcomponentComponent implements OnInit {
       this.airlines = airlines;
       console.log('asds');
       console.log(airlines);
+      console.log(this.airlines);
   });
 }
 
@@ -40,6 +41,7 @@ postAirlineData(airlineName: string, id: string, logo: string) {
   this.airlineData.logo = logo;
   this.airlineDataa = this.airlineData;
   this.airlineservice.postAirlineData(this.airlineDataa).subscribe((airline: IAirline) => console.log(airline));
+  console.log(this.airlineDataa);
 }
 
 deleteFlight(id: string): void {
