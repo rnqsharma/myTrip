@@ -11,13 +11,10 @@ import { Subscription } from 'rxjs';
 })
 export class HeaderComponent implements OnInit {
 
-  // @Input()
   userName = 'Login or Signup';
 
   email = '';
   private sub: Subscription;
-  // @Output()
-  // setUsername: EventEmitter<string> = new EventEmitter<string>();
 
   counter = false;
   logoimg = 'assets/images/paper-plane.png';
@@ -34,25 +31,16 @@ export class HeaderComponent implements OnInit {
     } else {
       this.userName = 'Login or Signup';
     }
-    // this.userName = localStorage.getItem('username');
-    // if (this.userName === null) {
-    //   this.userName = 'Login or Signup';
-    // }
+
     console.log(this.userName);
     this.setUsernameMethod();
-    // this.headerService.getLoggedInName.subscribe(name => this.setUsernameMethod(name));
-    // this.headerService.getEmail.subscribe(email => this.setEmail(email));
+
   }
 
-  // ngOnChanges() {
-  //   console.log("dhfs")
-  // }
 
   setUsernameMethod() {
-    // this.userName = name;
     if (this.userName !== 'Login or Signup') {
       this.counter = true;
-      // localStorage.setItem('username', name);
     }
     console.log(this.userName);
   }
