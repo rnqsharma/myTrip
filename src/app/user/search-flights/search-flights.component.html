@@ -1,11 +1,10 @@
-<div class="container">
+    <div class="container">
     <div class="card" style="border-radius: 30px;">
         <div class="card-body" id="cardbody">
             <div style="font-weight: bold; text-align: center">
                 <h2>Search flights</h2>
                 <h4 style="color: grey;">Fly anywhere. Fly everywhere.</h4>
             </div>
-
             <div class="table-responsive overflow-hidden">
                 <form>
                     <table class="table table-borderless" style="width: 100%;">
@@ -14,10 +13,16 @@
                             <div class="row">
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-5">
-                                    <mat-radio-group aria-label="Select an option">
+                                    <!-- <mat-radio-group aria-label="Select an option">
+                                        <mat-radio-button value="1">One Way</mat-radio-button>&nbsp;
+                                        <mat-radio-button value="2">Round Trip</mat-radio-button>
+                                    </mat-radio-group> -->
+                                    <!-- <mat-radio-group aria-label="Select an option">
                                         <mat-radio-button color='primary' value="1">One Way</mat-radio-button>&nbsp;
                                         <mat-radio-button (change)='radioSetter()' color='primary' value="2">Round Trip</mat-radio-button>
-                                    </mat-radio-group>
+                                    </mat-radio-group> -->
+                                    <input type="radio"  (change)='radioSetterOne()' name="type" value="1" checked> One Way
+                                    <input type="radio" (change)='radioSetterRound()' name="type" value="2"> Round Trip
 
                                 </div>
                                 <div class="col-sm-6"></div>
@@ -25,19 +30,23 @@
                             <div class="row">
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-5">
+                                    <!-- <mat-form-field>
+                                        <mat-label> From :</mat-label>
+                                        <mat-select class="form-control" name="from" id="selectfromcity" (change)="getFromCity($event)">                                        
+                                            <mat-option *ngFor='let c of from' [value]="c"> {{c}} </mat-option>
+                                        </mat-select>
+                                    </mat-form-field> -->
+                                    
                                     <label> From :</label>
-                                    <select class="form-control" [(ngModel)]='from' name="from" id="selectfromcity">
-                                        <option>Bangalore</option>
-                                        <option>Delhi</option>
+                                    <select class="form-control" name="from" id="selectfromcity" (change)="getFromCity($event)">                                        
+                                        <option *ngFor='let c of from' [value]="c"> {{c}} </option>
                                     </select>
-
                                 </div>
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-5">
                                     <label> To :</label>
-                                    <select class="form-control" [(ngModel)]='to' name="to" id="selectfromcity">
-                                        <option>Bangalore</option>
-                                        <option>Delhi</option>
+                                    <select class="form-control" name="to" id="selectfromcity" (change)="getToCity($event)">
+                                        <option *ngFor='let c of to' [value]="c"> {{c}} </option>
                                     </select>
                                 </div>
                             </div>
@@ -46,14 +55,12 @@
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-5">
                                     <label>Departure</label>
-                                    <input class="form-control" id="selectfromcity" type="date"
-                                        placeholder="Email (required)" />
+                                    <input class="form-control" id="selectfromcity" type="date" placeholder="Email (required)" (change)="getDepartureDate($event)" >
                                 </div>
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-5">
                                     <label>Return</label>
-                                    <input class="form-control" id="selectfromcity" type="date"
-                                        placeholder="Email (required)" />
+                                    <input class="form-control" id="selectfromcity" type="date" placeholder="Email (required)" (change)="getReturnDate($event)">
                                 </div>
                             </div>
                             <br>
@@ -61,7 +68,7 @@
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-5">
                                     <label>Travellers :</label>
-                                    <select class="form-control" id="selectfromcity">
+                                    <select class="form-control" id="selectfromcity" (change)="getTraveller($event)" >
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
@@ -76,7 +83,7 @@
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-5">
                                     <label>Class :</label>
-                                    <select class="form-control" id="selectfromcity">
+                                    <select class="form-control" id="selectfromcity" (change)="getTraveller($event)">
                                         <option>Economy</option>
                                         <option>Business</option>
                                     </select>
