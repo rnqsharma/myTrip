@@ -19,20 +19,25 @@ export class SearchFlightsComponent implements OnInit {
   cities: ICity[];
   roundcounter: boolean;
 
+  today = new Date();
+  currentDate = this.today.getDate();
+  currentMonth = this.today.getMonth() + 1;
+  currentYear = this.today.getFullYear();
+  fullDate = this.currentYear + '-' + this.currentMonth + '-' + this.currentDate;
+
   selectedDetails = {
     fromCity: 'Delhi',
     toCity: 'Delhi',
-    departureDate: '',
+    departureDate: '' + this.fullDate,
     returnDate: '',
-    travellers: 0,
+    travellers: 1,
     class: 'Economy',
-    tripType: ''
+    tripType: 'One Way'
   };
 
   startDate: string;
   endDate: string;
   dateRange: string[];
-  date: Date;
   sub: Subscription;
 
   // tslint:disable-next-line: variable-name
@@ -40,6 +45,8 @@ export class SearchFlightsComponent implements OnInit {
   constructor(private router: Router, private _flightService: FlightdataService, private _cityService: CitydataService, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    console.log(this.today.getMonth());
+    console.log(this.fullDate);
     this.roundcounter = false;
     this._flightService.getFlightsData()
       .subscribe((fulldata: IFlights[]) => {
@@ -52,6 +59,10 @@ export class SearchFlightsComponent implements OnInit {
       this.to = this.cities.map( c => c.cityName);
       this.from = this.cities.map( c => c.cityName);
     });
+
+    const today = new Date();
+    const currentDate = today.getDate().toString;
+    this.selectedDetails.departureDate = '' + currentDate;
   }
 
   findFlights() {
@@ -65,6 +76,7 @@ export class SearchFlightsComponent implements OnInit {
     } else {
       this.selectedDetails.tripType = 'One Way';
     }
+    console.log(this.selectedDetails.tripType);
   }
 
   getFromCity(e: any) {
@@ -77,9 +89,9 @@ export class SearchFlightsComponent implements OnInit {
 
   getDepartureDate(e: any) {
     this.selectedDetails.departureDate = e.target.value;
-    this.date = e.target.value;
+    // this.date = e.target.value;
     console.log('selected departure date = ' + this.selectedDetails.departureDate);
-    this.validateDepartureDate(this.date);
+    // this.validateDepartureDate(this.date);
   }
 
   getReturnDate(e: any) {
