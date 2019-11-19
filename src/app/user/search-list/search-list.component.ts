@@ -27,6 +27,14 @@ export class SearchListComponent implements OnInit {
     class: 'Economy',
     tripType: ''
   };
+  fromCity = '';
+  toCity = '';
+  departureDate = '';
+  returnDate = '';
+  travellers = '';
+  class = '';
+  tripType = '';
+
   flightsArray: Array<IFlights>;
   from: string[];
   to: string[];
@@ -34,7 +42,7 @@ export class SearchListComponent implements OnInit {
   roundcounter = false;
 
   ngOnInit() {
-
+    console.log('in search list component');
     this._flightService.getFlightsData()
       .subscribe((fulldata: IFlights[]) => {
         this.flightsArray = fulldata;
@@ -58,6 +66,7 @@ export class SearchListComponent implements OnInit {
         this.selectedDetails.tripType = params.get('triptype');
       }
     );
+    this.setValues();
   }
 
   findFlights() {
@@ -77,10 +86,11 @@ export class SearchListComponent implements OnInit {
     } else {
       this.roundcounter = false;
     }
+    console.log(this.selectedDetails.tripType);
   }
 
   getFromCity(e: any) {
-    this.selectedDetails.fromCity = e.target.value.toString();
+    this.selectedDetails.fromCity = e.target.value;
   }
 
   getToCity = (e: any) => {
@@ -107,4 +117,20 @@ export class SearchListComponent implements OnInit {
     this.selectedDetails.class = e.target.value;
   }
 
+  setValues() {
+    this.tripType = this.selectedDetails.tripType.trim();
+    // console.log('type = ' + this.tr ipType);
+    this.fromCity = this.selectedDetails.fromCity.trim();
+    console.log(this.fromCity);
+    this.toCity = this.selectedDetails.toCity.trim();
+    console.log(this.toCity);
+    this.departureDate = this.selectedDetails.departureDate.trim();
+    console.log(this.departureDate);
+    this.returnDate = this.selectedDetails.returnDate.trim();
+    console.log(this.returnDate);
+    this.travellers = this.selectedDetails.travellers.trim();
+    console.log(this.travellers);
+    this.class = this.selectedDetails.class.trim();
+    console.log(this.class);
+  }
 }

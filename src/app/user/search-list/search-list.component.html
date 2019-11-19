@@ -7,39 +7,39 @@
                         
                         <div class="offset-sm-2 col-sm-1.5">
                             <label>Trip type </label>
-                            <select class="form-control" (change)="getTripType($event)">
-                                <option>One way</option>
+                            <select class="form-control" (change)="getTripType($event)" [(ngModel)]="tripType" name="triptype">
+                                <option>One Way</option>
                                 <option>Round Trip</option>
                             </select>
                         </div>
                         &nbsp;
                         <div class="col-sm-1.7">
                             <label>From </label>
-                            <select class="form-control" name="from" (change)="getFromCity($event)">
-                                <option *ngFor='let c of from' [value]="c" >{{c}}</option>
+                            <select class="form-control" name="from" (change)="getFromCity($event)" [(ngModel)]="fromCity">
+                                <option *ngFor='let f of from' [value]="f" >{{f}}</option>
                             </select>
                         </div>
                         &nbsp;  
                         <div class="col-sm-1.5">
                             <label>To </label>
-                            <select class="form-control" name="to" (change)="getToCity($event)">
-                                <option *ngFor='let c of to' [value] = "c">{{c}}</option>
+                            <select class="form-control" name="to" (change)="getToCity($event)" [(ngModel)]="toCity">
+                                <option *ngFor='let f of to' [value] = "f">{{f}}</option>
                             </select>
                         </div>
                         &nbsp;
                         <div class="col-sm-1.5">
                             <label>Depart</label>
-                            <input type="date" class="form-control">
+                            <input type="date" class="form-control" [(ngModel)]="departureDate" name="departure">
                         </div>
                         &nbsp;
                         <div class="col-sm-1.5">
                             <label>Return</label>
-                            <input type="date" class="form-control">    
+                            <input type="date" class="form-control" [(ngModel)]="returnDate" name="return">    
                         </div>
                         &nbsp;
                         <div class="col-sm-1.5">
                             <label>Travellers </label>
-                            <select class="form-control">
+                            <select class="form-control" [(ngModel)]="travellers" name="traveller">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -54,7 +54,7 @@
                         &nbsp;
                         <div class="col-sm-1.5">
                             <label class="">Class </label>
-                            <select class="form-control">
+                            <select class="form-control" [(ngModel)]="class" name="classs">
                                 <option>Economy</option>
                                 <option>Business</option>
                             </select>
