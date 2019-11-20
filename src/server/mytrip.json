@@ -7,8 +7,8 @@
       "departureTime": "16:35",
       "arrivalName": "Bangalore",
       "arrivalTime": "19:25",
-      "price": 50050,
-      "duration": "02 hrs 55 min",
+      "price": 0,
+      "duration": "02 hrs 12 min",
       "economy": 150,
       "business": 50
     },

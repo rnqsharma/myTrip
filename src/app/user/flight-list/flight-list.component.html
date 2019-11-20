@@ -1,5 +1,5 @@
 <app-search-list (buttonClicked)="customFunc($event)"></app-search-list>
-<app-filter></app-filter>
+<!-- <app-filter></app-filter> -->
 <br><br>
 <div >
     <div *ngIf="!roundTripBool">
@@ -28,7 +28,7 @@
                     </div>
                     <div class="col-sm-1" id="ele">
                         <mat-card-actions>
-                            <button class="btn btn-primary button" [routerLink]="['/reviewBooking', f.id]" type="submit">
+                            <button class="btn btn-primary button" [routerLink]="['/reviewBooking', f.id]"  >
                                 BOOK
                             </button>
                         </mat-card-actions>
