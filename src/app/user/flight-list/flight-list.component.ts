@@ -18,7 +18,19 @@ export class FlightListComponent implements OnInit {
   lmao = 'unclicked';
   to = '';
   from = '';
+  travellers = '';
   private sub: Subscription;
+
+  selectedDetails = {
+    fromCity: '',
+    toCity: '',
+    departureDate: '',
+    returnDate: '',
+    travellers: '',
+    class: '',
+    tripType: ''
+  };
+
   fl: IFlights[];
   flightList: Array<IFlights> = [];
   flightListRound: Array<IFlights> = [];
@@ -55,6 +67,7 @@ export class FlightListComponent implements OnInit {
         this.to = params.get('to');
         this.from = params.get('from');
         this.roundTrip = params.get('roundtrip');
+        this.travellers = params.get('travellers');
         console.log(this.from + ' ' + this.to + ' ' + this.roundTrip );
       }
     );
@@ -148,8 +161,13 @@ export class FlightListComponent implements OnInit {
     this.sub = this.route.paramMap.subscribe(
       params => {
         this.to = params.get('to');
+        this.selectedDetails.toCity = params.get('to');
         this.from = params.get('from');
+        this.selectedDetails.fromCity = params.get('from');
         this.roundTrip = params.get('roundtrip');
+        this.travellers = params.get('travellers');
+        this.selectedDetails.travellers = params.get('travellers');
+        console.log('travellers = ' + this.travellers);
         console.log(this.from + ' ' + this.to + ' ' + this.roundTrip );
       }
     );
@@ -158,5 +176,9 @@ export class FlightListComponent implements OnInit {
     this.flightList = [];
     console.log(this.flightList);
     this.filterData();
+  }
+
+  getTraveller(e: any) {
+    this.selectedDetails.travellers = e.target.value;
   }
 }

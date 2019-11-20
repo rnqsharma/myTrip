@@ -29,17 +29,17 @@
                         &nbsp;
                         <div class="col-sm-1.5">
                             <label>Depart</label>
-                            <input type="date" class="form-control" [(ngModel)]="departureDate" name="departure" value="{{departureDate}}">
+                            <input type="date" class="form-control" [(ngModel)]="departureDate" name="departure" value="{{departureDate}}" (change)="getDepartureDate($event)">
                         </div>
                         &nbsp;
                         <div class="col-sm-1.5">
                             <label>Return</label>
-                            <input type="date" class="form-control" [(ngModel)]="returnDate" name="return">    
+                            <input type="date" class="form-control" [(ngModel)]="returnDate" name="return" (change)="getReturnDate($event)">    
                         </div>
                         &nbsp;
                         <div class="col-sm-1.5">
                             <label>Travellers </label>
-                            <select class="form-control" [(ngModel)]="travellers" name="traveller">
+                            <select class="form-control" [(ngModel)]="travellers" name="traveller" (change)="getTraveller($event)">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>

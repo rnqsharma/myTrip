@@ -18,8 +18,8 @@ export class SearchListComponent implements OnInit {
 
   sub: Subscription;
 
-  @Output() public linkedClicked = new EventEmitter<string>();
-  @Output() lol = new EventEmitter<string>();
+  // @Output() public linkedClicked = new EventEmitter<string>();
+  // @Output() lol = new EventEmitter<string>();
   @Output() buttonClicked = new EventEmitter<boolean>();
 
   selectedDetails = {
@@ -77,6 +77,7 @@ export class SearchListComponent implements OnInit {
     // tslint:disable-next-line: max-line-length
     this.router.navigate(['/search', this.selectedDetails.toCity, this.selectedDetails.fromCity, this.roundcounter, this.selectedDetails.departureDate, this.selectedDetails.returnDate, this.selectedDetails.tripType, this.selectedDetails.travellers, this.selectedDetails.class]);
     this.onButtonClick();
+    console.log('travellers = ' + this.selectedDetails.travellers);
   }
 
   getTripType(e: any) {
@@ -108,6 +109,7 @@ export class SearchListComponent implements OnInit {
 
   getTraveller(e: any) {
     this.selectedDetails.travellers = e.target.value;
+    console.log('gettravellers  = ' + this.selectedDetails.travellers);
   }
 
   getClass(e: any) {
