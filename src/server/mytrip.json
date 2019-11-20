@@ -28,19 +28,19 @@
       "flightCompany": "AirCar",
       "id": "SG-201",
       "departureName": "Delhi",
-      "arrivalName": "Mumbai",
+      "arrivalName": "Bangalore",
       "departureTime": "03:15",
       "arrivalTime": "07:15",
-      "duration": "04 Hrs 15 mins"
+      "duration": "04 Hrs 35 mins"
     },
     {
-      "flightCompany": "SpiceJet",
+      "flightCompany": "GoAir",
       "id": "SG-198",
       "departureName": "Bangalore",
       "arrivalName": "Delhi",
       "departureTime": "06:12",
       "arrivalTime": "10:32",
-      "duration": "04:10",
+      "duration": "04 hrs 45 mins",
       "economy": 5,
       "business": 10
     },
@@ -51,7 +51,7 @@
       "arrivalName": "pune",
       "departureTime": "03:56",
       "arrivalTime": "07:12",
-      "duration": "03:15"
+      "duration": "03 hrs 30 mins"
     }
   ],
   "profiledata": [
@@ -374,6 +374,58 @@
       "password": "Rahul",
       "gender": "Male",
       "dob": "1998-01-21",
+      "address": "",
+      "city": "",
+      "state": "",
+      "country": "",
+      "pincode": 0,
+      "mobile": 0,
+      "rights": "",
+      "bookedFlights": [
+        {
+          "flightId": "",
+          "flightCompany": "",
+          "departureName": "",
+          "departureTime": "",
+          "arrivalName": "",
+          "arrivalTime": "",
+          "price": 0,
+          "duration": ""
+        }
+      ]
+    },
+    {
+      "fullName": "Test",
+      "id": "test",
+      "password": "test",
+      "gender": "Male",
+      "dob": "2015-05-03",
+      "address": "",
+      "city": "",
+      "state": "",
+      "country": "",
+      "pincode": 0,
+      "mobile": 0,
+      "rights": "",
+      "bookedFlights": [
+        {
+          "flightId": "",
+          "flightCompany": "",
+          "departureName": "",
+          "departureTime": "",
+          "arrivalName": "",
+          "arrivalTime": "",
+          "price": 0,
+          "duration": ""
+        }
+      ]
+    },
+    {
+      "fullName": "",
+      "id": "xyz",
+      "password": "raunaq123",
+      "gender": "Male",
+      "dob": "",
       "address": "",
       "city": "",
       "state": "",

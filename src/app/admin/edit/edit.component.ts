@@ -95,7 +95,8 @@ export class EditComponent implements OnInit {
     const p = { ...this.flight, ...this.scheduleForm.value };
     console.log(p);
     this.updateProfile(p, this.id);
-    
+    console.log(this.scheduleForm.value.duration);
+   
   }
       updateProfile(flight: IFlights, id: string): void {
     this.flightService.updateProfile(flight, id)
@@ -105,9 +106,10 @@ export class EditComponent implements OnInit {
       });
   }
       onSaveComplete(): void {
-  
+        this.router.navigate(['/flightSchedule']);
   }
     
+  
   
   
   }
