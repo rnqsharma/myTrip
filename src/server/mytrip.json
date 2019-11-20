@@ -99,10 +99,10 @@
   ],
   "profiledata": [
     {
-      "fullName": "Simarjot Singh",
+      "fullName": "Simarjot Singhcgc",
       "id": "rnqsharma3@gmail.com",
       "password": "lol123",
-      "gender": "Male",
+      "gender": "male",
       "dob": "2019-11-13",
       "address": "Manyata Tech Park",
       "city": "Bangalore",
@@ -123,7 +123,7 @@
           "duration": "01 hrs 30 min"
         }
       ],
-      "email": "simar@gmail.com"
+      "email": "rnqsharma3@gmail.com"
     },
     {
       "fullName": "Raunaq",
