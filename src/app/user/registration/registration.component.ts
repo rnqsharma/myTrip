@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfiledataService } from 'src/app/service/profiledata.service';
-import { ThrowStmt } from '@angular/compiler';
 import { IProfile } from 'src/app/model/IProfile';
 import { MatSnackBar } from '@angular/material';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-registration',
@@ -37,13 +37,26 @@ export class RegistrationComponent implements OnInit {
     }]
   };
 
+  registrationForm: FormGroup;
   profileDataa: IProfile;
   allProfileData: IProfile[];
   constructor(private service: ProfiledataService,
+              // private fb = FormBuilder,
               // tslint:disable-next-line: variable-name
               private _snackBar: MatSnackBar) { }
 
   ngOnInit() {
+
+
+    // this.registrationForm = this.fb.group({
+    //     name: ['', Validators.required],
+    //     id: ['', Validators.required],
+    //     gender: ['', Validators.required],
+    //     dob: ['', Validators.required],
+    //     pass: ['', Validators.required],
+    //   });
+
+
     this.service.getProfileData().subscribe(profile => {
       console.log(profile);
       this.allProfileData = profile;

@@ -123,18 +123,18 @@
   ],
   "profiledata": [
     {
-      "fullName": "Raunaq Sharma",
+      "fullName": "Simarjot Singh",
       "id": "rnqsharma3@gmail.com",
-      "password": "raunaq123",
-      "gender": "male",
-      "dob": "11-05-1997",
-      "address": "646/20 Prem Nagar",
-      "city": "Rohtak",
-      "state": "Haryana",
+      "password": "lol123",
+      "gender": "Male",
+      "dob": "2019-11-13",
+      "address": "Manyata Tech Park",
+      "city": "Bangalore",
+      "state": "Karnatakaadss",
       "country": "India",
-      "pin code": 124001,
-      "mobile": 7206187562,
-      "rights": "admin",
+      "pincode": 560045,
+      "mobile": 6987985890,
+      "rights": "user",
       "bookedFlights": [
         {
           "flightId": "VS-455",
@@ -146,7 +146,8 @@
           "price": 3551,
           "duration": "01 hrs 30 min"
         }
-      ]
+      ],
+      "email": "simar@gmail.com"
     },
     {
       "fullName": "Raunaq11 Sharma",
@@ -175,10 +176,10 @@
       ]
     },
     {
-      "fullName": "Simarjot Singh",
+      "fullName": "Simarjot Singhh",
       "id": "simar@gmail.com",
       "password": "lol123",
-      "gender": "Male",
+      "gender": "female",
       "dob": "2019-11-13",
       "address": "Manyata Tech Park",
       "city": "Bangalore",
@@ -198,7 +199,8 @@
           "price": 3551,
           "duration": "01 hrs 30 min"
         }
-      ]
+      ],
+      "email": "simar@gmail.com"
     },
     {
       "fullName": "Rajni",

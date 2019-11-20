@@ -35,6 +35,16 @@ export class ReviewBookingComponent implements OnInit {
           duration: string;
           hours: string;
           mins: string;
+
+          fullname ='';
+          address = '';
+          mobile = '';
+          passengerDetails = {
+            fullName: '',
+            gender: 'Male',
+            address: '',
+            mobile: 0
+          };
     // tslint:disable-next-line: variable-name
     constructor(private _flightsData: FlightdataService,
                 private route: ActivatedRoute) { }
@@ -44,8 +54,12 @@ export class ReviewBookingComponent implements OnInit {
           this.fl = flights;
           this.sub = this.route.paramMap.subscribe(
             params => {
+              this.fullname = params.get('fullName');
+              this.address = params.get('address');
+              this.mobile =  params.get('mobile');
               this.id = params.get('flightID');
               console.log(this.id);
+              console.log(this.fullname);
               this.idArray = this.id.split(':');
               console.log(this.idArray);
               if (this.idArray.length > 1) {
