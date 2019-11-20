@@ -7,7 +7,7 @@
       "departureTime": "16:35",
       "arrivalName": "Bangalore",
       "arrivalTime": "19:25",
-      "price": 1051,
+      "price": 50050,
       "duration": "02 hrs 55 min",
       "economy": 150,
       "business": 50
@@ -99,11 +99,11 @@
     {
       "id": "SG-246",
       "flightCompany": "Spicejet",
-      "departureName": "Coimbatore",
+      "departureName": "Delhi",
       "departureTime": "14:35",
-      "arrivalName": "Visakhapatnam",
+      "arrivalName": "Bangalore",
       "arrivalTime": "16:35",
-      "price": 6651,
+      "price": 0,
       "duration": "02 hrs 00 min",
       "economy": 150,
       "business": 50

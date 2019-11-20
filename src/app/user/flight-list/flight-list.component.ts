@@ -13,6 +13,9 @@ import { IProfile } from 'src/app/model/IProfile';
 })
 export class FlightListComponent implements OnInit {
 
+
+  buttonClicked = false;
+  lmao = 'unclicked';
   to = '';
   from = '';
   private sub: Subscription;
@@ -39,14 +42,6 @@ export class FlightListComponent implements OnInit {
     this._flightsData.getFlightsData().subscribe(
       (flights: IFlights[]) => {
         this.fl = flights;
-        this.sub = this.route.paramMap.subscribe(
-          params => {
-            this.to = params.get('to');
-            this.from = params.get('from');
-            this.roundTrip = params.get('roundtrip');
-            console.log(this.from + ' ' + this.to + ' ' + this.roundTrip );
-          }
-        );
         if (this.roundTrip === 'false') {
           this.roundTripBool = false;
         } else {
@@ -54,12 +49,19 @@ export class FlightListComponent implements OnInit {
         }
         this.filterData();
       }
-
     );
+    this.sub = this.route.paramMap.subscribe(
+      params => {
+        this.to = params.get('to');
+        this.from = params.get('from');
+        this.roundTrip = params.get('roundtrip');
+        console.log(this.from + ' ' + this.to + ' ' + this.roundTrip );
+      }
+    );
+    console.log(this.lmao);
   }
 
   filterData() {
-
     this.fl.sort((a: IFlights, b: IFlights) => {
       if (a.price < b.price) {
          return -1;
@@ -69,18 +71,10 @@ export class FlightListComponent implements OnInit {
         return 0;
       }
    });
-
-    console.log(this.fl);
-
-    console.log('In filter');
-    console.log(this.roundTrip);
     this.fl.forEach(f => {
-
       if (f.departureName === this.from && f.arrivalName === this.to) {
-        console.log(f);
         this.flightList.push(f);
         this.flightList.sort((a: IFlights, b: IFlights) => {
-           console.log(a);
            if (a.price < b.price) {
               return -1;
            } else if (a.price > b.price) {
@@ -96,7 +90,6 @@ export class FlightListComponent implements OnInit {
       }
     });
   }
-
 
   departureRadioChange(selectedDepartureid: string) {
     console.log('departureid = ' + selectedDepartureid);
@@ -141,5 +134,29 @@ export class FlightListComponent implements OnInit {
     console.log('selectedDeparturePrice =  ' + this.selectedDeparture.price);
     console.log('selectedArrivalPrice =  ' + this.selectedArrival.price);
     this.totalFare = this.selectedDeparture.price + this.selectedArrival.price;
+  }
+
+  customFunc(e: string) {
+    console.log(this.buttonClicked);
+    this.buttonClicked = true;
+    console.log(this.buttonClicked);
+    this.pushNewValues();
+    // this.ngOnInit();
+  }
+
+  pushNewValues() {
+    this.sub = this.route.paramMap.subscribe(
+      params => {
+        this.to = params.get('to');
+        this.from = params.get('from');
+        this.roundTrip = params.get('roundtrip');
+        console.log(this.from + ' ' + this.to + ' ' + this.roundTrip );
+      }
+    );
+    console.log('from = ' + this.from);
+    console.log('to = ' + this.to);
+    this.flightList = [];
+    console.log(this.flightList);
+    this.filterData();
   }
 }
