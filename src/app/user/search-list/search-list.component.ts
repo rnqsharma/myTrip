@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CitydataService } from 'src/app/service/citydata.service';
 import { FlightdataService } from 'src/app/service/flightdata.service';
@@ -17,6 +17,10 @@ export class SearchListComponent implements OnInit {
   constructor(private router: Router, private _flightService: FlightdataService, private _cityService: CitydataService, private route: ActivatedRoute) { }
 
   sub: Subscription;
+
+  // @Output() public linkedClicked = new EventEmitter<string>();
+  // @Output() lol = new EventEmitter<string>();
+  @Output() buttonClicked = new EventEmitter<boolean>();
 
   selectedDetails = {
     fromCity: 'Delhi',
@@ -49,11 +53,11 @@ export class SearchListComponent implements OnInit {
       });
 
     this._cityService.getCityData()
-    .subscribe((fulldata: ICity[]) => {
-      this.cities = fulldata;
-      this.to = this.cities.map( c => c.cityName);
-      this.from = this.cities.map( c => c.cityName);
-    });
+      .subscribe((fulldata: ICity[]) => {
+        this.cities = fulldata;
+        this.to = this.cities.map(c => c.cityName);
+        this.from = this.cities.map(c => c.cityName);
+      });
 
     this.sub = this.route.paramMap.subscribe(
       params => {
@@ -72,14 +76,11 @@ export class SearchListComponent implements OnInit {
   findFlights() {
     // tslint:disable-next-line: max-line-length
     this.router.navigate(['/search', this.selectedDetails.toCity, this.selectedDetails.fromCity, this.roundcounter, this.selectedDetails.departureDate, this.selectedDetails.returnDate, this.selectedDetails.tripType, this.selectedDetails.travellers, this.selectedDetails.class]);
+    this.onButtonClick();
+    console.log('travellers = ' + this.selectedDetails.travellers);
   }
 
   getTripType(e: any) {
-    // if (this.roundcounter) {
-    //   this.selectedDetails.tripType = 'Round Trip';
-    // } else {
-    //   this.selectedDetails.tripType = 'One Way';
-    // }
     this.selectedDetails.tripType = e.target.value;
     if (this.selectedDetails.tripType === 'One Way') {
       this.roundcounter = true;
@@ -99,9 +100,6 @@ export class SearchListComponent implements OnInit {
 
   getDepartureDate(e: any) {
     this.selectedDetails.departureDate = e.target.value;
-    // this.date = e.target.value;
-    // console.log('selected departure date = ' + this.selectedDetails.departureDate);
-    // this.validateDepartureDate(this.date);
   }
 
   getReturnDate(e: any) {
@@ -111,6 +109,7 @@ export class SearchListComponent implements OnInit {
 
   getTraveller(e: any) {
     this.selectedDetails.travellers = e.target.value;
+    console.log('gettravellers  = ' + this.selectedDetails.travellers);
   }
 
   getClass(e: any) {
@@ -119,18 +118,16 @@ export class SearchListComponent implements OnInit {
 
   setValues() {
     this.tripType = this.selectedDetails.tripType.trim();
-    // console.log('type = ' + this.tr ipType);
     this.fromCity = this.selectedDetails.fromCity.trim();
-    console.log(this.fromCity);
     this.toCity = this.selectedDetails.toCity.trim();
-    console.log(this.toCity);
     this.departureDate = this.selectedDetails.departureDate.trim();
-    console.log(this.departureDate);
     this.returnDate = this.selectedDetails.returnDate.trim();
-    console.log(this.returnDate);
     this.travellers = this.selectedDetails.travellers.trim();
-    console.log(this.travellers);
     this.class = this.selectedDetails.class.trim();
-    console.log(this.class);
+  }
+
+  onButtonClick() {
+    console.log('search list button clicked');
+    this.buttonClicked.emit(true);
   }
 }

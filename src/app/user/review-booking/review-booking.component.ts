@@ -76,8 +76,12 @@ export class ReviewBookingComponent implements OnInit {
     }
     filterData() {
       console.log('In filter');
+      console.log(this.fromCity + ' ' + this.toCity);
+      
       this.fl.forEach( f => {
         console.log(f);
+        console.log(f.id);
+        
         if (f.id === this.fromCity || f.id === this.toCity) {
           console.log('sfd');
           this.flightList.push(f);

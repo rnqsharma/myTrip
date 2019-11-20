@@ -20,14 +20,12 @@ import { PassengerDetailsComponent } from './user/passenger-details/passenger-de
 
 
 const routes: Routes = [
-  // {path: '', component: ViewProfileComponent},
 
   {path: 'adminhome', component: AdminhomeComponent, canActivate: [AdminGuardGuard]},
   {path: 'reviewBooking/:fullName/:address/:mobile/:flightID', component: ReviewBookingComponent},
   {path: '', component: SearchFlightsComponent},
   {path: 'adminFlight', component: AdminFlightlistComponent, canActivate: [AdminGuardGuard]},
   {path: 'search/:to/:from/:roundtrip/:departuredate/:returndate/:triptype/:travellers/:class', component: FlightListComponent},
-  // {path: '', component: SearchFlightsComponent},
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: RegistrationComponent},
   {path: 'viewprofile/:email', component: ViewProfileComponent},
