@@ -18,14 +18,12 @@ import { CityViewComponent } from './admin/city-view/city-view.component';
 
 
 const routes: Routes = [
-  // {path: '', component: ViewProfileComponent},
 
   {path: 'adminhome', component: AdminhomeComponent},
   {path: 'reviewBooking/:flightID', component: ReviewBookingComponent},
   {path: '', component: SearchFlightsComponent},
   {path: 'adminFlight', component: AdminFlightlistComponent},
   {path: 'search/:to/:from/:roundtrip/:departuredate/:returndate/:triptype/:travellers/:class', component: FlightListComponent},
-  // {path: '', component: SearchFlightsComponent},
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: RegistrationComponent},
   {path: 'viewprofile/:email', component: ViewProfileComponent},

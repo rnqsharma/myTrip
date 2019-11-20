@@ -7,19 +7,7 @@
       "departureTime": "16:35",
       "arrivalName": "Bangalore",
       "arrivalTime": "19:25",
-      "price": 1051,
-      "duration": "02 hrs 55 min",
-      "economy": 150,
-      "business": 50
-    },
-    {
-      "id": "SG-190",
-      "flightCompany": "Spicejet",
-      "departureName": "Bangalore",
-      "departureTime": "16:35",
-      "arrivalName": "Delhi",
-      "arrivalTime": "19:25",
-      "price": 9051,
+      "price": 50050,
       "duration": "02 hrs 55 min",
       "economy": 150,
       "business": 50
@@ -93,18 +81,6 @@
       "arrivalTime": "03:30",
       "price": 3551,
       "duration": "01 hrs 30 min",
-      "economy": 150,
-      "business": 50
-    },
-    {
-      "id": "SG-246",
-      "flightCompany": "Spicejet",
-      "departureName": "Coimbatore",
-      "departureTime": "14:35",
-      "arrivalName": "Visakhapatnam",
-      "arrivalTime": "16:35",
-      "price": 6651,
-      "duration": "02 hrs 00 min",
       "economy": 150,
       "business": 50
     },
