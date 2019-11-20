@@ -14,7 +14,7 @@ export class ProfiledataService {
 
   public getProfileData(): Observable<IProfile[]> {
     return this._httpclient.get<IProfile[]>(
-      `http://localhost:3000/profiledata`
+      `http://localhost:8001/getAll`
     );
   }
 
@@ -22,7 +22,7 @@ export class ProfiledataService {
   public getProfileById(id: string): Observable<IProfile> {
     console.log(id);
     return this._httpclient.get<IProfile>
-      (`http://localhost:3000/profiledata/${id}`);
+      (`http://localhost:8001/viewprofile/${id}`);
   }
 
   postProfileData(login: IProfile): Observable<IProfile> {
@@ -30,7 +30,7 @@ export class ProfiledataService {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' }); // MIME TYPE
     console.log('post wala');
     console.log(login);
-    return this._httpclient.post<IProfile>(`http://localhost:3000/profiledata`, login, { headers })
+    return this._httpclient.post<IProfile>(`http://localhost:8001/signup`, login, { headers })
       .pipe(tap(data => console.log('registration Successful' + JSON.stringify(data))),
         catchError(this.handleError));
   }
@@ -56,7 +56,7 @@ export class ProfiledataService {
   public updateProfile(profile: IProfile, id: string): Observable<IProfile> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     console.log('id' + id);
-    const url = `http://localhost:3000/profiledata/${id}`;
+    const url = `http://localhost:8001/editprofile/${id}`;
     return this._httpclient.put<IProfile>(url, profile, { headers })
       .pipe(
         tap(() => console.log('updateProfile: ' + profile.id)),

@@ -30,6 +30,8 @@ import { AirlinelistcomponentComponent } from './admin/airlinelistcomponent/airl
 import { ScheduleComponent } from './admin/schedule/schedule.component';
 import { PassengerDetailsComponent } from './user/passenger-details/passenger-details.component';
 import { CityViewComponent } from './admin/city-view/city-view.component';
+import { EditComponent } from './admin/edit/edit.component';
+import { GuardComponent } from './guard/guard.component';
 
 
 
@@ -61,7 +63,9 @@ import { CityViewComponent } from './admin/city-view/city-view.component';
     AirlinelistcomponentComponent,
     ScheduleComponent,
     PassengerDetailsComponent,
-    CityViewComponent
+    CityViewComponent,
+    EditComponent,
+    GuardComponent
   ],
   imports: [
     BrowserModule,

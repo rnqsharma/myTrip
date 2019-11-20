@@ -9,11 +9,12 @@ import { ScheduleComponent } from './schedule/schedule.component';
 import { AdminFlightlistComponent } from './admin-flightlist/admin-flightlist.component';
 import { EditairlineComponent } from './editairline/editairline.component';
 import { CityViewComponent } from './city-view/city-view.component';
+import { EditComponent } from './edit/edit.component';
 
 
 
 @NgModule({
-  declarations: [AirlinelistcomponentComponent, CityComponent, AirlineComponent, AdminhomeComponent, AddnewflightComponent, ScheduleComponent,AdminFlightlistComponent, CityViewComponent],
+  declarations: [AirlinelistcomponentComponent, CityComponent, AirlineComponent, AdminhomeComponent, AddnewflightComponent, ScheduleComponent,AdminFlightlistComponent, CityViewComponent, EditComponent],
   imports: [
     CommonModule
   ]

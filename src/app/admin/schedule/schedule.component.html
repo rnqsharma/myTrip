@@ -21,14 +21,14 @@
 
         
         <td>{{ flight.flightCompany }}</td>
-        <td>{{ flight.flightID }}</td>
+        <td>{{ flight.id }}</td>
         <td>{{flight.departureName}}</td>
         <td>{{flight.arrivalName}}</td>
         <td>{{ flight.departureTime }}</td>
         <td>{{ flight.arrivalTime }}</td>
         <td>{{flight.duration}}</td>
-        <td><button class='btn btn-primary'>
-            Edit
+        <td><button class='btn btn-primary' [routerLink]="['/edit', flight.id]" type="submit">
+                        Edit
             </button>
         </td>
         

@@ -14,14 +14,14 @@ export class AirlinedataService {
 
   getAirlinesData(): Observable<IAirline[]> {
     return this._httpclient.get<IAirline[]>(
-      `http://localhost:3000/airlines`
+      `http://localhost:8004/searchairline`
     );
   }
 
   deleteAirlineByID(id: string): Observable<{}> {
     console.log(id);
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    const url = `http://localhost:3000/airlines/${id}`;
+    const url = `http://localhost:8004/deleteAirlines/${id}`;
     console.log('url = ' + url);
     return this._httpclient.delete<IAirline>(url, { headers })
     .pipe(
@@ -31,7 +31,7 @@ export class AirlinedataService {
 
   getAirlinesByID(id: string): Observable<IAirline> {
     return this._httpclient.get<IAirline>(
-      `http://localhost:3000/airlines/${id}`
+      `http://localhost:8004/searchairlinebyid/${id}`
     );
   }
 
@@ -40,7 +40,7 @@ export class AirlinedataService {
     const headers = new HttpHeaders({'Content-Type': 'application/json'}); // MIME TYPE
     console.log('post wala');
     console.log(airline);
-  return this._httpclient.post<IAirline>(`http://localhost:3000/airlines`,JSON.stringify(airline), {headers})
+    return this._httpclient.post<IAirline>(`http://localhost:8004/addairline`, airline, {headers})
     .pipe(tap (data => console.log('registration Successful' + JSON.stringify(data))),
     catchError(this.handleError));
   }

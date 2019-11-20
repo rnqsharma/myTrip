@@ -15,11 +15,12 @@ import { ScheduleComponent } from './admin/schedule/schedule.component';
 import { AdminFlightlistComponent } from './admin/admin-flightlist/admin-flightlist.component';
 import { AirlineComponent } from './admin/airline/airline.component';
 import { CityViewComponent } from './admin/city-view/city-view.component';
-
+import { EditComponent } from './admin/edit/edit.component';
+import { HeaderComponent } from './header/header.component';
+import { AuthGuard } from './guard/auth-guard';
 
 const routes: Routes = [
   // {path: '', component: ViewProfileComponent},
-
   {path: 'adminhome', component: AdminhomeComponent},
   {path: 'reviewBooking/:flightID', component: ReviewBookingComponent},
   {path: '', component: SearchFlightsComponent},
@@ -29,14 +30,14 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: RegistrationComponent},
   {path: 'viewprofile/:email', component: ViewProfileComponent},
-  {path: 'editprofile', component: ProfileComponent},
+  {path: 'editprofile/:id', component: ProfileComponent},
   {path: 'search', component: SearchListComponent},
   {path: 'airlinelist' , component: AirlinelistcomponentComponent},
   {path : 'addnewflight/:flightID' , component : AddnewflightComponent },
   {path: 'flightSchedule', component: ScheduleComponent},
   {path: 'editAirline', component: AirlineComponent},
-  {path: 'cityList', component: CityViewComponent}
-
+  {path: 'cityList', component: CityViewComponent},
+  {path: 'edit/:id' , component: EditComponent}
   // {path : 'addnewflight/:flightID' , component : AddnewflightComponent }
 ];
 

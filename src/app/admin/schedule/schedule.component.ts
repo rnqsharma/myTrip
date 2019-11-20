@@ -10,14 +10,15 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ScheduleComponent implements OnInit {
 
-  departureTime = '';
-  arrivalTime = '';
-  flightID = '';
-  flightCompany = '';
-  departureName = '';
-  arrivalName = '';
-  duration = '';
-  flights: IFlights[];
+  
+  departureTime='';
+  arrivalTime='';
+  id ='';
+  flightCompany='';
+  departureName='';
+  arrivalName='';
+  duration='';
+  flights : IFlights[];
 
   // tslint:disable-next-line: variable-name
   constructor(private _flightsData: FlightdataService, private route: ActivatedRoute) { }
@@ -29,6 +30,7 @@ export class ScheduleComponent implements OnInit {
       console.log(this.flights);
 
     });
+    
 
   }
 }

@@ -11,13 +11,13 @@ export class LogindataService {
   constructor(private _httpclient: HttpClient) { }
   getloginData(): Observable<IProfile[]> {
     return this._httpclient.get<IProfile[]>(
-      `http://localhost:3000/profiledata`
+      `http://localhost:8001/getAll`
     );
   }
   getLoginDataByMail(login: string): Observable<IProfile> {
     console.log(login);
     return this._httpclient.get<IProfile>(
-      `http://localhost:3000/profiledata/${login}`
+      `http://localhost:8001/viewprofile/${login}`
     );
   }
 

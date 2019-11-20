@@ -51,7 +51,8 @@ deleteFlight(id: string): void {
     if (confirm(`Really delete this topic?`)) {
       this.airlineservice.deleteAirlineByID(id)
       .subscribe(() => {
-      this.router.navigate(['/airlineList']);
+      this.router.navigate(['/airlinelist']);
+      //console.log(this.airlineData);
       // error: err => this.errorMessage = err;
       this.deleteFeedback();
       });

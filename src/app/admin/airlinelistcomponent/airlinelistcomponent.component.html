@@ -20,7 +20,7 @@
             <tbody>
                 <tr *ngFor= 'let airline of airlines'>
                     <td> 
-                    <img src= '{{airline.logo}}'  height="60" width="60">
+                    <img [src]= 'airline.logo'  height="60" width="60">
                     </td>
                     <td >
                     {{airline.airLineName}} 

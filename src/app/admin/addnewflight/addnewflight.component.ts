@@ -28,18 +28,6 @@ export class AddnewflightComponent implements OnInit {
   flight: IFlights;
   errorMessage: string;
 
-  flightDetails: {
-    id: '',
-    flightCompany: '',
-    departureName: '',
-    departureTime: '',
-    arrivalName: '',
-    arrivalTime: '',
-    duration: '',
-    economy: '',
-    business: ''
-  };
-
   constructor(
     private fb: FormBuilder,
     private route: ActivatedRoute,
@@ -56,6 +44,14 @@ export class AddnewflightComponent implements OnInit {
         this.id = params.get('flightID');
       }
     );
+
+    // this.productForm = this.fb.group({
+    //   productName: [''],
+    //   productCode: ['', Validators.required],
+    //   starRating: ['', NumberValidators.range(1, 5)],
+    //   tags: this.fb.array([]),
+    //   description: ''
+    //   });
     this.flightForm = this.fb.group({
       id: [''],
       flightCompany: [''],
@@ -74,9 +70,10 @@ export class AddnewflightComponent implements OnInit {
 
       this.cityservice.getCityData().subscribe((cities: ICity[]) => {
         this.cities = cities;
-        console.log('lool');
-        console.log(this.cities);
+        // console.log(this.cities);
 
+
+        if (this.id !== '0') {
         this.flightService.getFlightsDataByID(this.id).
       subscribe((flight: IFlights) => {
         console.log(flight);
@@ -93,34 +90,47 @@ export class AddnewflightComponent implements OnInit {
           duration: this.flight.duration,
           economy: this.flight.economy,
           business: this.flight.business,
-          });
-
-      });
+        });
+        console.log('flightForm is working' + this.flightForm.value.id);
     });
+  }
   });
+});
 
+  }
+    addflight = (): void => {
+  const p = { ...this.flight, ...this.flightForm.value };
+  console.log(p);
+  // console.log(this.email);
+  console.log('p.id is working' + this.id);
+  if (this.id === '0') {
+    console.log('createNew is working');
+    this.flightService.createFlight(p)
+    .subscribe({
+    next: () => this.onSaveComplete(),
+    error: err => this.errorMessage = err
+    });
+    } else {
+      console.log('update is working');
+      this.updateProfile(p, this.id);
+    }
+  // console.log("sgf")
 }
-//     addflight = (): void => {
-//   const p = { ...this.flight, ...this.flightForm.value };
-//   console.log(p);
-//   // console.log(this.email);
-//   this.updateProfile(p, this.id);
-//   // console.log("sgf")
-// }
-//     updateProfile(flight: IFlights, id: string): void {
-//   this.flightService.updateProfile(flight, id)
-//     .subscribe({
-//       next: () => this.onSaveComplete(),
-//       error: err => this.errorMessage = err
-//     });
-// }
-    // onSaveComplete(): void {
+    updateProfile(flight: IFlights, id: string): void {
+  this.flightService.updateProfile(flight, id)
+    .subscribe({
+      next: () => this.onSaveComplete(),
+      error: err => this.errorMessage = err
+    });
+}
+
+
+
+
+onSaveComplete(): void {
   // Reset the form to clear the flags
   // this.profileForm.reset();
-  //  this.router.navigate(['/profile']);
-addflight() {
-  console.log('id = ' + this.id);
+    this.router.navigate(['/adminFlight']);
 }
-
 
 }

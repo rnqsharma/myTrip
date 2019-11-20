@@ -14,7 +14,7 @@ export class ProfileComponent implements OnInit {
 
   errorMessage: string;
   profileForm: FormGroup;
-  email = 'rnqsharma3@gmail.com';
+  email = '';
   profile: IProfile;
   private sub: Subscription;
 
@@ -42,12 +42,12 @@ export class ProfileComponent implements OnInit {
       mobile: [''],
     });
 
-    // this.sub = this.route.paramMap.subscribe(
-    //   params => {
-    //     this.email = params.get('email');
-    //     console.log(this.email);
-    //   }
-    // );
+    this.sub = this.route.paramMap.subscribe(
+      params => {
+        this.email = params.get('id');
+        console.log(this.email);
+      }
+    );
 
 
     this.profileService.getProfileById(localStorage.getItem('email')).subscribe((profile: IProfile) => {
