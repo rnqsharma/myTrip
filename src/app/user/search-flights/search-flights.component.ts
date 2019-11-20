@@ -80,7 +80,7 @@ export class SearchFlightsComponent implements OnInit {
   }
 
   getFromCity(e: any) {
-    this.selectedDetails.fromCity = e.target.value.toString();
+    this.selectedDetails.fromCity = e.target.value;
   }
 
   getToCity = (e: any) => {
@@ -130,9 +130,9 @@ export class SearchFlightsComponent implements OnInit {
     // console.log('end date = ' + this.endDate);
   }
 
-  addMonthsToDate(dt, n) {
-    const dtt = dt.getMonth() + n;
-    const endDate = new Date(dt.setMonth(dtt));
-    this.endDate = '' + endDate.toString;
-  }
+  // addMonthsToDate(dt, n) {
+  //   const dtt = dt.getMonth() + n;
+  //   const endDate = new Date(dt.setMonth(dtt));
+  //   this.endDate = '' + endDate.toString;
+  // }
 }

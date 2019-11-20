@@ -99,12 +99,39 @@
   ],
   "profiledata": [
     {
-      "fullName": "Raunaq Sharma",
+      "fullName": "Simarjot Singh",
       "id": "rnqsharma3@gmail.com",
-      "password": "raunaq123",
+      "password": "lol123",
+      "gender": "Male",
+      "dob": "2019-11-13",
+      "address": "Manyata Tech Park",
+      "city": "Bangalore",
+      "state": "Karnatakaadss",
+      "country": "India",
+      "pincode": 560045,
+      "mobile": 6987985890,
+      "rights": "user",
+      "bookedFlights": [
+        {
+          "flightId": "VS-455",
+          "flightCompany": "Vistara",
+          "departureName": "Chandigarh",
+          "departureTime": "02:00",
+          "arrivalName": "Noida",
+          "arrivalTime": "03:30",
+          "price": 3551,
+          "duration": "01 hrs 30 min"
+        }
+      ],
+      "email": "simar@gmail.com"
+    },
+    {
+      "fullName": "Raunaq",
+      "id": "admin@gmail.com",
+      "password": "admin123",
       "gender": "male",
       "dob": "11-05-1997",
-      "address": "646/20 Prem Nagar",
+      "address": "646/20 Prem Nagar, Rohtak, Haryana",
       "city": "Rohtak",
       "state": "Haryana",
       "country": "India",
@@ -125,36 +152,10 @@
       ]
     },
     {
-      "fullName": "Raunaq11 Sharma",
-      "id": "admin@gmail.com",
-      "password": "admin123",
-      "gender": "male",
-      "dob": "11-05-1997",
-      "address": "646/20 Prem Nagar, Rohtak, Haryana",
-      "city": "Rohtak",
-      "state": "Haryana",
-      "country": "India",
-      "pin code": 124001,
-      "mobile": 7206187562,
-      "rights": "user",
-      "bookedFlights": [
-        {
-          "flightId": "VS-455",
-          "flightCompany": "Vistara",
-          "departureName": "Chandigarh",
-          "departureTime": "02:00",
-          "arrivalName": "Noida",
-          "arrivalTime": "03:30",
-          "price": 3551,
-          "duration": "01 hrs 30 min"
-        }
-      ]
-    },
-    {
-      "fullName": "Simarjot Singh",
+      "fullName": "Simarjot Singhh",
       "id": "simar@gmail.com",
       "password": "lol123",
-      "gender": "Male",
+      "gender": "female",
       "dob": "2019-11-13",
       "address": "Manyata Tech Park",
       "city": "Bangalore",
@@ -174,7 +175,8 @@
           "price": 3551,
           "duration": "01 hrs 30 min"
         }
-      ]
+      ],
+      "email": "simar@gmail.com"
     },
     {
       "fullName": "Rajni",
@@ -319,6 +321,84 @@
       "pincode": 0,
       "mobile": 0,
       "rights": "",
+      "bookedFlights": [
+        {
+          "flightId": "",
+          "flightCompany": "",
+          "departureName": "",
+          "departureTime": "",
+          "arrivalName": "",
+          "arrivalTime": "",
+          "price": 0,
+          "duration": ""
+        }
+      ]
+    },
+    {
+      "fullName": "lolo",
+      "id": "lolo@yahoo.com",
+      "password": "123",
+      "gender": "Other",
+      "dob": "2019-03-08",
+      "address": "",
+      "city": "",
+      "state": "",
+      "country": "",
+      "pincode": 0,
+      "mobile": 0,
+      "rights": "user",
+      "bookedFlights": [
+        {
+          "flightId": "",
+          "flightCompany": "",
+          "departureName": "",
+          "departureTime": "",
+          "arrivalName": "",
+          "arrivalTime": "",
+          "price": 0,
+          "duration": ""
+        }
+      ]
+    },
+    {
+      "fullName": "abcc",
+      "id": "abc@gmail.com",
+      "password": "123",
+      "gender": "Male",
+      "dob": "2019-10-30",
+      "address": "",
+      "city": "",
+      "state": "",
+      "country": "",
+      "pincode": 0,
+      "mobile": 0,
+      "rights": "",
+      "bookedFlights": [
+        {
+          "flightId": "",
+          "flightCompany": "",
+          "departureName": "",
+          "departureTime": "",
+          "arrivalName": "",
+          "arrivalTime": "",
+          "price": 0,
+          "duration": ""
+        }
+      ]
+    },
+    {
+      "fullName": "lolo23",
+      "id": "lolo23@gmail.com",
+      "password": "1234",
+      "gender": "Male",
+      "dob": "2019-11-20",
+      "address": "",
+      "city": "",
+      "state": "",
+      "country": "",
+      "pincode": 0,
+      "mobile": 0,
+      "rights": "user",
       "bookedFlights": [
         {
           "flightId": "",
