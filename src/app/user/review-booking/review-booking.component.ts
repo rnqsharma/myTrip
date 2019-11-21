@@ -95,6 +95,7 @@ export class ReviewBookingComponent implements OnInit, AfterViewChecked {
 
 
 
+          counter = false;
           fullname ='';
           address = '';
           mobile = '';
@@ -124,6 +125,7 @@ export class ReviewBookingComponent implements OnInit, AfterViewChecked {
               this.idArray = this.id.split(':');
               console.log(this.idArray);
               if (this.idArray.length > 1) {
+                this.counter = true;
                 this.fromCity = this.idArray[0];
                 this.toCity = this.idArray[1];
                 this.paypalService.payPal(this.details);

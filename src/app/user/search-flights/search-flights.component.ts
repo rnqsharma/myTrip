@@ -48,7 +48,7 @@ export class SearchFlightsComponent implements OnInit {
     this.validationMessages = {
 
     };
-   }
+  }
 
   ngOnInit() {
     console.log(this.today.getMonth());
@@ -60,11 +60,11 @@ export class SearchFlightsComponent implements OnInit {
       });
 
     this._cityService.getCityData()
-    .subscribe((fulldata: ICity[]) => {
-      this.cities = fulldata;
-      this.to = this.cities.map( c => c.cityName);
-      this.from = this.cities.map( c => c.cityName);
-    });
+      .subscribe((fulldata: ICity[]) => {
+        this.cities = fulldata;
+        this.to = this.cities.map(c => c.cityName);
+        this.from = this.cities.map(c => c.cityName);
+      });
 
     const today = new Date();
     const currentDate = today.getDate().toString;
@@ -73,7 +73,12 @@ export class SearchFlightsComponent implements OnInit {
 
   findFlights() {
     // tslint:disable-next-line: max-line-length
-    this.router.navigate(['/search', this.selectedDetails.toCity, this.selectedDetails.fromCity, this.roundcounter, this.selectedDetails.departureDate, this.selectedDetails.returnDate, this.selectedDetails.tripType, this.selectedDetails.travellers, this.selectedDetails.class, this.roundcounter]);
+    if (this.selectedDetails.fromCity === this.selectedDetails.toCity) {
+      alert('From and To Cities cannot be same');
+    } else {
+      this.router.navigate(['/search', this.selectedDetails.toCity, this.selectedDetails.fromCity, this.roundcounter,this.selectedDetails.departureDate, this.selectedDetails.returnDate, this.selectedDetails.tripType, this.selectedDetails.travellers, this.selectedDetails.class, this.roundcounter]);
+    }
+
   }
 
   getTripType() {
@@ -119,11 +124,11 @@ export class SearchFlightsComponent implements OnInit {
   }
 
   radioSetterRound() {
-    this.roundcounter = true  ;
+    this.roundcounter = true;
     this.getTripType();
   }
 
-  validateDepartureDate(date: Date) {}
+  validateDepartureDate(date: Date) { }
 
   // addMonthsToDate(dt, n) {
   //   const dtt = dt.getMonth() + n;

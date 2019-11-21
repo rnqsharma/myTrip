@@ -36,6 +36,8 @@ export class FlightListComponent implements OnInit {
     tripType: ''
   };
 
+  imgCounter = false;
+
   fl: IFlights[];
   flightList: Array<IFlights> = [];
   flightListRound: Array<IFlights> = [];
@@ -138,6 +140,9 @@ export class FlightListComponent implements OnInit {
       // console.log('In Else');
       // alert(" sorry no flights available");
       this.router.navigate[(' ')];
+      this.imgCounter = true;
+      alert('sorry no flights available');
+      this.router.navigate[('')];
     }
   }
 
