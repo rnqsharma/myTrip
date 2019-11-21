@@ -26,7 +26,7 @@ const routes: Routes = [
   {path: 'reviewBooking/:fullName/:address/:mobile/:flightID/:travellers/:class', component: ReviewBookingComponent},
   {path: '', component: SearchFlightsComponent},
   {path: 'adminFlight', component: AdminFlightlistComponent, canActivate: [AdminGuardGuard]},
-  {path: 'search/:to/:from/:roundtrip/:departuredate/:returndate/:triptype/:travellers/:class', component: FlightListComponent},
+  {path: 'search/:to/:from/:roundtrip/:departuredate/:returndate/:triptype/:travellers/:class/:roundcounter', component: FlightListComponent},
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: RegistrationComponent},
   {path: 'viewprofile/:email', component: ViewProfileComponent, canActivate: [AuthGuardGuard]},

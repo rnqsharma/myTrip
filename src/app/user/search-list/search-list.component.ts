@@ -44,6 +44,7 @@ export class SearchListComponent implements OnInit {
   to: string[];
   cities: ICity[];
   roundcounter = false;
+  roundcounter1 = '';
 
   ngOnInit() {
     console.log('in search list component');
@@ -68,8 +69,14 @@ export class SearchListComponent implements OnInit {
         this.selectedDetails.travellers = params.get('travellers');
         this.selectedDetails.class = params.get('class');
         this.selectedDetails.tripType = params.get('triptype');
+        this.roundcounter1 = params.get('roundcounter');
       }
     );
+    if (this.roundcounter1 === 'true') {
+      this.roundcounter = true;
+    } else {
+      this.roundcounter = false;
+    }
     this.setValues();
   }
 

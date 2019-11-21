@@ -41,6 +41,9 @@ img{
   hr{
       border: 2px solid;
   }
+  #roundCards{
+      width: 100%;
+  }
   mat-card-header{
       /* margin-left: 35px; */
       /* margin-top: 20px; */
@@ -49,7 +52,7 @@ img{
       width: 70%;
   }
   #rowCard{
-      width: 100%;
+      width: 483px;
   }
   table {
     /* border: 0px solid #CCC; */
