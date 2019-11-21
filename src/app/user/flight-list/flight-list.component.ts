@@ -6,6 +6,7 @@ import { Subscription } from 'rxjs';
 import { element } from 'protractor';
 import { IProfile } from 'src/app/model/IProfile';
 import { ProfiledataService } from 'src/app/service/profiledata.service';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-flight-list',
@@ -63,7 +64,8 @@ export class FlightListComponent implements OnInit {
 
   // tslint:disable-next-line: variable-name
   constructor(private _flightsData: FlightdataService, private route: ActivatedRoute,
-              private router: Router, private profileService: ProfiledataService) { }
+              private router: Router, private profileService: ProfiledataService,
+              private _snackBar: MatSnackBar) { }
 
   ngOnInit() {
     this._flightsData.getFlightsData().subscribe(
@@ -130,6 +132,14 @@ export class FlightListComponent implements OnInit {
       }
     });
     if (this.flightList.length === 0) {
+
+      this._snackBar.open('Flight Doesnt Exist', '', {
+        panelClass: ['snackbar'],
+        duration: 2000,
+      });
+      // console.log('In Else');
+      // alert(" sorry no flights available");
+      this.router.navigate[(' ')];
       this.imgCounter = true;
       alert('sorry no flights available');
       this.router.navigate[('')];

@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ProfiledataService } from 'src/app/service/profiledata.service';
 import { IProfile } from 'src/app/model/IProfile';
 import { MatSnackBar } from '@angular/material';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+// import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -65,6 +66,8 @@ export class RegistrationComponent implements OnInit {
     });
   }
 
+
+
   postProfileData( fullName: string, email: string, gender: string, dob: string, password: string ) {
 
     this.allProfileData.forEach(profile => {
@@ -92,7 +95,6 @@ export class RegistrationComponent implements OnInit {
       });
       console.log('In Else');
     }
-
   }
 
   disabledCounter(): boolean {

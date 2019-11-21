@@ -28,9 +28,10 @@ import { ReviewBookingComponent } from './user/review-booking/review-booking.com
 import { RoundtripFooterComponent } from './user/roundtrip-footer/roundtrip-footer.component';
 import { AirlinelistcomponentComponent } from './admin/airlinelistcomponent/airlinelistcomponent.component';
 import { ScheduleComponent } from './admin/schedule/schedule.component';
+import { EditComponent } from './admin/edit/edit.component';
+
 import { PassengerDetailsComponent } from './user/passenger-details/passenger-details.component';
 import { CityViewComponent } from './admin/city-view/city-view.component';
-
 
 
 @NgModule({
@@ -60,6 +61,7 @@ import { CityViewComponent } from './admin/city-view/city-view.component';
     FilterComponent,
     AirlinelistcomponentComponent,
     ScheduleComponent,
+    EditComponent,
     PassengerDetailsComponent,
     CityViewComponent
   ],

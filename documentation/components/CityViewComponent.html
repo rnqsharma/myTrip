@@ -1,0 +1,812 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>my-trip documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">my-trip documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>CityViewComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/admin/city-view/city-view.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-city-view</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./city-view.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./city-view.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#cities">cities</a>
+                            </li>
+                            <li>
+                                <a href="#city">city</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#deleteByAttr">deleteByAttr</a>
+                            </li>
+                            <li>
+                                <a href="#deleteCity">deleteCity</a>
+                            </li>
+                            <li>
+                                <a href="#deleteFeedback">deleteFeedback</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(cityservice: <a href="../injectables/CitydataService.html">CitydataService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/admin/city-view/city-view.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>cityservice</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CitydataService.html" target="_self" >CitydataService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteByAttr"></a>
+                    <span class="name">
+                        <b>
+                            deleteByAttr
+                        </b>
+                        <a href="#deleteByAttr"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteByAttr(arr, attr, value)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="57"
+                            class="link-to-prism">src/app/admin/city-view/city-view.component.ts:57</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>arr</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>attr</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>value</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteCity"></a>
+                    <span class="name">
+                        <b>
+                            deleteCity
+                        </b>
+                        <a href="#deleteCity"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteCity(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="30"
+                            class="link-to-prism">src/app/admin/city-view/city-view.component.ts:30</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteFeedback"></a>
+                    <span class="name">
+                        <b>
+                            deleteFeedback
+                        </b>
+                        <a href="#deleteFeedback"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteFeedback()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="44"
+                            class="link-to-prism">src/app/admin/city-view/city-view.component.ts:44</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="22"
+                            class="link-to-prism">src/app/admin/city-view/city-view.component.ts:22</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="cities"></a>
+                        <span class="name">
+                            <b>
+                            cities</b>
+                            <a href="#cities"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/ICity.html" target="_self" >ICity[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/admin/city-view/city-view.component.ts:12</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="city"></a>
+                        <span class="name">
+                            <b>
+                            city</b>
+                            <a href="#city"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/ICity.html" target="_self" >ICity</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    cityName: &#x27;&#x27;,
+    id: &#x27;&#x27;
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/admin/city-view/city-view.component.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { ICity } from &#x27;src/app/model/ICity&#x27;;
+import { CitydataService } from &#x27;src/app/service/citydata.service&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+
+@Component({
+  selector: &#x27;app-city-view&#x27;,
+  templateUrl: &#x27;./city-view.component.html&#x27;,
+  styleUrls: [&#x27;./city-view.component.css&#x27;]
+})
+export class CityViewComponent implements OnInit {
+  cities: ICity[];
+  city: ICity &#x3D; {
+    cityName: &#x27;&#x27;,
+    id: &#x27;&#x27;
+  }
+
+  constructor(
+    private cityservice: CitydataService, private router: Router
+  ) { }
+
+  ngOnInit() {
+    this.cityservice.getCityData().subscribe((cities: ICity[]) &#x3D;&gt; {
+      this.cities &#x3D; cities;
+      console.log(&#x27;lool&#x27;);
+      console.log(this.cities);
+    });
+  }
+
+  deleteCity(id: string): void {
+    console.log(id);
+    this.city.id &#x3D; id;
+    // this.deleteFeedback();
+    if (confirm(&#x60;Really delete this topic?&#x60;)) {
+      this.cityservice.deleteCityByID(id)
+        .subscribe(() &#x3D;&gt; {
+          this.router.navigate([&#x27;/cityList&#x27;]);
+          // error: err &#x3D;&gt; this.errorMessage &#x3D; err;
+          this.deleteFeedback();
+        });
+    }
+  }
+
+  deleteFeedback() {
+    // this.idFeed &#x3D; feedID;
+    console.log(&quot;lll&quot;);
+    this.cities.forEach(c &#x3D;&gt; {
+      if (c.id &#x3D;&#x3D;&#x3D; this.city.id) {
+        this.deleteByAttr(this.cities, &#x27;id&#x27;, this.city.id);
+      }
+    });
+    console.log(this.cities);
+    // this.updateCustomer();
+  }
+
+
+  deleteByAttr(arr, attr, value) {
+    let i &#x3D; arr.length;
+    while (i--) {
+      if (arr[i] &amp;&amp; arr[i].hasOwnProperty(attr) &amp;&amp; (arguments.length &gt; 2 &amp;&amp; arr[i][attr] &#x3D;&#x3D;&#x3D; value)) {
+
+        arr.splice(i, 1);
+
+      }
+    }
+    return arr;
+  }
+
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">
+&lt;div class&#x3D; &quot;container-fluid&quot; &gt;
+    
+        &lt;!--&lt;div class&#x3D;&quot;col-sm-9 jobs_index_middle_panels&quot;&gt;--&gt;
+            &lt;div class&#x3D;&quot;card offset-md-2 col-sm-8&quot;&gt;
+            &lt;div class&#x3D;&quot;card-body&quot;&gt;
+            &lt;table class&#x3D;&quot;table table-hover&quot;&gt;
+                    
+                &lt;thead class&#x3D;&quot;table table-borderless&quot;&gt;
+                &lt;tr&gt;
+                     
+                     &lt;th&gt;City Name&lt;/th&gt;
+                     &lt;th&gt;City Id &lt;/th&gt;
+                     &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary&quot; data-toggle&#x3D;&quot;modal&quot; data-target&#x3D;&quot;#myModa&quot;&gt;Add Airline&lt;/button&gt;
+                     &lt;!-- &lt;app-airline&gt;&lt;/app-airline&gt; --&gt;
+    
+                &lt;/tr&gt;
+                                    
+                &lt;/thead&gt;
+                &lt;tbody&gt;
+                    &lt;tr *ngFor&#x3D; &#x27;let city of cities&#x27;&gt;
+                        
+                        &lt;td &gt;
+                        {{city.cityName}} 
+                        &lt;/td&gt;
+                        &lt;td&gt;
+                            {{city.id}} 
+                        &lt;/td&gt;
+                        &lt;td&gt;
+                                &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary&quot; data-toggle&#x3D;&quot;modal&quot; data-target&#x3D;&quot;#myModa&quot;&gt;Edit&lt;/button&gt;
+                        &lt;/td&gt;
+                        &lt;td&gt;
+                            &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary&quot;  (click)&#x3D;&quot;deleteCity(city.id)&quot;&gt;delete&lt;/button&gt;
+                        &lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/tbody&gt;
+             &lt;/table&gt;
+            &lt;/div&gt;
+            &lt;/div&gt;  
+        &lt;            
+            &lt;/div&gt;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+            
+                                                    &lt;!-- MODAL CODE --&gt;
+    
+            &lt;div class&#x3D;&quot;modal fade&quot; id&#x3D;&quot;myModa&quot;&gt;
+                    &lt;div class&#x3D;&quot;modal-dialog modal-dialog-centered&quot;&gt;
+                      &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+                      
+                        &lt;!-- Modal Header --&gt;
+                        &lt;div class&#x3D;&quot;modal-header&quot;&gt;
+                          &lt;h4 class&#x3D;&quot;modal-title&quot;&gt;City Information&lt;/h4&gt;
+                        &lt;/div&gt;
+                        
+                        &lt;!-- Modal body --&gt;
+                        
+                                &lt;form class&#x3D;&quot;modal-body&quot; class&#x3D;&quot;form-group&quot; style&#x3D;&quot;margin: 20px;&quot; &gt;
+                                        &lt;label for&#x3D;&quot;name&quot;&gt;&lt;b&gt;City Name: &lt;/b&gt;&lt;/label&gt;
+                                        &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Enter City Name&quot;  name&#x3D;&quot;name&quot; #Name required &gt;&lt;br&gt;
+                                    
+                                        &lt;label for&#x3D;&quot;code&quot;&gt;&lt;b&gt;City Id:&lt;/b&gt;&lt;/label&gt;
+                                        &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot;placeholder&#x3D;&quot;Enter City Code&quot; name&#x3D;&quot;code&quot; #id required&gt;
+                                        &lt;br&gt;
+                                        
+                                &lt;/form&gt;
+                        
+                        
+                        &lt;!-- Modal footer --&gt;
+                        &lt;div class&#x3D;&quot;modal-footer&quot;&gt;
+                          &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary&quot; (click) &#x3D;&quot;postAirlineData(airLineName.value, id.value, logo.value)&quot; &gt;Save&lt;/button&gt;
+                        &lt;/div&gt;
+                        
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+    </code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./city-view.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class= "container-fluid" >            <!--<div class="col-sm-9 jobs_index_middle_panels">-->            <div class="card offset-md-2 col-sm-8">            <div class="card-body">            <table class="table table-hover">                                    <thead class="table table-borderless">                <tr>                                          <th>City Name</th>                     <th>City Id </th>                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModa">Add Airline</button>                     <!-- <app-airline></app-airline> -->                    </tr>                                                    </thead>                <tbody>                    <tr *ngFor= \'let city of cities\'>                                                <td >                        {{city.cityName}}                         </td>                        <td>                            {{city.id}}                         </td>                        <td>                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModa">Edit</button>                        </td>                        <td>                            <button type="button" class="btn btn-primary"  (click)="deleteCity(city.id)">delete</button>                        </td>                    </tr>                </tbody>             </table>            </div>            </div>          <                        </div>                                                                                                    <!-- MODAL CODE -->                <div class="modal fade" id="myModa">                    <div class="modal-dialog modal-dialog-centered">                      <div class="modal-content">                                              <!-- Modal Header -->                        <div class="modal-header">                          <h4 class="modal-title">City Information</h4>                        </div>                                                <!-- Modal body -->                                                        <form class="modal-body" class="form-group" style="margin: 20px;" >                                        <label for="name"><b>City Name: </b></label>                                        <input type="text" class="form-control" placeholder="Enter City Name"  name="name" #Name required ><br>                                                                            <label for="code"><b>City Id:</b></label>                                        <input type="text" class="form-control"placeholder="Enter City Code" name="code" #id required>                                        <br>                                                                        </form>                                                                        <!-- Modal footer -->                        <div class="modal-footer">                          <button type="button" class="btn btn-primary" (click) ="postAirlineData(airLineName.value, id.value, logo.value)" >Save</button>                        </div>                                              </div>                    </div>                  </div>    </div>'
+    var COMPONENTS = [{'name': 'AddnewflightComponent', 'selector': 'app-addnewflight'},{'name': 'AdminFlightlistComponent', 'selector': 'app-admin-flightlist'},{'name': 'AdminhomeComponent', 'selector': 'app-adminhome'},{'name': 'AirlineComponent', 'selector': 'app-airline'},{'name': 'AirlinelistcomponentComponent', 'selector': 'app-airlinelistcomponent'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CityComponent', 'selector': 'app-city'},{'name': 'CityViewComponent', 'selector': 'app-city-view'},{'name': 'EditairlineComponent', 'selector': 'app-editairline'},{'name': 'EditComponent', 'selector': 'app-edit'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FlightListComponent', 'selector': 'app-flight-list'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PassengerDetailsComponent', 'selector': 'app-passenger-details'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'RegistrationComponent', 'selector': 'app-registration'},{'name': 'ReviewBookingComponent', 'selector': 'app-review-booking'},{'name': 'RoundtripFooterComponent', 'selector': 'app-roundtrip-footer'},{'name': 'ScheduleComponent', 'selector': 'app-schedule'},{'name': 'SearchFlightsComponent', 'selector': 'app-search-flights'},{'name': 'SearchListComponent', 'selector': 'app-search-list'},{'name': 'ViewProfileComponent', 'selector': 'app-view-profile'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'CityViewComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'CityViewComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

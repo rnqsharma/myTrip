@@ -2,11 +2,24 @@
   "flightsdata": [
     {
       "id": "SG-1807",
-      "flightCompany": "Spicejet",
+      "flightCompany": "Vistara",
       "departureName": "Delhi",
-      "departureTime": "05:35",
+      "departureTime": "07:35",
       "arrivalName": "Bangalore",
-      "arrivalTime": "19:25",
+      "arrivalTime": "04:05",
+      "price": 1440,
+      "duration": "02 hrs 55 min",
+      "economy": 150,
+      "business": 50,
+      "distance": 12
+    },
+    {
+      "id": "SG-160",
+      "flightCompany": "Spicejet",
+      "departureName": "Bangalore",
+      "departureTime": "16:35",
+      "arrivalName": "Delhi",
+      "arrivalTime": "10:25",
       "price": 70000,
       "duration": "03 hrs 00 min",
       "economy": 150,
@@ -79,7 +92,7 @@
       "departureName": "Chandigarh",
       "departureTime": "02:00",
       "arrivalName": "Noida",
-      "arrivalTime": "03:30",
+      "arrivalTime": "01:30",
       "price": 3551,
       "duration": "01 hrs 30 min",
       "economy": 150,
@@ -132,19 +145,6 @@
       "duration": "3 hours 00 mins",
       "economy": 80,
       "business": 10
-    },
-    {
-      "id": "T9l9Zci",
-      "flightCompany": "",
-      "departureName": "",
-      "departureTime": "",
-      "arrivalName": "",
-      "arrivalTime": "",
-      "price": 0,
-      "duration": "",
-      "economy": "",
-      "business": "",
-      "distance": ""
     }
   ],
   "profiledata": [
@@ -172,8 +172,7 @@
           "price": 3551,
           "duration": "01 hrs 30 min"
         }
-      ],
-      "email": "rnqsharma3@gmail.com"
+      ]
     },
     {
       "fullName": "Raunaq",
@@ -225,8 +224,7 @@
           "price": 3551,
           "duration": "01 hrs 30 min"
         }
-      ],
-      "email": "simar@gmail.com"
+      ]
     },
     {
       "fullName": "Rajni",
@@ -487,6 +485,33 @@
           "duration": ""
         }
       ]
+    },
+    {
+      "fullName": "tanish",
+      "id": "tanish@gmail.com",
+      "password": "12345",
+      "gender": "Male",
+      "dob": "2019-11-13",
+      "address": "76,Bhagwati Colony near Jain Temple, Behat Road",
+      "city": "Saharanpur",
+      "state": "Uttar Pradesh",
+      "country": "india",
+      "pincode": 247001,
+      "mobile": 8077623889,
+      "rights": "user",
+      "bookedFlights": [
+        {
+          "flightId": "",
+          "flightCompany": "",
+          "departureName": "",
+          "departureTime": "",
+          "arrivalName": "",
+          "arrivalTime": "",
+          "price": 0,
+          "duration": ""
+        }
+      ],
+      "email": "tanish@gmail.com"
     }
   ],
   "citydetails": [

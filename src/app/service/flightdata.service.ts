@@ -70,4 +70,27 @@ export class FlightdataService {
     );
   }
 
-}
+
+  updateFlight(flight : IFlights): Observable<IFlights> {
+    const headers = new HttpHeaders({'Content-type': 'application/json'});
+    const url =  `http://localhost:3000/flightsData/${flight.id}`;
+
+    return this._httpclient.put<IFlights>(url,flight,{headers}).pipe(tap(()=> console.log('update Flight: '+ flight.id)),map(()=>flight),catchError(this.handleError));
+  }
+
+  deleteFlight(id:string):Observable<{}>{
+
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    const url = `http://localhost:3000/flightsdata/${id}`;
+    return this._httpclient.delete<IFlights>(url, { headers })
+    .pipe(
+    tap(data => console.log('deleteFlight: ' + id)),
+    catchError(this.handleError)
+    );
+    }
+
+  
+  }
+
+
+

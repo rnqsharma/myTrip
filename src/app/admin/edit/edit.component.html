@@ -1,0 +1,60 @@
+<div class="container-fluid">
+    <div class="card ">
+        <div class="card-body">
+
+            <form [formGroup]="scheduleForm" (ngSubmit)="addflight()">
+
+                <h2 style="text-align: center;">Update Flight</h2>
+                <p>
+                    <label>Airline: </label>
+                    <input type="text" class="form-control" formControlName="flightCompany" required>
+                </p>
+
+
+                <p>
+                    <label>Flight ID: </label>
+                    <input type="text" class="form-control" formControlName="id" required disabled>
+                </p>
+
+                <p>
+                    <label>Departure: </label>
+                    <select class="form-control" name="Departure_city" formControlName="departureName">
+                        <option *ngFor='let city of cities'>{{city.cityName}}</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label>Arrival: </label>
+                    <select class="form-control" name="Arrival_city" formControlName="arrivalName">
+                        <option *ngFor='let city of cities'>{{city.cityName}}</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label>Departure Time: </label>
+                    <input type="time" class="form-control" formControlName="departureTime" required>
+                </p>
+
+                <p>
+                    <label>Arrival Time: </label>
+                    <input type="time" class="form-control" formControlName="arrivalTime" required>
+                </p>
+
+                <p>
+                    <label>Duration(in Hrs): </label>
+                    <input type="text" class="form-control" formControlName="duration" required>
+                </p>
+
+
+
+                <button type="submit" class="btn btn-primary" [disabled]="!scheduleForm.valid">Save</button>
+
+                <!-- <button type="submit" class="btn btn-primary" (click)="del()">Delete</button>-->
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="alert alert-danger" *ngIf="errorMessage">
+    {{errorMessage}}
+</div>
