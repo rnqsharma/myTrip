@@ -1,86 +1,106 @@
+<div class="container-fluid">
+  <!--<div class="col-sm-9 jobs_index_middle_panels">-->
+  <div class="card offset-md-2 col-sm-8">
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead class="table table-borderless">
+          <tr>
+            <!-- <th>Airline logo</th> -->
+            <th>Airline Name</th>
+            <th>Airline Id </th>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModa1">Add
+              Airline</button>
+            <!-- <app-airline></app-airline> -->
 
-<div class= "container-fluid" >
-    
-    <!--<div class="col-sm-9 jobs_index_middle_panels">-->
-        <div class="card offset-md-2 col-sm-8">
-        <div class="card-body">
-        <table class="table table-hover">
-                
-            <thead class="table table-borderless">
-            <tr>
-                 <th>Airline logo</th>
-                 <th>Airline Name</th>
-                 <th>Airline Id </th>
-                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModa">Add Airline</button>
-                 <!-- <app-airline></app-airline> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let airline of airlines'>
+            <!-- <td>
+              <img src='{{airline.logo}}' height="60" width="60">
+            </td> -->
+            <td>
+              {{airline.airLineName}}
+            </td>
+            <td>
+              {{airline.id}}
+            </td>
+            <td>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModa"
+                (click)="EditAirline(airline.airLineName,airline.id,airline.logo)">Edit</button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-primary" (click)="deleteFlight(airline.id)">delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
-            </tr>
-                                
-            </thead>
-            <tbody>
-                <tr *ngFor= 'let airline of airlines'>
-                    <td> 
-                    <img src= '{{airline.logo}}'  height="60" width="60">
-                    </td>
-                    <td >
-                    {{airline.airLineName}} 
-                    </td>
-                    <td>
-                        {{airline.id}} 
-                    </td>
-                    <td>
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModa">Edit</button>
-                    </td>
-                    <td>
-                        <button type="button" class="btn btn-primary"  (click)="deleteFlight(airline.id)">delete</button>
-                    </td>
-                </tr>
-            </tbody>
-         </table>
-        </div>
-        </div>  
-    <            
-        </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- MODAL CODE edit-->
+
+<div class="modal fade" id="myModa">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Airline Information</h4>
+      </div>
+      <!-- Modal body -->
+      <form class="modal-body" class="form-group" style="margin: 20px;">
+        <label for="code"><b>Airline Id:</b></label>
+        <input type="text" class="form-control" value={{airlineid}} [(ngModel)]='newCode'
+          placeholder="Enter Airline Code" [disabled]=true name="code" #id required>
+        <br>
+        <label for="name"><b>Airline Name: </b></label>
+        <input type="text" class="form-control" value={{airlinename}} placeholder="Enter Airline Name"
+          [(ngModel)]='newName' name="name" #airLineName required><br>
+        <label for="code"><b>Airline Logo:</b></label>
+        <input type='file' name="code" id="imageUpload" accept=".png, .jpg, .jpeg" #logo />
+      </form>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="saveAirline()">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
+<!-- MODAL CODE add -->
 
-
-
-
-
-
-
-        
-                                                <!-- MODAL CODE -->
-
-        <div class="modal fade" id="myModa">
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                  
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                      <h4 class="modal-title">Airline Information</h4>
-                    </div>
-                    
-                    <!-- Modal body -->
-                    
-                            <form class="modal-body" class="form-group" style="margin: 20px;" >
-                                    <label for="name"><b>Airline Name: </b></label>
-                                    <input type="text" class="form-control" placeholder="Enter Airline Name"  name="name" #airLineName required ><br>
-                                
-                                    <label for="code"><b>Airline Id:</b></label>
-                                    <input type="text" class="form-control"placeholder="Enter Airline Code" name="code" #id required>
-                                    <br>
-                                    <label for="code"><b>Airline Logo:</b></label>
-                                    <input type='file' name="code" id="imageUpload"  accept=".png, .jpg, .jpeg" #logo/>
-                            </form>
-                    
-                    
-                    <!-- Modal footer -->
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-primary" (click) ="postAirlineData(airLineName.value, id.value, logo.value)" >Save</button>
-                    </div>
-                    
-                  </div>
-                </div>
-              </div>
+<div class="modal fade" id="myModa1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Airline Information</h4>
+      </div>
+      <!-- Modal body -->
+      <form class="modal-body" [formGroup]="airlineForm" class="form-group" style="margin: 20px;">
+        <label for="code"><b>Airline Id:</b></label>
+        <input type="text" class="form-control" formControlName="id" placeholder="Enter Airline Code" name="code" required #id>
+        <br>
+        <div *ngIf="airlineForm.controls['id'].invalid && (airlineForm.controls['id'].dirty || airlineForm.controls['id'].touched )" class="alert-danger">
+            <div *ngIf="airlineForm.controls['id'].errors.required">Please Enter Airline ID</div>
+            </div>
+        <label for="name"><b>Airline Name: </b></label>
+        <input type="text" class="form-control" formControlName="name" placeholder="Enter Airline Name" name="name" required #airLineName><br>
+        <div *ngIf="airlineForm.controls['name'].invalid && (airlineForm.controls['name'].dirty || airlineForm.controls['name'].touched )" class="alert-danger">
+            <div *ngIf="airlineForm.controls['name'].errors.required">Please Enter Airline Name</div>
+            </div>
+        <label for="code"><b>Airline Logo:</b></label>
+        <input type='file' name="code" id="imageUpload" #logo>
+      </form>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" [disabled]='disableCounter()'
+          (click)="postAirlineData( id.value, airLineName.value, logo.value)">Save</button>
+      </div>
+    </div>
+  </div>
+</div>

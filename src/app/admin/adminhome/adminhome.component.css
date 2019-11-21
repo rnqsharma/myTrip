@@ -9,8 +9,9 @@
 
   button{
       background-color: rgb(47, 46, 70);
+      
       font-size: large;
-      color: white;
+      /* color: white; */
       margin-top: 25px;
   }
   #flight{

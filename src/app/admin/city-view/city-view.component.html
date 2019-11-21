@@ -1,84 +1,90 @@
+<div class="container-fluid">
+  <!--<div class="col-sm-9 jobs_index_middle_panels">-->
+  <div class="card offset-md-2 col-sm-8">
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead class="table table-borderless">
+          <tr>
+            <th>City Name</th>
+            <th>City Id </th>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModa1">Add City</button>
+            <!-- <app-airline></app-airline> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let city of cities'>
+            <td>
+              {{city.cityName}}
+            </td>
+            <td>
+              {{city.id}}
+            </td>
+            <td>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModa"
+                (click)="EditCity(city.cityName,city.id)">Edit</button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-primary" (click)="deleteCity(city.id)">delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+   </div> <!-- MODAL CODE -->
+    <div class="modal fade" id="myModa">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">City Information</h4>
+          </div>
+          <!-- Modal body -->
+          <form class="modal-body" class="form-group" style="margin: 20px;">
+            <label for="code"><b>City Id:</b></label>
+            <input type="text" class="form-control" value={{cityid}} [(ngModel)]='newCode' placeholder="Enter City Code"
+              [disabled]="true" name="code" #id required>
+            <br>
+            <label for="name"><b>City Name: </b></label>
+            <input type="text" class="form-control" value={{cityname}} [(ngModel)]='newName'
+              placeholder="Enter City Name" name="name" #Name required><br>
+          </form>
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" (click)="saveCity()">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<div class= "container-fluid" >
-    
-        <!--<div class="col-sm-9 jobs_index_middle_panels">-->
-            <div class="card offset-md-2 col-sm-8">
-            <div class="card-body">
-            <table class="table table-hover">
-                    
-                <thead class="table table-borderless">
-                <tr>
-                     
-                     <th>City Name</th>
-                     <th>City Id </th>
-                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModa">Add Airline</button>
-                     <!-- <app-airline></app-airline> -->
-    
-                </tr>
-                                    
-                </thead>
-                <tbody>
-                    <tr *ngFor= 'let city of cities'>
-                        
-                        <td >
-                        {{city.cityName}} 
-                        </td>
-                        <td>
-                            {{city.id}} 
-                        </td>
-                        <td>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModa">Edit</button>
-                        </td>
-                        <td>
-                            <button type="button" class="btn btn-primary"  (click)="deleteCity(city.id)">delete</button>
-                        </td>
-                    </tr>
-                </tbody>
-             </table>
-            </div>
-            </div>  
-        <            
-            </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+    <!-- MODAL CODE ADD-->
+    <div class="modal fade" id="myModa1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">City Information</h4>
+          </div>
+          <!-- Modal body -->
+          <form class="modal-body" [formGroup]="cityForm" class="form-group" style="margin: 20px;">
+            <label for="code"><b>City Id:</b></label>
+            <input type="text" class="form-control" formControlName="id" placeholder="Enter City Code" name="code" #id required>
             
-                                                    <!-- MODAL CODE -->
-    
-            <div class="modal fade" id="myModa">
-                    <div class="modal-dialog modal-dialog-centered">
-                      <div class="modal-content">
-                      
-                        <!-- Modal Header -->
-                        <div class="modal-header">
-                          <h4 class="modal-title">City Information</h4>
-                        </div>
-                        
-                        <!-- Modal body -->
-                        
-                                <form class="modal-body" class="form-group" style="margin: 20px;" >
-                                        <label for="name"><b>City Name: </b></label>
-                                        <input type="text" class="form-control" placeholder="Enter City Name"  name="name" #Name required ><br>
-                                    
-                                        <label for="code"><b>City Id:</b></label>
-                                        <input type="text" class="form-control"placeholder="Enter City Code" name="code" #id required>
-                                        <br>
-                                        
-                                </form>
-                        
-                        
-                        <!-- Modal footer -->
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-primary" (click) ="postAirlineData(airLineName.value, id.value, logo.value)" >Save</button>
-                        </div>
-                        
-                      </div>
-                    </div>
-                  </div>
-    
+            <br>
+            <div *ngIf="cityForm.controls['id'].invalid && (cityForm.controls['id'].dirty || cityForm.controls['id'].touched )" class="alert-danger">
+                <div *ngIf="cityForm.controls['id'].errors.required">Please Enter Airline ID</div>
+                </div>
+            <label for="name"><b>City Name: </b></label>
+            <input type="text" class="form-control" formControlName="name" placeholder="Enter City Name" name="name" #Name required><br>
+            <div *ngIf="cityForm.controls['name'].invalid && (cityForm.controls['name'].dirty || cityForm.controls['name'].touched )" class="alert-danger">
+                <div *ngIf="cityForm.controls['name'].errors.required">Please Enter Airline ID</div>
+                </div>
+          </form>
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" [disabled]='disableCounter()' (click)="postCityData( id.value, Name.value)">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>

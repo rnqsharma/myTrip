@@ -44,6 +44,7 @@ export class SearchListComponent implements OnInit {
   to: string[];
   cities: ICity[];
   roundcounter = false;
+  roundcounter1 = '';
 
   ngOnInit() {
     console.log('in search list component');
@@ -68,14 +69,21 @@ export class SearchListComponent implements OnInit {
         this.selectedDetails.travellers = params.get('travellers');
         this.selectedDetails.class = params.get('class');
         this.selectedDetails.tripType = params.get('triptype');
+        this.roundcounter1 = params.get('roundcounter');
       }
     );
+    if (this.roundcounter1 === 'true') {
+      this.roundcounter = true;
+    } else {
+      this.roundcounter = false;
+    }
     this.setValues();
   }
 
   findFlights() {
     // tslint:disable-next-line: max-line-length
-    this.router.navigate(['/search', this.selectedDetails.toCity, this.selectedDetails.fromCity, this.roundcounter, this.selectedDetails.departureDate, this.selectedDetails.returnDate, this.selectedDetails.tripType, this.selectedDetails.travellers, this.selectedDetails.class]);
+    this.router.navigate(['/search', this.selectedDetails.toCity, this.selectedDetails.fromCity, this.roundcounter, this.selectedDetails.departureDate, this.selectedDetails.returnDate, this.selectedDetails.tripType, this.selectedDetails.travellers, this.selectedDetails.class, this.roundcounter]);
+    console.log('class = ' + this.selectedDetails.class);
     this.onButtonClick();
     console.log('travellers = ' + this.selectedDetails.travellers);
   }

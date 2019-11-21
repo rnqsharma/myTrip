@@ -18,18 +18,19 @@ import { EditComponent } from './admin/edit/edit.component';
 import { CityViewComponent } from './admin/city-view/city-view.component';
 import { AdminGuardGuard } from './admin/guard/admin-guard.guard';
 import { PassengerDetailsComponent } from './user/passenger-details/passenger-details.component';
+import { AuthGuardGuard } from './user/gaurd/auth-guard.guard';
 
 
 const routes: Routes = [
 
   {path: 'adminhome', component: AdminhomeComponent, canActivate: [AdminGuardGuard]},
-  {path: 'reviewBooking/:fullName/:address/:mobile/:flightID', component: ReviewBookingComponent},
+  {path: 'reviewBooking/:fullName/:address/:mobile/:flightID/:travellers/:class', component: ReviewBookingComponent},
   {path: '', component: SearchFlightsComponent},
   {path: 'adminFlight', component: AdminFlightlistComponent, canActivate: [AdminGuardGuard]},
-  {path: 'search/:to/:from/:roundtrip/:departuredate/:returndate/:triptype/:travellers/:class', component: FlightListComponent},
+  {path: 'search/:to/:from/:roundtrip/:departuredate/:returndate/:triptype/:travellers/:class/:roundcounter', component: FlightListComponent},
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: RegistrationComponent},
-  {path: 'viewprofile/:email', component: ViewProfileComponent},
+  {path: 'viewprofile/:email', component: ViewProfileComponent, canActivate: [AuthGuardGuard]},
   {path: 'editprofile', component: ProfileComponent},
   {path:'edit/:flightID',component: EditComponent},
   {path: 'search', component: SearchListComponent},
@@ -38,7 +39,7 @@ const routes: Routes = [
   {path: 'flightSchedule', component: ScheduleComponent, canActivate: [AdminGuardGuard]},
   {path: 'editAirline', component: AirlineComponent, canActivate: [AdminGuardGuard]},
   {path: 'cityList', component: CityViewComponent, canActivate: [AdminGuardGuard]},
-  {path: 'passengerDetails/:flightID', component: PassengerDetailsComponent},
+  {path: 'passengerDetails/:flightID/:travellers/:class', component: PassengerDetailsComponent},
 
   // {path : 'addnewflight/:flightID' , component : AddnewflightComponent }
 ];

@@ -4,13 +4,14 @@
       "id": "SG-1807",
       "flightCompany": "Vistara",
       "departureName": "Delhi",
-      "departureTime": "20:35",
+      "departureTime": "07:35",
       "arrivalName": "Bangalore",
       "arrivalTime": "04:05",
-      "price": 54000,
+      "price": 1440,
       "duration": "02 hrs 55 min",
       "economy": 150,
-      "business": 50
+      "business": 50,
+      "distance": 12
     },
     {
       "id": "SG-160",
@@ -18,11 +19,12 @@
       "departureName": "Bangalore",
       "departureTime": "16:35",
       "arrivalName": "Delhi",
-      "arrivalTime": "19:25",
-      "price": 5005,
-      "duration": "02 hrs 55 min",
+      "arrivalTime": "10:25",
+      "price": 70000,
+      "duration": "03 hrs 00 min",
       "economy": 150,
-      "business": 50
+      "business": 10,
+      "distance": 1000
     },
     {
       "id": "SG-198",
@@ -95,18 +97,66 @@
       "duration": "01 hrs 30 min",
       "economy": 150,
       "business": 50
+    },
+    {
+      "id": "VS-456",
+      "flightCompany": "Vistara",
+      "departureName": "Mumbai",
+      "departureTime": "05:00",
+      "arrivalName": "Pune",
+      "arrivalTime": "06:00",
+      "price": 2125,
+      "duration": "01 hrs 00 min",
+      "economy": 150,
+      "business": 50
+    },
+    {
+      "id": "AI-4456",
+      "flightCompany": "Airindia",
+      "departureName": "Bangalore",
+      "departureTime": "13:40",
+      "arrivalName": "Delhi",
+      "arrivalTime": "16:00",
+      "price": 70000,
+      "duration": "02 hrs 55 min",
+      "economy": 110,
+      "business": 10
+    },
+    {
+      "id": "SG-1101",
+      "flightCompany": "Spicejet",
+      "departureName": "Delhi",
+      "departureTime": "11:03",
+      "arrivalName": "Bangalore",
+      "arrivalTime": "14:09",
+      "price": 51000,
+      "duration": "3hrs 6mins",
+      "economy": 50,
+      "business": 10
+    },
+    {
+      "id": "AI-1123",
+      "flightCompany": "Airindia",
+      "departureName": "Bangalore",
+      "departureTime": "08:08",
+      "arrivalName": "Delhi",
+      "arrivalTime": "23:00",
+      "price": 70000,
+      "duration": "3 hours 00 mins",
+      "economy": 80,
+      "business": 10
     }
   ],
   "profiledata": [
     {
-      "fullName": "Simarjot Singh",
+      "fullName": "Simarjot Singhcgc",
       "id": "rnqsharma3@gmail.com",
       "password": "lol123",
-      "gender": "Male",
+      "gender": "male",
       "dob": "2019-11-13",
       "address": "Manyata Tech Park",
       "city": "Bangalore",
-      "state": "Karnatakaadss",
+      "state": "Karnataka",
       "country": "India",
       "pincode": 560045,
       "mobile": 6987985890,
@@ -411,11 +461,11 @@
       ]
     },
     {
-      "fullName": "",
-      "id": "iop",
-      "password": "admin123",
-      "gender": "Male",
-      "dob": "",
+      "fullName": "Lolo Singh",
+      "id": "lolo@ymail.com",
+      "password": "lolo123",
+      "gender": "Other",
+      "dob": "2019-11-22",
       "address": "",
       "city": "",
       "state": "",
@@ -437,17 +487,17 @@
       ]
     },
     {
-      "fullName": "",
-      "id": "iop@gmail.com",
-      "password": "admin123",
+      "fullName": "tanish",
+      "id": "tanish@gmail.com",
+      "password": "12345",
       "gender": "Male",
-      "dob": "",
-      "address": "",
-      "city": "",
-      "state": "",
-      "country": "",
-      "pincode": 0,
-      "mobile": 0,
+      "dob": "2019-11-13",
+      "address": "76,Bhagwati Colony near Jain Temple, Behat Road",
+      "city": "Saharanpur",
+      "state": "Uttar Pradesh",
+      "country": "india",
+      "pincode": 247001,
+      "mobile": 8077623889,
       "rights": "user",
       "bookedFlights": [
         {
@@ -460,215 +510,8 @@
           "price": 0,
           "duration": ""
         }
-      ]
-    },
-    {
-      "fullName": "qwerty",
-      "id": "qwerty@gmail.com",
-      "password": "qwerty",
-      "gender": "Male",
-      "dob": "1222-01-21",
-      "address": "",
-      "city": "",
-      "state": "",
-      "country": "",
-      "pincode": 0,
-      "mobile": 0,
-      "rights": "user",
-      "bookedFlights": [
-        {
-          "flightId": "",
-          "flightCompany": "",
-          "departureName": "",
-          "departureTime": "",
-          "arrivalName": "",
-          "arrivalTime": "",
-          "price": 0,
-          "duration": ""
-        }
-      ]
-    },
-    {
-      "fullName": "",
-      "id": "lkjhh@gmail.com",
-      "password": "admin123",
-      "gender": "Male",
-      "dob": "",
-      "address": "",
-      "city": "",
-      "state": "",
-      "country": "",
-      "pincode": 0,
-      "mobile": 0,
-      "rights": "user",
-      "bookedFlights": [
-        {
-          "flightId": "",
-          "flightCompany": "",
-          "departureName": "",
-          "departureTime": "",
-          "arrivalName": "",
-          "arrivalTime": "",
-          "price": 0,
-          "duration": ""
-        }
-      ]
-    },
-    {
-      "fullName": "",
-      "id": "admin",
-      "password": "admin123",
-      "gender": "Male",
-      "dob": "",
-      "address": "",
-      "city": "",
-      "state": "",
-      "country": "",
-      "pincode": 0,
-      "mobile": 0,
-      "rights": "user",
-      "bookedFlights": [
-        {
-          "flightId": "",
-          "flightCompany": "",
-          "departureName": "",
-          "departureTime": "",
-          "arrivalName": "",
-          "arrivalTime": "",
-          "price": 0,
-          "duration": ""
-        }
-      ]
-    },
-    {
-      "fullName": "",
-      "id": "qwe",
-      "password": "admin123",
-      "gender": "Male",
-      "dob": "",
-      "address": "",
-      "city": "",
-      "state": "",
-      "country": "",
-      "pincode": 0,
-      "mobile": 0,
-      "rights": "user",
-      "bookedFlights": [
-        {
-          "flightId": "",
-          "flightCompany": "",
-          "departureName": "",
-          "departureTime": "",
-          "arrivalName": "",
-          "arrivalTime": "",
-          "price": 0,
-          "duration": ""
-        }
-      ]
-    },
-    {
-      "fullName": "",
-      "id": "admi",
-      "password": "admin123",
-      "gender": "Male",
-      "dob": "",
-      "address": "",
-      "city": "",
-      "state": "",
-      "country": "",
-      "pincode": 0,
-      "mobile": 0,
-      "rights": "user",
-      "bookedFlights": [
-        {
-          "flightId": "",
-          "flightCompany": "",
-          "departureName": "",
-          "departureTime": "",
-          "arrivalName": "",
-          "arrivalTime": "",
-          "price": 0,
-          "duration": ""
-        }
-      ]
-    },
-    {
-      "fullName": "abcdef",
-      "id": "yuio",
-      "password": "admin123",
-      "gender": "Male",
-      "dob": "",
-      "address": "",
-      "city": "",
-      "state": "",
-      "country": "",
-      "pincode": 0,
-      "mobile": 0,
-      "rights": "user",
-      "bookedFlights": [
-        {
-          "flightId": "",
-          "flightCompany": "",
-          "departureName": "",
-          "departureTime": "",
-          "arrivalName": "",
-          "arrivalTime": "",
-          "price": 0,
-          "duration": ""
-        }
-      ]
-    },
-    {
-      "fullName": "abc",
-      "id": "123a",
-      "password": "admin123",
-      "gender": "Male",
-      "dob": "",
-      "address": "",
-      "city": "",
-      "state": "",
-      "country": "",
-      "pincode": 0,
-      "mobile": 0,
-      "rights": "user",
-      "bookedFlights": [
-        {
-          "flightId": "",
-          "flightCompany": "",
-          "departureName": "",
-          "departureTime": "",
-          "arrivalName": "",
-          "arrivalTime": "",
-          "price": 0,
-          "duration": ""
-        }
-      ]
-    },
-    {
-      "fullName": "abc",
-      "id": "abc2",
-      "password": "admin123",
-      "gender": "Male",
-      "dob": "",
-      "address": "",
-      "city": "",
-      "state": "",
-      "country": "",
-      "pincode": 0,
-      "mobile": 0,
-      "rights": "user",
-      "bookedFlights": [
-        {
-          "flightId": "",
-          "flightCompany": "",
-          "departureName": "",
-          "departureTime": "",
-          "arrivalName": "",
-          "arrivalTime": "",
-          "price": 0,
-          "duration": ""
-        }
-      ]
+      ],
+      "email": "tanish@gmail.com"
     }
   ],
   "citydetails": [
@@ -689,12 +532,16 @@
       "id": "KOL"
     },
     {
-      "cityName": "Chennai",
+      "cityName": "Chennaiii",
       "id": "MAA"
     },
     {
       "cityName": "Pune",
       "id": "PUN"
+    },
+    {
+      "cityName": "New York City",
+      "id": "NYC"
     }
   ],
   "airlines": [

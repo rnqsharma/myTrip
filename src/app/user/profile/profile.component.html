@@ -2,107 +2,126 @@
     <div class="card">
         <div class="card-body">
 
-    <div style="font-weight: bold; text-align: left; color: grey">
-    <h2>Edit profile</h2>
-    </div>
-    
-    <form (ngSubmit)="saveProfile()" [formGroup]="profileForm">
-    <!-- <div class="offset-md-6"> -->
-    
-    <div class="form-group row mb-3">
-    <label class="col-md-2 col-form-label" for="descriptionId">Full Name</label>
-    
-    <div class="col-md-6">
-        <input class="form-control" id="fullName" placeholder="full Name" rows=3 formControlName="fullName"/>
-    </div>
-    </div>
-    
-        <div class="form-group row mb-3">
-            <label class="col-md-2 col-form-label"
-            for="descriptionId">Gender</label>
-            <div class="col-md-6">
-                <input type="radio" name="gender" value="male" checked formControlName="gender"> Male<br>
-                <input type="radio" name="gender" value="female" formControlName="gender"> Female<br>
-            </div>
-        </div>
-
-        <div class="form-group row mb-3">
-            <label class="col-md-2 col-form-label"
-            for="descriptionId">Date of Birth</label>
-            
-            <div class="col-md-6">
-            <input class="form-control"
-            id="dob"
-            placeholder=""
-            rows=3
-            formControlName="dob"
-            />
-            
-            </div>
+            <div style="font-weight: bold; text-align: left; color: grey">
+                <h2>Edit profile</h2>
             </div>
 
-            <div class="form-group row mb-3">
-                <label class="col-md-2 col-form-label"
-                for="descriptionId">Address</label>
-                
-                <div class="col-md-6">
-                <input class="form-control"
-                id="address"
-                rows=3
-                input type="text-area"
-                formControlName="address"
-                />
-                
+            <form (ngSubmit)="saveProfile()" [formGroup]="profileForm">
+                <!-- <div class="offset-md-6"> -->
+
+                <div class="form-group row mb-3">
+                    <label class="col-md-2 col-form-label" for="descriptionId">Full Name</label>
+
+                    <div class="col-md-6">
+                        <input class="form-control" type="text" formControlName="fullName" id="fullName" placeholder="Full Name" rows=3 >
+                            
+                    </div>
+                    <div *ngIf="profileForm.controls['fullName'].invalid && (profileForm.controls['fullName'].dirty || profileForm.controls['fullName'].touched )" class="alert-danger">
+                            <div *ngIf="profileForm.controls['fullName'].errors.required">Please Enter Full Name</div>
+                            </div>
+                    
                 </div>
+
+                <div class="form-group row mb-3">
+                    <label class="col-md-2 col-form-label" for="descriptionId">Gender</label>
+                    <div class="col-md-6">
+                        <input type="radio" name="gender" value="male" checked formControlName="gender"> Male<br>
+                        <input type="radio" name="gender" value="female" formControlName="gender"> Female<br>
+                    </div>
+                    <div *ngIf="profileForm.controls['gender'].invalid && (profileForm.controls['gender'].dirty || profileForm.controls['gender'].touched )" class="alert-danger">
+                            <div *ngIf="profileForm.controls['gender'].errors.required">Please Select Gender</div>
+                            </div>
+                </div>
+
+                <div class="form-group row mb-3">
+                    <label class="col-md-2 col-form-label" for="descriptionId">Date of Birth</label>
+
+                    <div class="col-md-6">
+                        <input class="form-control" id="dob" placeholder="" rows=3 formControlName="dob" />
+
+                    </div>
+                    <div *ngIf="profileForm.controls['dob'].invalid && (profileForm.controls['dob'].dirty || profileForm.controls['dob'].touched )" class="alert-danger">
+                            <div *ngIf="profileForm.controls['dob'].errors.required">Please Enter D.O.B.</div>
+                            </div>
+                </div>
+
+                <div class="form-group row mb-3">
+                    <label class="col-md-2 col-form-label" for="descriptionId">Address</label>
+
+                    <div class="col-md-6">
+                        <input class="form-control" id="address" rows=3 input type="text-area"
+                            formControlName="address" />
+
+                    </div>
+                    <div *ngIf="profileForm.controls['address'].invalid && (profileForm.controls['address'].dirty || profileForm.controls['address'].touched )" class="alert-danger">
+                            <div *ngIf="profileForm.controls['address'].errors.required">Please Enter Address.</div>
+                            </div>
                 </div>
 
 
                 <div class="form-group row mb-3">
-                    <label class="col-md-2 col-form-label" for="descriptionId">City</label>                    
+                    <label class="col-md-2 col-form-label" for="descriptionId">City</label>
                     <div class="col-md-6">
-                        <input class="form-control" id="city" placeholder="city" rows=3 formControlName="city"/>                    
+                        <input class="form-control" id="city" placeholder="city" rows=3 formControlName="city" />
+                    </div>
+                    <div *ngIf="profileForm.controls['city'].invalid && (profileForm.controls['city'].dirty || profileForm.controls['city'].touched )" class="alert-danger">
+                            <div *ngIf="profileForm.controls['city'].errors.required">Please Enter City</div>
+                            </div>
+                </div>
+
+                <div class="form-group row mb-3">
+                    <label class="col-md-2 col-form-label" for="descriptionId">State</label>
+                    <div class="col-md-6">
+                        <input class="form-control" id="state" placeholder="state" rows=3 formControlName="state" />
+                    </div>
+                    <div *ngIf="profileForm.controls['state'].invalid && (profileForm.controls['state'].dirty || profileForm.controls['state'].touched )" class="alert-danger">
+                            <div *ngIf="profileForm.controls['state'].errors.required">Please Enter State.</div>
+                            </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <label class="col-md-2 col-form-label" for="descriptionId">Country</label>
+                    <div class="col-md-6">
+                        <input class="form-control" id="country" placeholder="country" rows=3
+                            formControlName="country" />
+                    </div>
+                    <div *ngIf="profileForm.controls['country'].invalid && (profileForm.controls['country'].dirty || profileForm.controls['country'].touched )" class="alert-danger">
+                            <div *ngIf="profileForm.controls['country'].errors.required">Please Enter Country</div>
+                            </div>
+                </div>
+
+                <div class="form-group row mb-3">
+                    <label class="col-md-2 col-form-label" for="descriptionId">PinCode</label>
+                    <div class="col-md-6">
+                        <input class="form-control" id="pincode" placeholder="pincode" type="number" rows=3
+                            formControlName="pincode" />
+                    </div>
+                    <div *ngIf="profileForm.controls['pincode'].invalid && (profileForm.controls['pincode'].dirty || profileForm.controls['pincode'].touched )" class="alert-danger">
+                            <div *ngIf="profileForm.controls['pincode'].errors.required">Please Enter Pincode</div>
+                            </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <label class="col-md-2 col-form-label" for="descriptionId">PhoneNo</label>
+                    <div class="col-md-6">
+                        <input class="form-control" id="mobile" placeholder="PhoneNo" type="number" rows=3
+                            formControlName="mobile" />
+                    </div>
+                    <div *ngIf="profileForm.controls['mobile'].invalid && (profileForm.controls['mobile'].dirty || profileForm.controls['mobile'].touched )" class="alert-danger">
+                            <div *ngIf="profileForm.controls['mobile'].errors.required">Please Enter Mobile</div>
+                            </div>
+                </div>
+
+                <div class="form-group row mb-4">
+                    <div class="offset-md-3 col-md-4">
+                        <button class="btn btn-primary mr-6" style="width:200px;" type="submit" [disabled]='disabledCounter()'>
+                            Update Profile
+                        </button>
                     </div>
                 </div>
 
-            <div class="form-group row mb-3">
-                <label class="col-md-2 col-form-label" for="descriptionId">State</label>
-                <div class="col-md-6">
-                    <input class="form-control" id="state" placeholder="state" rows=3 formControlName="state"/>
-                </div>
-            </div>
-            <div class="form-group row mb-3">
-                <label class="col-md-2 col-form-label" for="descriptionId">Country</label>                            
-                <div class="col-md-6">
-                    <input class="form-control" id="country" placeholder="country" rows=3 formControlName="country"/>
-                </div>
-            </div>
-
-            <div class="form-group row mb-3">
-                <label class="col-md-2 col-form-label" for="descriptionId">PinCode</label>
-                <div class="col-md-6">
-                    <input class="form-control" id="pincode" placeholder="pincode" type="number" rows=3 formControlName="pincode"/>
-                </div>
-            </div>
-            <div class="form-group row mb-3">
-                <label class="col-md-2 col-form-label" for="descriptionId">PhoneNo</label>                                    
-                <div class="col-md-6">
-                    <input class="form-control" id="mobile" placeholder="PhoneNo" type="number" rows=3 formControlName="mobile"/>                    
-                </div>
-            </div>
-        
-    <div class="form-group row mb-4">
-        <div class="offset-md-3 col-md-4">
-            <button class="btn btn-primary mr-6" style="width:200px;" type="submit">
-                Update Profile
-            </button>
+            </form>
         </div>
     </div>
 
-    </form>
-    </div>
-</div>
 
-    
-    <div class="alert alert-danger"
-        *ngIf="errorMessage">{{errorMessage}}
+    <div class="alert alert-danger" *ngIf="errorMessage">{{errorMessage}}
     </div>

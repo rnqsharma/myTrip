@@ -25,7 +25,9 @@ export class ReviewBookingComponent implements OnInit, AfterViewChecked {
 
     to = '';
     from = '';
+    travellers = '';
     totalPrice = 0;
+    class = '';
     private sub: Subscription;
     fl: IFlights[];
     flightList: Array<IFlights> = [];
@@ -97,7 +99,7 @@ export class ReviewBookingComponent implements OnInit, AfterViewChecked {
           address = '';
           mobile = '';
           passengerDetails = {
-            fullName: '',
+            fullname: '',
             gender: 'Male',
             address: '',
             mobile: 0
@@ -114,7 +116,9 @@ export class ReviewBookingComponent implements OnInit, AfterViewChecked {
               this.fullname = params.get('fullName');
               this.address = params.get('address');
               this.mobile =  params.get('mobile');
+              this.travellers = params.get('travellers');
               this.id = params.get('flightID');
+              this.class = params.get('class');
               console.log(this.id);
               console.log(this.fullname);
               this.idArray = this.id.split(':');
@@ -136,16 +140,23 @@ export class ReviewBookingComponent implements OnInit, AfterViewChecked {
     filterData() {
       console.log('In filter');
       console.log(this.fromCity + ' ' + this.toCity);
-      
       this.fl.forEach( f => {
         console.log(f);
         console.log(f.id);
-        
         if (f.id === this.fromCity || f.id === this.toCity) {
-          console.log('sfd');
           this.flightList.push(f);
           this.totalPrice += f.price;
+          const travellersPrice = +this.totalPrice;
+          const travellers = +this.travellers;
+          const newPrice = travellersPrice * travellers;
+          this.totalPrice = newPrice;
+          console.log(this.totalPrice);
           console.log(this.flightList);
+          if ( this.class === 'Economy' ) {
+          } else {
+            this.totalPrice = this.totalPrice * 3;
+          }
+          console.log(this.totalPrice);
         }
         
       });
