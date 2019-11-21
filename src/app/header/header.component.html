@@ -7,9 +7,7 @@
         </button>
         <div id="navbarNavDropdown" class="navbar-collapse collapse">
             <ul class="navbar-nav mr-auto">
-               
-          
-              
+
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item" *ngIf="!counter; else elseBlock" >
@@ -17,11 +15,20 @@
                 </li>
 
                 <li *ngIf='counter'>
+                        
                         <button mat-button style="color: white; width: 100%;" [matMenuTriggerFor]="menu">{{userName}}</button>
-                        <mat-menu #menu="matMenu">
-                          <button mat-menu-item (click) ='profileView()'>My Profile</button>
-                          <button mat-menu-item (click)='logoutFunc()'>Logout</button>
-                        </mat-menu>
+                        
+                            <mat-menu #menu="matMenu">
+                            <ng-container *ngIf='counter1'>
+                                <button mat-menu-item (click) ='profileView()'>My Profile</button>
+                            </ng-container>
+                            <ng-container *ngIf='!counter1'>
+                                    <button mat-menu-item (click) ='adminView()'>View Admin</button>
+                                </ng-container>
+                                <button mat-menu-item (click)='logoutFunc()'>Logout</button>
+                              </mat-menu>
+                        
+                        
                 </li>
               
             </ul>

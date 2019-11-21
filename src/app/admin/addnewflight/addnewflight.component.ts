@@ -27,6 +27,7 @@ export class AddnewflightComponent implements OnInit {
   cityName: string;
   flight: IFlights;
   errorMessage: string;
+  dist = '';
 
   constructor(
     private fb: FormBuilder,
@@ -70,16 +71,15 @@ export class AddnewflightComponent implements OnInit {
 
       this.cityservice.getCityData().subscribe((cities: ICity[]) => {
         this.cities = cities;
-        console.log('lool');
-        console.log(this.cities);
+        // console.log(this.cities);
 
 
+        if (this.id !== '0') {
         this.flightService.getFlightsDataByID(this.id).
       subscribe((flight: IFlights) => {
         console.log(flight);
         this.flight = flight;
         this.flightForm.patchValue({
-
           id: this.flight.id,
           flightCompany: this.flight.flightCompany,
           departureName: this.flight.departureName,
@@ -91,40 +91,60 @@ export class AddnewflightComponent implements OnInit {
           economy: this.flight.economy,
           business: this.flight.business,
         });
-
+        console.log('flightForm is working' + this.flightForm.value.id);
     });
+  }
   });
 });
 
   }
-    addflight = (): void => {
-  const p = { ...this.flight, ...this.flightForm.value };
-  console.log(p);
-  // console.log(this.email);
-  this.updateProfile(p, this.id);
-  // console.log("sgf")
-}
-    updateProfile(flight: IFlights, id: string): void {
-  this.flightService.updateProfile(flight, id)
-    .subscribe({
+  addflight = (): void => {
+    this.setPrice();
+    const p = { ...this.flight, ...this.flightForm.value };
+    console.log('p.id is working' + this.id);
+    if (this.id === '0') {
+      console.log('createNew is working');
+      this.flightService.createFlight(p)
+      .subscribe({
       next: () => this.onSaveComplete(),
       error: err => this.errorMessage = err
-    });
-}
+      });
+    } else {
+      console.log('update is working');
+      this.updateProfile(p, this.id);
+    }
+  }
 
+  updateProfile(flight: IFlights, id: string): void {
+    this.flightService.updateProfile(flight, id)
+      .subscribe({
+        next: () => this.onSaveComplete(),
+        error: err => this.errorMessage = err
+      });
+  }
 
+  onSaveComplete(): void {
+    // Reset the form to clear the flags
+    // this.profileForm.reset();
+      this.router.navigate(['/adminFlight']);
+  }
 
+  setPrice() {
+    const distance = +this.dist;
+    let price: number;
+    if (distance < 500) {
+      price = distance * 120;
+    } else if (distance > 500 && distance < 1001) {
+      price = distance * 70;
+    } else if (distance > 1000) {
+      price = distance * 50;
+    }
+    console.log('price = ' + price);
+    this.flightForm.value.price = price;
+  }
 
-
-    onSaveComplete(): void {
-  // Reset the form to clear the flags
-  // this.profileForm.reset();
-  //  this.router.navigate(['/profile']);
-}
-
-
-
-  
-
-
+  getDistance(dist: string) {
+    this.dist = dist;
+    console.log(dist);
+  }
 }

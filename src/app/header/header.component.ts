@@ -11,15 +11,13 @@ import { Subscription } from 'rxjs';
 })
 export class HeaderComponent implements OnInit {
 
-  @Input()
-  userName: string = 'Login or Signup';
+  userName = 'Login or Signup';
 
   email = '';
   private sub: Subscription;
-  // @Output()
-  // setUsername: EventEmitter<string> = new EventEmitter<string>();
 
   counter = false;
+  counter1 = true;
   logoimg = 'assets/images/paper-plane.png';
   constructor(private headerService: HeadernameService, private router: Router,
               private route: ActivatedRoute) {
@@ -27,19 +25,28 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     console.log(this.userName);
-    this.headerService.getLoggedInName.subscribe(name => this.setUsernameMethod(name));
-    this.headerService.getEmail.subscribe(email => this.setEmail(email));
+    console.log(localStorage.getItem('username'));
+    if (localStorage.getItem('username') !== null ) {
+      console.log('hjgfhjgdsgf');
+      this.userName = localStorage.getItem('username');
+      if(this.userName === 'Raunaq') {
+        // this.ngOnInit();
+        console.log('sdhgfgssdfg');
+        this.counter1 = false;
+      }
+    } else {
+      this.userName = 'Login or Signup';
+    }
+
+    console.log(this.userName);
+    this.setUsernameMethod();
+
   }
 
-  ngOnChanges() {
-    console.log("dhfs")
-  }
 
-  setUsernameMethod(name: string) {
-    this.userName = name;
+  setUsernameMethod() {
     if (this.userName !== 'Login or Signup') {
       this.counter = true;
-      localStorage.setItem('username', name);
     }
     console.log(this.userName);
   }
@@ -55,12 +62,19 @@ export class HeaderComponent implements OnInit {
 
   logoutFunc() {
     console.log('In Logout');
-    // this.router.navigate(['']);
+    localStorage.clear();
+    this.router.navigate(['/']);
+    location.reload();
   }
 
   profileView() {
+    this.email = localStorage.getItem('email');
     console.log(this.email);
     this.router.navigate(['/viewprofile', this.email]);
+  }
+
+  adminView() {
+    this.router.navigate(['adminhome']);
   }
 
 }

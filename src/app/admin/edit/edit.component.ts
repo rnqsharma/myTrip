@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FlightdataService } from 'src/app/service/flightdata.service';
 import { Subscription } from 'rxjs';
@@ -50,14 +50,14 @@ export class EditComponent implements OnInit {
 
 
     this.scheduleForm = this.fb.group({
-      id: [''],
-      flightCompany: [''],
-      departureName: [''],
-      departureTime: [''],
-      arrivalName: [''],
-      arrivalTime: [''],
-      price: [''],
-      duration: ['']
+      id: ['', [Validators.required]],
+      flightCompany: ['', [Validators.required]],
+      departureName: ['', [Validators.required]],
+      departureTime: ['', [Validators.required]],
+      arrivalName: ['', [Validators.required]],
+      arrivalTime: ['', [Validators.required]],
+      price: ['', [Validators.required]],
+      duration: ['', [Validators.required]]
     });
    
     this.airlineservice.getAirlinesData().subscribe((airlines: IAirline[]) => {

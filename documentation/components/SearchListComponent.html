@@ -1,0 +1,1739 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>my-trip documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">my-trip documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>SearchListComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/user/search-list/search-list.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-search-list</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./search-list.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./search-list.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#cities">cities</a>
+                            </li>
+                            <li>
+                                <a href="#class">class</a>
+                            </li>
+                            <li>
+                                <a href="#departureDate">departureDate</a>
+                            </li>
+                            <li>
+                                <a href="#flightsArray">flightsArray</a>
+                            </li>
+                            <li>
+                                <a href="#from">from</a>
+                            </li>
+                            <li>
+                                <a href="#fromCity">fromCity</a>
+                            </li>
+                            <li>
+                                <a href="#getToCity">getToCity</a>
+                            </li>
+                            <li>
+                                <a href="#returnDate">returnDate</a>
+                            </li>
+                            <li>
+                                <a href="#roundcounter">roundcounter</a>
+                            </li>
+                            <li>
+                                <a href="#selectedDetails">selectedDetails</a>
+                            </li>
+                            <li>
+                                <a href="#sub">sub</a>
+                            </li>
+                            <li>
+                                <a href="#to">to</a>
+                            </li>
+                            <li>
+                                <a href="#toCity">toCity</a>
+                            </li>
+                            <li>
+                                <a href="#travellers">travellers</a>
+                            </li>
+                            <li>
+                                <a href="#tripType">tripType</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#findFlights">findFlights</a>
+                            </li>
+                            <li>
+                                <a href="#getClass">getClass</a>
+                            </li>
+                            <li>
+                                <a href="#getDepartureDate">getDepartureDate</a>
+                            </li>
+                            <li>
+                                <a href="#getFromCity">getFromCity</a>
+                            </li>
+                            <li>
+                                <a href="#getReturnDate">getReturnDate</a>
+                            </li>
+                            <li>
+                                <a href="#getTraveller">getTraveller</a>
+                            </li>
+                            <li>
+                                <a href="#getTripType">getTripType</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onButtonClick">onButtonClick</a>
+                            </li>
+                            <li>
+                                <a href="#setValues">setValues</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#buttonClicked">buttonClicked</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, _flightService: <a href="../injectables/FlightdataService.html">FlightdataService</a>, _cityService: <a href="../injectables/CitydataService.html">CitydataService</a>, route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/user/search-list/search-list.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>_flightService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FlightdataService.html" target="_self" >FlightdataService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>_cityService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CitydataService.html" target="_self" >CitydataService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="buttonClicked"></a>
+                        <b>buttonClicked</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/user/search-list/search-list.component.ts:23</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findFlights"></a>
+                    <span class="name">
+                        <b>
+                            findFlights
+                        </b>
+                        <a href="#findFlights"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findFlights()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="76"
+                            class="link-to-prism">src/app/user/search-list/search-list.component.ts:76</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getClass"></a>
+                    <span class="name">
+                        <b>
+                            getClass
+                        </b>
+                        <a href="#getClass"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getClass(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="115"
+                            class="link-to-prism">src/app/user/search-list/search-list.component.ts:115</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getDepartureDate"></a>
+                    <span class="name">
+                        <b>
+                            getDepartureDate
+                        </b>
+                        <a href="#getDepartureDate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getDepartureDate(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="101"
+                            class="link-to-prism">src/app/user/search-list/search-list.component.ts:101</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getFromCity"></a>
+                    <span class="name">
+                        <b>
+                            getFromCity
+                        </b>
+                        <a href="#getFromCity"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getFromCity(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="93"
+                            class="link-to-prism">src/app/user/search-list/search-list.component.ts:93</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getReturnDate"></a>
+                    <span class="name">
+                        <b>
+                            getReturnDate
+                        </b>
+                        <a href="#getReturnDate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getReturnDate(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="105"
+                            class="link-to-prism">src/app/user/search-list/search-list.component.ts:105</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getTraveller"></a>
+                    <span class="name">
+                        <b>
+                            getTraveller
+                        </b>
+                        <a href="#getTraveller"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getTraveller(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="110"
+                            class="link-to-prism">src/app/user/search-list/search-list.component.ts:110</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getTripType"></a>
+                    <span class="name">
+                        <b>
+                            getTripType
+                        </b>
+                        <a href="#getTripType"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getTripType(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="83"
+                            class="link-to-prism">src/app/user/search-list/search-list.component.ts:83</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="48"
+                            class="link-to-prism">src/app/user/search-list/search-list.component.ts:48</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onButtonClick"></a>
+                    <span class="name">
+                        <b>
+                            onButtonClick
+                        </b>
+                        <a href="#onButtonClick"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onButtonClick()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="129"
+                            class="link-to-prism">src/app/user/search-list/search-list.component.ts:129</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setValues"></a>
+                    <span class="name">
+                        <b>
+                            setValues
+                        </b>
+                        <a href="#setValues"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setValues()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="119"
+                            class="link-to-prism">src/app/user/search-list/search-list.component.ts:119</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="cities"></a>
+                        <span class="name">
+                            <b>
+                            cities</b>
+                            <a href="#cities"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/ICity.html" target="_self" >ICity[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/user/search-list/search-list.component.ts:45</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="class"></a>
+                        <span class="name">
+                            <b>
+                            class</b>
+                            <a href="#class"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/user/search-list/search-list.component.ts:39</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="departureDate"></a>
+                        <span class="name">
+                            <b>
+                            departureDate</b>
+                            <a href="#departureDate"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/user/search-list/search-list.component.ts:36</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="flightsArray"></a>
+                        <span class="name">
+                            <b>
+                            flightsArray</b>
+                            <a href="#flightsArray"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/IFlights.html" target="_self" >Array&lt;IFlights&gt;</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/user/search-list/search-list.component.ts:42</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="from"></a>
+                        <span class="name">
+                            <b>
+                            from</b>
+                            <a href="#from"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>string[]</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/user/search-list/search-list.component.ts:43</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fromCity"></a>
+                        <span class="name">
+                            <b>
+                            fromCity</b>
+                            <a href="#fromCity"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/user/search-list/search-list.component.ts:34</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getToCity"></a>
+                        <span class="name">
+                            <b>
+                            getToCity</b>
+                            <a href="#getToCity"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="97" class="link-to-prism">src/app/user/search-list/search-list.component.ts:97</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="returnDate"></a>
+                        <span class="name">
+                            <b>
+                            returnDate</b>
+                            <a href="#returnDate"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/user/search-list/search-list.component.ts:37</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="roundcounter"></a>
+                        <span class="name">
+                            <b>
+                            roundcounter</b>
+                            <a href="#roundcounter"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/user/search-list/search-list.component.ts:46</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="selectedDetails"></a>
+                        <span class="name">
+                            <b>
+                            selectedDetails</b>
+                            <a href="#selectedDetails"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    fromCity: &#x27;Delhi&#x27;,
+    toCity: &#x27;Delhi&#x27;,
+    departureDate: &#x27;&#x27;,
+    returnDate: &#x27;&#x27;,
+    travellers: &#x27;&#x27;,
+    class: &#x27;Economy&#x27;,
+    tripType: &#x27;&#x27;
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/user/search-list/search-list.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sub"></a>
+                        <span class="name">
+                            <b>
+                            sub</b>
+                            <a href="#sub"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subscription</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/user/search-list/search-list.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="to"></a>
+                        <span class="name">
+                            <b>
+                            to</b>
+                            <a href="#to"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>string[]</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/user/search-list/search-list.component.ts:44</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="toCity"></a>
+                        <span class="name">
+                            <b>
+                            toCity</b>
+                            <a href="#toCity"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/user/search-list/search-list.component.ts:35</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="travellers"></a>
+                        <span class="name">
+                            <b>
+                            travellers</b>
+                            <a href="#travellers"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/user/search-list/search-list.component.ts:38</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="tripType"></a>
+                        <span class="name">
+                            <b>
+                            tripType</b>
+                            <a href="#tripType"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/user/search-list/search-list.component.ts:40</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Output, EventEmitter } from &#x27;@angular/core&#x27;;
+import { ActivatedRoute, Router } from &#x27;@angular/router&#x27;;
+import { CitydataService } from &#x27;src/app/service/citydata.service&#x27;;
+import { FlightdataService } from &#x27;src/app/service/flightdata.service&#x27;;
+import { Subscription } from &#x27;rxjs&#x27;;
+import { ICity } from &#x27;src/app/model/ICity&#x27;;
+import { IFlights } from &#x27;src/app/model/IFlights&#x27;;
+
+@Component({
+  selector: &#x27;app-search-list&#x27;,
+  templateUrl: &#x27;./search-list.component.html&#x27;,
+  styleUrls: [&#x27;./search-list.component.css&#x27;]
+})
+export class SearchListComponent implements OnInit {
+
+  // tslint:disable-next-line: max-line-length
+  constructor(private router: Router, private _flightService: FlightdataService, private _cityService: CitydataService, private route: ActivatedRoute) { }
+
+  sub: Subscription;
+
+  // @Output() public linkedClicked &#x3D; new EventEmitter&lt;string&gt;();
+  // @Output() lol &#x3D; new EventEmitter&lt;string&gt;();
+  @Output() buttonClicked &#x3D; new EventEmitter&lt;boolean&gt;();
+
+  selectedDetails &#x3D; {
+    fromCity: &#x27;Delhi&#x27;,
+    toCity: &#x27;Delhi&#x27;,
+    departureDate: &#x27;&#x27;,
+    returnDate: &#x27;&#x27;,
+    travellers: &#x27;&#x27;,
+    class: &#x27;Economy&#x27;,
+    tripType: &#x27;&#x27;
+  };
+  fromCity &#x3D; &#x27;&#x27;;
+  toCity &#x3D; &#x27;&#x27;;
+  departureDate &#x3D; &#x27;&#x27;;
+  returnDate &#x3D; &#x27;&#x27;;
+  travellers &#x3D; &#x27;&#x27;;
+  class &#x3D; &#x27;&#x27;;
+  tripType &#x3D; &#x27;&#x27;;
+
+  flightsArray: Array&lt;IFlights&gt;;
+  from: string[];
+  to: string[];
+  cities: ICity[];
+  roundcounter &#x3D; false;
+
+  ngOnInit() {
+    console.log(&#x27;in search list component&#x27;);
+    this._flightService.getFlightsData()
+      .subscribe((fulldata: IFlights[]) &#x3D;&gt; {
+        this.flightsArray &#x3D; fulldata;
+      });
+
+    this._cityService.getCityData()
+      .subscribe((fulldata: ICity[]) &#x3D;&gt; {
+        this.cities &#x3D; fulldata;
+        this.to &#x3D; this.cities.map(c &#x3D;&gt; c.cityName);
+        this.from &#x3D; this.cities.map(c &#x3D;&gt; c.cityName);
+      });
+
+    this.sub &#x3D; this.route.paramMap.subscribe(
+      params &#x3D;&gt; {
+        this.selectedDetails.fromCity &#x3D; params.get(&#x27;from&#x27;);
+        this.selectedDetails.toCity &#x3D; params.get(&#x27;to&#x27;);
+        this.selectedDetails.departureDate &#x3D; params.get(&#x27;departuredate&#x27;);
+        this.selectedDetails.returnDate &#x3D; params.get(&#x27;returndate&#x27;);
+        this.selectedDetails.travellers &#x3D; params.get(&#x27;travellers&#x27;);
+        this.selectedDetails.class &#x3D; params.get(&#x27;class&#x27;);
+        this.selectedDetails.tripType &#x3D; params.get(&#x27;triptype&#x27;);
+      }
+    );
+    this.setValues();
+  }
+
+  findFlights() {
+    // tslint:disable-next-line: max-line-length
+    this.router.navigate([&#x27;/search&#x27;, this.selectedDetails.toCity, this.selectedDetails.fromCity, this.roundcounter, this.selectedDetails.departureDate, this.selectedDetails.returnDate, this.selectedDetails.tripType, this.selectedDetails.travellers, this.selectedDetails.class]);
+    this.onButtonClick();
+    console.log(&#x27;travellers &#x3D; &#x27; + this.selectedDetails.travellers);
+  }
+
+  getTripType(e: any) {
+    this.selectedDetails.tripType &#x3D; e.target.value;
+    if (this.selectedDetails.tripType &#x3D;&#x3D;&#x3D; &#x27;One Way&#x27;) {
+      this.roundcounter &#x3D; true;
+    } else {
+      this.roundcounter &#x3D; false;
+    }
+    console.log(this.selectedDetails.tripType);
+  }
+
+  getFromCity(e: any) {
+    this.selectedDetails.fromCity &#x3D; e.target.value;
+  }
+
+  getToCity &#x3D; (e: any) &#x3D;&gt; {
+    this.selectedDetails.toCity &#x3D; e.target.value;
+  }
+
+  getDepartureDate(e: any) {
+    this.selectedDetails.departureDate &#x3D; e.target.value;
+  }
+
+  getReturnDate(e: any) {
+    this.selectedDetails.returnDate &#x3D; e.target.value;
+    console.log(&#x27;selected return date &#x3D; &#x27; + this.selectedDetails.returnDate);
+  }
+
+  getTraveller(e: any) {
+    this.selectedDetails.travellers &#x3D; e.target.value;
+    console.log(&#x27;gettravellers  &#x3D; &#x27; + this.selectedDetails.travellers);
+  }
+
+  getClass(e: any) {
+    this.selectedDetails.class &#x3D; e.target.value;
+  }
+
+  setValues() {
+    this.tripType &#x3D; this.selectedDetails.tripType.trim();
+    this.fromCity &#x3D; this.selectedDetails.fromCity.trim();
+    this.toCity &#x3D; this.selectedDetails.toCity.trim();
+    this.departureDate &#x3D; this.selectedDetails.departureDate.trim();
+    this.returnDate &#x3D; this.selectedDetails.returnDate.trim();
+    this.travellers &#x3D; this.selectedDetails.travellers.trim();
+    this.class &#x3D; this.selectedDetails.class.trim();
+  }
+
+  onButtonClick() {
+    console.log(&#x27;search list button clicked&#x27;);
+    this.buttonClicked.emit(true);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html"> &lt;div class&#x3D;&quot;container-fluid&quot;  &gt;
+    &lt;div style&#x3D;&quot;width: 100%;&quot;&gt;
+        &lt;div  style&#x3D;&quot;width: 100%;&quot;&gt;
+            &lt;form&gt;
+                &lt;table style&#x3D;&quot;width: 100%; color: white;&quot;&gt;
+                    &lt;div class&#x3D;&quot;row col&quot; style&#x3D;&quot;width: 100%;&quot;&gt;
+                        
+                        &lt;div class&#x3D;&quot;offset-sm-2 col-sm-1.5&quot;&gt;
+                            &lt;label&gt;Trip type &lt;/label&gt;
+                            &lt;select class&#x3D;&quot;form-control&quot; (change)&#x3D;&quot;getTripType($event)&quot; [(ngModel)]&#x3D;&quot;tripType&quot; name&#x3D;&quot;triptype&quot;&gt;
+                                &lt;option&gt;One Way&lt;/option&gt;
+                                &lt;option&gt;Round Trip&lt;/option&gt;
+                            &lt;/select&gt;
+                        &lt;/div&gt;
+                        &amp;nbsp;
+                        &lt;div class&#x3D;&quot;col-sm-1.7&quot;&gt;
+                            &lt;label&gt;From &lt;/label&gt;
+                            &lt;select class&#x3D;&quot;form-control&quot; name&#x3D;&quot;from&quot; (change)&#x3D;&quot;getFromCity($event)&quot; [(ngModel)]&#x3D;&quot;fromCity&quot;&gt;
+                                &lt;option *ngFor&#x3D;&#x27;let f of from&#x27; [value]&#x3D;&quot;f&quot; &gt;{{f}}&lt;/option&gt;
+                            &lt;/select&gt;
+                        &lt;/div&gt;
+                        &amp;nbsp;  
+                        &lt;div class&#x3D;&quot;col-sm-1.5&quot;&gt;
+                            &lt;label&gt;To &lt;/label&gt;
+                            &lt;select class&#x3D;&quot;form-control&quot; name&#x3D;&quot;to&quot; (change)&#x3D;&quot;getToCity($event)&quot; [(ngModel)]&#x3D;&quot;toCity&quot;&gt;
+                                &lt;option *ngFor&#x3D;&#x27;let f of to&#x27; [value] &#x3D; &quot;f&quot;&gt;{{f}}&lt;/option&gt;
+                            &lt;/select&gt;
+                        &lt;/div&gt;
+                        &amp;nbsp;
+                        &lt;div class&#x3D;&quot;col-sm-1.5&quot;&gt;
+                            &lt;label&gt;Depart&lt;/label&gt;
+                            &lt;input type&#x3D;&quot;date&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;departureDate&quot; name&#x3D;&quot;departure&quot; value&#x3D;&quot;{{departureDate}}&quot; (change)&#x3D;&quot;getDepartureDate($event)&quot;&gt;
+                        &lt;/div&gt;
+                        &amp;nbsp;
+                        &lt;div class&#x3D;&quot;col-sm-1.5&quot;&gt;
+                            &lt;label&gt;Return&lt;/label&gt;
+                            &lt;input type&#x3D;&quot;date&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;returnDate&quot; name&#x3D;&quot;return&quot; (change)&#x3D;&quot;getReturnDate($event)&quot;&gt;    
+                        &lt;/div&gt;
+                        &amp;nbsp;
+                        &lt;div class&#x3D;&quot;col-sm-1.5&quot;&gt;
+                            &lt;label&gt;Travellers &lt;/label&gt;
+                            &lt;select class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;travellers&quot; name&#x3D;&quot;traveller&quot; (change)&#x3D;&quot;getTraveller($event)&quot;&gt;
+                                &lt;option&gt;1&lt;/option&gt;
+                                &lt;option&gt;2&lt;/option&gt;
+                                &lt;option&gt;3&lt;/option&gt;
+                                &lt;option&gt;4&lt;/option&gt;
+                                &lt;option&gt;5&lt;/option&gt;
+                                &lt;option&gt;6&lt;/option&gt;
+                                &lt;option&gt;7&lt;/option&gt;
+                                &lt;option&gt;8&lt;/option&gt;
+                                &lt;option&gt;9&lt;/option&gt;
+                            &lt;/select&gt;
+                        &lt;/div&gt;
+                        &amp;nbsp;
+                        &lt;div class&#x3D;&quot;col-sm-1.5&quot;&gt;
+                            &lt;label class&#x3D;&quot;&quot;&gt;Class &lt;/label&gt;
+                            &lt;select class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;class&quot; name&#x3D;&quot;classs&quot;&gt;
+                                &lt;option&gt;Economy&lt;/option&gt;
+                                &lt;option&gt;Business&lt;/option&gt;
+                            &lt;/select&gt;
+                        &lt;/div&gt;
+                        &amp;nbsp;
+                        &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                            &lt;label&gt;&lt;/label&gt;
+                            &lt;button class&#x3D;&quot;btn btn-primary button&quot; (click)&#x3D;&quot;findFlights()&quot; style&#x3D;&quot;width: 100%; height: 60%; border-radius: 10px; margin-top: 30px;&quot; &gt;
+                                Find Flights
+                            &lt;/button&gt;
+                        &lt;/div&gt;
+                        
+                    &lt;/div&gt;
+                    &lt;br&gt;
+                    
+                &lt;/table&gt;
+                
+            &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./search-list.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.center {
+    text-align: center;
+}
+
+.hsw {
+    padding: 11px 0;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    font-family: Lato-Regular,Arial,Helvetica,sans-serif;
+}
+
+/* .hsw .hsw_inner {
+    width: 1200px;
+    margin: 0 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+} */</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div> <div class="container-fluid"  >    <div style="width: 100%;">        <div  style="width: 100%;">            <form>                <table style="width: 100%; color: white;">                    <div class="row col" style="width: 100%;">                                                <div class="offset-sm-2 col-sm-1.5">                            <label>Trip type </label>                            <select class="form-control" (change)="getTripType($event)" [(ngModel)]="tripType" name="triptype">                                <option>One Way</option>                                <option>Round Trip</option>                            </select>                        </div>                        &nbsp;                        <div class="col-sm-1.7">                            <label>From </label>                            <select class="form-control" name="from" (change)="getFromCity($event)" [(ngModel)]="fromCity">                                <option *ngFor=\'let f of from\' [value]="f" >{{f}}</option>                            </select>                        </div>                        &nbsp;                          <div class="col-sm-1.5">                            <label>To </label>                            <select class="form-control" name="to" (change)="getToCity($event)" [(ngModel)]="toCity">                                <option *ngFor=\'let f of to\' [value] = "f">{{f}}</option>                            </select>                        </div>                        &nbsp;                        <div class="col-sm-1.5">                            <label>Depart</label>                            <input type="date" class="form-control" [(ngModel)]="departureDate" name="departure" value="{{departureDate}}" (change)="getDepartureDate($event)">                        </div>                        &nbsp;                        <div class="col-sm-1.5">                            <label>Return</label>                            <input type="date" class="form-control" [(ngModel)]="returnDate" name="return" (change)="getReturnDate($event)">                            </div>                        &nbsp;                        <div class="col-sm-1.5">                            <label>Travellers </label>                            <select class="form-control" [(ngModel)]="travellers" name="traveller" (change)="getTraveller($event)">                                <option>1</option>                                <option>2</option>                                <option>3</option>                                <option>4</option>                                <option>5</option>                                <option>6</option>                                <option>7</option>                                <option>8</option>                                <option>9</option>                            </select>                        </div>                        &nbsp;                        <div class="col-sm-1.5">                            <label class="">Class </label>                            <select class="form-control" [(ngModel)]="class" name="classs">                                <option>Economy</option>                                <option>Business</option>                            </select>                        </div>                        &nbsp;                        <div class="form-group">                            <label></label>                            <button class="btn btn-primary button" (click)="findFlights()" style="width: 100%; height: 60%; border-radius: 10px; margin-top: 30px;" >                                Find Flights                            </button>                        </div>                                            </div>                    <br>                                    </table>                            </form>        </div>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AddnewflightComponent', 'selector': 'app-addnewflight'},{'name': 'AdminFlightlistComponent', 'selector': 'app-admin-flightlist'},{'name': 'AdminhomeComponent', 'selector': 'app-adminhome'},{'name': 'AirlineComponent', 'selector': 'app-airline'},{'name': 'AirlinelistcomponentComponent', 'selector': 'app-airlinelistcomponent'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CityComponent', 'selector': 'app-city'},{'name': 'CityViewComponent', 'selector': 'app-city-view'},{'name': 'EditairlineComponent', 'selector': 'app-editairline'},{'name': 'EditComponent', 'selector': 'app-edit'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FlightListComponent', 'selector': 'app-flight-list'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PassengerDetailsComponent', 'selector': 'app-passenger-details'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'RegistrationComponent', 'selector': 'app-registration'},{'name': 'ReviewBookingComponent', 'selector': 'app-review-booking'},{'name': 'RoundtripFooterComponent', 'selector': 'app-roundtrip-footer'},{'name': 'ScheduleComponent', 'selector': 'app-schedule'},{'name': 'SearchFlightsComponent', 'selector': 'app-search-flights'},{'name': 'SearchListComponent', 'selector': 'app-search-list'},{'name': 'ViewProfileComponent', 'selector': 'app-view-profile'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'SearchListComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SearchListComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

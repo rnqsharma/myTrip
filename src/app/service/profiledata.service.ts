@@ -54,6 +54,8 @@ export class ProfiledataService {
 
   // tslint:disable-next-line: align
   public updateProfile(profile: IProfile, id: string): Observable<IProfile> {
+    console.log(profile);
+    console.log(id);
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     console.log('id' + id);
     const url = `http://localhost:3000/profiledata/${id}`;

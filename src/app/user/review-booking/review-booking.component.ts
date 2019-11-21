@@ -92,6 +92,16 @@ export class ReviewBookingComponent implements OnInit, AfterViewChecked {
           // description = "Single Habitat Sasquatch Starter Kit";
 
 
+
+          fullname ='';
+          address = '';
+          mobile = '';
+          passengerDetails = {
+            fullName: '',
+            gender: 'Male',
+            address: '',
+            mobile: 0
+          };
     // tslint:disable-next-line: variable-name
     constructor(private _flightsData: FlightdataService,
                 private route: ActivatedRoute, private paypalService: PaypalService) { }
@@ -101,8 +111,12 @@ export class ReviewBookingComponent implements OnInit, AfterViewChecked {
           this.fl = flights;
           this.sub = this.route.paramMap.subscribe(
             params => {
+              this.fullname = params.get('fullName');
+              this.address = params.get('address');
+              this.mobile =  params.get('mobile');
               this.id = params.get('flightID');
               console.log(this.id);
+              console.log(this.fullname);
               this.idArray = this.id.split(':');
               console.log(this.idArray);
               if (this.idArray.length > 1) {
@@ -121,8 +135,12 @@ export class ReviewBookingComponent implements OnInit, AfterViewChecked {
     }
     filterData() {
       console.log('In filter');
+      console.log(this.fromCity + ' ' + this.toCity);
+      
       this.fl.forEach( f => {
         console.log(f);
+        console.log(f.id);
+        
         if (f.id === this.fromCity || f.id === this.toCity) {
           console.log('sfd');
           this.flightList.push(f);

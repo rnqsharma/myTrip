@@ -1,0 +1,1372 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>my-trip documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">my-trip documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>AddnewflightComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/admin/addnewflight/addnewflight.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-addnewflight</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./addnewflight.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./addnewflight.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addflight">addflight</a>
+                            </li>
+                            <li>
+                                <a href="#airLineName">airLineName</a>
+                            </li>
+                            <li>
+                                <a href="#airlines">airlines</a>
+                            </li>
+                            <li>
+                                <a href="#cities">cities</a>
+                            </li>
+                            <li>
+                                <a href="#cityName">cityName</a>
+                            </li>
+                            <li>
+                                <a href="#dist">dist</a>
+                            </li>
+                            <li>
+                                <a href="#errorMessage">errorMessage</a>
+                            </li>
+                            <li>
+                                <a href="#flight">flight</a>
+                            </li>
+                            <li>
+                                <a href="#flightData">flightData</a>
+                            </li>
+                            <li>
+                                <a href="#flightForm">flightForm</a>
+                            </li>
+                            <li>
+                                <a href="#id">id</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#sub">sub</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getDistance">getDistance</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onSaveComplete">onSaveComplete</a>
+                            </li>
+                            <li>
+                                <a href="#setPrice">setPrice</a>
+                            </li>
+                            <li>
+                                <a href="#updateProfile">updateProfile</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(fb: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>, route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, flightService: <a href="../injectables/FlightdataService.html">FlightdataService</a>, airlineservice: <a href="../injectables/AirlinedataService.html">AirlinedataService</a>, cityservice: <a href="../injectables/CitydataService.html">CitydataService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/admin/addnewflight/addnewflight.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>fb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>flightService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FlightdataService.html" target="_self" >FlightdataService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>airlineservice</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AirlinedataService.html" target="_self" >AirlinedataService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cityservice</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CitydataService.html" target="_self" >CitydataService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getDistance"></a>
+                    <span class="name">
+                        <b>
+                            getDistance
+                        </b>
+                        <a href="#getDistance"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getDistance(dist: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="146"
+                            class="link-to-prism">src/app/admin/addnewflight/addnewflight.component.ts:146</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>dist</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="41"
+                            class="link-to-prism">src/app/admin/addnewflight/addnewflight.component.ts:41</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSaveComplete"></a>
+                    <span class="name">
+                        <b>
+                            onSaveComplete
+                        </b>
+                        <a href="#onSaveComplete"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSaveComplete()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="126"
+                            class="link-to-prism">src/app/admin/addnewflight/addnewflight.component.ts:126</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setPrice"></a>
+                    <span class="name">
+                        <b>
+                            setPrice
+                        </b>
+                        <a href="#setPrice"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setPrice()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="132"
+                            class="link-to-prism">src/app/admin/addnewflight/addnewflight.component.ts:132</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateProfile"></a>
+                    <span class="name">
+                        <b>
+                            updateProfile
+                        </b>
+                        <a href="#updateProfile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updateProfile(flight: <a href="../interfaces/IFlights.html">IFlights</a>, id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="118"
+                            class="link-to-prism">src/app/admin/addnewflight/addnewflight.component.ts:118</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>flight</td>
+                                    <td>
+                                                <code><a href="../interfaces/IFlights.html" target="_self" >IFlights</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="addflight"></a>
+                        <span class="name">
+                            <b>
+                            addflight</b>
+                            <a href="#addflight"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="101" class="link-to-prism">src/app/admin/addnewflight/addnewflight.component.ts:101</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="airLineName"></a>
+                        <span class="name">
+                            <b>
+                            airLineName</b>
+                            <a href="#airLineName"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/admin/addnewflight/addnewflight.component.ts:24</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="airlines"></a>
+                        <span class="name">
+                            <b>
+                            airlines</b>
+                            <a href="#airlines"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/IAirline.html" target="_self" >IAirline[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/admin/addnewflight/addnewflight.component.ts:23</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="cities"></a>
+                        <span class="name">
+                            <b>
+                            cities</b>
+                            <a href="#cities"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/ICity.html" target="_self" >ICity[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/admin/addnewflight/addnewflight.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="cityName"></a>
+                        <span class="name">
+                            <b>
+                            cityName</b>
+                            <a href="#cityName"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/admin/addnewflight/addnewflight.component.ts:27</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dist"></a>
+                        <span class="name">
+                            <b>
+                            dist</b>
+                            <a href="#dist"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/admin/addnewflight/addnewflight.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="errorMessage"></a>
+                        <span class="name">
+                            <b>
+                            errorMessage</b>
+                            <a href="#errorMessage"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/admin/addnewflight/addnewflight.component.ts:29</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="flight"></a>
+                        <span class="name">
+                            <b>
+                            flight</b>
+                            <a href="#flight"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/IFlights.html" target="_self" >IFlights</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/admin/addnewflight/addnewflight.component.ts:28</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="flightData"></a>
+                        <span class="name">
+                            <b>
+                            flightData</b>
+                            <a href="#flightData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/IFlights.html" target="_self" >IFlights</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/admin/addnewflight/addnewflight.component.ts:22</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="flightForm"></a>
+                        <span class="name">
+                            <b>
+                            flightForm</b>
+                            <a href="#flightForm"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/admin/addnewflight/addnewflight.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="id"></a>
+                        <span class="name">
+                            <b>
+                            id</b>
+                            <a href="#id"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/admin/addnewflight/addnewflight.component.ts:21</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sub"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            sub</b>
+                            <a href="#sub"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subscription</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/admin/addnewflight/addnewflight.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { FormBuilder, FormGroup } from &#x27;@angular/forms&#x27;;
+import { ActivatedRoute, Router } from &#x27;@angular/router&#x27;;
+import { FlightdataService } from &#x27;src/app/service/flightdata.service&#x27;;
+import { Subscription } from &#x27;rxjs&#x27;;
+import { IFlights } from &#x27;src/app/model/IFlights&#x27;;
+import { AirlinedataService } from &#x27;src/app/service/airlinedata.service&#x27;;
+import { IAirline } from &#x27;src/app/model/IAirline&#x27;;
+import { CitydataService } from &#x27;src/app/service/citydata.service&#x27;;
+import { ICity } from &#x27;src/app/model/ICity&#x27;;
+
+@Component({
+  selector: &#x27;app-addnewflight&#x27;,
+  templateUrl: &#x27;./addnewflight.component.html&#x27;,
+  styleUrls: [&#x27;./addnewflight.component.css&#x27;]
+})
+export class AddnewflightComponent implements OnInit {
+
+  flightForm: FormGroup;
+  private sub: Subscription;
+  id: string;
+  flightData: IFlights;
+  airlines: IAirline[];
+  airLineName: string;
+  // airlinesName: Array&lt;string&gt; &#x3D; [];
+  cities: ICity[];
+  cityName: string;
+  flight: IFlights;
+  errorMessage: string;
+  dist &#x3D; &#x27;&#x27;;
+
+  constructor(
+    private fb: FormBuilder,
+    private route: ActivatedRoute,
+    private router: Router,
+    private flightService: FlightdataService,
+    private airlineservice: AirlinedataService,
+    private cityservice: CitydataService
+  ) { }
+
+  ngOnInit() {
+
+    this.sub &#x3D; this.route.paramMap.subscribe(
+      params &#x3D;&gt; {
+        this.id &#x3D; params.get(&#x27;flightID&#x27;);
+      }
+    );
+
+    // this.productForm &#x3D; this.fb.group({
+    //   productName: [&#x27;&#x27;],
+    //   productCode: [&#x27;&#x27;, Validators.required],
+    //   starRating: [&#x27;&#x27;, NumberValidators.range(1, 5)],
+    //   tags: this.fb.array([]),
+    //   description: &#x27;&#x27;
+    //   });
+    this.flightForm &#x3D; this.fb.group({
+      id: [&#x27;&#x27;],
+      flightCompany: [&#x27;&#x27;],
+      departureName: [&#x27;&#x27;],
+      departureTime: [&#x27;&#x27;],
+      arrivalName: [&#x27;&#x27;],
+      arrivalTime: [&#x27;&#x27;],
+      price: [&#x27;&#x27;],
+      duration: [&#x27;&#x27;],
+      economy: [&#x27;&#x27;],
+      business: [&#x27;&#x27;],
+    });
+    this.airlineservice.getAirlinesData().subscribe((airlines: IAirline[]) &#x3D;&gt; {
+      this.airlines &#x3D; airlines;
+      // console.log(this.airlines);
+
+      this.cityservice.getCityData().subscribe((cities: ICity[]) &#x3D;&gt; {
+        this.cities &#x3D; cities;
+        // console.log(this.cities);
+
+
+        if (this.id !&#x3D;&#x3D; &#x27;0&#x27;) {
+        this.flightService.getFlightsDataByID(this.id).
+      subscribe((flight: IFlights) &#x3D;&gt; {
+        console.log(flight);
+        this.flight &#x3D; flight;
+        this.flightForm.patchValue({
+          id: this.flight.id,
+          flightCompany: this.flight.flightCompany,
+          departureName: this.flight.departureName,
+          departureTime: this.flight.departureTime,
+          arrivalName: this.flight.arrivalName,
+          arrivalTime: this.flight.arrivalTime,
+          price: this.flight.price,
+          duration: this.flight.duration,
+          economy: this.flight.economy,
+          business: this.flight.business,
+        });
+        console.log(&#x27;flightForm is working&#x27; + this.flightForm.value.id);
+    });
+  }
+  });
+});
+
+  }
+  addflight &#x3D; (): void &#x3D;&gt; {
+    this.setPrice();
+    const p &#x3D; { ...this.flight, ...this.flightForm.value };
+    console.log(&#x27;p.id is working&#x27; + this.id);
+    if (this.id &#x3D;&#x3D;&#x3D; &#x27;0&#x27;) {
+      console.log(&#x27;createNew is working&#x27;);
+      this.flightService.createFlight(p)
+      .subscribe({
+      next: () &#x3D;&gt; this.onSaveComplete(),
+      error: err &#x3D;&gt; this.errorMessage &#x3D; err
+      });
+    } else {
+      console.log(&#x27;update is working&#x27;);
+      this.updateProfile(p, this.id);
+    }
+  }
+
+  updateProfile(flight: IFlights, id: string): void {
+    this.flightService.updateProfile(flight, id)
+      .subscribe({
+        next: () &#x3D;&gt; this.onSaveComplete(),
+        error: err &#x3D;&gt; this.errorMessage &#x3D; err
+      });
+  }
+
+  onSaveComplete(): void {
+    // Reset the form to clear the flags
+    // this.profileForm.reset();
+      this.router.navigate([&#x27;/adminFlight&#x27;]);
+  }
+
+  setPrice() {
+    const distance &#x3D; +this.dist;
+    let price: number;
+    if (distance &lt; 500) {
+      price &#x3D; distance * 120;
+    } else if (distance &gt; 500 &amp;&amp; distance &lt; 1001) {
+      price &#x3D; distance * 70;
+    } else if (distance &gt; 1000) {
+      price &#x3D; distance * 50;
+    }
+    console.log(&#x27;price &#x3D; &#x27; + price);
+    this.flightForm.value.price &#x3D; price;
+  }
+
+  getDistance(dist: string) {
+    this.dist &#x3D; dist;
+    console.log(dist);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container&quot;&gt;
+                &lt;div class&#x3D;&quot;card&quot;&gt;
+                    &lt;div class&#x3D;&quot;card-body&quot;&gt;
+            
+                &lt;div style&#x3D;&quot;font-weight: bold; text-align: left; color: grey&quot;&gt;
+                
+                &lt;/div&gt;
+                
+                &lt;form (ngSubmit)&#x3D;&quot;addflight()&quot; [formGroup]&#x3D;&quot;flightForm&quot;&gt;
+                &lt;!-- &lt;div class&#x3D;&quot;offset-md-6&quot;&gt; --&gt;
+         
+                
+                
+                &lt;div class&#x3D;&quot;form-group row mb-3&quot;&gt;
+                        &lt;label class&#x3D;&quot;col-md-2 col-form-label&quot;
+                        for&#x3D;&quot;descriptionId&quot;&gt;Flight No.&lt;/label&gt;
+                        
+                        &lt;div class&#x3D;&quot;col-md-6&quot;&gt;
+                        &lt;input class&#x3D;&quot;form-control&quot;
+                        id&#x3D;&quot;flightno&quot;
+                        placeholder&#x3D;&quot;Flight No&quot;
+                        rows&#x3D;3
+                        formControlName&#x3D;&quot;id&quot;
+                        /&gt;
+                        
+                        &lt;/div&gt;   
+                 &lt;/div&gt;
+            
+                    &lt;div class&#x3D;&quot;form-group row mb-3&quot;&gt;
+                        &lt;label class&#x3D;&quot;col-md-2 col-form-label&quot;
+                        for&#x3D;&quot;descriptionId&quot;&gt;Airline name&lt;/label&gt;
+                        
+                        &lt;div class&#x3D;&quot;col-md-6&quot;&gt;
+                        
+                                &lt;select class&#x3D;&quot;form-control&quot; name&#x3D;&quot;Airline_Name&quot; formControlName&#x3D;&quot;flightCompany&quot;&gt;
+                                        &lt;option *ngFor&#x3D;&#x27;let airline of airlines&#x27; &gt;{{airline.airLineName}}&lt;/option&gt;
+                                      &lt;/select&gt;
+                        
+                        &lt;/div&gt;
+                        &lt;app-airline&gt;&lt;/app-airline&gt;
+                        &lt;/div&gt;
+                        
+                        &lt;div class&#x3D;&quot;form-group row mb-3&quot;&gt;
+                                &lt;label class&#x3D;&quot;col-md-2 col-form-label&quot;
+                                for&#x3D;&quot;descriptionId&quot;&gt;Departure City&lt;/label&gt;
+                                
+                                &lt;div class&#x3D;&quot;col-md-6&quot;&gt;
+                                
+                                        &lt;select class&#x3D;&quot;form-control&quot; name&#x3D;&quot;Departure_city&quot; formControlName&#x3D;&quot;departureName&quot;&gt;
+                                                &lt;option *ngFor&#x3D;&#x27;let city of cities&#x27;  &gt;{{city.cityName}}&lt;/option&gt;
+                                              &lt;/select&gt;
+                                
+                                &lt;/div&gt;
+                                &lt;app-city&gt;&lt;/app-city&gt;
+                                &lt;/div&gt;
+                               
+                                &lt;div class&#x3D;&quot;form-group row mb-3&quot;&gt;
+                                        &lt;label class&#x3D;&quot;col-md-2 col-form-label&quot;
+                                        for&#x3D;&quot;descriptionId&quot;&gt;Arrival City&lt;/label&gt;
+                                        
+                                        &lt;div class&#x3D;&quot;col-md-6&quot;&gt;
+                                        
+                                                &lt;select  class&#x3D;&quot;form-control&quot; name&#x3D;&quot;Arrival_city&quot; formControlName&#x3D;&quot;arrivalName&quot;&gt;
+                                                                &lt;option *ngFor&#x3D;&#x27;let city of cities&#x27;  &gt;{{city.cityName}}&lt;/option&gt;
+                                                      &lt;/select&gt;
+                                        
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+            
+                        
+            
+                            &lt;div class&#x3D;&quot;form-group row mb-3&quot;&gt;
+                                    &lt;label class&#x3D;&quot;col-md-2 col-form-label&quot;
+                                    for&#x3D;&quot;descriptionId&quot;&gt;Departure Time&lt;/label&gt;
+                                    
+                                    &lt;div class&#x3D;&quot;col-md-6&quot;&gt;
+                                            &lt;input type&#x3D;&quot;time&quot; name&#x3D;&quot;time&quot; value&#x3D;&quot;&quot; id&#x3D;&quot;departureTime&quot; 
+                                            formControlName&#x3D;&quot;departureTime&quot; class&#x3D;&quot;form-control&quot;&gt; 
+                                    
+                                    &lt;/div&gt;
+                                    &lt;/div&gt;
+            
+                                &lt;div class&#x3D;&quot;form-group row mb-3&quot;&gt;
+                                    &lt;label class&#x3D;&quot;col-md-2 col-form-label&quot;
+                                    for&#x3D;&quot;descriptionId&quot;&gt;Arrival Time&lt;/label&gt;
+                                    
+                                    &lt;div class&#x3D;&quot;col-md-6&quot;&gt;
+                                            &lt;input type&#x3D;&quot;time&quot; name&#x3D;&quot;time&quot; value&#x3D;&quot;&quot; id&#x3D; &quot;arrivalTime&quot;
+                                            formControlName&#x3D;&quot;arrivalTime&quot; class&#x3D;&quot;form-control&quot; &gt; 
+                                    
+                                    &lt;/div&gt;
+                                    &lt;/div&gt;
+                        
+                                    &lt;div class&#x3D;&quot;form-group row mb-3&quot;&gt;
+                                        &lt;label class&#x3D;&quot;col-md-2 col-form-label&quot;
+                                        for&#x3D;&quot;descriptionId&quot;&gt;Duration(hrs)&lt;/label&gt;
+                                        
+                                        &lt;div class&#x3D;&quot;col-md-6&quot;&gt;
+                                        &lt;input class&#x3D;&quot;form-control&quot;
+                                        id&#x3D;&quot;Duration&quot;
+                                        placeholder&#x3D;&quot;&quot;
+                                        rows&#x3D;3
+                                        formControlName&#x3D;&quot;duration&quot;
+                                        /&gt;
+                                        
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+            
+                                        &lt;div class&#x3D;&quot;form-group row mb-3&quot;&gt;
+                                                &lt;label class&#x3D;&quot;col-md-2 col-form-label&quot;
+                                                for&#x3D;&quot;descriptionId&quot;&gt;No Of Economy Class Seats&lt;/label&gt;
+                                                        
+                                                &lt;div class&#x3D;&quot;col-md-6&quot;&gt;
+                                                &lt;input class&#x3D;&quot;form-control&quot;
+                                                id&#x3D;&quot;Economy_Seats&quot;
+                                                placeholder&#x3D;&quot;&quot;
+                                                type&#x3D;&quot;number&quot;
+                                                rows&#x3D;3
+                                                formControlName&#x3D;&quot;economy&quot;
+                                                /&gt;
+                                    
+                                    &lt;/div&gt;
+                                    &lt;/div&gt;
+            
+                                    &lt;div class&#x3D;&quot;form-group row mb-3&quot;&gt;
+                                        &lt;label class&#x3D;&quot;col-md-2 col-form-label&quot;
+                                        for&#x3D;&quot;descriptionId&quot;&gt;No Of Business Class Seats&lt;/label&gt;
+                                                
+                                        &lt;div class&#x3D;&quot;col-md-6&quot;&gt;
+                                        &lt;input class&#x3D;&quot;form-control&quot;
+                                        id&#x3D;&quot;Business_Seats&quot;
+                                        placeholder&#x3D;&quot;&quot;
+                                        type&#x3D;&quot;number&quot;
+                                        rows&#x3D;3
+                                        formControlName&#x3D;&quot;business&quot;
+                                        /&gt;
+                                        
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+                    
+                            
+                               
+                                            
+                                &lt;div class&#x3D;&quot;form-group row mb-3&quot;&gt;
+                                &lt;label class&#x3D;&quot;col-md-2 col-form-label&quot;&gt;Distance(in km)&lt;/label&gt;
+                                &lt;div class&#x3D;&quot;col-md-6&quot;&gt;
+                                &lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;Distance&quot; type&#x3D;&quot;number&quot;
+                                placeholder&#x3D;&quot;&quot;
+                                     (change)&#x3D;&quot;getDistance(distance.value)&quot; #distance&gt;
+                                        
+                                &lt;/div&gt;
+                               &lt;/div&gt;
+                            
+            
+                &lt;div class&#x3D;&quot;form-group row mb-4&quot;&gt;
+                &lt;div class&#x3D;&quot;offset-md-3 col-md-4&quot;&gt;
+                &lt;button class&#x3D;&quot;btn btn-primary mr-6&quot;
+                style&#x3D;&quot;width:200px;&quot;
+                type&#x3D;&quot;submit&quot;
+                &gt;
+                Submit
+                &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;/div&gt;
+            
+                &lt;/form&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            
+                
+                &lt;div class&#x3D;&quot;alert alert-danger&quot;
+                *ngIf&#x3D;&quot;errorMessage&quot;&gt;
+                {{errorMessage}}
+                &lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./addnewflight.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.backcolor{
+    background-image: linear-gradient(black,#0099cc);
+  
+  }
+  </code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="container">                <div class="card">                    <div class="card-body">                            <div style="font-weight: bold; text-align: left; color: grey">                                </div>                                <form (ngSubmit)="addflight()" [formGroup]="flightForm">                <!-- <div class="offset-md-6"> -->                                                         <div class="form-group row mb-3">                        <label class="col-md-2 col-form-label"                        for="descriptionId">Flight No.</label>                                                <div class="col-md-6">                        <input class="form-control"                        id="flightno"                        placeholder="Flight No"                        rows=3                        formControlName="id"                        />                                                </div>                    </div>                                <div class="form-group row mb-3">                        <label class="col-md-2 col-form-label"                        for="descriptionId">Airline name</label>                                                <div class="col-md-6">                                                        <select class="form-control" name="Airline_Name" formControlName="flightCompany">                                        <option *ngFor=\'let airline of airlines\' >{{airline.airLineName}}</option>                                      </select>                                                </div>                        <app-airline></app-airline>                        </div>                                                <div class="form-group row mb-3">                                <label class="col-md-2 col-form-label"                                for="descriptionId">Departure City</label>                                                                <div class="col-md-6">                                                                        <select class="form-control" name="Departure_city" formControlName="departureName">                                                <option *ngFor=\'let city of cities\'  >{{city.cityName}}</option>                                              </select>                                                                </div>                                <app-city></app-city>                                </div>                                                               <div class="form-group row mb-3">                                        <label class="col-md-2 col-form-label"                                        for="descriptionId">Arrival City</label>                                                                                <div class="col-md-6">                                                                                        <select  class="form-control" name="Arrival_city" formControlName="arrivalName">                                                                <option *ngFor=\'let city of cities\'  >{{city.cityName}}</option>                                                      </select>                                                                                </div>                                        </div>                                                                            <div class="form-group row mb-3">                                    <label class="col-md-2 col-form-label"                                    for="descriptionId">Departure Time</label>                                                                        <div class="col-md-6">                                            <input type="time" name="time" value="" id="departureTime"                                             formControlName="departureTime" class="form-control">                                                                         </div>                                    </div>                                            <div class="form-group row mb-3">                                    <label class="col-md-2 col-form-label"                                    for="descriptionId">Arrival Time</label>                                                                        <div class="col-md-6">                                            <input type="time" name="time" value="" id= "arrivalTime"                                            formControlName="arrivalTime" class="form-control" >                                                                         </div>                                    </div>                                                            <div class="form-group row mb-3">                                        <label class="col-md-2 col-form-label"                                        for="descriptionId">Duration(hrs)</label>                                                                                <div class="col-md-6">                                        <input class="form-control"                                        id="Duration"                                        placeholder=""                                        rows=3                                        formControlName="duration"                                        />                                                                                </div>                                        </div>                                                    <div class="form-group row mb-3">                                                <label class="col-md-2 col-form-label"                                                for="descriptionId">No Of Economy Class Seats</label>                                                                                                        <div class="col-md-6">                                                <input class="form-control"                                                id="Economy_Seats"                                                placeholder=""                                                type="number"                                                rows=3                                                formControlName="economy"                                                />                                                                        </div>                                    </div>                                                <div class="form-group row mb-3">                                        <label class="col-md-2 col-form-label"                                        for="descriptionId">No Of Business Class Seats</label>                                                                                        <div class="col-md-6">                                        <input class="form-control"                                        id="Business_Seats"                                        placeholder=""                                        type="number"                                        rows=3                                        formControlName="business"                                        />                                                                                </div>                                        </div>                                                                                                                                                           <div class="form-group row mb-3">                                <label class="col-md-2 col-form-label">Distance(in km)</label>                                <div class="col-md-6">                                <input class="form-control" id="Distance" type="number"                                placeholder=""                                     (change)="getDistance(distance.value)" #distance>                                                                        </div>                               </div>                                                        <div class="form-group row mb-4">                <div class="offset-md-3 col-md-4">                <button class="btn btn-primary mr-6"                style="width:200px;"                type="submit"                >                Submit                </button>                </div>                </div>                            </form>                </div>            </div>                                            <div class="alert alert-danger"                *ngIf="errorMessage">                {{errorMessage}}                </div></div>'
+    var COMPONENTS = [{'name': 'AddnewflightComponent', 'selector': 'app-addnewflight'},{'name': 'AdminFlightlistComponent', 'selector': 'app-admin-flightlist'},{'name': 'AdminhomeComponent', 'selector': 'app-adminhome'},{'name': 'AirlineComponent', 'selector': 'app-airline'},{'name': 'AirlinelistcomponentComponent', 'selector': 'app-airlinelistcomponent'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CityComponent', 'selector': 'app-city'},{'name': 'CityViewComponent', 'selector': 'app-city-view'},{'name': 'EditairlineComponent', 'selector': 'app-editairline'},{'name': 'EditComponent', 'selector': 'app-edit'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FlightListComponent', 'selector': 'app-flight-list'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PassengerDetailsComponent', 'selector': 'app-passenger-details'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'RegistrationComponent', 'selector': 'app-registration'},{'name': 'ReviewBookingComponent', 'selector': 'app-review-booking'},{'name': 'RoundtripFooterComponent', 'selector': 'app-roundtrip-footer'},{'name': 'ScheduleComponent', 'selector': 'app-schedule'},{'name': 'SearchFlightsComponent', 'selector': 'app-search-flights'},{'name': 'SearchListComponent', 'selector': 'app-search-list'},{'name': 'ViewProfileComponent', 'selector': 'app-view-profile'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'AddnewflightComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'AddnewflightComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -12,17 +12,19 @@
             <div class="card-body">
         
         <h1>Create New Account</h1>
-        <form action="" class="" >
+      <form [formGroup]="scheduleForm">
+  
             <div class="container" >
               <p>Please fill in this form to create an account.</p>
               
               <hr>
               <label for="name"><b>Full Name</b></label>
-              <input type="text" placeholder="Enter Full Name" name="name" value="{{profileData.fullName}}" required #name>
+              <input type="text" placeholder="Enter Full Name" name="name" value="{{profileData.fullName}}" onkeypress="return (event.charCode > 64 && 
+              event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" required #name>
         
               <label for="UserEmail"><b>Email</b></label>
-              <input type="text" placeholder="Enter Email" name="UserEmail" id="UserEmail" required #email>
-              
+              <input type="text" id="email" class="form-control" placeholder="Email address"
+              name="email" required #email>
               <strong style="font-size: 18px;">Gender</strong><br><br>
 
               <!-- <input type="radio" name="gender" value="male"> Male

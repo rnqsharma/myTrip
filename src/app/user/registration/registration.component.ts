@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfiledataService } from 'src/app/service/profiledata.service';
-import { ThrowStmt } from '@angular/compiler';
 import { IProfile } from 'src/app/model/IProfile';
 import { MatSnackBar } from '@angular/material';
+import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-registration',
@@ -24,26 +24,39 @@ export class RegistrationComponent implements OnInit {
     country: '',
     pincode: 0,
     mobile: 0,
-    rights: '',
+    rights: 'user',
     bookedFlights: [{
       flightId: '',
-        flightCompany: '',
-        departureName: '',
-        departureTime: '',
-        arrivalName: '',
-        arrivalTime: '',
-        price: 0,
-        duration: '',
+      flightCompany: '',
+      departureName: '',
+      departureTime: '',
+      arrivalName: '',
+      arrivalTime: '',
+      price: 0,
+      duration: ''
     }]
   };
 
+  registrationForm: FormGroup;
   profileDataa: IProfile;
   allProfileData: IProfile[];
   constructor(private service: ProfiledataService,
+              // private fb = FormBuilder,
               // tslint:disable-next-line: variable-name
               private _snackBar: MatSnackBar) { }
 
   ngOnInit() {
+
+
+    // this.registrationForm = this.fb.group({
+    //     name: ['', Validators.required],
+    //     id: ['', Validators.required],
+    //     gender: ['', Validators.required],
+    //     dob: ['', Validators.required],
+    //     pass: ['', Validators.required],
+    //   });
+
+
     this.service.getProfileData().subscribe(profile => {
       console.log(profile);
       this.allProfileData = profile;
@@ -76,10 +89,8 @@ export class RegistrationComponent implements OnInit {
       });
       console.log('In Else');
     }
-
   }
 
-  
-   
+
   
 }
