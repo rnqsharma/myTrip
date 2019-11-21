@@ -41,20 +41,20 @@ export class RegistrationComponent implements OnInit {
   profileDataa: IProfile;
   allProfileData: IProfile[];
   constructor(private service: ProfiledataService,
-              // private fb = FormBuilder,
+    private fb: FormBuilder,
               // tslint:disable-next-line: variable-name
               private _snackBar: MatSnackBar) { }
 
   ngOnInit() {
 
 
-    // this.registrationForm = this.fb.group({
-    //     name: ['', Validators.required],
-    //     id: ['', Validators.required],
-    //     gender: ['', Validators.required],
-    //     dob: ['', Validators.required],
-    //     pass: ['', Validators.required],
-    //   });
+    this.registrationForm = this.fb.group({
+        name: ['', Validators.required],
+        id: ['', Validators.required],
+        gender: ['', Validators.required],
+        dob: ['', Validators.required],
+        pass: ['', Validators.required],
+      });
 
 
     this.service.getProfileData().subscribe(profile => {
@@ -88,5 +88,12 @@ export class RegistrationComponent implements OnInit {
       console.log('In Else');
     }
 
+  }
+
+  disabledCounter(): boolean {
+    if (this.registrationForm.valid) {
+      return false;
+    }
+    return true;
   }
 }

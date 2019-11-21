@@ -7,10 +7,12 @@
       "departureTime": "16:35",
       "arrivalName": "Bangalore",
       "arrivalTime": "19:25",
-      "price": 50050,
-      "duration": "02 hrs 55 min",
+      "price": 328300,
+      "duration": "02 hrs 54 min",
       "economy": 150,
-      "business": 50
+      "business": 5465,
+      "distance": 6566,
+      "tags": []
     },
     {
       "id": "SG-198",
@@ -95,6 +97,31 @@
       "duration": "01 hrs 00 min",
       "economy": 150,
       "business": 50
+    },
+    {
+      "id": "AI-4456",
+      "flightCompany": "Airindia",
+      "departureName": "Bangalore",
+      "departureTime": "13:40",
+      "arrivalName": "",
+      "arrivalTime": "16:00",
+      "price": 125000,
+      "duration": "02 hrs 55 min",
+      "economy": 110,
+      "business": 10
+    },
+    {
+      "id": "VI-001",
+      "flightCompany": "Vistara",
+      "departureName": "Chennai",
+      "departureTime": "04:00",
+      "arrivalName": "Bangalore",
+      "arrivalTime": "05:00",
+      "price": 70000,
+      "duration": "01 hrs 00 mins",
+      "economy": 100,
+      "business": 10,
+      "distance": 1000
     }
   ],
   "profiledata": [
@@ -431,12 +458,16 @@
       "id": "KOL"
     },
     {
-      "cityName": "Chennai",
+      "cityName": "Chennaiii",
       "id": "MAA"
     },
     {
       "cityName": "Pune",
       "id": "PUN"
+    },
+    {
+      "cityName": "New York City",
+      "id": "NYC"
     }
   ],
   "airlines": [

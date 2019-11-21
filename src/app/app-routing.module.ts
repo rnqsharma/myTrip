@@ -17,6 +17,7 @@ import { AirlineComponent } from './admin/airline/airline.component';
 import { CityViewComponent } from './admin/city-view/city-view.component';
 import { AdminGuardGuard } from './admin/guard/admin-guard.guard';
 import { PassengerDetailsComponent } from './user/passenger-details/passenger-details.component';
+import { AuthGuardGuard } from './user/gaurd/auth-guard.guard';
 
 
 const routes: Routes = [
@@ -28,7 +29,7 @@ const routes: Routes = [
   {path: 'search/:to/:from/:roundtrip/:departuredate/:returndate/:triptype/:travellers/:class', component: FlightListComponent},
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: RegistrationComponent},
-  {path: 'viewprofile/:email', component: ViewProfileComponent},
+  {path: 'viewprofile/:email', component: ViewProfileComponent, canActivate: [AuthGuardGuard]},
   {path: 'editprofile', component: ProfileComponent},
   {path: 'search', component: SearchListComponent},
   {path: 'airlinelist' , component: AirlinelistcomponentComponent, canActivate: [AdminGuardGuard]},
