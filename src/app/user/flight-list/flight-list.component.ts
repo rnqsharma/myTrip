@@ -127,6 +127,10 @@ export class FlightListComponent implements OnInit {
         console.log(this.flightListRound);
       }
     });
+    if (this.flightList.length === 0) {
+      alert(" sorry no flights available");
+      this.router.navigate[(' ')];
+    }
   }
 
   departureRadioChange(selectedDepartureid: string) {
@@ -175,12 +179,12 @@ export class FlightListComponent implements OnInit {
   }
 
   routeToReviewOneWay(id: string) {
-    console.log(this.passengerDetails.fullName);
+    // console.log(this.passengerDetails.fullName);
     console.log(localStorage.getItem('username'));
     if (localStorage.getItem('username') !== null) {
-      console.log('djsvfgds');
+      // console.log('djsvfgds');
       this.router.navigate(['/reviewBooking', this.passengerDetails.fullName,
-      this.passengerDetails.address, this.passengerDetails.mobile, id]);
+      this.passengerDetails.address, this.passengerDetails.mobile, id, this.travellers, this.class]);
     } else {
       console.log('In Else');
       this.router.navigate(['/passengerDetails', id, this.travellers, this.class]);
@@ -191,10 +195,10 @@ export class FlightListComponent implements OnInit {
     // [routerLink]="['/reviewBooking', departureAndArrivalid]"
     if (localStorage.getItem('username') !== null) {
       this.router.navigate(['/reviewBooking', this.passengerDetails.fullName,
-      this.passengerDetails.address, this.passengerDetails.mobile, this.departureAndArrivalid, this.travellers]);
+      this.passengerDetails.address, this.passengerDetails.mobile, this.departureAndArrivalid, this.travellers, this.class]);
     } else {
       console.log('In Else');
-      this.router.navigate(['passengerDetails', this.departureAndArrivalid, this.travellers]);
+      this.router.navigate(['passengerDetails', this.departureAndArrivalid, this.travellers, this.class]);
     }
   }
 

@@ -42,7 +42,6 @@ export class SearchFlightsComponent implements OnInit {
   startDate = this.fullDate;
   endDate = this.fullEndDate;
   sub: Subscription;
-
   // tslint:disable-next-line: variable-name
   // tslint:disable-next-line: max-line-length
   constructor(private router: Router, private _flightService: FlightdataService, private _cityService: CitydataService, private route: ActivatedRoute) {
