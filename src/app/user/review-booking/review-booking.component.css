@@ -3,50 +3,53 @@ section{
     border-color: black;
     background-color: white;
     float: left;
-    margin-left: 7.5%;
+    margin-left: 10%;
     margin-right: 5%;
-}
-aside{
+    }
+    aside{
     border-radius: 12px;
     border-color: black;
     background-color: white;
     float: right;
-}
-.icon{
+    margin-left: 5%;
+    }
+    .icon{
     height: 120px;
     width: 150px;
-}
-img{
+    }
+    img{
     height: 50px;
     width: 50px;
-    /* margin-top: 25px; */
-}
-
-
-.example-card {
+    /* 25px; */
+    }
+    
+    
+    .example-card {
     max-width: 400px;
-  }
-  
-  .header-image {
+    }
+    .header-image {
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS1N1PrEqSsb-FCWH3J32PUCndFdSQSxqzypFRdyxo-7zM4DK2c');
     background-size: cover;
-  }
-
-  table {
+    }
+    
+    table {
     width: 100%;
-  }
-  #ele{
-      margin-left: 8%;
-  }
-  #ele1{
-      margin-left: 3cm;
-  }
-  mat-card-header{
-      margin-left: 35px;
-  }
-.btn{
+    }
+    #ele{
+    margin-left: 8%;
+    }
+    #ele1{
+    margin-left: 3cm;
+    }
+    mat-card-header{
+    margin-left: 35px;
+    }
+    .btn{
     margin-top: 2.5%;
     margin-left: 22.5%;
     margin-bottom: 2.5%;
     width: 20%;
-}
+    }
+    .pd{
+    margin-top: 2.5%;
+    }

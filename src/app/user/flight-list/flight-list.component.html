@@ -1,9 +1,9 @@
 <app-search-list (buttonClicked)="customFunc($event)"></app-search-list>
-<app-filter></app-filter>
+<!-- <app-filter></app-filter> -->
 <br><br>
 <div >
     <div *ngIf="!roundTripBool">
-        <div class="container-fluid " *ngFor='let f of flightList'>
+        <div class="container " *ngFor='let f of flightList'>
             <mat-card class="row">
                 <mat-card-header class="row">
                     <div mat-card-avatar class="header-image"></div>
@@ -24,7 +24,8 @@
                         <mat-card-subtitle>{{f.arrivalName}}</mat-card-subtitle>
                     </div>
                     <div class="col-sm-1" id="ele">
-                        <mat-card-title><span>&#8377;</span>{{f.price}}</mat-card-title>
+                        <mat-card-title><span>&#8377;</span>{{isBusiness() ? f.price*3 : f.price }}</mat-card-title>
+                        <!-- //<mat-card-title><span>&#8377;</span>{{}}</mat-card-title> -->
                     </div>
                     <div class="col-sm-1" id="ele">
                         <mat-card-actions>

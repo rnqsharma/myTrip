@@ -9,39 +9,55 @@
             <div class="card-body">
         
         <h1>Create New Account</h1>
-        <form class="" >
+        <form class="" [formGroup]='registrationForm'>
             <div class="container" >
               <p>Please fill in this form to create an account.</p>
               
               <hr>
               <label for="name"><b>Full Name</b></label>
-              <input type="text" placeholder="Enter Full Name" name="name" value="{{profileData.fullName}}" required #name>
+              <input type="text" formControlName="name" placeholder="Enter Full Name" name="name" value="{{profileData.fullName}}" required #name>
+              <div *ngIf="registrationForm.controls['name'].invalid && (registrationForm.controls['name'].dirty || registrationForm.controls['name'].touched )" class="alert-danger">
+                  <div *ngIf="registrationForm.controls['name'].errors.required">Please Enter Full Name</div>
+                  </div>
         
               <label for="email"><b>Email</b></label>
-              <input type="text" placeholder="Enter Email" name="email" required #email>
+              <input type="text" formControlName="id" placeholder="Enter Email" name="email" required #email>
+              <div *ngIf="registrationForm.controls['id'].invalid && (registrationForm.controls['id'].dirty || registrationForm.controls['id'].touched )" class="alert-danger">
+                  <div *ngIf="registrationForm.controls['id'].errors.required">Please Enter Email</div>
+                  </div>
               
               <strong style="font-size: 18px;">Gender</strong><br><br>
 
               <!-- <input type="radio" name="gender" value="male"> Male
               <input type="radio" name="gender" value="female"> Female -->
 
-              <select #gender >
+              <select #gender formControlName="gender">
                 <option>Male</option>
                 <option>Female</option>
                 <option>Other</option>
               </select>
+              <div *ngIf="registrationForm.controls['gender'].invalid && (registrationForm.controls['gender'].dirty || registrationForm.controls['gender'].touched )" class="alert-danger">
+                  <div *ngIf="registrationForm.controls['gender'].errors.required">Please Enter Gender</div>
+                  </div>
         
               <br><br><br>
         
               <label for="birthdate"><strong>Date Of Birth:</strong></label>&nbsp;&nbsp;
-              <input class="birthdate" type="date" placeholder="YYYY-MM-DD" data-date-split-input="true" required #dob>
+              <input class="birthdate" formControlName="dob" type="date" placeholder="YYYY-MM-DD" data-date-split-input="true" required #dob>
+              <div *ngIf="registrationForm.controls['dob'].invalid && (registrationForm.controls['dob'].dirty || registrationForm.controls['dob'].touched )" class="alert-danger">
+                  <div *ngIf="registrationForm.controls['dob'].errors.required">Please Enter DOB</div>
+                  </div>
               <br><br><br>
               <label for="psw"><b style="font-size: 20px;">Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required #password>
-              
+              <input type="password" formControlName="pass" placeholder="Enter Password" name="psw" required #password>
+              <div *ngIf="registrationForm.controls['pass'].invalid && (registrationForm.controls['pass'].dirty || registrationForm.controls['pass'].touched )" class="alert-danger">
+                  <div *ngIf="registrationForm.controls['pass'].errors.required">Please Enter Password</div>
+                  </div>
               <label for="psw-repeat"><b style="font-size: 18px;">Confirm Password</b></label>
-              <input type="password" placeholder="Repeat Password" name="psw-repeat" required >
-          
+              <input type="password" formControlName="pass" placeholder="Repeat Password" name="psw-repeat" required >
+              <div *ngIf="registrationForm.controls['pass'].invalid && (registrationForm.controls['pass'].dirty || registrationForm.controls['pass'].touched )" class="alert-danger">
+                  <div *ngIf="registrationForm.controls['pass'].errors.required">Please Confirm Password</div>
+                  </div>
               <label>
                 <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
               </label>
@@ -50,7 +66,7 @@
           
               <div class="clearfix">
             
-                <button type="submit" class="signupbtn btn btn-primary button" (click)="postProfileData(name.value, email.value, gender.value, dob.value, password.value)">CREATE ACCOUNT</button>
+                <button type="submit" class="signupbtn btn btn-primary button" (click)="postProfileData(name.value, email.value, gender.value, dob.value, password.value)" [disabled]='disabledCounter()'>CREATE ACCOUNT</button>
               </div>
               <h4 style="text-align: center;">
                 OR CREATE ACCOUNT WITH 

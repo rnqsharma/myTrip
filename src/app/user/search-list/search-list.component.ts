@@ -76,6 +76,7 @@ export class SearchListComponent implements OnInit {
   findFlights() {
     // tslint:disable-next-line: max-line-length
     this.router.navigate(['/search', this.selectedDetails.toCity, this.selectedDetails.fromCity, this.roundcounter, this.selectedDetails.departureDate, this.selectedDetails.returnDate, this.selectedDetails.tripType, this.selectedDetails.travellers, this.selectedDetails.class]);
+    console.log('class = ' + this.selectedDetails.class);
     this.onButtonClick();
     console.log('travellers = ' + this.selectedDetails.travellers);
   }

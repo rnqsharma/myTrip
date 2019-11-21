@@ -1,18 +1,18 @@
- <div class="container-fluid"  >
+ <div class="container"  >
     <div style="width: 100%;">
         <div  style="width: 100%;">
             <form>
                 <table style="width: 100%; color: white;">
                     <div class="row col" style="width: 100%;">
                         
-                        <div class="offset-sm-2 col-sm-1.5">
+                        <!-- <div class="offset-sm-2 col-sm-1.5">
                             <label>Trip type </label>
                             <select class="form-control" (change)="getTripType($event)" [(ngModel)]="tripType" name="triptype">
                                 <option>One Way</option>
                                 <option>Round Trip</option>
                             </select>
-                        </div>
-                        &nbsp;
+                        </div> -->
+                        <!-- &nbsp; -->
                         <div class="col-sm-1.7">
                             <label>From </label>
                             <select class="form-control" name="from" (change)="getFromCity($event)" [(ngModel)]="fromCity">
@@ -34,7 +34,7 @@
                         &nbsp;
                         <div class="col-sm-1.5">
                             <label>Return</label>
-                            <input type="date" class="form-control" [(ngModel)]="returnDate" name="return" (change)="getReturnDate($event)">    
+                            <input type="date" class="form-control" [(ngModel)]="returnDate" name="return" (change)="getReturnxDate($event)">    
                         </div>
                         &nbsp;
                         <div class="col-sm-1.5">
@@ -54,7 +54,7 @@
                         &nbsp;
                         <div class="col-sm-1.5">
                             <label class="">Class </label>
-                            <select class="form-control" [(ngModel)]="class" name="classs">
+                            <select class="form-control" [(ngModel)]="class" name="classs" (change)="getClass($event)">
                                 <option>Economy</option>
                                 <option>Business</option>
                             </select>

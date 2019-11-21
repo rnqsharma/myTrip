@@ -87,4 +87,11 @@ export class ViewProfileComponent implements OnInit {
   editProfileFunc() {
     this.router.navigate(['editprofile']);
   }
+
+  logoutFunc() {
+    console.log('In Logout');
+    localStorage.clear();
+    this.router.navigate(['login']);
+    location.reload();
+  }
 }

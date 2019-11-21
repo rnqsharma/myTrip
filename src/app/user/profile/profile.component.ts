@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, FormArray, FormControlName } from '@angular/forms';
+import { FormGroup, FormBuilder, FormArray, FormControlName, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { IProfile } from 'src/app/model/IProfile';
@@ -29,17 +29,17 @@ export class ProfileComponent implements OnInit {
 
     console.log(this.email + ' ');
     this.profileForm = this.fb.group({
-      fullName: [''],
-      email: [''],
+      fullName: ['', Validators.required],
+      email: ['', Validators.required],
       password: [''],
-      gender: [''],
-      dob: [''],
-      address: [''],
-      city: [''],
-      state: [''],
-      country: [''],
-      pincode: [''],
-      mobile: [''],
+      gender: ['', Validators.required],
+      dob: ['', Validators.required],
+      address: ['', Validators.required],
+      city: ['', Validators.required],
+      state: ['', Validators.required],
+      country: ['', Validators.required],
+      pincode: ['', Validators.required],
+      mobile: ['', Validators.required],
     });
 
     // this.sub = this.route.paramMap.subscribe(
@@ -88,6 +88,13 @@ export class ProfileComponent implements OnInit {
     // Reset the form to clear the flags
     // this.profileForm.reset();
      this.router.navigate(['/viewprofile', this.email]);
+  }
+
+  disabledCounter() {
+    if (this.profileForm.valid) {
+      return false;
+    }
+    return true;
   }
 }
 

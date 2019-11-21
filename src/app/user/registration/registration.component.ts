@@ -3,6 +3,7 @@ import { ProfiledataService } from 'src/app/service/profiledata.service';
 import { IProfile } from 'src/app/model/IProfile';
 import { MatSnackBar } from '@angular/material';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registration',
@@ -41,20 +42,21 @@ export class RegistrationComponent implements OnInit {
   profileDataa: IProfile;
   allProfileData: IProfile[];
   constructor(private service: ProfiledataService,
-              // private fb = FormBuilder,
+    private fb: FormBuilder,
               // tslint:disable-next-line: variable-name
-              private _snackBar: MatSnackBar) { }
+              private _snackBar: MatSnackBar,
+              private router: Router) { }
 
   ngOnInit() {
 
 
-    // this.registrationForm = this.fb.group({
-    //     name: ['', Validators.required],
-    //     id: ['', Validators.required],
-    //     gender: ['', Validators.required],
-    //     dob: ['', Validators.required],
-    //     pass: ['', Validators.required],
-    //   });
+    this.registrationForm = this.fb.group({
+        name: ['', Validators.required],
+        id: ['', Validators.required],
+        gender: ['', Validators.required],
+        dob: ['', Validators.required],
+        pass: ['', Validators.required],
+      });
 
 
     this.service.getProfileData().subscribe(profile => {
@@ -79,7 +81,10 @@ export class RegistrationComponent implements OnInit {
       this.profileData.password = password;
       this.profileDataa = this.profileData;
       console.log('profileData = ' + this.profileData);
-      this.service.postProfileData(this.profileData).subscribe(d => console.log(d));
+      this.service.postProfileData(this.profileData).subscribe(d => {
+        this.router.navigate(['login']);
+        console.log(d);
+      });
     } else {
       this._snackBar.open('Email Already Exists', '', {
         panelClass: ['snackbar'],
@@ -88,5 +93,12 @@ export class RegistrationComponent implements OnInit {
       console.log('In Else');
     }
 
+  }
+
+  disabledCounter(): boolean {
+    if (this.registrationForm.valid) {
+      return false;
+    }
+    return true;
   }
 }
