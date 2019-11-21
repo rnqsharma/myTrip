@@ -1,235 +1,45 @@
-<!-- <div class="container-fluid">
-    <div class="row" *ngFor='let f of flightList'>
-        <section class="col-md-6 col-sm-4">
-            <mat-card class="row">
-                <mat-card-header class="row">
-                    <div mat-card-avatar class="header-image"></div>
-                    <mat-card-title>{{f.flightCompany}}</mat-card-title>
-                    <mat-card-subtitle>{{f.id}}</mat-card-subtitle>
-                    <div class="col-sm-1" id="ele">
-                        <mat-card-title>{{f.departureTime}}</mat-card-title>
-                        <mat-card-subtitle>{{f.departureName}}</mat-card-subtitle>
-                    </div>
-                    <div class="col-sm-1" id="ele">
-                        <mat-card-subtitle>{{f.duration}}</mat-card-subtitle>
-                        <mat-card-subtitle>
-                            <hr>
-                        </mat-card-subtitle>
-                    </div>
-                    <div class="col-sm-1" id="ele">
-                        <mat-card-title>{{f.arrivalTime}}</mat-card-title>
-                        <mat-card-subtitle>{{f.arrivalName}}</mat-card-subtitle>
-                    </div>
-                </mat-card-header>
-            </mat-card>
-            <div class="row">
-                <div class="col-md-3 col-sd-2 pdng" style="padding-right:20px; border-right: 1px solid #ccc;">
-                    <h6>Baggage:</h6>
-                </div>
-                <div class="col-md-3 col-sm-2" style="padding-right:20px; border-right: 1px solid #ccc;">
-                    <h6>Check in</h6>
-                    <p>15kg</p>
-                </div>
-                <div class="col-md-3 col-sm-2">
-                    <h6>Cabin</h6>
-                    <p>7kg</p>
-                </div>
-            </div>
-        </section>
-        
 
-    </div>
-
-    <div class="card col-sm-4">
-            <h5>Passenger Details</h5>
-            <hr>
-            <div class="container">
-                <div class="row">
-                    <h6><strong>Profile Name</strong>: {{fullName}}</h6>
-                </div>
-                <hr>
-                <div class="row">
-                    <h6><strong>Address</strong>:{{address}} </h6>
-                </div>
-                <hr>
-                <div class="row">
-                    <h6><strong>Mobile</strong>{{mobile}}</h6>
-                </div>
-                <hr>
-            </div>
-        </div>
-    
-    
-
-    <aside class="col-md-3 col-sm-4">
-        <h5>Fare Summary</h5>
-        <hr>
         <div class="container">
-            <div class="row">
-                <h6><strong>Base Fare</strong>: Rs. {{totalPrice}}</h6>
-            </div>
-            <hr>
-            <div class="row">
-                <h6><strong>Subcharges</strong>: Rs. 500</h6>
-            </div>
-            <hr>
-            <div class="row">
-                <h6><strong>Other Charges</strong>: Rs. 5</h6>
-            </div>
-            <hr>
-            <div class="row">
-                <h6><strong>Total Amount</strong>:</h6>
-                <h6> Rs. {{totalPrice + 505}}</h6>
-            </div>
-        </div>
-    </aside> -->
-
-<!-- </div> -->
-<!-- <button class="btn btn-primary button" (click)='payment()' type="submit">Pay</button>
-</div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="container-fluid">
-    <div class="row" *ngIf='counter'>
-        <div class="row" *ngFor='let f of flightList'>
-            <section class="col-md-11 col-sm-4">
-                <mat-card class="row">
-                    <mat-card-header class="row">
-                        <div mat-card-avatar class="header-image"></div>
-                        <mat-card-title>{{f.flightCompany}}</mat-card-title>
-                        <mat-card-subtitle>{{f.id}}</mat-card-subtitle>
-                        <div class="col-sm-1" id="ele">
-                            <mat-card-title>{{f.departureTime}}</mat-card-title>
-                            <mat-card-subtitle>{{f.departureName}}</mat-card-subtitle>
-                        </div>
-                        <div class="col-sm-1" id="ele">
-                            <mat-card-subtitle>{{f.duration}}</mat-card-subtitle>
-                            <mat-card-subtitle>
-                                <hr>
-                            </mat-card-subtitle>
-                        </div>
-                        <div class="col-sm-1" id="ele">
-                            <mat-card-title>{{f.arrivalTime}}</mat-card-title>
-                            <mat-card-subtitle>{{f.arrivalName}}</mat-card-subtitle>
-                        </div>
-                    </mat-card-header>
-                </mat-card>
-                <div class="row">
-                    <div class="col-md-3 col-sd-2 pdng" style="padding-right:20px; border-right: 1px solid #ccc;">
-                        <h6>Baggage:</h6>
-                    </div>
-                    <div class="col-md-3 col-sm-2" style="padding-right:20px; border-right: 1px solid #ccc;">
-                        <h6>Check in</h6>
-                        <p>15kg</p>
-                    </div>
-                    <div class="col-md-3 col-sm-2">
-                        <h6>Cabin</h6>
-                        <p>7kg</p>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <aside class="col-md-2 col-sm-4">
-            <h5>Fare Summary</h5>
-            <hr>
-            <div class="container">
-                <div class="row">
-                    <h6><strong>Base Fare</strong>: Rs. {{totalPrice}}</h6>
-                </div>
-                <hr>
-                <div class="row">
-                    <h6><strong>Subcharges</strong>: Rs. 500</h6>
-                </div>
-                <hr>
-                <div class="row">
-                    <h6><strong>Other Charges</strong>: Rs. 5</h6>
-                </div>
-                <hr>
-                <div class="row">
-                    <h6><strong>Total Amount</strong>:</h6>
-                    <h6> Rs. {{totalPrice + 505}}</h6>
-                </div>
-            </div>
-        </aside>
-        <div class="container col-md-8 col-md-offset-2 pd">
-            <div class="card col-sm-4 col-md-6">
-                <h5>Passenger Details</h5>
-                <hr>
-                <div class="container">
-                    <div class="row">
-                        <h6><strong>Profile Name</strong>: {{fullName}}</h6>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <h6><strong>Address</strong>:{{address}} </h6>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <h6><strong>Mobile</strong>{{mobile}}</h6>
-                    </div>
-                    <hr>
-                </div>
-            </div>
-            <!-- </div> -->
-            <button class="btn btn-primary button" (click)='payment()' type="submit">Pay</button>
-        </div>
-    </div>
-
-    <div class="row" *ngIf='!counter'>
-        <div class="container col-md-offset-2 ">
-            <div class="row" *ngFor='let f of flightList'>
-                <section class="col-sm-4 col-md-6">
-                    <mat-card class="row">
-                        <mat-card-header class="row">
-                            <div mat-card-avatar class="header-image"></div>
-                            <mat-card-title>{{f.flightCompany}}</mat-card-title>
-                            <mat-card-subtitle>{{f.id}}</mat-card-subtitle>
-                            <div class="col-sm-1" id="ele">
-                                <mat-card-title>{{f.departureTime}}</mat-card-title>
-                                <mat-card-subtitle>{{f.departureName}}</mat-card-subtitle>
+            <div class="row" *ngIf='counter'>
+                <div class="row" *ngFor='let f of flightList'>
+                    <section class="col-md-11">
+                        <mat-card class="row">
+                            <mat-card-header class="row">
+                                <div mat-card-avatar class="header-image"></div>
+                                <mat-card-title>{{f.flightCompany}}</mat-card-title>
+                                <mat-card-subtitle>{{f.id}}</mat-card-subtitle>
+                                <div class="col-sm-1" id="ele">
+                                    <mat-card-title>{{f.departureTime}}</mat-card-title>
+                                    <mat-card-subtitle>{{f.departureName}}</mat-card-subtitle>
+                                </div>
+                                <div class="col-sm-1" id="ele">
+                                    <mat-card-subtitle>{{f.duration}}</mat-card-subtitle>
+                                    <mat-card-subtitle>
+                                        <hr>
+                                    </mat-card-subtitle>
+                                </div>
+                                <div class="col-sm-1" id="ele">
+                                    <mat-card-title>{{f.arrivalTime}}</mat-card-title>
+                                    <mat-card-subtitle>{{f.arrivalName}}</mat-card-subtitle>
+                                </div>
+                            </mat-card-header>
+                        </mat-card>
+                        <div class="row">
+                            <div class="col-md-3 col-sd-2 pdng" style="padding-right:20px; border-right: 1px solid #ccc;">
+                                <h6>Baggage:</h6>
                             </div>
-                            <div class="col-sm-1" id="ele">
-                                <mat-card-subtitle>{{f.duration}}</mat-card-subtitle>
-                                <mat-card-subtitle>
-                                    <hr>
-                                </mat-card-subtitle>
+                            <div class="col-md-3 col-sm-2" style="padding-right:20px; border-right: 1px solid #ccc;">
+                                <h6>Check in</h6>
+                                <p>15kg</p>
                             </div>
-                            <div class="col-sm-1" id="ele">
-                                <mat-card-title>{{f.arrivalTime}}</mat-card-title>
-                                <mat-card-subtitle>{{f.arrivalName}}</mat-card-subtitle>
+                            <div class="col-md-3 col-sm-2">
+                                <h6>Cabin</h6>
+                                <p>7kg</p>
                             </div>
-                        </mat-card-header>
-                    </mat-card>
-                    <div class="row">
-                        <div class="col-md-3 col-sd-2 pdng" style="padding-right:20px; border-right: 1px solid #ccc;">
-                            <h6>Baggage:</h6>
                         </div>
-                        <div class="col-md-3 col-sm-2" style="padding-right:20px; border-right: 1px solid #ccc;">
-                            <h6>Check in</h6>
-                            <p>15kg</p>
-                        </div>
-                        <div class="col-md-3 col-sm-2">
-                            <h6>Cabin</h6>
-                            <p>7kg</p>
-                        </div>
-                    </div>
-                </section>
+                    </section>
+                </div>
+               
                 <aside class="col-md-2 col-sm-4">
                     <h5>Fare Summary</h5>
                     <hr>
@@ -252,31 +62,121 @@
                         </div>
                     </div>
                 </aside>
-            </div>
-
-
-            <hr>
-            <div class="container col-md-8 col-md-offset-2">
-                <div class="card col-sm-4 col-md-6">
-                    <h5>Passenger Details</h5>
-                    <hr>
-                    <div class="container">
-                        <div class="row">
-                            <h6><strong>Profile Name</strong>: {{fullName}}</h6>
-                        </div>
+                <div class="container pd">
+                    <div class="card col-sm-3 col-md-9 col-md-offset-4 pl">
+                        <h5>Passenger Details</h5>
                         <hr>
-                        <div class="row">
-                            <h6><strong>Address</strong>:{{address}} </h6>
+                        <div class="container">
+                            <div class="row">
+                                <h6><strong>Profile Name</strong>: {{fullName}}</h6>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <h6><strong>Address</strong>:{{address}} </h6>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <h6><strong>Mobile</strong>{{mobile}}</h6>
+                            </div>
+                            <hr>
                         </div>
-                        <hr>
-                        <div class="row">
-                            <h6><strong>Mobile</strong>{{mobile}}</h6>
-                        </div>
-                        <hr>
                     </div>
+                    <!-- </div> -->
+                    <h2 class="offset-md-3" *ngIf="paypalLoad">Paypal button is loading</h2>
+        <div id="paypal-checkout-btn"></div>
+                    <!-- <button class="btn btn-primary button" (click)='payment()' type="submit">Pay</button> -->
                 </div>
             </div>
-            <!-- </div> -->
-            <button class="btn btn-primary button" (click)='payment()' type="submit">Pay</button>
-        </div>
-    </div>
+        
+            <div class="row" *ngIf='!counter'>
+                <div class="container col-md-offset-2 ">
+                    <div class="row" *ngFor='let f of flightList'>
+                        <section class="col-sm-4 col-md-6">
+                            <mat-card class="row">
+                                <mat-card-header class="row">
+                                    <div mat-card-avatar class="header-image"></div>
+                                    <mat-card-title>{{f.flightCompany}}</mat-card-title>
+                                    <mat-card-subtitle>{{f.id}}</mat-card-subtitle>
+                                    <div class="col-sm-1" id="ele">
+                                        <mat-card-title>{{f.departureTime}}</mat-card-title>
+                                        <mat-card-subtitle>{{f.departureName}}</mat-card-subtitle>
+                                    </div>
+                                    <div class="col-sm-1" id="ele">
+                                        <mat-card-subtitle>{{f.duration}}</mat-card-subtitle>
+                                        <mat-card-subtitle>
+                                            <hr>
+                                        </mat-card-subtitle>
+                                    </div>
+                                    <div class="col-sm-1" id="ele">
+                                        <mat-card-title>{{f.arrivalTime}}</mat-card-title>
+                                        <mat-card-subtitle>{{f.arrivalName}}</mat-card-subtitle>
+                                    </div>
+                                </mat-card-header>
+                            </mat-card>
+                            <div class="row">
+                                <div class="col-md-3 col-sd-2 pdng" style="padding-right:20px; border-right: 1px solid #ccc;">
+                                    <h6>Baggage:</h6>
+                                </div>
+                                <div class="col-md-3 col-sm-2" style="padding-right:20px; border-right: 1px solid #ccc;">
+                                    <h6>Check in</h6>
+                                    <p>15kg</p>
+                                </div>
+                                <div class="col-md-3 col-sm-2">
+                                    <h6>Cabin</h6>
+                                    <p>7kg</p>
+                                </div>
+                            </div>
+                        </section>
+                        <aside class="col-md-2 col-sm-4">
+                            <h5>Fare Summary</h5>
+                            <hr>
+                            <div class="container">
+                                <div class="row">
+                                    <h6><strong>Base Fare</strong>: Rs. {{totalPrice}}</h6>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <h6><strong>Subcharges</strong>: Rs. 500</h6>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <h6><strong>Other Charges</strong>: Rs. 5</h6>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <h6><strong>Total Amount</strong>:</h6>
+                                    <h6> Rs. {{totalPrice + 505}}</h6>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+        
+        
+                    <hr>
+                    <div class="container col-md-8 col-md-offset-2">
+                        <div class="card col-sm-4 col-md-6">
+                            <h5>Passenger Details</h5>
+                            <hr>
+                            <div class="container">
+                                <div class="row">
+                                    <h6><strong>Profile Name</strong>: {{fullname}}</h6>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <h6><strong>Address</strong>:{{address}} </h6>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <h6><strong>Mobile</strong>{{mobile}}</h6>
+                                </div>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+        
+                    <h2 class="offset-md-3" *ngIf="paypalLoad">Paypal button is loading</h2>
+        <div id="paypal-checkout-btn"></div>
+                    <!-- <button class="btn btn-primary button" (click)='payment()' type="submit">Pay</button> -->
+                </div>
+            </div>

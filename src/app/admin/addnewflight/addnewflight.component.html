@@ -7,7 +7,8 @@
                                 <div class="form-group row mb-3">
                                         <label class="col-md-2 col-form-label" for="descriptionId">Flight No.</label>
                                         <div class="col-md-6">
-                                                <input class="form-control" id="flightno" placeholder="Flight No" rows=3 formControlName="id" [disabled]="true" />
+                                                <input class="form-control" id="flightno" placeholder="Flight No" rows=3
+                                                        formControlName="id" [disabled]="true" />
                                         </div>
 
                                         <div *ngIf="flightForm.controls['id'].invalid && (flightForm.controls['id'].dirty || flightForm.controls['id'].touched )"
@@ -45,7 +46,6 @@
                                                 </select>
 
                                         </div>
-
                                 </div>
 
                                 <div class="form-group row mb-3">
@@ -68,8 +68,9 @@
                                                 Time</label>
 
                                         <div class="col-md-6">
-                                                <input type="time" name="time" value="" id="departureTime" 
-                                                formControlName="departureTime" class="form-control" (change) = "getDepartureTime(deptime.value)" #deptime>
+                                                <input type="time" name="time" value="" id="departureTime"
+                                                        formControlName="departureTime" class="form-control"
+                                                        (change)="getDepartureTime(deptime.value)" #deptime>
                                         </div>
 
                                         <div *ngIf="flightForm.controls['departureTime'].invalid && (flightForm.controls['departureTime'].dirty || flightForm.controls['departureTime'].touched )"
@@ -83,11 +84,10 @@
 
                                 <div class="form-group row mb-3">
                                         <label class="col-md-2 col-form-label" for="descriptionId">Arrival Time</label>
-
                                         <div class="col-md-6">
                                                 <input type="text" name="time" value="" id="arrivalTime"
-                                                        formControlName="arrivalTime" class="form-control" [(ngModel)]="arrivalTime">
-
+                                                        formControlName="arrivalTime" class="form-control"
+                                                        [(ngModel)]="arrivalTime">
                                         </div>
 
                                         <div *ngIf="flightForm.controls['arrivalTime'].invalid && (flightForm.controls['arrivalTime'].dirty || flightForm.controls['arrivalTime'].touched )"
