@@ -3,7 +3,7 @@
 <br><br>
 <div >
     <div *ngIf="!roundTripBool">
-        <div class="container-fluid " *ngFor='let f of flightList'>
+        <div class="container " *ngFor='let f of flightList'>
             <mat-card class="row">
                 <mat-card-header class="row">
                     <div mat-card-avatar class="header-image"></div>
@@ -24,11 +24,12 @@
                         <mat-card-subtitle>{{f.arrivalName}}</mat-card-subtitle>
                     </div>
                     <div class="col-sm-1" id="ele">
-                        <mat-card-title><span>&#8377;</span>{{f.price}}</mat-card-title>
+                        <mat-card-title><span>&#8377;</span>{{isBusiness() ? f.price*3 : f.price }}</mat-card-title>
+                        <!-- //<mat-card-title><span>&#8377;</span>{{}}</mat-card-title> -->
                     </div>
                     <div class="col-sm-1" id="ele">
                         <mat-card-actions>
-                            <button class="btn btn-primary button" [routerLink]="['/reviewBooking', f.id]"  >
+                            <button class="btn btn-primary button" (click)='routeToReviewOneWay(f.id)' type="submit">
                                 BOOK
                             </button>
                         </mat-card-actions>
@@ -199,7 +200,7 @@
                                         
                                         <div class="col-sm-2">
                                                 Total Fare : ₹ {{totalFare}}    <br>
-                                            <button class="btn-primary" [routerLink]="['/reviewBooking', departureAndArrivalid]" style="border-radius: 20px; margin-top: 0px; width: 150px;">BOOK NOW</button>
+                                            <button class="btn-primary" (click)='routeToReviewRound()' style="border-radius: 20px; margin-top: 0px; width: 150px;">BOOK NOW</button>
                                         </div>
                                     </div>
                                     
@@ -212,6 +213,3 @@
     </div>  
 </div>
 <br><br><br><br>
-
-
-

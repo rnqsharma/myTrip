@@ -64,7 +64,7 @@ export class ViewProfileComponent implements OnInit {
       this.city = this.profile.city;
       this.country = this.profile.country;
 
-      if (this.mobile !== null) {
+      if (this.mobile !== 0) {
           this.mobile_value = true;
       }
       if (this.address !== '') {

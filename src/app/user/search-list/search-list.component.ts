@@ -53,11 +53,11 @@ export class SearchListComponent implements OnInit {
       });
 
     this._cityService.getCityData()
-    .subscribe((fulldata: ICity[]) => {
-      this.cities = fulldata;
-      this.to = this.cities.map( c => c.cityName);
-      this.from = this.cities.map( c => c.cityName);
-    });
+      .subscribe((fulldata: ICity[]) => {
+        this.cities = fulldata;
+        this.to = this.cities.map(c => c.cityName);
+        this.from = this.cities.map(c => c.cityName);
+      });
 
     this.sub = this.route.paramMap.subscribe(
       params => {
@@ -76,6 +76,7 @@ export class SearchListComponent implements OnInit {
   findFlights() {
     // tslint:disable-next-line: max-line-length
     this.router.navigate(['/search', this.selectedDetails.toCity, this.selectedDetails.fromCity, this.roundcounter, this.selectedDetails.departureDate, this.selectedDetails.returnDate, this.selectedDetails.tripType, this.selectedDetails.travellers, this.selectedDetails.class]);
+    console.log('class = ' + this.selectedDetails.class);
     this.onButtonClick();
     console.log('travellers = ' + this.selectedDetails.travellers);
   }

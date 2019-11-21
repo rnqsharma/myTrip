@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FlightdataService } from 'src/app/service/flightdata.service';
 import { IFlights } from 'src/app/model/IFlights';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { element } from 'protractor';
 import { IProfile } from 'src/app/model/IProfile';
+import { ProfiledataService } from 'src/app/service/profiledata.service';
 
 @Component({
   selector: 'app-flight-list',
@@ -19,7 +20,10 @@ export class FlightListComponent implements OnInit {
   to = '';
   from = '';
   travellers = '';
+  class = '';
   private sub: Subscription;
+
+  business = false;
 
   selectedDetails = {
     fromCity: '',
@@ -45,10 +49,19 @@ export class FlightListComponent implements OnInit {
   selectedArrival: IFlights;
   totalFare: number;
   departureAndArrivalid = '';
+  passengerDetails = {
+    fullName: '',
+    gender: 'Male',
+    address: '',
+    mobile: 0
+  };
+
+  profile: IProfile;
 
 
   // tslint:disable-next-line: variable-name
-  constructor(private _flightsData: FlightdataService, private route: ActivatedRoute) { }
+  constructor(private _flightsData: FlightdataService, private route: ActivatedRoute,
+              private router: Router, private profileService: ProfiledataService) { }
 
   ngOnInit() {
     this._flightsData.getFlightsData().subscribe(
@@ -62,16 +75,28 @@ export class FlightListComponent implements OnInit {
         this.filterData();
       }
     );
+
     this.sub = this.route.paramMap.subscribe(
       params => {
         this.to = params.get('to');
         this.from = params.get('from');
         this.roundTrip = params.get('roundtrip');
         this.travellers = params.get('travellers');
+        this.class = params.get('class');
         console.log(this.from + ' ' + this.to + ' ' + this.roundTrip );
       }
     );
     console.log(this.lmao);
+
+    this.profileService.getProfileById(localStorage.getItem('email'))
+      .subscribe((profile: IProfile) => {
+      console.log(profile);
+      this.profile = profile;
+    });
+    this.passengerDetails.fullName = this.profile.fullName;
+    this.passengerDetails.address = this.profile.address;
+    this.passengerDetails.gender = this.profile.gender;
+    this.passengerDetails.mobile = this.profile.mobile;
   }
 
   filterData() {
@@ -149,12 +174,35 @@ export class FlightListComponent implements OnInit {
     this.totalFare = this.selectedDeparture.price + this.selectedArrival.price;
   }
 
+  routeToReviewOneWay(id: string) {
+    console.log(this.passengerDetails.fullName);
+    console.log(localStorage.getItem('username'));
+    if (localStorage.getItem('username') !== null) {
+      console.log('djsvfgds');
+      this.router.navigate(['/reviewBooking', this.passengerDetails.fullName,
+      this.passengerDetails.address, this.passengerDetails.mobile, id]);
+    } else {
+      console.log('In Else');
+      this.router.navigate(['/passengerDetails', id, this.travellers, this.class]);
+    }
+  }
+
+  routeToReviewRound() {
+    // [routerLink]="['/reviewBooking', departureAndArrivalid]"
+    if (localStorage.getItem('username') !== null) {
+      this.router.navigate(['/reviewBooking', this.passengerDetails.fullName,
+      this.passengerDetails.address, this.passengerDetails.mobile, this.departureAndArrivalid, this.travellers]);
+    } else {
+      console.log('In Else');
+      this.router.navigate(['passengerDetails', this.departureAndArrivalid, this.travellers]);
+    }
+  }
+
   customFunc(e: string) {
     console.log(this.buttonClicked);
     this.buttonClicked = true;
     console.log(this.buttonClicked);
     this.pushNewValues();
-    // this.ngOnInit();
   }
 
   pushNewValues() {
@@ -180,5 +228,12 @@ export class FlightListComponent implements OnInit {
 
   getTraveller(e: any) {
     this.selectedDetails.travellers = e.target.value;
+  }
+
+  isBusiness() {
+    if (this.class === 'Business') {
+      return true;
+    }
+    return false;
   }
 }

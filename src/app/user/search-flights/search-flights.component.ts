@@ -38,7 +38,7 @@ export class SearchFlightsComponent implements OnInit {
   };
 
   private validationMessages: { [key: string]: { [key: string]: string } };
-  private genericValidator: GenericValidator;
+  // private genericValidator: GenericValidator;
   startDate = this.fullDate;
   endDate = this.fullEndDate;
   sub: Subscription;
@@ -87,7 +87,7 @@ export class SearchFlightsComponent implements OnInit {
   }
 
   getFromCity(e: any) {
-    this.selectedDetails.fromCity = e.target.value.toString();
+    this.selectedDetails.fromCity = e.target.value;
   }
 
   getToCity = (e: any) => {
@@ -126,13 +126,9 @@ export class SearchFlightsComponent implements OnInit {
 
   validateDepartureDate(date: Date) {}
 
-  addMonthsToDate(dt, n) {
-    const dtt = dt.getMonth() + n;
-    const endDate = new Date(dt.setMonth(dtt));
-    this.endDate = '' + endDate.toString;
-  }
-
-  getToday(): string {
-    return this.startDate;
-  }
+  // addMonthsToDate(dt, n) {
+  //   const dtt = dt.getMonth() + n;
+  //   const endDate = new Date(dt.setMonth(dtt));
+  //   this.endDate = '' + endDate.toString;
+  // }
 }

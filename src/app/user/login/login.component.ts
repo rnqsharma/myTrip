@@ -45,7 +45,9 @@ export class LoginComponent implements OnInit {
             localStorage.setItem('username', c.fullName);
             localStorage.setItem('email', c.id);
             console.log(localStorage.getItem('username'));
+            // location.reload();
             this.router.navigate(['/adminhome']);
+
           } else {
             console.log("In else");
             localStorage.setItem('username', 'Login or Signup');
@@ -64,7 +66,6 @@ export class LoginComponent implements OnInit {
               console.log("In else");
               localStorage.setItem('username', 'Login or Signup');
               this.router.navigate(['/login']);
-
               alert('please enter correct password');
             }
           }

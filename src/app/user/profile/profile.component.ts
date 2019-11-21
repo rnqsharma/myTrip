@@ -14,7 +14,7 @@ export class ProfileComponent implements OnInit {
 
   errorMessage: string;
   profileForm: FormGroup;
-  email = 'rnqsharma3@gmail.com';
+  email = localStorage.getItem('email');
   profile: IProfile;
   private sub: Subscription;
 
@@ -50,6 +50,7 @@ export class ProfileComponent implements OnInit {
     // );
 
 
+    console.log(localStorage.getItem('email'));
     this.profileService.getProfileById(localStorage.getItem('email')).subscribe((profile: IProfile) => {
         console.log(profile);
         this.profile = profile;
@@ -76,8 +77,9 @@ export class ProfileComponent implements OnInit {
     this.updateProfile(p, this.email);
   }
   updateProfile(profile: IProfile, id: string): void {
-    this.profileService.updateProfile(profile, id)
-      .subscribe({
+    console.log(profile);
+    console.log(id);
+    this.profileService.updateProfile(profile, id).subscribe({
         next: () => this.onSaveComplete(),
         error: err => this.errorMessage = err
       });
@@ -85,7 +87,7 @@ export class ProfileComponent implements OnInit {
   onSaveComplete(): void {
     // Reset the form to clear the flags
     // this.profileForm.reset();
-    //  this.router.navigate(['/viewprofile']);
+     this.router.navigate(['/viewprofile', this.email]);
   }
 }
 

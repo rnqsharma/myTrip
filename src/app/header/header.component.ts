@@ -17,6 +17,7 @@ export class HeaderComponent implements OnInit {
   private sub: Subscription;
 
   counter = false;
+  counter1 = true;
   logoimg = 'assets/images/paper-plane.png';
   constructor(private headerService: HeadernameService, private router: Router,
               private route: ActivatedRoute) {
@@ -28,6 +29,11 @@ export class HeaderComponent implements OnInit {
     if (localStorage.getItem('username') !== null ) {
       console.log('hjgfhjgdsgf');
       this.userName = localStorage.getItem('username');
+      if(this.userName === 'Raunaq') {
+        // this.ngOnInit();
+        console.log('sdhgfgssdfg');
+        this.counter1 = false;
+      }
     } else {
       this.userName = 'Login or Signup';
     }
@@ -50,14 +56,14 @@ export class HeaderComponent implements OnInit {
   }
 
   onUserClicked(name: string): void {
-    console.log("dsfdsf");
+    // console.log("dsfdsf");
     console.log(name);
   }
 
   logoutFunc() {
     console.log('In Logout');
     localStorage.clear();
-    this.router.navigate(['']);
+    this.router.navigate(['/']);
     location.reload();
   }
 
@@ -67,4 +73,7 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/viewprofile', this.email]);
   }
 
+  adminView() {
+    this.router.navigate(['adminhome']);
+  }
 }
