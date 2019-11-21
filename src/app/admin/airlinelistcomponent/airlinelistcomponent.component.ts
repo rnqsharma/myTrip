@@ -63,7 +63,7 @@ export class AirlinelistcomponentComponent implements OnInit {
     });
   }
 
-  postAirlineData(airlineName: string, id: string, logo: string) {
+  postAirlineData(id: string, airlineName: string, logo: string) {
     console.log(airlineName);
     this.airlineData.airLineName = airlineName;
     this.airlineData.id = id;

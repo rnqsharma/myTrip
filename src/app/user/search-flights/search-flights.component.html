@@ -53,7 +53,7 @@
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-5">
                                     <label>Return</label>
-                                    <input class="form-control" id="selectfromcity" type="date" placeholder="Email (required)" (change)="getReturnDate($event)">
+                                    <input class="form-control" id="selectfromcity" type="date" placeholder="Email (required)" (change)="getReturnDate($event)" [disabled]= !roundcounter>
                                 </div>
                             </div>
                             <br>
@@ -76,7 +76,7 @@
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-5">
                                     <label>Class :</label>
-                                    <select class="form-control" id="selectfromcity" (change)="getTraveller($event)">
+                                    <select class="form-control" id="selectfromcity" (change)="getClass($event)">
                                         <option>Economy</option>
                                         <option>Business</option>
                                     </select>

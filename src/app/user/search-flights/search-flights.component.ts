@@ -24,6 +24,8 @@ export class SearchFlightsComponent implements OnInit {
   currentMonth = this.today.getMonth() + 1;
   currentYear = this.today.getFullYear();
   fullDate = this.currentYear + '-' + this.currentMonth + '-' + this.currentDate;
+  endMonth = this.today.getMonth() + 3;
+  fullEndDate = this.currentYear + '-' + this.endMonth + '-' + this.currentDate;
 
   selectedDetails = {
     fromCity: 'Delhi',
@@ -35,14 +37,18 @@ export class SearchFlightsComponent implements OnInit {
     tripType: 'One Way'
   };
 
-  startDate: string;
-  endDate: string;
-  dateRange: string[];
+  private validationMessages: { [key: string]: { [key: string]: string } };
+  // private genericValidator: GenericValidator;
+  startDate = this.fullDate;
+  endDate = this.fullEndDate;
   sub: Subscription;
-
   // tslint:disable-next-line: variable-name
   // tslint:disable-next-line: max-line-length
-  constructor(private router: Router, private _flightService: FlightdataService, private _cityService: CitydataService, private route: ActivatedRoute) { }
+  constructor(private router: Router, private _flightService: FlightdataService, private _cityService: CitydataService, private route: ActivatedRoute) {
+    this.validationMessages = {
+
+    };
+   }
 
   ngOnInit() {
     console.log(this.today.getMonth());
@@ -117,18 +123,7 @@ export class SearchFlightsComponent implements OnInit {
     this.getTripType();
   }
 
-  validateDepartureDate(date: Date) {
-    // date = this.date;
-    // const dd = date.getDate;
-    // const mm = date.getMonth;
-    // const yy = date.getFullYear;
-    // const today = new Date();
-    // const currentDate = today.getDate().toString;
-    // this.startDate = '' + currentDate;
-    // this.addMonthsToDate(this.startDate, 3);
-    // console.log('currentDate = ' + this.startDate);
-    // console.log('end date = ' + this.endDate);
-  }
+  validateDepartureDate(date: Date) {}
 
   // addMonthsToDate(dt, n) {
   //   const dtt = dt.getMonth() + n;

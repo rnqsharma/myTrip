@@ -1,46 +1,36 @@
 <div class="container">
         <div class="card">
                 <div class="card-body">
-
                         <div style="font-weight: bold; text-align: left; color: grey">
-
                         </div>
-
                         <form (ngSubmit)="addflight()" [formGroup]="flightForm">
-                                <!-- <div class="offset-md-6"> -->
-
-
-
                                 <div class="form-group row mb-3">
                                         <label class="col-md-2 col-form-label" for="descriptionId">Flight No.</label>
-
                                         <div class="col-md-6">
-                                                <input class="form-control" id="flightno" placeholder="Flight No" rows=3
-                                                        formControlName="id" [disabled]="true" />
-
+                                                <input class="form-control" id="flightno" placeholder="Flight No" rows=3 formControlName="id" [disabled]="true" />
                                         </div>
 
-                                        <div *ngIf="flightForm.controls['id'].invalid && (flightForm.controls['id'].dirty || flightForm.controls['id'].touched )" class="alert-danger">
-                                                        <div *ngIf="flightForm.controls['id'].errors.required">Please Enter Flight ID</div>
-                                                        </div>
+                                        <div *ngIf="flightForm.controls['id'].invalid && (flightForm.controls['id'].dirty || flightForm.controls['id'].touched )"
+                                                class="alert-danger">
+                                                <div *ngIf="flightForm.controls['id'].errors.required">Please Enter
+                                                        Flight ID</div>
+                                        </div>
                                 </div>
 
                                 <div class="form-group row mb-3">
                                         <label class="col-md-2 col-form-label" for="descriptionId">Airline name</label>
-
                                         <div class="col-md-6">
-
                                                 <select class="form-control" name="Airline_Name"
                                                         formControlName="flightCompany">
                                                         <option *ngFor='let airline of airlines'>{{airline.airLineName}}
                                                         </option>
                                                 </select>
-
                                         </div>
-
-                                        <div *ngIf="flightForm.controls['flightCompany'].invalid && (flightForm.controls['flightCompany'].dirty || flightForm.controls['flightCompany'].touched )" class="alert-danger">
-                                                        <div *ngIf="flightForm.controls['flightCompany'].errors.required">Please Enter Airline</div>
-                                                        </div>
+                                        <div *ngIf="flightForm.controls['flightCompany'].invalid && (flightForm.controls['flightCompany'].dirty || flightForm.controls['flightCompany'].touched )"
+                                                class="alert-danger">
+                                                <div *ngIf="flightForm.controls['flightCompany'].errors.required">Please
+                                                        Enter Airline</div>
+                                        </div>
                                 </div>
 
                                 <div class="form-group row mb-3">
@@ -78,30 +68,33 @@
                                                 Time</label>
 
                                         <div class="col-md-6">
-                                                <input type="time" name="time" value="" id="departureTime"
-                                                        formControlName="departureTime" class="form-control">
-
+                                                <input type="time" name="time" value="" id="departureTime" 
+                                                formControlName="departureTime" class="form-control" (change) = "getDepartureTime(deptime.value)" #deptime>
                                         </div>
 
-                                        <div *ngIf="flightForm.controls['departureTime'].invalid && (flightForm.controls['departureTime'].dirty || flightForm.controls['departureTime'].touched )" class="alert-danger">
-                                                        <div *ngIf="flightForm.controls['departureTime'].errors.required">Please Enter Flight Departure Time</div>
-                                                        </div>
+                                        <div *ngIf="flightForm.controls['departureTime'].invalid && (flightForm.controls['departureTime'].dirty || flightForm.controls['departureTime'].touched )"
+                                                class="alert-danger">
+                                                <div *ngIf="flightForm.controls['departureTime'].errors.required">Please
+                                                        Enter Flight Departure Time</div>
+                                        </div>
 
-                                        
+
                                 </div>
 
                                 <div class="form-group row mb-3">
                                         <label class="col-md-2 col-form-label" for="descriptionId">Arrival Time</label>
 
                                         <div class="col-md-6">
-                                                <input type="time" name="time" value="" id="arrivalTime"
-                                                        formControlName="arrivalTime" class="form-control">
+                                                <input type="text" name="time" value="" id="arrivalTime"
+                                                        formControlName="arrivalTime" class="form-control" [(ngModel)]="arrivalTime">
 
                                         </div>
 
-                                        <div *ngIf="flightForm.controls['arrivalTime'].invalid && (flightForm.controls['arrivalTime'].dirty || flightForm.controls['arrivalTime'].touched )" class="alert-danger">
-                                                        <div *ngIf="flightForm.controls['arrivalTime'].errors.required">Please Enter Flight Arrival Time</div>
-                                                        </div>
+                                        <div *ngIf="flightForm.controls['arrivalTime'].invalid && (flightForm.controls['arrivalTime'].dirty || flightForm.controls['arrivalTime'].touched )"
+                                                class="alert-danger">
+                                                <div *ngIf="flightForm.controls['arrivalTime'].errors.required">Please
+                                                        Enter Flight Arrival Time</div>
+                                        </div>
                                 </div>
 
                                 <div class="form-group row mb-3">
@@ -109,13 +102,15 @@
 
                                         <div class="col-md-6">
                                                 <input class="form-control" id="Duration" placeholder="" rows=3
-                                                        formControlName="duration" type="text"  />
-                                                
+                                                        formControlName="duration" type="text" />
+
 
                                         </div>
-                                        <div *ngIf="flightForm.controls['duration'].invalid && (flightForm.controls['duration'].dirty || flightForm.controls['duration'].touched )" class="alert-danger">
-                                                        <div *ngIf="flightForm.controls['duration'].errors.required">Please Enter Flight Duration</div>
-                                                        </div>
+                                        <div *ngIf="flightForm.controls['duration'].invalid && (flightForm.controls['duration'].dirty || flightForm.controls['duration'].touched )"
+                                                class="alert-danger">
+                                                <div *ngIf="flightForm.controls['duration'].errors.required">Please
+                                                        Enter Flight Duration</div>
+                                        </div>
                                 </div>
 
                                 <div class="form-group row mb-3">
@@ -128,9 +123,11 @@
 
                                         </div>
 
-                                        <div *ngIf="flightForm.controls['economy'].invalid && (flightForm.controls['economy'].dirty || flightForm.controls['economy'].touched )" class="alert-danger">
-                                                        <div *ngIf="flightForm.controls['economy'].errors.required">Please Enter Economy Class Seats</div>
-                                                        </div>
+                                        <div *ngIf="flightForm.controls['economy'].invalid && (flightForm.controls['economy'].dirty || flightForm.controls['economy'].touched )"
+                                                class="alert-danger">
+                                                <div *ngIf="flightForm.controls['economy'].errors.required">Please Enter
+                                                        Economy Class Seats</div>
+                                        </div>
                                 </div>
 
                                 <div class="form-group row mb-3">
@@ -143,9 +140,11 @@
 
                                         </div>
 
-                                        <div *ngIf="flightForm.controls['business'].invalid && (flightForm.controls['business'].dirty || flightForm.controls['business'].touched )" class="alert-danger">
-                                                        <div *ngIf="flightForm.controls['business'].errors.required">Please Enter Business Class Seats</div>
-                                                        </div>
+                                        <div *ngIf="flightForm.controls['business'].invalid && (flightForm.controls['business'].dirty || flightForm.controls['business'].touched )"
+                                                class="alert-danger">
+                                                <div *ngIf="flightForm.controls['business'].errors.required">Please
+                                                        Enter Business Class Seats</div>
+                                        </div>
                                 </div>
 
 
@@ -154,20 +153,24 @@
                                 <div class="form-group row mb-3">
                                         <label class="col-md-2 col-form-label">Distance(in km)</label>
                                         <div class="col-md-6">
-                                                <input class="form-control" id="Distance" formControlName="distance" type="number" placeholder=""
+                                                <input class="form-control" id="Distance" formControlName="distance"
+                                                        type="number" placeholder=""
                                                         (change)="getDistance(distance.value)" #distance>
 
                                         </div>
 
-                                        <div *ngIf="flightForm.controls['distance'].invalid && (flightForm.controls['distance'].dirty || flightForm.controls['distance'].touched )" class="alert-danger">
-                                                        <div *ngIf="flightForm.controls['distance'].errors.required">Please Enter Distance</div>
-                                                        </div>
+                                        <div *ngIf="flightForm.controls['distance'].invalid && (flightForm.controls['distance'].dirty || flightForm.controls['distance'].touched )"
+                                                class="alert-danger">
+                                                <div *ngIf="flightForm.controls['distance'].errors.required">Please
+                                                        Enter Distance</div>
+                                        </div>
                                 </div>
 
 
                                 <div class="form-group row mb-4">
                                         <div class="offset-md-3 col-md-4">
-                                                <button class="btn btn-primary mr-6" style="width:200px;" type="submit" [disabled]='disable()'>
+                                                <button class="btn btn-primary mr-6" style="width:200px;" type="submit"
+                                                        [disabled]='disable()'>
                                                         Submit
                                                 </button>
                                         </div>

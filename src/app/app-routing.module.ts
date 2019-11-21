@@ -23,7 +23,7 @@ import { AuthGuardGuard } from './user/gaurd/auth-guard.guard';
 const routes: Routes = [
 
   {path: 'adminhome', component: AdminhomeComponent, canActivate: [AdminGuardGuard]},
-  {path: 'reviewBooking/:fullName/:address/:mobile/:flightID', component: ReviewBookingComponent},
+  {path: 'reviewBooking/:fullName/:address/:mobile/:flightID/:travellers/:class', component: ReviewBookingComponent},
   {path: '', component: SearchFlightsComponent},
   {path: 'adminFlight', component: AdminFlightlistComponent, canActivate: [AdminGuardGuard]},
   {path: 'search/:to/:from/:roundtrip/:departuredate/:returndate/:triptype/:travellers/:class', component: FlightListComponent},
@@ -37,7 +37,7 @@ const routes: Routes = [
   {path: 'flightSchedule', component: ScheduleComponent, canActivate: [AdminGuardGuard]},
   {path: 'editAirline', component: AirlineComponent, canActivate: [AdminGuardGuard]},
   {path: 'cityList', component: CityViewComponent, canActivate: [AdminGuardGuard]},
-  {path: 'passengerDetails/:flightID', component: PassengerDetailsComponent},
+  {path: 'passengerDetails/:flightID/:travellers/:class', component: PassengerDetailsComponent},
 
   // {path : 'addnewflight/:flightID' , component : AddnewflightComponent }
 ];

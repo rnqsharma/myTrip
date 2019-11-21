@@ -14,6 +14,8 @@ export class PassengerDetailsComponent implements OnInit {
 
   private sub: Subscription;
   id = '';
+  travellers = '';
+  class = '';
   // errorMessage: string;
   // passenger: IProfile;
   // passengerForm: FormGroup;
@@ -35,7 +37,10 @@ export class PassengerDetailsComponent implements OnInit {
     this.sub = this.route.paramMap.subscribe(
       params => {
         this.id = params.get('flightID');
+        this.travellers = params.get('travellers');
+        this.class = params.get('class');
         console.log(this.id);
+        console.log(this.travellers);
       }
     );
   }
@@ -47,7 +52,7 @@ export class PassengerDetailsComponent implements OnInit {
     this.passengerDetails.mobile = mobile;
     console.log(this.passengerDetails.fullName);
     this.router.navigate(['reviewBooking', this.passengerDetails.fullName,
-     this.passengerDetails.address, this.passengerDetails.mobile, this.id]);
+     this.passengerDetails.address, this.passengerDetails.mobile, this.id, this.travellers, this.class]);
   }
   onRadioMale() {
     this.passengerDetails.gender = 'Male';

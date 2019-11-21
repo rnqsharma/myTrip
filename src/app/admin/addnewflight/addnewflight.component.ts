@@ -10,6 +10,9 @@ import { CitydataService } from 'src/app/service/citydata.service';
 import { ICity } from 'src/app/model/ICity';
 import { GenericValidator } from 'src/app/validator/generic-validator';
 import { debounceTime } from 'rxjs/operators';
+// import { GenericValidator } from 'src/app/validator/generic-validator';
+import * as moment from 'moment';
+import { Time } from '@angular/common';
 
 @Component({
   selector: 'app-addnewflight',
@@ -26,6 +29,7 @@ export class AddnewflightComponent implements OnInit, AfterViewInit {
   id: string;
   flightData: IFlights;
   airlines: IAirline[];
+  counterDisable = false;
   airLineName: string;
   // airlinesName: Array<string> = [];
   cities: ICity[];
@@ -33,10 +37,24 @@ export class AddnewflightComponent implements OnInit, AfterViewInit {
   flight: IFlights;
   errorMessage: string;
   dist = '';
+  duration = '';
+  durationHours = '';
+  durationMins = '';
+  departureTime = '';
+  departureHours = '';
+  departureMins = '';
+  departureAMPM = '';
+  arrivalTime = '';
+  arrivalHours = '';
+  arrivalMins = '';
+  arrivalAMPM = '';
 
   displayMessage: { [key: string]: string } = {};
   private validationMessages: { [key: string]: { [key: string]: string } };
-  private genericValidator: GenericValidator;
+
+  // displayMessage: { [key: string]: string } = {};
+  // private validationMessages: { [key: string]: { [key: string]: string } };
+  // private genericValidator: GenericValidator;
   
 
 
@@ -85,24 +103,16 @@ export class AddnewflightComponent implements OnInit, AfterViewInit {
         required: 'Product code is required.'
       }
     };
-    this.genericValidator = new GenericValidator(this.validationMessages);
+    // this.genericValidator = new GenericValidator(this.validationMessages);
   }
 
   ngOnInit() {
-
     this.sub = this.route.paramMap.subscribe(
       params => {
         this.id = params.get('flightID');
       }
     );
 
-    // this.productForm = this.fb.group({
-    //   productName: [''],
-    //   productCode: ['', Validators.required],
-    //   starRating: ['', NumberValidators.range(1, 5)],
-    //   tags: this.fb.array([]),
-    //   description: ''
-    //   });
     this.flightForm = this.fb.group({
       id: ['', Validators.required],
       flightCompany: ['', Validators.required],
@@ -118,24 +128,21 @@ export class AddnewflightComponent implements OnInit, AfterViewInit {
     });
     this.airlineservice.getAirlinesData().subscribe((airlines: IAirline[]) => {
       this.airlines = airlines;
-      // console.log(this.airlines);
-
       this.cityservice.getCityData().subscribe((cities: ICity[]) => {
         this.cities = cities;
-        // console.log(this.cities);
-
-
         if (this.id !== '0') {
           this.flightForm.get('distance').setValidators([
             Validators.required
-          ])
-          // this.flightForm.controls['distance'].setValidators([Validators.required]);
+          ]);
           this.flightForm.controls['id'].disable();
           this.flightForm.controls['flightCompany'].disable();
+          this.flightForm.controls['arrivalTime'].disable();
           this.flightService.getFlightsDataByID(this.id).
             subscribe((flight: IFlights) => {
               console.log(flight);
               this.flight = flight;
+              this.duration = this.flight.duration;
+              console.log(this.duration);
               this.flightForm.patchValue({
                 id: this.flight.id,
                 flightCompany: this.flight.flightCompany,
@@ -152,9 +159,15 @@ export class AddnewflightComponent implements OnInit, AfterViewInit {
               console.log('flightForm is working' + this.flightForm.value.id);
             });
         }
+        if (this.id === '0') {
+          if (this.flightForm.valid) {
+            this.counterDisable = true;
+          }
+        }
       });
     });
-
+    // this.duration = this.flightForm.value.duration;
+    console.log('duration = ' + this.duration);
   }
 
 
@@ -170,11 +183,9 @@ export class AddnewflightComponent implements OnInit, AfterViewInit {
     merge(this.flightForm.valueChanges, ...controlBlurs).pipe(
       debounceTime(800)
     ).subscribe(value => {
-      this.displayMessage = this.genericValidator.processMessages(this.flightForm);
+      // this.displayMessage = this.genericValidator.processMessages(this.flightForm);
     });
   }
-
- 
 
   addflight = (): void => {
     this.setPrice();
@@ -196,6 +207,9 @@ export class AddnewflightComponent implements OnInit, AfterViewInit {
   disable() {
     if (this.flightForm.valid || this.id === '0'){
       return false;
+    } else if (this.counterDisable) {
+      console.log('sdge');
+      return true;
     } else {
       return true;
     }
@@ -232,5 +246,71 @@ export class AddnewflightComponent implements OnInit, AfterViewInit {
   getDistance(dist: string) {
     this.dist = dist;
     console.log(dist);
+  }
+
+  getDepartureTime(departureTime: string) {
+    this.departureTime = departureTime;
+    const hours = departureTime.split(':')[0];
+    const mins = departureTime.split(':')[1];
+    this.departureHours = hours;
+    this.departureMins = mins;
+    // if (hours > 12) {
+    //   this.departureAMPM = 'PM';
+    // }
+    // this.departureHours = '' + hours;
+    // const departureHours = +hours - 12;
+    // const departureHoursFormat = Math.abs(departureHours);
+    // this.departureHours = '' + departureHoursFormat;
+    // const mins = departureTime.split(':')[1];
+    // this.departureMins = mins;
+    this.findArrivalTime();
+  }
+
+  findArrivalTime() {
+    this.durationHours = this.duration.split(' ')[0];
+    this.durationMins = this.duration.split(' ')[2];
+    const durationHours = +this.durationHours;
+    const durationMins = +this.durationMins;
+    let arrivalHours = +this.departureHours + durationHours;
+    if (arrivalHours > 23) {
+      arrivalHours = 0;
+    }
+    console.log('arrival = ' + arrivalHours);
+    const arrivalMins = +this.departureMins + durationMins;
+    console.log('arrival = ' + arrivalMins);
+    this.arrivalTime = arrivalHours + ':' + arrivalMins;
+
+    // const dur = this.duration;
+    // this.durationHours = this.duration.split(' ')[0];
+    // const durationHours = +this.durationHours;
+    // this.durationMins = this.duration.split(' ')[2];
+    // const durationMins = +this.durationMins;
+    // const durationInMins = (durationHours * 60) + durationMins;
+    // const arrivalHours = +this.departureHours + durationHours;
+    // let arrivalMins = +this.departureMins + durationMins;
+    // if (arrivalMins > 60) {
+    //   arrivalMins = arrivalMins - 60;
+    // }
+    // // if(this.departureHours + this.durationHours > 12)
+    // const departureHoursNumber = +this.departureHours;
+    // const arrivalHoursNumber = +this.arrivalHours;
+    // if ( departureHoursNumber + durationHours > 12) {
+    //   if (this.departureAMPM === 'AM') {
+    //     this.arrivalAMPM = 'PM';
+    //   } else {
+    //     this.arrivalAMPM = 'AM';
+    //   }
+    // } else {
+    //   if (this.departureAMPM === 'AM') {
+    //     this.arrivalAMPM = 'PM';
+    //   } else {
+    //     this.arrivalAMPM = 'AM';
+    //   }
+    // }
+    // console.log('departuretime = ' + this.departureTime);
+    // const ampm = this.departureTime.split(' ')[0];
+    // console.log('ampm = ' + ampm);
+    // this.arrivalTime = arrivalHours + ':' + arrivalMins + ' ' + this.arrivalAMPM;
+    // console.log('arrivalTime = ' + this.arrivalTime);
   }
 }

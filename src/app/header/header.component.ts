@@ -56,7 +56,7 @@ export class HeaderComponent implements OnInit {
   }
 
   onUserClicked(name: string): void {
-    console.log("dsfdsf");
+    // console.log("dsfdsf");
     console.log(name);
   }
 
@@ -76,5 +76,4 @@ export class HeaderComponent implements OnInit {
   adminView() {
     this.router.navigate(['adminhome']);
   }
-
 }
